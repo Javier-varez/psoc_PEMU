@@ -562,27 +562,28 @@ END GROUP
  .text.CYMEMZERO
                 0x000007ac        0xc .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x000007b8       0xb8 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(cyfitter_cfg.o)
+                0x000007b8       0xb4 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x00000870        0x8 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(cyfitter_cfg.o)
+                0x0000086c        0x8 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x00000878       0xd0 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(cyfitter_cfg.o)
-                0x00000878                cyfitter_cfg
+                0x00000874       0xd0 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(cyfitter_cfg.o)
+                0x00000874                cyfitter_cfg
  .text.ISR_SetVector
-                0x00000948        0xc .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
-                0x00000948                ISR_SetVector
+                0x00000944        0xc .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
+                0x00000944                ISR_SetVector
  .text.ISR_SetPriority
-                0x00000954       0x10 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
-                0x00000954                ISR_SetPriority
+                0x00000950       0x10 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
+                0x00000950                ISR_SetPriority
  .text.ISR_Enable
-                0x00000964        0xc .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
-                0x00000964                ISR_Enable
+                0x00000960        0xc .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
+                0x00000960                ISR_Enable
  .text.ISR_Disable
-                0x00000970        0xc .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
-                0x00000970                ISR_Disable
+                0x0000096c        0xc .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
+                0x0000096c                ISR_Disable
  .text.ISR_StartEx
-                0x0000097c       0x1c .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
-                0x0000097c                ISR_StartEx
+                0x00000978       0x1c .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(ISR.o)
+                0x00000978                ISR_StartEx
+ *fill*         0x00000994        0x4 
  .text          0x00000998       0x20 .\CortexM3\ARM_GCC_493\Debug\gnome_psoc5.a(CyBootAsmGnu.o)
                 0x00000998                CyDelayCycles
                 0x000009a8                CyEnterCriticalSection
@@ -811,9 +812,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000      0x184
+.cyconfigecc    0x80000000      0x174
  *(.cyconfigecc)
- .cyconfigecc   0x80000000      0x184 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .cyconfigecc   0x80000000      0x174 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4

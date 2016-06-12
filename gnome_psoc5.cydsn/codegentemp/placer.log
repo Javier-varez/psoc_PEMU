@@ -6,7 +6,7 @@
 
 #Build Date:         Oct  1 2015 13:46:59
 
-#File Generated:     Jun 12 2016 18:04:35
+#File Generated:     Jun 12 2016 22:51:22
 
 #Purpose:            
 
@@ -44,7 +44,7 @@ Phase 2
 Phase 3
 
 Design Statistics after Packing
-    Number of Combinational MCs 	:	17
+    Number of Combinational MCs 	:	16
     Number of Sequential MCs    	:	4
     Number of DPs               	:	0
     Number of Controls          	:	3
@@ -53,7 +53,7 @@ Design Statistics after Packing
     Number of count7cells       	:	0
 
 Device Utilization Summary after Packing
-    Macrocells                  :	21/192
+    Macrocells                  :	20/192
     UDBS                        :	3/24
     IOs                         :	2/72
 
@@ -111,7 +111,7 @@ Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
 D2088: Phase 7, elapsed time : 0.0 (sec)
 
 Final Design Statistics
-    Number of Combinational MCs 	:	17
+    Number of Combinational MCs 	:	16
     Number of Sequential MCs    	:	4
     Number of DPs               	:	0
     Number of Controls          	:	3
@@ -121,7 +121,7 @@ Final Design Statistics
     Number of IOs       	:	2
 
 Device Utilization Summary
-    Macrocells                  :	21/192
+    Macrocells                  :	20/192
     IOs                         :	2/72
 
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
   36              	.LVL1:
   37 0004 0E28     		cmp	r0, #14
   38 0006 1CD0     		beq	.L3
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 2
 
 
   39 0008 0F28     		cmp	r0, #15
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
   77 0046 53B1     		cbz	r3, .L8
   36:.\gnome_memory.c ****                     current_context->accumulator = (((*mem_mapped_reg) & 0xF0) >> 4) & ((1<<GNOME_W
   78              		.loc 1 36 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 3
 
 
   79 0048 204B     		ldr	r3, .L13+4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  119 0082 124B     		ldr	r3, .L13+4
  120 0084 1968     		ldr	r1, [r3]
  121 0086 144B     		ldr	r3, .L13+16
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 4
 
 
  122 0088 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
@@ -238,11 +238,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  165 00c8 00000000 		.word	via_state
  166 00cc 00000000 		.word	current_context
  167 00d0 7E640040 		.word	1073767550
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 5
 
 
- 168 00d4 7D640040 		.word	1073767549
- 169 00d8 7F640040 		.word	1073767551
+ 168 00d4 7F640040 		.word	1073767551
+ 169 00d8 7D640040 		.word	1073767549
  170 00dc 00000000 		.word	registers
  171              	.LBE2:
  172              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  200              		.loc 1 83 0
  201 000e 134B     		ldr	r3, .L25
  202 0010 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 6
 
 
  203 0012 1BB1     		cbz	r3, .L19
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  243              	.LVL20:
  244              	.L23:
   98:.\gnome_memory.c ****                 }
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 7
 
 
   99:.\gnome_memory.c ****                 via_state.port1_ptr = !via_state.port1_ptr;                
@@ -394,8 +394,8 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  263              		.align	2
  264              	.L25:
  265 005c 00000000 		.word	via_state
- 266 0060 6D640040 		.word	1073767533
- 267 0064 6F640040 		.word	1073767535
+ 266 0060 6F640040 		.word	1073767535
+ 267 0064 6D640040 		.word	1073767533
  268 0068 00000000 		.word	registers
  269              		.cfi_endproc
  270              	.LFE64:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  284              		@ link register save eliminated.
  285              	.LVL23:
  286              	.LBB4:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 8
 
 
  114:.\gnome_memory.c ****     if (GNOME_VIA_ACTIVE) {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  317 0020 185C     		ldrb	r0, [r3, r0]	@ zero_extendqisi2
  318 0022 00F00F00 		and	r0, r0, #15
  319              	.LVL30:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 9
 
 
  320              	.LBE4:
@@ -494,8 +494,8 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  323              	.L34:
  324              		.align	2
  325              	.L33:
- 326 0028 6D640040 		.word	1073767533
- 327 002c 6F640040 		.word	1073767535
+ 326 0028 6F640040 		.word	1073767535
+ 327 002c 6D640040 		.word	1073767533
  328 0030 00000000 		.word	registers
  329              		.cfi_endproc
  330              	.LFE65:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  367 0032 1D       		.byte	0x1d
  368 0033 37000000 		.4byte	0x37
  369 0037 02       		.uleb128 0x2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 10
 
 
  370 0038 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  424 009f 37000000 		.4byte	0x37
  425 00a3 02       		.uleb128 0x2
  426 00a4 04       		.byte	0x4
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 11
 
 
  427 00a5 04       		.byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  481 010b 00       		.byte	0
  482 010c 08       		.uleb128 0x8
  483 010d 70747200 		.ascii	"ptr\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 12
 
 
  484 0111 05       		.byte	0x5
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  538 017a 47       		.byte	0x47
  539 017b ED000000 		.4byte	0xed
  540 017f 01       		.byte	0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 13
 
 
  541 0180 08       		.uleb128 0x8
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  595 01e8 1B000000 		.4byte	.LASF47
  596 01ec 01       		.byte	0x1
  597 01ed 0F       		.byte	0xf
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 14
 
 
  598 01ee 00000000 		.4byte	.LFB63
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  652 0272 34020000 		.4byte	0x234
  653 0276 A0000000 		.4byte	.LLST4
  654 027a 0F       		.uleb128 0xf
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 15
 
 
  655 027b 6E000000 		.4byte	.LASF35
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  709 02fa 00000000 		.4byte	normal_context
  710 02fe 13       		.uleb128 0x13
  711 02ff DC000000 		.4byte	.LASF40
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 16
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 16
 
 
  712 0303 05       		.byte	0x5
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  766 0375 00000000 		.4byte	via_state
  767 0379 00       		.byte	0
  768              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 17
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 17
 
 
  769              	.Ldebug_abbrev0:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  823 0035 00       		.byte	0
  824 0036 05       		.uleb128 0x5
  825 0037 16       		.uleb128 0x16
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 18
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 18
 
 
  826 0038 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  880 006e 0B       		.uleb128 0xb
  881 006f 49       		.uleb128 0x49
  882 0070 13       		.uleb128 0x13
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 19
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 19
 
 
  883 0071 38       		.uleb128 0x38
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  937 00a8 3B       		.uleb128 0x3b
  938 00a9 0B       		.uleb128 0xb
  939 00aa 49       		.uleb128 0x49
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 20
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 20
 
 
  940 00ab 13       		.uleb128 0x13
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  994 00e1 01       		.uleb128 0x1
  995 00e2 12       		.uleb128 0x12
  996 00e3 06       		.uleb128 0x6
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 21
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 21
 
 
  997 00e4 40       		.uleb128 0x40
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1051 011b 19       		.uleb128 0x19
  1052 011c 02       		.uleb128 0x2
  1053 011d 18       		.uleb128 0x18
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 22
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 22
 
 
  1054 011e 00       		.byte	0
@@ -1291,13 +1291,13 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1081 0035 7C000000 		.4byte	.LVL7
  1082 0039 0600     		.2byte	0x6
  1083 003b 0C       		.byte	0xc
- 1084 003c 7D640040 		.4byte	0x4000647d
+ 1084 003c 7F640040 		.4byte	0x4000647f
  1085 0040 9F       		.byte	0x9f
  1086 0041 7C000000 		.4byte	.LVL7
  1087 0045 B6000000 		.4byte	.LVL10
  1088 0049 0600     		.2byte	0x6
  1089 004b 0C       		.byte	0xc
- 1090 004c 7F640040 		.4byte	0x4000647f
+ 1090 004c 7D640040 		.4byte	0x4000647d
  1091 0050 9F       		.byte	0x9f
  1092 0051 00000000 		.4byte	0
  1093 0055 00000000 		.4byte	0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1108 0074 3F       		.byte	0x3f
  1109 0075 1A       		.byte	0x1a
  1110 0076 9F       		.byte	0x9f
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 23
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 23
 
 
  1111 0077 00000000 		.4byte	0
@@ -1342,13 +1342,13 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1129 00a4 30000000 		.4byte	.LVL17
  1130 00a8 0600     		.2byte	0x6
  1131 00aa 0C       		.byte	0xc
- 1132 00ab 6D640040 		.4byte	0x4000646d
+ 1132 00ab 6F640040 		.4byte	0x4000646f
  1133 00af 9F       		.byte	0x9f
  1134 00b0 30000000 		.4byte	.LVL17
  1135 00b4 52000000 		.4byte	.LVL21
  1136 00b8 0600     		.2byte	0x6
  1137 00ba 0C       		.byte	0xc
- 1138 00bb 6F640040 		.4byte	0x4000646f
+ 1138 00bb 6D640040 		.4byte	0x4000646d
  1139 00bf 9F       		.byte	0x9f
  1140 00c0 00000000 		.4byte	0
  1141 00c4 00000000 		.4byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1165              	.LLST6:
  1166 0107 00000000 		.4byte	.LVL23
  1167 010b 04000000 		.4byte	.LVL24
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 24
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 24
 
 
  1168 010f 0100     		.2byte	0x1
@@ -1397,13 +1397,13 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1181 012c 16000000 		.4byte	.LVL27
  1182 0130 0600     		.2byte	0x6
  1183 0132 0C       		.byte	0xc
- 1184 0133 6D640040 		.4byte	0x4000646d
+ 1184 0133 6F640040 		.4byte	0x4000646f
  1185 0137 9F       		.byte	0x9f
  1186 0138 16000000 		.4byte	.LVL27
  1187 013c 1E000000 		.4byte	.LVL29
  1188 0140 0600     		.2byte	0x6
  1189 0142 0C       		.byte	0xc
- 1190 0143 6F640040 		.4byte	0x4000646f
+ 1190 0143 6D640040 		.4byte	0x4000646d
  1191 0147 9F       		.byte	0x9f
  1192 0148 00000000 		.4byte	0
  1193 014c 00000000 		.4byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1222 0024 34000000 		.4byte	.LFE65-.LFB65
  1223 0028 00000000 		.4byte	0
  1224 002c 00000000 		.4byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 25
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 25
 
 
  1225              		.section	.debug_ranges,"",%progbits
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1256              	.LASF13:
  1257 0068 75696E74 		.ascii	"uint8\000"
  1257      3800
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 26
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 26
 
 
  1258              	.LASF35:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1284              	.LASF45:
  1285 00fb 2E5C676E 		.ascii	".\\gnome_memory.c\000"
  1285      6F6D655F 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 27
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 27
 
 
  1285      6D656D6F 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1305      7200
  1306              	.LASF12:
  1307 0204 696E7433 		.ascii	"int32_t\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 28
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 28
 
 
  1307      325F7400 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 1
  1332      315F7074 
  1332      7200
  1333              	.LASF3:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc6RZdU0.s 			page 29
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc111fnh.s 			page 29
 
 
  1334 02c4 73686F72 		.ascii	"short unsigned int\000"

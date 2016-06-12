@@ -9,7 +9,7 @@
     <peripheral>
       <name>via8bits_P1_stat</name>
       <description>No description available</description>
-      <baseAddress>0x4000646F</baseAddress>
+      <baseAddress>0x4000646D</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -164,7 +164,7 @@
     <peripheral>
       <name>via8bits_P1_ctrl</name>
       <description>No description available</description>
-      <baseAddress>0x4000647F</baseAddress>
+      <baseAddress>0x4000647D</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -206,7 +206,7 @@
     <peripheral>
       <name>via8bits_P0_stat</name>
       <description>No description available</description>
-      <baseAddress>0x4000646D</baseAddress>
+      <baseAddress>0x4000646F</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -361,7 +361,7 @@
     <peripheral>
       <name>via8bits_P0_ctrl</name>
       <description>No description available</description>
-      <baseAddress>0x4000647D</baseAddress>
+      <baseAddress>0x4000647F</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>

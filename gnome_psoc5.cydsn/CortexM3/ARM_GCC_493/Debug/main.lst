@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
   38 0002 62B6     		CPSIE   i
   39              	@ 0 "" 2
   18:.\main.c      **** 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 2
 
 
   19:.\main.c      ****     gnome_start();
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
   91 0040 05       		.byte	0x5
   92 0041 FA010000 		.4byte	.LASF2
   93 0045 02       		.uleb128 0x2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 3
 
 
   94 0046 02       		.byte	0x2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  148 00ac 02       		.uleb128 0x2
  149 00ad 04       		.byte	0x4
  150 00ae 07       		.byte	0x7
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 4
 
 
  151 00af D6010000 		.4byte	.LASF16
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  205 0117 05       		.uleb128 0x5
  206 0118 02       		.byte	0x2
  207 0119 04       		.byte	0x4
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 5
 
 
  208 011a 25       		.byte	0x25
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  262 0185 09       		.byte	0x9
  263 0186 00       		.byte	0
  264 0187 03       		.uleb128 0x3
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 6
 
 
  265 0188 16020000 		.4byte	.LASF25
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  319 0204 0F020000 		.4byte	0x20f
  320 0208 09       		.uleb128 0x9
  321 0209 AC000000 		.4byte	0xac
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 7
 
 
  322 020d 0F       		.byte	0xf
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  376 0014 24       		.uleb128 0x24
  377 0015 00       		.byte	0
  378 0016 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 8
 
 
  379 0017 0B       		.uleb128 0xb
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  433 004d 13       		.uleb128 0x13
  434 004e 38       		.uleb128 0x38
  435 004f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 9
 
 
  436 0050 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  490 0086 9742     		.uleb128 0x2117
  491 0088 19       		.uleb128 0x19
  492 0089 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 10
 
 
  493 008a 13       		.uleb128 0x13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  547 00c2 0F       		.uleb128 0xf
  548 00c3 00       		.byte	0
  549 00c4 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 11
 
 
  550 00c5 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  604 001c 00000000 		.4byte	0
  605              		.section	.debug_ranges,"",%progbits
  606              	.Ldebug_ranges0:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 12
 
 
  607 0000 00000000 		.4byte	.LFB63
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  635      6420696E 
  635      7400
  636              	.LASF20:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 13
 
 
  637 0074 696E645F 		.ascii	"ind_addr_reg_t\000"
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  657      65642069 
  658              	.LASF11:
  659 0171 75696E74 		.ascii	"uint8_t\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 14
 
 
  659      385F7400 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 1
  686 0229 7369676E 		.ascii	"signed char\000"
  686      65642063 
  686      68617200 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOWfJrn.s 			page 15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccVW71MK.s 			page 15
 
 
  687              	.LASF3:

@@ -8,6 +8,7 @@
 <files />
 <projects>
 <v>.\gnome_psoc5.cydsn\gnome_psoc5.cyprj</v>
+<v>.\gnome_psoc4.cydsn\gnome_psoc4.cyprj</v>
 </projects>
 <workspace_id v="add7ef9e-7c50-4b28-b5a4-bb5d2218a4db" />
 <WriteAppVersionLastSavedWith v="3.3.0.7343" />

@@ -1,5 +1,5 @@
 -- Project:   gnome_psoc5
--- Generated: 06/12/2016 18:04:35
+-- Generated: 06/12/2016 22:51:23
 -- PSoC Creator  3.3 SP1
 
 ENTITY gnome_psoc5 IS
@@ -37,50 +37,48 @@ ARCHITECTURE __DEFAULT__ OF gnome_psoc5 IS
     SIGNAL Net_17_7 : bit;
     ATTRIBUTE POWER OF Net_17_7 : SIGNAL IS true;
     SIGNAL Net_21_0 : bit;
-    ATTRIBUTE placement_force OF Net_21_0 : SIGNAL IS "U(0,4,A)0";
+    ATTRIBUTE placement_force OF Net_21_0 : SIGNAL IS "U(0,5,A)2";
     SIGNAL Net_21_1 : bit;
-    ATTRIBUTE placement_force OF Net_21_1 : SIGNAL IS "U(0,4,A)1";
+    ATTRIBUTE placement_force OF Net_21_1 : SIGNAL IS "U(1,5,B)1";
     SIGNAL Net_21_2 : bit;
-    ATTRIBUTE placement_force OF Net_21_2 : SIGNAL IS "U(0,4,A)2";
+    ATTRIBUTE placement_force OF Net_21_2 : SIGNAL IS "U(1,5,B)2";
     SIGNAL Net_21_3 : bit;
-    ATTRIBUTE placement_force OF Net_21_3 : SIGNAL IS "U(0,4,A)3";
+    ATTRIBUTE placement_force OF Net_21_3 : SIGNAL IS "U(1,5,B)3";
     SIGNAL Net_21_4 : bit;
-    ATTRIBUTE placement_force OF Net_21_4 : SIGNAL IS "U(0,4,B)0";
+    ATTRIBUTE placement_force OF Net_21_4 : SIGNAL IS "U(1,5,A)1";
     SIGNAL Net_21_5 : bit;
-    ATTRIBUTE placement_force OF Net_21_5 : SIGNAL IS "U(0,4,B)1";
+    ATTRIBUTE placement_force OF Net_21_5 : SIGNAL IS "U(1,5,A)0";
     SIGNAL Net_21_6 : bit;
-    ATTRIBUTE placement_force OF Net_21_6 : SIGNAL IS "U(0,4,B)2";
+    ATTRIBUTE placement_force OF Net_21_6 : SIGNAL IS "U(1,5,A)2";
     SIGNAL Net_21_7 : bit;
-    ATTRIBUTE placement_force OF Net_21_7 : SIGNAL IS "U(0,4,B)3";
+    ATTRIBUTE placement_force OF Net_21_7 : SIGNAL IS "U(1,5,A)3";
     SIGNAL Net_22_0 : bit;
-    ATTRIBUTE placement_force OF Net_22_0 : SIGNAL IS "U(1,5,A)0";
+    ATTRIBUTE placement_force OF Net_22_0 : SIGNAL IS "U(0,4,A)0";
     SIGNAL Net_22_1 : bit;
-    ATTRIBUTE placement_force OF Net_22_1 : SIGNAL IS "U(1,5,A)1";
+    ATTRIBUTE placement_force OF Net_22_1 : SIGNAL IS "U(0,4,A)1";
     SIGNAL Net_22_2 : bit;
-    ATTRIBUTE placement_force OF Net_22_2 : SIGNAL IS "U(1,5,A)2";
+    ATTRIBUTE placement_force OF Net_22_2 : SIGNAL IS "U(0,4,A)2";
     SIGNAL Net_22_3 : bit;
-    ATTRIBUTE placement_force OF Net_22_3 : SIGNAL IS "U(1,5,A)3";
+    ATTRIBUTE placement_force OF Net_22_3 : SIGNAL IS "U(0,4,A)3";
     SIGNAL Net_22_4 : bit;
-    ATTRIBUTE placement_force OF Net_22_4 : SIGNAL IS "U(1,5,B)0";
+    ATTRIBUTE placement_force OF Net_22_4 : SIGNAL IS "U(0,4,B)0";
     SIGNAL Net_22_5 : bit;
-    ATTRIBUTE placement_force OF Net_22_5 : SIGNAL IS "U(1,5,B)1";
+    ATTRIBUTE placement_force OF Net_22_5 : SIGNAL IS "U(0,4,B)1";
     SIGNAL Net_22_6 : bit;
-    ATTRIBUTE placement_force OF Net_22_6 : SIGNAL IS "U(1,5,B)2";
+    ATTRIBUTE placement_force OF Net_22_6 : SIGNAL IS "U(0,4,B)2";
     SIGNAL Net_22_7 : bit;
-    ATTRIBUTE placement_force OF Net_22_7 : SIGNAL IS "U(1,5,B)3";
+    ATTRIBUTE placement_force OF Net_22_7 : SIGNAL IS "U(0,4,B)3";
     SIGNAL Net_34_0 : bit;
-    ATTRIBUTE placement_force OF Net_34_0 : SIGNAL IS "U(0,5,B)0";
+    ATTRIBUTE placement_force OF Net_34_0 : SIGNAL IS "U(1,4,B)3";
     SIGNAL Net_34_1 : bit;
-    ATTRIBUTE placement_force OF Net_34_1 : SIGNAL IS "U(0,5,A)3";
+    ATTRIBUTE placement_force OF Net_34_1 : SIGNAL IS "U(1,4,B)2";
     SIGNAL Net_34_2 : bit;
-    ATTRIBUTE placement_force OF Net_34_2 : SIGNAL IS "U(0,5,A)2";
+    ATTRIBUTE placement_force OF Net_34_2 : SIGNAL IS "U(1,4,B)1";
     SIGNAL Net_34_3 : bit;
-    ATTRIBUTE placement_force OF Net_34_3 : SIGNAL IS "U(0,5,A)1";
+    ATTRIBUTE placement_force OF Net_34_3 : SIGNAL IS "U(1,4,B)0";
     SIGNAL Net_36 : bit;
     ATTRIBUTE global_signal OF Net_36 : SIGNAL IS true;
     SIGNAL Net_36_local : bit;
-    SIGNAL Net_39 : bit;
-    ATTRIBUTE placement_force OF Net_39 : SIGNAL IS "U(0,5,A)0";
     SIGNAL \via8bits:Ctrl:control_0\ : bit;
     SIGNAL \via8bits:Ctrl:control_2\ : bit;
     SIGNAL \via8bits:Ctrl:control_4\ : bit;
@@ -115,58 +113,56 @@ ARCHITECTURE __DEFAULT__ OF gnome_psoc5 IS
     ATTRIBUTE lib_model OF LED(0) : LABEL IS "iocell2";
     ATTRIBUTE Location OF LED(0) : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF Net_21_7 : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_21_7 : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF Net_21_7 : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF Net_21_6 : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF Net_21_6 : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF Net_21_6 : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF Net_21_5 : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF Net_21_5 : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF Net_21_5 : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF Net_21_4 : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF Net_21_4 : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF Net_21_4 : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF Net_21_3 : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF Net_21_3 : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF Net_21_3 : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF Net_21_2 : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF Net_21_2 : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF Net_21_2 : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF Net_21_1 : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF Net_21_1 : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF Net_21_1 : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF Net_21_0 : LABEL IS "macrocell8";
-    ATTRIBUTE Location OF Net_21_0 : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF Net_21_0 : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF Net_22_7 : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF Net_22_7 : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF Net_22_7 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_22_6 : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF Net_22_6 : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF Net_22_6 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_22_5 : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF Net_22_5 : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF Net_22_5 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_22_4 : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF Net_22_4 : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF Net_22_4 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_22_3 : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF Net_22_3 : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF Net_22_3 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_22_2 : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF Net_22_2 : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF Net_22_2 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_22_1 : LABEL IS "macrocell15";
-    ATTRIBUTE Location OF Net_22_1 : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF Net_22_1 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_22_0 : LABEL IS "macrocell16";
-    ATTRIBUTE Location OF Net_22_0 : LABEL IS "U(1,5)";
-    ATTRIBUTE lib_model OF Net_39 : LABEL IS "macrocell17";
-    ATTRIBUTE Location OF Net_39 : LABEL IS "U(0,5)";
+    ATTRIBUTE Location OF Net_22_0 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \via8bits:Ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell1";
     ATTRIBUTE Location OF \via8bits:Ctrl:Sync:ctrl_reg\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \via8bits:P0_ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell2";
-    ATTRIBUTE Location OF \via8bits:P0_ctrl:Sync:ctrl_reg\ : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF \via8bits:P0_ctrl:Sync:ctrl_reg\ : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF \via8bits:P0_stat:sts:sts_reg\ : LABEL IS "statuscell1";
-    ATTRIBUTE Location OF \via8bits:P0_stat:sts:sts_reg\ : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF \via8bits:P0_stat:sts:sts_reg\ : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF \via8bits:P1_ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell3";
-    ATTRIBUTE Location OF \via8bits:P1_ctrl:Sync:ctrl_reg\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \via8bits:P1_ctrl:Sync:ctrl_reg\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \via8bits:P1_stat:sts:sts_reg\ : LABEL IS "statuscell2";
-    ATTRIBUTE Location OF \via8bits:P1_stat:sts:sts_reg\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \via8bits:P1_stat:sts:sts_reg\ : LABEL IS "U(0,4)";
     ATTRIBUTE Location OF ISR : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
-    ATTRIBUTE lib_model OF Net_34_3 : LABEL IS "macrocell18";
-    ATTRIBUTE Location OF Net_34_3 : LABEL IS "U(0,5)";
-    ATTRIBUTE lib_model OF Net_34_2 : LABEL IS "macrocell19";
-    ATTRIBUTE Location OF Net_34_2 : LABEL IS "U(0,5)";
-    ATTRIBUTE lib_model OF Net_34_1 : LABEL IS "macrocell20";
-    ATTRIBUTE Location OF Net_34_1 : LABEL IS "U(0,5)";
-    ATTRIBUTE lib_model OF Net_34_0 : LABEL IS "macrocell21";
-    ATTRIBUTE Location OF Net_34_0 : LABEL IS "U(0,5)";
+    ATTRIBUTE lib_model OF Net_34_3 : LABEL IS "macrocell17";
+    ATTRIBUTE Location OF Net_34_3 : LABEL IS "U(1,4)";
+    ATTRIBUTE lib_model OF Net_34_2 : LABEL IS "macrocell18";
+    ATTRIBUTE Location OF Net_34_2 : LABEL IS "U(1,4)";
+    ATTRIBUTE lib_model OF Net_34_1 : LABEL IS "macrocell19";
+    ATTRIBUTE Location OF Net_34_1 : LABEL IS "U(1,4)";
+    ATTRIBUTE lib_model OF Net_34_0 : LABEL IS "macrocell20";
+    ATTRIBUTE Location OF Net_34_0 : LABEL IS "U(1,4)";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -704,17 +700,6 @@ BEGIN
             main_0 => \via8bits:P1_io\,
             main_1 => \via8bits:Net_495_0\);
 
-    Net_39:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3)",
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_39,
-            main_0 => Net_34_3,
-            main_1 => Net_34_2,
-            main_2 => Net_34_1,
-            main_3 => Net_34_0);
-
     \via8bits:Ctrl:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "00000000",
@@ -808,7 +793,7 @@ BEGIN
         GENERIC MAP(
             int_type => "10")
         PORT MAP(
-            interrupt => Net_39,
+            interrupt => Net_34_3,
             clock => ClockBlock_BUS_CLK);
 
     Net_34_3:macrocell

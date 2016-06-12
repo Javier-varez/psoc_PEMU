@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
   29:.\gnome.c     ****     normal_context.flags.C = 0;
   30:.\gnome.c     ****     normal_context.flags.Z = 0;
   31:.\gnome.c     ****     normal_context.ind_addr_reg.data = 0;
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 2
 
 
   32:.\gnome.c     ****     normal_context.ind_addr_reg.ptr = 0;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
   86:.\gnome.c     ****         if (current_context == &normal_context) 
   87:.\gnome.c     ****             UART_PutString("\tNormal Context\n");
   88:.\gnome.c     ****         else
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 3
 
 
   89:.\gnome.c     ****             UART_PutString("\tIT Context\n");
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  143:.\gnome.c     ****                 UART_PutString(str);
  144:.\gnome.c     ****             }
  145:.\gnome.c     ****             UART_PutString("\n");
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 4
 
 
  146:.\gnome.c     ****             for (i = 0; i < GNOME_STACK_SIZE; i++) {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
   56              		.global	gnome_reset
   57              		.thumb
   58              		.thumb_func
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 5
 
 
   59              		.type	gnome_reset, %function
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  100 0022 134A     		ldr	r2, .L13+4
  101 0024 0023     		movs	r3, #0
  102              	.LVL3:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 6
 
 
  103 0026 1370     		strb	r3, [r2]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  144              		.loc 1 56 0
  145 004e 9C70     		strb	r4, [r3, #2]
   59:.\gnome.c     ****     
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 7
 
 
  146              		.loc 1 59 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  194 0000 10B5     		push	{r4, lr}
  195              		.cfi_def_cfa_offset 8
  196              		.cfi_offset 4, -8
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 8
 
 
  197              		.cfi_offset 14, -4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  241              	.L19:
  242              		.align	2
  243              	.L18:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 9
 
 
  244 0030 00000000 		.word	gnome_process_it
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  298 0041 33000000 		.4byte	.LASF2
  299 0045 02       		.uleb128 0x2
  300 0046 02       		.byte	0x2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 10
 
 
  301 0047 07       		.byte	0x7
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  355 00b2 C5000000 		.4byte	.LASF15
  356 00b6 02       		.uleb128 0x2
  357 00b7 08       		.byte	0x8
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 11
 
 
  358 00b8 04       		.byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  412 011b 70747200 		.ascii	"ptr\000"
  413 011f 05       		.byte	0x5
  414 0120 22       		.byte	0x22
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 12
 
 
  415 0121 81000000 		.4byte	0x81
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  469 018d 03       		.sleb128 3
  470 018e 0E       		.uleb128 0xe
  471 018f B9000000 		.4byte	.LASF28
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 13
 
 
  472 0193 04       		.sleb128 4
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  526 01fc 05       		.byte	0x5
  527 01fd 45       		.byte	0x45
  528 01fe 3E020000 		.4byte	0x23e
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 14
 
 
  529 0202 0A       		.uleb128 0xa
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  583 026a 45000000 		.4byte	.LASF46
  584 026e 06       		.byte	0x6
  585 026f 16       		.byte	0x16
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 15
 
 
  586 0270 81000000 		.4byte	0x81
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  640 02e3 28030000 		.4byte	0x328
  641 02e7 16       		.uleb128 0x16
  642 02e8 9B010000 		.4byte	.LASF50
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 16
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 16
 
 
  643 02ec 01       		.byte	0x1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  697 0356 5A030000 		.4byte	0x35a
  698 035a 1B       		.uleb128 0x1b
  699 035b 8C000000 		.4byte	0x8c
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 17
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 17
 
 
  700 035f 1C       		.uleb128 0x1c
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  754 03d4 05       		.uleb128 0x5
  755 03d5 03       		.byte	0x3
  756 03d6 00000000 		.4byte	rom
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 18
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 18
 
 
  757 03da 1C       		.uleb128 0x1c
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  811 0004 0E       		.uleb128 0xe
  812 0005 13       		.uleb128 0x13
  813 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 19
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 19
 
 
  814 0007 03       		.uleb128 0x3
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  868 003d 3B       		.uleb128 0x3b
  869 003e 05       		.uleb128 0x5
  870 003f 49       		.uleb128 0x49
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 20
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 20
 
 
  871 0040 13       		.uleb128 0x13
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  925 0076 3B       		.uleb128 0x3b
  926 0077 0B       		.uleb128 0xb
  927 0078 49       		.uleb128 0x49
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 21
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 21
 
 
  928 0079 13       		.uleb128 0x13
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  982 00af 10       		.uleb128 0x10
  983 00b0 2E       		.uleb128 0x2e
  984 00b1 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 22
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 22
 
 
  985 00b2 3F       		.uleb128 0x3f
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1039 00ea 02       		.uleb128 0x2
  1040 00eb 17       		.uleb128 0x17
  1041 00ec 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 23
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 23
 
 
  1042 00ed 00       		.byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1096 0128 49       		.uleb128 0x49
  1097 0129 13       		.uleb128 0x13
  1098 012a 02       		.uleb128 0x2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 24
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 24
 
 
  1099 012b 17       		.uleb128 0x17
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1153 0165 3B       		.uleb128 0x3b
  1154 0166 0B       		.uleb128 0xb
  1155 0167 49       		.uleb128 0x49
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 25
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 25
 
 
  1156 0168 13       		.uleb128 0x13
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1210 019e 01       		.byte	0x1
  1211 019f 3F       		.uleb128 0x3f
  1212 01a0 19       		.uleb128 0x19
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 26
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 26
 
 
  1213 01a1 03       		.uleb128 0x3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1267 0008 0200     		.2byte	0x2
  1268 000a 30       		.byte	0x30
  1269 000b 9F       		.byte	0x9f
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 27
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 27
 
 
  1270 000c 14000000 		.4byte	.LVL1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1324 0014 3C000000 		.4byte	.LFE64
  1325 0018 00000000 		.4byte	0
  1326 001c 00000000 		.4byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 28
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 28
 
 
  1327              		.section	.debug_line,"",%progbits
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1353      7300
  1354              	.LASF61:
  1355 007e 2E5C676E 		.ascii	".\\gnome.c\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 29
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 29
 
 
  1355      6F6D652E 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1385      325F7400 
  1386              	.LASF4:
  1387 010d 5F5F7569 		.ascii	"__uint8_t\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 30
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 30
 
 
  1387      6E74385F 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1414              	.LASF33:
  1415 01a0 6C6F6164 		.ascii	"load_rd\000"
  1415      5F726400 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 31
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 31
 
 
  1416              	.LASF54:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1440 025f 646F7562 		.ascii	"double\000"
  1440      6C6500
  1441              	.LASF49:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 32
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 32
 
 
  1442 0266 676E6F6D 		.ascii	"gnome_start\000"
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 1
  1465              	.LASF63:
  1466 035b 676E6F6D 		.ascii	"gnome_process_it\000"
  1466      655F7072 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIv3t9u.s 			page 33
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccPRw8PO.s 			page 33
 
 
  1466      6F636573 

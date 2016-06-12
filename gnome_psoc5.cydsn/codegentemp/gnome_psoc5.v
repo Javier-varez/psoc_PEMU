@@ -1,6 +1,6 @@
 // ======================================================================
 // gnome_psoc5.v generated from TopDesign.cysch
-// 06/12/2016 at 18:04
+// 06/12/2016 at 22:51
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -414,29 +414,14 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BasicCounter_v1_0\BasicCounter_v1_0.v"
 `endif
 
-// Component: DigitalComp_v1_0
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0\DigitalComp_v1_0.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0\DigitalComp_v1_0.v"
-`endif
-
 // top
 module top ;
 
           wire  Net_234;
-          wire [3:0] Net_44;
           wire  Net_36;
           wire  Net_35;
           wire  Net_33;
           wire  Net_233;
-          wire  Net_39;
           wire [7:0] Net_21;
           wire  Net_20;
           wire  Net_19;
@@ -467,7 +452,7 @@ module top ;
 	cy_isr_v1_0
 		#(.int_type(2'b10))
 		ISR
-		 (.int_signal(Net_39));
+		 (.int_signal(Net_34[3]));
 
 
 	wire [0:0] tmpOE__Button_net;
@@ -642,10 +627,6 @@ module top ;
         .clock(Net_36));
     defparam BasicCounter_1.Width = 4;
 
-    assign Net_39 = (Net_34[3:0] == Net_44[3:0]);
-
-    assign Net_44[3:0] = 4'h0;
-
     assign Net_35 = 1'h0;
 
     assign Net_33 = 1'h1;
@@ -655,7 +636,7 @@ module top ;
 		#(.id("11e27fe0-3a28-424d-9039-d9ee04f76ba7"),
 		  .source_clock_id("315365C3-2E3E-4f04-84A2-BB564A173261"),
 		  .divisor(0),
-		  .period("5000000000000"),
+		  .period("3906250000000"),
 		  .is_direct(0),
 		  .is_digital(1))
 		CounterCLK

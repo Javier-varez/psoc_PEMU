@@ -11414,100 +11414,100 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  110              	.set via8bits_P0_ctrl_Sync_ctrl_reg__0__POS, 0
  111              	.set via8bits_P0_ctrl_Sync_ctrl_reg__1__MASK, 0x02
  112              	.set via8bits_P0_ctrl_Sync_ctrl_reg__1__POS, 1
- 113              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB13_14_ACTL
- 114              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_CONTROL_CONTROL_REG, CYREG_B0_UDB13_14_CTL
- 115              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_CONTROL_COUNT_REG, CYREG_B0_UDB13_14_CTL
- 116              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_COUNT_CONTROL_REG, CYREG_B0_UDB13_14_CTL
- 117              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_COUNT_COUNT_REG, CYREG_B0_UDB13_14_CTL
- 118              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_MASK_MASK_REG, CYREG_B0_UDB13_14_MSK
- 119              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_MASK_PERIOD_REG, CYREG_B0_UDB13_14_MSK
- 120              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_PERIOD_MASK_REG, CYREG_B0_UDB13_14_MSK
- 121              	.set via8bits_P0_ctrl_Sync_ctrl_reg__16BIT_PERIOD_PERIOD_REG, CYREG_B0_UDB13_14_MSK
- 122              	.set via8bits_P0_ctrl_Sync_ctrl_reg__2__MASK, 0x04
- 123              	.set via8bits_P0_ctrl_Sync_ctrl_reg__2__POS, 2
- 124              	.set via8bits_P0_ctrl_Sync_ctrl_reg__3__MASK, 0x08
- 125              	.set via8bits_P0_ctrl_Sync_ctrl_reg__3__POS, 3
- 126              	.set via8bits_P0_ctrl_Sync_ctrl_reg__4__MASK, 0x10
- 127              	.set via8bits_P0_ctrl_Sync_ctrl_reg__4__POS, 4
- 128              	.set via8bits_P0_ctrl_Sync_ctrl_reg__5__MASK, 0x20
- 129              	.set via8bits_P0_ctrl_Sync_ctrl_reg__5__POS, 5
- 130              	.set via8bits_P0_ctrl_Sync_ctrl_reg__6__MASK, 0x40
- 131              	.set via8bits_P0_ctrl_Sync_ctrl_reg__6__POS, 6
- 132              	.set via8bits_P0_ctrl_Sync_ctrl_reg__7__MASK, 0x80
- 133              	.set via8bits_P0_ctrl_Sync_ctrl_reg__7__POS, 7
- 134              	.set via8bits_P0_ctrl_Sync_ctrl_reg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB13_ACTL
- 135              	.set via8bits_P0_ctrl_Sync_ctrl_reg__CONTROL_REG, CYREG_B0_UDB13_CTL
- 136              	.set via8bits_P0_ctrl_Sync_ctrl_reg__CONTROL_ST_REG, CYREG_B0_UDB13_ST_CTL
- 137              	.set via8bits_P0_ctrl_Sync_ctrl_reg__COUNT_REG, CYREG_B0_UDB13_CTL
- 138              	.set via8bits_P0_ctrl_Sync_ctrl_reg__COUNT_ST_REG, CYREG_B0_UDB13_ST_CTL
- 139              	.set via8bits_P0_ctrl_Sync_ctrl_reg__MASK, 0xFF
- 140              	.set via8bits_P0_ctrl_Sync_ctrl_reg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
- 141              	.set via8bits_P0_ctrl_Sync_ctrl_reg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
- 142              	.set via8bits_P0_ctrl_Sync_ctrl_reg__PERIOD_REG, CYREG_B0_UDB13_MSK
- 143              	
- 144              	/* via8bits_P0_stat */
- 145              	.set via8bits_P0_stat_sts_sts_reg__0__MASK, 0x01
- 146              	.set via8bits_P0_stat_sts_sts_reg__0__POS, 0
- 147              	.set via8bits_P0_stat_sts_sts_reg__1__MASK, 0x02
- 148              	.set via8bits_P0_stat_sts_sts_reg__1__POS, 1
- 149              	.set via8bits_P0_stat_sts_sts_reg__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB13_14_ACTL
- 150              	.set via8bits_P0_stat_sts_sts_reg__16BIT_STATUS_REG, CYREG_B0_UDB13_14_ST
- 151              	.set via8bits_P0_stat_sts_sts_reg__2__MASK, 0x04
- 152              	.set via8bits_P0_stat_sts_sts_reg__2__POS, 2
- 153              	.set via8bits_P0_stat_sts_sts_reg__3__MASK, 0x08
- 154              	.set via8bits_P0_stat_sts_sts_reg__3__POS, 3
- 155              	.set via8bits_P0_stat_sts_sts_reg__4__MASK, 0x10
- 156              	.set via8bits_P0_stat_sts_sts_reg__4__POS, 4
+ 113              	.set via8bits_P0_ctrl_Sync_ctrl_reg__2__MASK, 0x04
+ 114              	.set via8bits_P0_ctrl_Sync_ctrl_reg__2__POS, 2
+ 115              	.set via8bits_P0_ctrl_Sync_ctrl_reg__3__MASK, 0x08
+ 116              	.set via8bits_P0_ctrl_Sync_ctrl_reg__3__POS, 3
+ 117              	.set via8bits_P0_ctrl_Sync_ctrl_reg__4__MASK, 0x10
+ 118              	.set via8bits_P0_ctrl_Sync_ctrl_reg__4__POS, 4
+ 119              	.set via8bits_P0_ctrl_Sync_ctrl_reg__5__MASK, 0x20
+ 120              	.set via8bits_P0_ctrl_Sync_ctrl_reg__5__POS, 5
+ 121              	.set via8bits_P0_ctrl_Sync_ctrl_reg__6__MASK, 0x40
+ 122              	.set via8bits_P0_ctrl_Sync_ctrl_reg__6__POS, 6
+ 123              	.set via8bits_P0_ctrl_Sync_ctrl_reg__7__MASK, 0x80
+ 124              	.set via8bits_P0_ctrl_Sync_ctrl_reg__7__POS, 7
+ 125              	.set via8bits_P0_ctrl_Sync_ctrl_reg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB15_ACTL
+ 126              	.set via8bits_P0_ctrl_Sync_ctrl_reg__CONTROL_REG, CYREG_B0_UDB15_CTL
+ 127              	.set via8bits_P0_ctrl_Sync_ctrl_reg__CONTROL_ST_REG, CYREG_B0_UDB15_ST_CTL
+ 128              	.set via8bits_P0_ctrl_Sync_ctrl_reg__COUNT_REG, CYREG_B0_UDB15_CTL
+ 129              	.set via8bits_P0_ctrl_Sync_ctrl_reg__COUNT_ST_REG, CYREG_B0_UDB15_ST_CTL
+ 130              	.set via8bits_P0_ctrl_Sync_ctrl_reg__MASK, 0xFF
+ 131              	.set via8bits_P0_ctrl_Sync_ctrl_reg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+ 132              	.set via8bits_P0_ctrl_Sync_ctrl_reg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+ 133              	.set via8bits_P0_ctrl_Sync_ctrl_reg__PERIOD_REG, CYREG_B0_UDB15_MSK
+ 134              	
+ 135              	/* via8bits_P0_stat */
+ 136              	.set via8bits_P0_stat_sts_sts_reg__0__MASK, 0x01
+ 137              	.set via8bits_P0_stat_sts_sts_reg__0__POS, 0
+ 138              	.set via8bits_P0_stat_sts_sts_reg__1__MASK, 0x02
+ 139              	.set via8bits_P0_stat_sts_sts_reg__1__POS, 1
+ 140              	.set via8bits_P0_stat_sts_sts_reg__2__MASK, 0x04
+ 141              	.set via8bits_P0_stat_sts_sts_reg__2__POS, 2
+ 142              	.set via8bits_P0_stat_sts_sts_reg__3__MASK, 0x08
+ 143              	.set via8bits_P0_stat_sts_sts_reg__3__POS, 3
+ 144              	.set via8bits_P0_stat_sts_sts_reg__4__MASK, 0x10
+ 145              	.set via8bits_P0_stat_sts_sts_reg__4__POS, 4
+ 146              	.set via8bits_P0_stat_sts_sts_reg__5__MASK, 0x20
+ 147              	.set via8bits_P0_stat_sts_sts_reg__5__POS, 5
+ 148              	.set via8bits_P0_stat_sts_sts_reg__6__MASK, 0x40
+ 149              	.set via8bits_P0_stat_sts_sts_reg__6__POS, 6
+ 150              	.set via8bits_P0_stat_sts_sts_reg__7__MASK, 0x80
+ 151              	.set via8bits_P0_stat_sts_sts_reg__7__POS, 7
+ 152              	.set via8bits_P0_stat_sts_sts_reg__MASK, 0xFF
+ 153              	.set via8bits_P0_stat_sts_sts_reg__MASK_REG, CYREG_B0_UDB15_MSK
+ 154              	.set via8bits_P0_stat_sts_sts_reg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+ 155              	.set via8bits_P0_stat_sts_sts_reg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
+ 156              	.set via8bits_P0_stat_sts_sts_reg__STATUS_AUX_CTL_REG, CYREG_B0_UDB15_ACTL
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 192
 
 
- 157              	.set via8bits_P0_stat_sts_sts_reg__5__MASK, 0x20
- 158              	.set via8bits_P0_stat_sts_sts_reg__5__POS, 5
- 159              	.set via8bits_P0_stat_sts_sts_reg__6__MASK, 0x40
- 160              	.set via8bits_P0_stat_sts_sts_reg__6__POS, 6
- 161              	.set via8bits_P0_stat_sts_sts_reg__7__MASK, 0x80
- 162              	.set via8bits_P0_stat_sts_sts_reg__7__POS, 7
- 163              	.set via8bits_P0_stat_sts_sts_reg__MASK, 0xFF
- 164              	.set via8bits_P0_stat_sts_sts_reg__MASK_REG, CYREG_B0_UDB13_MSK
- 165              	.set via8bits_P0_stat_sts_sts_reg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
- 166              	.set via8bits_P0_stat_sts_sts_reg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
- 167              	.set via8bits_P0_stat_sts_sts_reg__STATUS_AUX_CTL_REG, CYREG_B0_UDB13_ACTL
- 168              	.set via8bits_P0_stat_sts_sts_reg__STATUS_CNT_REG, CYREG_B0_UDB13_ST_CTL
- 169              	.set via8bits_P0_stat_sts_sts_reg__STATUS_CONTROL_REG, CYREG_B0_UDB13_ST_CTL
- 170              	.set via8bits_P0_stat_sts_sts_reg__STATUS_REG, CYREG_B0_UDB13_ST
- 171              	
- 172              	/* via8bits_P1_ctrl */
- 173              	.set via8bits_P1_ctrl_Sync_ctrl_reg__0__MASK, 0x01
- 174              	.set via8bits_P1_ctrl_Sync_ctrl_reg__0__POS, 0
- 175              	.set via8bits_P1_ctrl_Sync_ctrl_reg__1__MASK, 0x02
- 176              	.set via8bits_P1_ctrl_Sync_ctrl_reg__1__POS, 1
- 177              	.set via8bits_P1_ctrl_Sync_ctrl_reg__2__MASK, 0x04
- 178              	.set via8bits_P1_ctrl_Sync_ctrl_reg__2__POS, 2
- 179              	.set via8bits_P1_ctrl_Sync_ctrl_reg__3__MASK, 0x08
- 180              	.set via8bits_P1_ctrl_Sync_ctrl_reg__3__POS, 3
- 181              	.set via8bits_P1_ctrl_Sync_ctrl_reg__4__MASK, 0x10
- 182              	.set via8bits_P1_ctrl_Sync_ctrl_reg__4__POS, 4
- 183              	.set via8bits_P1_ctrl_Sync_ctrl_reg__5__MASK, 0x20
- 184              	.set via8bits_P1_ctrl_Sync_ctrl_reg__5__POS, 5
- 185              	.set via8bits_P1_ctrl_Sync_ctrl_reg__6__MASK, 0x40
- 186              	.set via8bits_P1_ctrl_Sync_ctrl_reg__6__POS, 6
- 187              	.set via8bits_P1_ctrl_Sync_ctrl_reg__7__MASK, 0x80
- 188              	.set via8bits_P1_ctrl_Sync_ctrl_reg__7__POS, 7
- 189              	.set via8bits_P1_ctrl_Sync_ctrl_reg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB15_ACTL
- 190              	.set via8bits_P1_ctrl_Sync_ctrl_reg__CONTROL_REG, CYREG_B0_UDB15_CTL
- 191              	.set via8bits_P1_ctrl_Sync_ctrl_reg__CONTROL_ST_REG, CYREG_B0_UDB15_ST_CTL
- 192              	.set via8bits_P1_ctrl_Sync_ctrl_reg__COUNT_REG, CYREG_B0_UDB15_CTL
- 193              	.set via8bits_P1_ctrl_Sync_ctrl_reg__COUNT_ST_REG, CYREG_B0_UDB15_ST_CTL
- 194              	.set via8bits_P1_ctrl_Sync_ctrl_reg__MASK, 0xFF
- 195              	.set via8bits_P1_ctrl_Sync_ctrl_reg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
- 196              	.set via8bits_P1_ctrl_Sync_ctrl_reg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
- 197              	.set via8bits_P1_ctrl_Sync_ctrl_reg__PERIOD_REG, CYREG_B0_UDB15_MSK
- 198              	
- 199              	/* via8bits_P1_stat */
- 200              	.set via8bits_P1_stat_sts_sts_reg__0__MASK, 0x01
- 201              	.set via8bits_P1_stat_sts_sts_reg__0__POS, 0
- 202              	.set via8bits_P1_stat_sts_sts_reg__1__MASK, 0x02
- 203              	.set via8bits_P1_stat_sts_sts_reg__1__POS, 1
+ 157              	.set via8bits_P0_stat_sts_sts_reg__STATUS_CNT_REG, CYREG_B0_UDB15_ST_CTL
+ 158              	.set via8bits_P0_stat_sts_sts_reg__STATUS_CONTROL_REG, CYREG_B0_UDB15_ST_CTL
+ 159              	.set via8bits_P0_stat_sts_sts_reg__STATUS_REG, CYREG_B0_UDB15_ST
+ 160              	
+ 161              	/* via8bits_P1_ctrl */
+ 162              	.set via8bits_P1_ctrl_Sync_ctrl_reg__0__MASK, 0x01
+ 163              	.set via8bits_P1_ctrl_Sync_ctrl_reg__0__POS, 0
+ 164              	.set via8bits_P1_ctrl_Sync_ctrl_reg__1__MASK, 0x02
+ 165              	.set via8bits_P1_ctrl_Sync_ctrl_reg__1__POS, 1
+ 166              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB13_14_ACTL
+ 167              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_CONTROL_CONTROL_REG, CYREG_B0_UDB13_14_CTL
+ 168              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_CONTROL_COUNT_REG, CYREG_B0_UDB13_14_CTL
+ 169              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_COUNT_CONTROL_REG, CYREG_B0_UDB13_14_CTL
+ 170              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_COUNT_COUNT_REG, CYREG_B0_UDB13_14_CTL
+ 171              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_MASK_MASK_REG, CYREG_B0_UDB13_14_MSK
+ 172              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_MASK_PERIOD_REG, CYREG_B0_UDB13_14_MSK
+ 173              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_PERIOD_MASK_REG, CYREG_B0_UDB13_14_MSK
+ 174              	.set via8bits_P1_ctrl_Sync_ctrl_reg__16BIT_PERIOD_PERIOD_REG, CYREG_B0_UDB13_14_MSK
+ 175              	.set via8bits_P1_ctrl_Sync_ctrl_reg__2__MASK, 0x04
+ 176              	.set via8bits_P1_ctrl_Sync_ctrl_reg__2__POS, 2
+ 177              	.set via8bits_P1_ctrl_Sync_ctrl_reg__3__MASK, 0x08
+ 178              	.set via8bits_P1_ctrl_Sync_ctrl_reg__3__POS, 3
+ 179              	.set via8bits_P1_ctrl_Sync_ctrl_reg__4__MASK, 0x10
+ 180              	.set via8bits_P1_ctrl_Sync_ctrl_reg__4__POS, 4
+ 181              	.set via8bits_P1_ctrl_Sync_ctrl_reg__5__MASK, 0x20
+ 182              	.set via8bits_P1_ctrl_Sync_ctrl_reg__5__POS, 5
+ 183              	.set via8bits_P1_ctrl_Sync_ctrl_reg__6__MASK, 0x40
+ 184              	.set via8bits_P1_ctrl_Sync_ctrl_reg__6__POS, 6
+ 185              	.set via8bits_P1_ctrl_Sync_ctrl_reg__7__MASK, 0x80
+ 186              	.set via8bits_P1_ctrl_Sync_ctrl_reg__7__POS, 7
+ 187              	.set via8bits_P1_ctrl_Sync_ctrl_reg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB13_ACTL
+ 188              	.set via8bits_P1_ctrl_Sync_ctrl_reg__CONTROL_REG, CYREG_B0_UDB13_CTL
+ 189              	.set via8bits_P1_ctrl_Sync_ctrl_reg__CONTROL_ST_REG, CYREG_B0_UDB13_ST_CTL
+ 190              	.set via8bits_P1_ctrl_Sync_ctrl_reg__COUNT_REG, CYREG_B0_UDB13_CTL
+ 191              	.set via8bits_P1_ctrl_Sync_ctrl_reg__COUNT_ST_REG, CYREG_B0_UDB13_ST_CTL
+ 192              	.set via8bits_P1_ctrl_Sync_ctrl_reg__MASK, 0xFF
+ 193              	.set via8bits_P1_ctrl_Sync_ctrl_reg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
+ 194              	.set via8bits_P1_ctrl_Sync_ctrl_reg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
+ 195              	.set via8bits_P1_ctrl_Sync_ctrl_reg__PERIOD_REG, CYREG_B0_UDB13_MSK
+ 196              	
+ 197              	/* via8bits_P1_stat */
+ 198              	.set via8bits_P1_stat_sts_sts_reg__0__MASK, 0x01
+ 199              	.set via8bits_P1_stat_sts_sts_reg__0__POS, 0
+ 200              	.set via8bits_P1_stat_sts_sts_reg__1__MASK, 0x02
+ 201              	.set via8bits_P1_stat_sts_sts_reg__1__POS, 1
+ 202              	.set via8bits_P1_stat_sts_sts_reg__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB13_14_ACTL
+ 203              	.set via8bits_P1_stat_sts_sts_reg__16BIT_STATUS_REG, CYREG_B0_UDB13_14_ST
  204              	.set via8bits_P1_stat_sts_sts_reg__2__MASK, 0x04
  205              	.set via8bits_P1_stat_sts_sts_reg__2__POS, 2
  206              	.set via8bits_P1_stat_sts_sts_reg__3__MASK, 0x08
@@ -11524,13 +11524,13 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  214              	.set via8bits_P1_stat_sts_sts_reg__7__MASK, 0x80
  215              	.set via8bits_P1_stat_sts_sts_reg__7__POS, 7
  216              	.set via8bits_P1_stat_sts_sts_reg__MASK, 0xFF
- 217              	.set via8bits_P1_stat_sts_sts_reg__MASK_REG, CYREG_B0_UDB15_MSK
- 218              	.set via8bits_P1_stat_sts_sts_reg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
- 219              	.set via8bits_P1_stat_sts_sts_reg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB15_MSK_ACTL
- 220              	.set via8bits_P1_stat_sts_sts_reg__STATUS_AUX_CTL_REG, CYREG_B0_UDB15_ACTL
- 221              	.set via8bits_P1_stat_sts_sts_reg__STATUS_CNT_REG, CYREG_B0_UDB15_ST_CTL
- 222              	.set via8bits_P1_stat_sts_sts_reg__STATUS_CONTROL_REG, CYREG_B0_UDB15_ST_CTL
- 223              	.set via8bits_P1_stat_sts_sts_reg__STATUS_REG, CYREG_B0_UDB15_ST
+ 217              	.set via8bits_P1_stat_sts_sts_reg__MASK_REG, CYREG_B0_UDB13_MSK
+ 218              	.set via8bits_P1_stat_sts_sts_reg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
+ 219              	.set via8bits_P1_stat_sts_sts_reg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
+ 220              	.set via8bits_P1_stat_sts_sts_reg__STATUS_AUX_CTL_REG, CYREG_B0_UDB13_ACTL
+ 221              	.set via8bits_P1_stat_sts_sts_reg__STATUS_CNT_REG, CYREG_B0_UDB13_ST_CTL
+ 222              	.set via8bits_P1_stat_sts_sts_reg__STATUS_CONTROL_REG, CYREG_B0_UDB13_ST_CTL
+ 223              	.set via8bits_P1_stat_sts_sts_reg__STATUS_REG, CYREG_B0_UDB13_ST
  224              	
  225              	/* via8bits_Stat */
  226              	.set via8bits_Stat_sts_sts_reg__REMOVED, 1
