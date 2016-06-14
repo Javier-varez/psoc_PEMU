@@ -15,12 +15,13 @@
 #include "gnome_inst_decoder.h"
 #include "gnome_execute.h"
 #include "gnome_memory.h"
+#include "gnome_lcd.h"
 
-CY_ISR_PROTO(gnome_process_it);
-
-#if (GNOME_DEBUGGING_ON==1)
+#if (GNOME_DEBUGGING_ON == 1)
     #include <stdio.h>
 #endif
+
+CY_ISR_PROTO(gnome_process_it);
 
 void gnome_reset() {
     
@@ -108,19 +109,27 @@ void gnome_start() {
     // Configure interrupt
     ISR_StartEx(gnome_process_it);
     
+    // Config LCD
+    setup_lcd(&lcd);
+    
+    // Set CLK pointer
+    reg8 *clk = GNOME_VIA_GNOME_CLK_ADDR;
     while(1) {
         
         CyGlobalIntDisable;
+        *clk = 1;
         // Fetch Instruction & Increment PC
         uint8_t code = rom[current_context->PC & 0xFF]; 
         current_context->PC++;
-        
+        *clk = 0;
+        *clk = 1;
         // Decode Instruction
         inst_enum inst = decodeInstruction(code);
-        
+        *clk = 0;
+        *clk = 1;
         // Execute instruction
         exectute(inst, code);
-        
+        *clk = 0;
         #if(GNOME_DEBUGGING_ON==1) 
             char str[40];
             if (current_context == &normal_context) 
@@ -159,6 +168,8 @@ void gnome_start() {
         
         // Habilitar interrupciones entre instrucciones
         CYGlobalIntEnable;
+        
+        if (lcd_update) update_lcd(&lcd);
     }
 }
 
@@ -170,5 +181,6 @@ CY_ISR(gnome_process_it){
         current_context->PC = GNOME_IT_VECTOR;
     }
 }
+
 
 /* [] END OF FILE */

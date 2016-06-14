@@ -34,6 +34,11 @@
 #define GNOME_VIA_PORT1                 0x0F    // Registro mapeado en memoria para el puerto 1
 #define GNOME_VIA_PORT_SIZE             0x08    // Tamaño de la vía
     
+#define GNOME_LCD_MODULE_ACTIVE         0x01        // Pantalla LCD activa
+#define GNOME_LCD_MODULE_MSG1           "Nmbr1: "   // Mensaje 1
+#define GNOME_LCD_MODULE_MSG2           "Nmbr2: "   // Mensaje 2
+#define GNOME_LCD_MODULE_I2C_ADDR       0x27
+    
 // Registros Mapeados en Memoria (PSOC)
 #define GNOME_VIA_CONFIG_IN_ADDR        via8bits_Stat_Status_PTR 
 #define GNOME_VIA_CONFIG_OUT_ADDR       via8bits_Ctrl_Control_PTR
@@ -41,6 +46,10 @@
 #define GNOME_VIA_PORT0_OUT_ADDR        via8bits_P0_ctrl_Control_PTR
 #define GNOME_VIA_PORT1_IN_ADDR         via8bits_P1_stat_Status_PTR
 #define GNOME_VIA_PORT1_OUT_ADDR        via8bits_P1_ctrl_Control_PTR
+#define GNOME_VIA_GNOME_CLK_ADDR        via8bits_gnome_clk_Control_PTR
+
+#define GNOME_LCD_A_ADDR                LCD_gnome_A_reg_Status_PTR
+#define GNOME_LCD_B_ADDR                LCD_gnome_B_reg_Status_PTR
 
 // Optimizacion de registros, en caso de que el sintetizador elimine algun puerto de acceso por no ser utilizado
     
@@ -67,6 +76,14 @@
 #ifdef via8bits_P1_ctrl_Sync_ctrl_reg__REMOVED
     #define GNOME_VIA_PORT1_OUT_OPT_OUT 1u
 #endif
-    
+
+#ifdef LCD_gnome_A_reg_sts_sts_reg__REMOVED
+    #define GNOME_LCD_A_OPR_OUT 1u
+#endif
+
+#ifdef LCD_gnome_B_reg_sts_sts_reg__REMOVED
+    #define GNOME_LCD_B_OPR_OUT 1u
+#endif
+
 #endif // GNOME_CONFIG
 /* [] END OF FILE */

@@ -1,0 +1,6 @@
+C:\Users\Javier\Documents\PSoC Creator\Gnome\gnome2.0.cydsn\gnome2.0.cyprj|dd719234-eb77-42a9-92ec-7e2e1348b0f0
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d5e8a6af-44e3-4778-a8d1-dcecef2dc87a
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|448cc792-a861-434c-ae86-376d9ceb07e6
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|5664be80-4a87-42be-b244-4f6131b9193e
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b44f00e3-3560-452d-aa43-82f416204c85
+C:\Users\Javier\Documents\PSoC Creator\Gnome\gnome_cajas.cydsn\gnome_cajas.cyprj|abe95f86-7797-4692-9a88-1a27f96f77f9

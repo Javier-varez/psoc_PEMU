@@ -21,7 +21,8 @@ void gnome_store_reg(uint8_t regist) {
             case GNOME_VIA_CONFIG:
                 if(via_state.config_mask & 0x80) {
                     mem_mapped_reg = GNOME_VIA_CONFIG_OUT_ADDR;
-                    *mem_mapped_reg = current_context->accumulator & via_state.config_mask & ((1<<GNOME_WORD_SIZE) -1);
+                    intermediateValue = *mem_mapped_reg & ~via_state.config_mask; // Ponemos a cero los bit de la mascara
+                    *mem_mapped_reg = ((current_context->accumulator & via_state.config_mask) | intermediateValue) & ((1<<GNOME_WORD_SIZE) -1);
                     via_state.config_mask = 0;
                 } else {
                     // 0x80 indica una petición de escritura, incluso si la máscara es cero.
@@ -33,12 +34,11 @@ void gnome_store_reg(uint8_t regist) {
             case GNOME_VIA_PORT0:
                 mem_mapped_reg = GNOME_VIA_PORT0_OUT_ADDR;
                 if (via_state.port0_ptr) {
-                    current_context->accumulator = (((*mem_mapped_reg) & 0xF0) >> 4) & ((1<<GNOME_WORD_SIZE) -1);
                     intermediateValue = 0x0F & *mem_mapped_reg;
-                    *mem_mapped_reg =  (intermediateValue + (current_context->accumulator << 4)) & ((1<<GNOME_WORD_SIZE) -1);
+                    *mem_mapped_reg =  (intermediateValue + (current_context->accumulator << 4));
                 } else {
                     intermediateValue = 0xF0 & *mem_mapped_reg;
-                    *mem_mapped_reg =  (intermediateValue + current_context->accumulator) & ((1<<GNOME_WORD_SIZE) -1);
+                    *mem_mapped_reg =  (intermediateValue + current_context->accumulator);
                 }
                 via_state.port0_ptr = !via_state.port0_ptr;
                 break;
@@ -47,12 +47,11 @@ void gnome_store_reg(uint8_t regist) {
             case GNOME_VIA_PORT1:
                 mem_mapped_reg = GNOME_VIA_PORT1_OUT_ADDR;
                 if (via_state.port1_ptr) {
-                    current_context->accumulator = (((*mem_mapped_reg) & 0xF0) >> 4) & ((1<<GNOME_WORD_SIZE) -1);
                     intermediateValue = 0x0F & *mem_mapped_reg;
-                    *mem_mapped_reg =  (intermediateValue + (current_context->accumulator << 4)) & ((1<<GNOME_WORD_SIZE) -1);
+                    *mem_mapped_reg =  (intermediateValue + (current_context->accumulator << 4));
                 } else {
                     intermediateValue = 0xF0 & *mem_mapped_reg;
-                    *mem_mapped_reg =  (intermediateValue + current_context->accumulator) & ((1<<GNOME_WORD_SIZE) -1);
+                    *mem_mapped_reg =  (intermediateValue + current_context->accumulator);
                 }
                 via_state.port1_ptr = !via_state.port1_ptr;                
                 break;
