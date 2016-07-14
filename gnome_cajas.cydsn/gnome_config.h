@@ -35,10 +35,10 @@
 #define GNOME_VIA_PORT_SIZE             0x08    // Tamaño de la vía
     
 #define GNOME_LCD_MODULE_ACTIVE         0x01        // Pantalla LCD activa
-#define GNOME_LCD_MODULE_MSG1           "CG: "      // Mensaje 1
-#define GNOME_LCD_LINE_OFFSET1          4
-#define GNOME_LCD_MODULE_MSG2           "CP: "      // Mensaje 2
-#define GNOME_LCD_LINE_OFFSET2          4
+#define GNOME_LCD_MODULE_MSG1           "CG: 0x"      // Mensaje 1
+#define GNOME_LCD_LINE_OFFSET1          6
+#define GNOME_LCD_MODULE_MSG2           "CP: 0x"      // Mensaje 2
+#define GNOME_LCD_LINE_OFFSET2          6
 #define GNOME_LCD_MODULE_I2C_ADDR       0x27
     
 // Registros Mapeados en Memoria (PSOC)
@@ -93,11 +93,11 @@
 #endif
 
 #ifdef LCD_gnome_A_reg_sts_sts_reg__REMOVED
-    #define GNOME_LCD_A_OPR_OUT 1u
+    #define GNOME_LCD_A_OPT_OUT 1u
 #endif
 
 #ifdef LCD_gnome_B_reg_sts_sts_reg__REMOVED
-    #define GNOME_LCD_B_OPR_OUT 1u
+    #define GNOME_LCD_B_OPT_OUT 1u
 #endif
 
 #endif // GNOME_CONFIG

@@ -2,7 +2,7 @@
 --	Conversion of gnome_cajas.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Jun 14 09:55:17 2016
+--	Wed Jun 15 10:55:08 2016
 --
 
 USE cypress.cypress.all;
@@ -233,7 +233,7 @@ SIGNAL Net_842_2 : bit;
 SIGNAL Net_842_1 : bit;
 SIGNAL Net_842_0 : bit;
 SIGNAL Net_858 : bit;
-SIGNAL Net_861 : bit;
+SIGNAL Net_903 : bit;
 SIGNAL tmpOE__i2c_scl_net_0 : bit;
 SIGNAL tmpFB_0__i2c_scl_net_0 : bit;
 SIGNAL Net_640 : bit;
@@ -1495,9 +1495,9 @@ Net_842_6 <=  ('1') ;
 	OR (\Centr:v_1\ and \Centr:parocuenta\)
 	OR (\Centr:v_0\ and \Centr:parocuenta\));
 
-\Centr:temp_7\\D\ <= ((not P1_signal_7 and not Net_861 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_6 and P1_signal_5 and P1_signal_4 and P1_signal_3 and P1_signal_2 and P1_signal_1 and P1_signal_0)
+\Centr:temp_7\\D\ <= ((not P1_signal_7 and not Net_903 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_6 and P1_signal_5 and P1_signal_4 and P1_signal_3 and P1_signal_2 and P1_signal_1 and P1_signal_0)
 	OR (not \Centr:resetemp\ and P1_signal_7 and \Centr:parocuenta\)
-	OR (not \Centr:resetemp\ and P1_signal_7 and Net_861)
+	OR (not \Centr:resetemp\ and P1_signal_7 and Net_903)
 	OR (not P1_signal_0 and not \Centr:resetemp\ and P1_signal_7)
 	OR (not P1_signal_1 and not \Centr:resetemp\ and P1_signal_7)
 	OR (not P1_signal_2 and not \Centr:resetemp\ and P1_signal_7)
@@ -1506,9 +1506,9 @@ Net_842_6 <=  ('1') ;
 	OR (not P1_signal_5 and not \Centr:resetemp\ and P1_signal_7)
 	OR (not P1_signal_6 and not \Centr:resetemp\ and P1_signal_7));
 
-\Centr:temp_6\\D\ <= ((not P1_signal_6 and not Net_861 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_5 and P1_signal_4 and P1_signal_3 and P1_signal_2 and P1_signal_1 and P1_signal_0)
+\Centr:temp_6\\D\ <= ((not P1_signal_6 and not Net_903 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_5 and P1_signal_4 and P1_signal_3 and P1_signal_2 and P1_signal_1 and P1_signal_0)
 	OR (not \Centr:resetemp\ and P1_signal_6 and \Centr:parocuenta\)
-	OR (not \Centr:resetemp\ and P1_signal_6 and Net_861)
+	OR (not \Centr:resetemp\ and P1_signal_6 and Net_903)
 	OR (not P1_signal_0 and not \Centr:resetemp\ and P1_signal_6)
 	OR (not P1_signal_1 and not \Centr:resetemp\ and P1_signal_6)
 	OR (not P1_signal_2 and not \Centr:resetemp\ and P1_signal_6)
@@ -1516,50 +1516,50 @@ Net_842_6 <=  ('1') ;
 	OR (not P1_signal_4 and not \Centr:resetemp\ and P1_signal_6)
 	OR (not P1_signal_5 and not \Centr:resetemp\ and P1_signal_6));
 
-\Centr:temp_5\\D\ <= ((not P1_signal_5 and not Net_861 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_4 and P1_signal_3 and P1_signal_2 and P1_signal_1 and P1_signal_0)
+\Centr:temp_5\\D\ <= ((not P1_signal_5 and not Net_903 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_4 and P1_signal_3 and P1_signal_2 and P1_signal_1 and P1_signal_0)
 	OR (not \Centr:resetemp\ and P1_signal_5 and \Centr:parocuenta\)
-	OR (not \Centr:resetemp\ and P1_signal_5 and Net_861)
+	OR (not \Centr:resetemp\ and P1_signal_5 and Net_903)
 	OR (not P1_signal_0 and not \Centr:resetemp\ and P1_signal_5)
 	OR (not P1_signal_1 and not \Centr:resetemp\ and P1_signal_5)
 	OR (not P1_signal_2 and not \Centr:resetemp\ and P1_signal_5)
 	OR (not P1_signal_3 and not \Centr:resetemp\ and P1_signal_5)
 	OR (not P1_signal_4 and not \Centr:resetemp\ and P1_signal_5));
 
-\Centr:temp_4\\D\ <= ((not P1_signal_4 and not Net_861 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_3 and P1_signal_2 and P1_signal_1 and P1_signal_0)
+\Centr:temp_4\\D\ <= ((not P1_signal_4 and not Net_903 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_3 and P1_signal_2 and P1_signal_1 and P1_signal_0)
 	OR (not \Centr:resetemp\ and P1_signal_4 and \Centr:parocuenta\)
-	OR (not \Centr:resetemp\ and P1_signal_4 and Net_861)
+	OR (not \Centr:resetemp\ and P1_signal_4 and Net_903)
 	OR (not P1_signal_0 and not \Centr:resetemp\ and P1_signal_4)
 	OR (not P1_signal_1 and not \Centr:resetemp\ and P1_signal_4)
 	OR (not P1_signal_2 and not \Centr:resetemp\ and P1_signal_4)
 	OR (not P1_signal_3 and not \Centr:resetemp\ and P1_signal_4));
 
-\Centr:temp_3\\D\ <= ((not P1_signal_3 and not Net_861 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_2 and P1_signal_1 and P1_signal_0)
+\Centr:temp_3\\D\ <= ((not P1_signal_3 and not Net_903 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_2 and P1_signal_1 and P1_signal_0)
 	OR (not \Centr:resetemp\ and P1_signal_3 and \Centr:parocuenta\)
-	OR (not \Centr:resetemp\ and P1_signal_3 and Net_861)
+	OR (not \Centr:resetemp\ and P1_signal_3 and Net_903)
 	OR (not P1_signal_0 and not \Centr:resetemp\ and P1_signal_3)
 	OR (not P1_signal_1 and not \Centr:resetemp\ and P1_signal_3)
 	OR (not P1_signal_2 and not \Centr:resetemp\ and P1_signal_3));
 
-\Centr:temp_2\\D\ <= ((not P1_signal_2 and not Net_861 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_1 and P1_signal_0)
+\Centr:temp_2\\D\ <= ((not P1_signal_2 and not Net_903 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_1 and P1_signal_0)
 	OR (not \Centr:resetemp\ and P1_signal_2 and \Centr:parocuenta\)
-	OR (not \Centr:resetemp\ and P1_signal_2 and Net_861)
+	OR (not \Centr:resetemp\ and P1_signal_2 and Net_903)
 	OR (not P1_signal_0 and not \Centr:resetemp\ and P1_signal_2)
 	OR (not P1_signal_1 and not \Centr:resetemp\ and P1_signal_2));
 
-\Centr:temp_1\\D\ <= ((not P1_signal_1 and not Net_861 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_0)
+\Centr:temp_1\\D\ <= ((not P1_signal_1 and not Net_903 and not \Centr:resetemp\ and not \Centr:parocuenta\ and P1_signal_0)
 	OR (not \Centr:resetemp\ and P1_signal_1 and \Centr:parocuenta\)
-	OR (not \Centr:resetemp\ and P1_signal_1 and Net_861)
+	OR (not \Centr:resetemp\ and P1_signal_1 and Net_903)
 	OR (not P1_signal_0 and not \Centr:resetemp\ and P1_signal_1));
 
-\Centr:temp_0\\D\ <= ((not P1_signal_0 and not Net_861 and not \Centr:resetemp\ and not \Centr:parocuenta\)
+\Centr:temp_0\\D\ <= ((not P1_signal_0 and not Net_903 and not \Centr:resetemp\ and not \Centr:parocuenta\)
 	OR (not \Centr:resetemp\ and P1_signal_0 and \Centr:parocuenta\)
-	OR (not \Centr:resetemp\ and P1_signal_0 and Net_861));
+	OR (not \Centr:resetemp\ and P1_signal_0 and Net_903));
 
-\Centr:state_1\\D\ <= ((Net_20 and Net_861 and \Centr:state_0\)
+\Centr:state_1\\D\ <= ((Net_20 and Net_903 and \Centr:state_0\)
 	OR (\Centr:state_1\ and \Centr:state_0\)
 	OR (Net_20 and \Centr:state_1\));
 
-\Centr:state_0\\D\ <= ((not Net_861 and not \Centr:state_1\)
+\Centr:state_0\\D\ <= ((not Net_903 and not \Centr:state_1\)
 	OR (\Centr:state_1\ and \Centr:state_0\)
 	OR (not Net_20 and \Centr:state_0\));
 
@@ -2080,7 +2080,7 @@ Button:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(Net_842_6),
 		y=>(zero),
-		fb=>Net_861,
+		fb=>Net_903,
 		analog=>(open),
 		io=>(tmpIO_0__Button_net_0),
 		siovref=>(tmpSIOVREF__Button_net_0),

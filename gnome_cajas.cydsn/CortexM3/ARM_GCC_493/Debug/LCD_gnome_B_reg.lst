@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
   29:.\Generated_Source\PSoC5/LCD_gnome_B_reg.c **** *
   30:.\Generated_Source\PSoC5/LCD_gnome_B_reg.c **** * Parameters:
   31:.\Generated_Source\PSoC5/LCD_gnome_B_reg.c **** *  None.
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/LCD_gnome_B_reg.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
   54              		@ args = 0, pretend = 0, frame = 0
   55              		@ frame_needed = 0, uses_anonymous_args = 0
   56 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 3
 
 
   57              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
   88              		.cfi_startproc
   89              		@ args = 0, pretend = 0, frame = 0
   90              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 4
 
 
   91 0000 08B5     		push	{r3, lr}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  122              		.loc 1 104 0
  123              		.cfi_startproc
  124              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 5
 
 
  125              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  129:.\Generated_Source\PSoC5/LCD_gnome_B_reg.c **** }
  155              		.loc 1 129 0
  156 0004 7047     		bx	lr
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 6
 
 
  157              	.L17:
@@ -322,14 +322,14 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  175 000c 61000000 		.4byte	.LASF21
  176 0010 01       		.byte	0x1
  177 0011 3C010000 		.4byte	.LASF22
- 178 0015 D0010000 		.4byte	.LASF23
+ 178 0015 B1010000 		.4byte	.LASF23
  179 0019 00000000 		.4byte	.Ldebug_ranges0+0
  180 001d 00000000 		.4byte	0
  181 0021 00000000 		.4byte	.Ldebug_line0
  182 0025 02       		.uleb128 0x2
  183 0026 01       		.byte	0x1
  184 0027 06       		.byte	0x6
- 185 0028 C4010000 		.4byte	.LASF0
+ 185 0028 0D020000 		.4byte	.LASF0
  186 002c 02       		.uleb128 0x2
  187 002d 01       		.byte	0x1
  188 002e 08       		.byte	0x8
@@ -337,11 +337,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  190 0033 02       		.uleb128 0x2
  191 0034 02       		.byte	0x2
  192 0035 05       		.byte	0x5
- 193 0036 2B020000 		.4byte	.LASF2
+ 193 0036 35020000 		.4byte	.LASF2
  194 003a 02       		.uleb128 0x2
  195 003b 02       		.byte	0x2
  196 003c 07       		.byte	0x7
- 197 003d B1010000 		.4byte	.LASF3
+ 197 003d FA010000 		.4byte	.LASF3
  198 0041 02       		.uleb128 0x2
  199 0042 04       		.byte	0x4
  200 0043 05       		.byte	0x5
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  211 0057 08       		.byte	0x8
  212 0058 07       		.byte	0x7
  213 0059 4A000000 		.4byte	.LASF7
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 7
 
 
  214 005d 03       		.uleb128 0x3
@@ -377,7 +377,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  227 0077 02       		.uleb128 0x2
  228 0078 04       		.byte	0x4
  229 0079 04       		.byte	0x4
- 230 007a 25020000 		.4byte	.LASF9
+ 230 007a 2F020000 		.4byte	.LASF9
  231 007e 02       		.uleb128 0x2
  232 007f 08       		.byte	0x8
  233 0080 04       		.byte	0x4
@@ -387,7 +387,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  237 0087 08       		.byte	0x8
  238 0088 37010000 		.4byte	.LASF11
  239 008c 04       		.uleb128 0x4
- 240 008d 35020000 		.4byte	.LASF13
+ 240 008d 3F020000 		.4byte	.LASF13
  241 0091 02       		.byte	0x2
  242 0092 E201     		.2byte	0x1e2
  243 0094 98000000 		.4byte	0x98
@@ -396,7 +396,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  246 009d 02       		.uleb128 0x2
  247 009e 04       		.byte	0x4
  248 009f 07       		.byte	0x7
- 249 00a0 3A020000 		.4byte	.LASF14
+ 249 00a0 44020000 		.4byte	.LASF14
  250 00a4 06       		.uleb128 0x6
  251 00a5 EF000000 		.4byte	.LASF19
  252 00a9 01       		.byte	0x1
@@ -416,9 +416,9 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  266 00c9 9C       		.byte	0x9c
  267 00ca F0000000 		.4byte	0xf0
  268 00ce 08       		.uleb128 0x8
- 269 00cf 43020000 		.4byte	.LASF17
+ 269 00cf 4D020000 		.4byte	.LASF17
  270 00d3 01       		.byte	0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 8
 
 
  271 00d4 3B       		.byte	0x3b
@@ -441,7 +441,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  288 0100 9C       		.byte	0x9c
  289 0101 27010000 		.4byte	0x127
  290 0105 08       		.uleb128 0x8
- 291 0106 43020000 		.4byte	.LASF17
+ 291 0106 4D020000 		.4byte	.LASF17
  292 010a 01       		.byte	0x1
  293 010b 52       		.byte	0x52
  294 010c 6B000000 		.4byte	0x6b
@@ -454,7 +454,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  301 0122 6A010000 		.4byte	0x16a
  302 0126 00       		.byte	0
  303 0127 07       		.uleb128 0x7
- 304 0128 52020000 		.4byte	.LASF18
+ 304 0128 5C020000 		.4byte	.LASF18
  305 012c 01       		.byte	0x1
  306 012d 67       		.byte	0x67
  307 012e 00000000 		.4byte	.LFB3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  325 0155 00000000 		.4byte	.LFB4
  326 0159 0C000000 		.4byte	.LFE4-.LFB4
  327 015d 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 9
 
 
  328 015e 9C       		.byte	0x9c
@@ -488,7 +488,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  332 0165 7E       		.byte	0x7e
  333 0166 6B000000 		.4byte	0x6b
  334 016a 0C       		.uleb128 0xc
- 335 016b 0F020000 		.4byte	.LASF26
+ 335 016b 19020000 		.4byte	.LASF26
  336 016f 03       		.byte	0x3
  337 0170 7F       		.byte	0x7f
  338 0171 0D       		.uleb128 0xd
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  382 0026 08       		.uleb128 0x8
  383 0027 00       		.byte	0
  384 0028 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 10
 
 
  385 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  439 0060 3B       		.uleb128 0x3b
  440 0061 0B       		.uleb128 0xb
  441 0062 27       		.uleb128 0x27
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 11
 
 
  442 0063 19       		.uleb128 0x19
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  496 009c 00       		.byte	0
  497 009d 3F       		.uleb128 0x3f
  498 009e 19       		.uleb128 0x19
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 12
 
 
  499 009f 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  553 0022 00000000 		.4byte	0
  554              		.section	.debug_aranges,"",%progbits
  555 0000 3C000000 		.4byte	0x3c
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 13
 
 
  556 0004 0200     		.2byte	0x2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  596      65637469 
  597              	.LASF12:
  598 0032 75696E74 		.ascii	"uint8\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 14
 
 
  598      3800
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  618      6E657261 
  618      7465645F 
  618      536F7572 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 15
 
 
  618      63655C50 
@@ -861,57 +861,57 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 1
  626 01a8 6C6F6E67 		.ascii	"long int\000"
  626      20696E74 
  626      00
- 627              	.LASF3:
- 628 01b1 73686F72 		.ascii	"short unsigned int\000"
- 628      7420756E 
- 628      7369676E 
- 628      65642069 
- 628      6E7400
- 629              	.LASF0:
- 630 01c4 7369676E 		.ascii	"signed char\000"
- 630      65642063 
- 630      68617200 
- 631              	.LASF23:
- 632 01d0 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\Gnome\\"
- 632      73657273 
- 632      5C4A6176 
- 632      6965725C 
- 632      446F6375 
- 633 01fd 676E6F6D 		.ascii	"gnome_cajas.cydsn\000"
- 633      655F6361 
- 633      6A61732E 
- 633      63796473 
- 633      6E00
+ 627              	.LASF23:
+ 628 01b1 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 628      73657273 
+ 628      5C4A6176 
+ 628      6965725C 
+ 628      446F6375 
+ 629 01df 6F726B73 		.ascii	"orkspace\\gnome_cajas.cydsn\000"
+ 629      70616365 
+ 629      5C676E6F 
+ 629      6D655F63 
+ 629      616A6173 
+ 630              	.LASF3:
+ 631 01fa 73686F72 		.ascii	"short unsigned int\000"
+ 631      7420756E 
+ 631      7369676E 
+ 631      65642069 
+ 631      6E7400
+ 632              	.LASF0:
+ 633 020d 7369676E 		.ascii	"signed char\000"
+ 633      65642063 
+ 633      68617200 
  634              	.LASF26:
- 635 020f 43794578 		.ascii	"CyExitCriticalSection\000"
+ 635 0219 43794578 		.ascii	"CyExitCriticalSection\000"
  635      69744372 
  635      69746963 
  635      616C5365 
  635      6374696F 
  636              	.LASF9:
- 637 0225 666C6F61 		.ascii	"float\000"
+ 637 022f 666C6F61 		.ascii	"float\000"
  637      7400
  638              	.LASF2:
- 639 022b 73686F72 		.ascii	"short int\000"
+ 639 0235 73686F72 		.ascii	"short int\000"
  639      7420696E 
  639      7400
  640              	.LASF13:
- 641 0235 72656738 		.ascii	"reg8\000"
+ 641 023f 72656738 		.ascii	"reg8\000"
  641      00
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3ULUTe.s 			page 16
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc0Rb6J7.s 			page 16
 
 
  642              	.LASF14:
- 643 023a 73697A65 		.ascii	"sizetype\000"
+ 643 0244 73697A65 		.ascii	"sizetype\000"
  643      74797065 
  643      00
  644              	.LASF17:
- 645 0243 696E7465 		.ascii	"interruptState\000"
+ 645 024d 696E7465 		.ascii	"interruptState\000"
  645      72727570 
  645      74537461 
  645      746500
  646              	.LASF18:
- 647 0252 4C43445F 		.ascii	"LCD_gnome_B_reg_WriteMask\000"
+ 647 025c 4C43445F 		.ascii	"LCD_gnome_B_reg_WriteMask\000"
  647      676E6F6D 
  647      655F425F 
  647      7265675F 

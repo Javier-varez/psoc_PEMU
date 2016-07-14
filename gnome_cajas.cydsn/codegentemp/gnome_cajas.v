@@ -1,6 +1,6 @@
 // ======================================================================
 // gnome_cajas.v generated from TopDesign.cysch
-// 06/14/2016 at 09:55
+// 06/15/2016 at 10:55
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -503,11 +503,11 @@ endmodule
 `endif
 
 `ifdef WARP
-`define CY_BLK_DIR "C:\Users\Javier\Documents\PSoC Creator\Gnome\gnome_cajas.cydsn\Centr"
-`include "C:\Users\Javier\Documents\PSoC Creator\Gnome\gnome_cajas.cydsn\Centr\Centr.v"
+`define CY_BLK_DIR "C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\Centr"
+`include "C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\Centr\Centr.v"
 `else
-`define CY_BLK_DIR "C:\Users\Javier\Documents\PSoC Creator\Gnome\gnome_cajas.cydsn\Centr"
-`include "C:\Users\Javier\Documents\PSoC Creator\Gnome\gnome_cajas.cydsn\Centr\Centr.v"
+`define CY_BLK_DIR "C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\Centr"
+`include "C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\Centr\Centr.v"
 `endif
 
 // Component: cy_virtualmux_v1_0
@@ -952,7 +952,7 @@ module top ;
           wire [7:0] P1_signal;
           wire  Net_233;
           wire  Net_858;
-          wire  Net_861;
+          wire  Net_903;
           wire  Net_869;
           wire  Net_811;
           wire  Net_34;
@@ -1013,7 +1013,7 @@ module top ;
     assign Net_842[7:0] = 8'h6E;
 
 
-    assign Net_858 = ~Net_861;
+    assign Net_858 = ~Net_903;
 
 
 	cy_clock_v1_0
@@ -1239,7 +1239,7 @@ module top ;
 		Button
 		 (.oe(tmpOE__Button_net),
 		  .y({1'b0}),
-		  .fb({Net_861}),
+		  .fb({Net_903}),
 		  .io({tmpIO_0__Button_net[0:0]}),
 		  .siovref(tmpSIOVREF__Button_net),
 		  .interrupt({tmpINTERRUPT_0__Button_net[0:0]}),

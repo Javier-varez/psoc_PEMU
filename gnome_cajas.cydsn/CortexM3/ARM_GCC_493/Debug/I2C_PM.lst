@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
   29:.\Generated_Source\PSoC5/I2C_PM.c **** #endif /* (I2C_FF_IMPLEMENTED) */
   30:.\Generated_Source\PSoC5/I2C_PM.c **** 
   31:.\Generated_Source\PSoC5/I2C_PM.c **** #if (I2C_TIMEOUT_ENABLED)
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/I2C_PM.c ****     I2C_DEFAULT_TMOUT_PERIOD,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
   32              		.loc 1 80 0
   33 0000 084B     		ldr	r3, .L2
   34 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 3
 
 
   35 0004 084B     		ldr	r3, .L2+4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
   96:.\Generated_Source\PSoC5/I2C_PM.c ****     *  2) Wait unti I2C is ready go to Sleep; !!
   97:.\Generated_Source\PSoC5/I2C_PM.c ****     *  3) These bits are cleared on wake up.
   98:.\Generated_Source\PSoC5/I2C_PM.c ****     */
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 4
 
 
   99:.\Generated_Source\PSoC5/I2C_PM.c ****     /* Wait when block is ready for sleep */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
   74              		.loc 1 152 0
   75              		.cfi_startproc
   76              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 5
 
 
   77              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  112              	I2C_RestoreConfig:
  113              	.LFB2:
  172:.\Generated_Source\PSoC5/I2C_PM.c **** }
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 6
 
 
  173:.\Generated_Source\PSoC5/I2C_PM.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  126 000a 0DD0     		beq	.L10
  215:.\Generated_Source\PSoC5/I2C_PM.c ****     /* Low power mode was Sleep - backup regulator is enabled */
  216:.\Generated_Source\PSoC5/I2C_PM.c ****     {
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 7
 
 
  217:.\Generated_Source\PSoC5/I2C_PM.c ****         /* Enable backup regulator in active mode */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  155 0036 D978     		ldrb	r1, [r3, #3]	@ zero_extendqisi2
  156 0038 0C3A     		subs	r2, r2, #12
  157 003a 1170     		strb	r1, [r2]
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 8
 
 
  243:.\Generated_Source\PSoC5/I2C_PM.c ****         I2C_CLKDIV1_REG = I2C_backup.clkDiv1;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  269:.\Generated_Source\PSoC5/I2C_PM.c **** * Function Name: I2C_Wakeup
  270:.\Generated_Source\PSoC5/I2C_PM.c **** ********************************************************************************
  271:.\Generated_Source\PSoC5/I2C_PM.c **** *
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 9
 
 
  272:.\Generated_Source\PSoC5/I2C_PM.c **** * Summary:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  308:.\Generated_Source\PSoC5/I2C_PM.c ****         I2C_EnableInt();
  204              		.loc 1 308 0
  205 0010 4FF40042 		mov	r2, #32768
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 10
 
 
  206 0014 024B     		ldr	r3, .L18+4
@@ -578,17 +578,17 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  240 0006 00000000 		.4byte	.Ldebug_abbrev0
  241 000a 04       		.byte	0x4
  242 000b 01       		.uleb128 0x1
- 243 000c 05010000 		.4byte	.LASF29
+ 243 000c 0A010000 		.4byte	.LASF29
  244 0010 01       		.byte	0x1
- 245 0011 34000000 		.4byte	.LASF30
- 246 0015 65000000 		.4byte	.LASF31
+ 245 0011 6D000000 		.4byte	.LASF30
+ 246 0015 0B000000 		.4byte	.LASF31
  247 0019 00000000 		.4byte	.Ldebug_ranges0+0
  248 001d 00000000 		.4byte	0
  249 0021 00000000 		.4byte	.Ldebug_line0
  250 0025 02       		.uleb128 0x2
  251 0026 01       		.byte	0x1
  252 0027 06       		.byte	0x6
- 253 0028 52020000 		.4byte	.LASF0
+ 253 0028 5C020000 		.4byte	.LASF0
  254 002c 02       		.uleb128 0x2
  255 002d 01       		.byte	0x1
  256 002e 08       		.byte	0x8
@@ -596,26 +596,26 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  258 0033 02       		.uleb128 0x2
  259 0034 02       		.byte	0x2
  260 0035 05       		.byte	0x5
- 261 0036 19020000 		.4byte	.LASF2
+ 261 0036 23020000 		.4byte	.LASF2
  262 003a 02       		.uleb128 0x2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 11
 
 
  263 003b 02       		.byte	0x2
  264 003c 07       		.byte	0x7
- 265 003d 21000000 		.4byte	.LASF3
+ 265 003d 5A000000 		.4byte	.LASF3
  266 0041 02       		.uleb128 0x2
  267 0042 04       		.byte	0x4
  268 0043 05       		.byte	0x5
- 269 0044 29020000 		.4byte	.LASF4
+ 269 0044 33020000 		.4byte	.LASF4
  270 0048 02       		.uleb128 0x2
  271 0049 04       		.byte	0x4
  272 004a 07       		.byte	0x7
- 273 004b CE000000 		.4byte	.LASF5
+ 273 004b D3000000 		.4byte	.LASF5
  274 004f 02       		.uleb128 0x2
  275 0050 08       		.byte	0x8
  276 0051 05       		.byte	0x5
- 277 0052 EF010000 		.4byte	.LASF6
+ 277 0052 F9010000 		.4byte	.LASF6
  278 0056 02       		.uleb128 0x2
  279 0057 08       		.byte	0x8
  280 0058 07       		.byte	0x7
@@ -627,38 +627,38 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  286 0064 02       		.uleb128 0x2
  287 0065 04       		.byte	0x4
  288 0066 07       		.byte	0x7
- 289 0067 9C010000 		.4byte	.LASF8
+ 289 0067 A1010000 		.4byte	.LASF8
  290 006b 04       		.uleb128 0x4
- 291 006c 23020000 		.4byte	.LASF9
+ 291 006c 2D020000 		.4byte	.LASF9
  292 0070 02       		.byte	0x2
  293 0071 3801     		.2byte	0x138
  294 0073 2C000000 		.4byte	0x2c
  295 0077 04       		.uleb128 0x4
- 296 0078 F7000000 		.4byte	.LASF10
+ 296 0078 FC000000 		.4byte	.LASF10
  297 007c 02       		.byte	0x2
  298 007d 3901     		.2byte	0x139
  299 007f 3A000000 		.4byte	0x3a
  300 0083 04       		.uleb128 0x4
- 301 0084 FE000000 		.4byte	.LASF11
+ 301 0084 03010000 		.4byte	.LASF11
  302 0088 02       		.byte	0x2
  303 0089 3A01     		.2byte	0x13a
  304 008b 48000000 		.4byte	0x48
  305 008f 02       		.uleb128 0x2
  306 0090 04       		.byte	0x4
  307 0091 04       		.byte	0x4
- 308 0092 1B000000 		.4byte	.LASF12
+ 308 0092 9E000000 		.4byte	.LASF12
  309 0096 02       		.uleb128 0x2
  310 0097 08       		.byte	0x8
  311 0098 04       		.byte	0x4
- 312 0099 F0000000 		.4byte	.LASF13
+ 312 0099 F5000000 		.4byte	.LASF13
  313 009d 02       		.uleb128 0x2
  314 009e 01       		.byte	0x1
  315 009f 08       		.byte	0x8
- 316 00a0 FD010000 		.4byte	.LASF14
+ 316 00a0 07020000 		.4byte	.LASF14
  317 00a4 04       		.uleb128 0x4
- 318 00a5 C9000000 		.4byte	.LASF15
+ 318 00a5 EB010000 		.4byte	.LASF15
  319 00a9 02       		.byte	0x2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 12
 
 
  320 00aa E201     		.2byte	0x1e2
@@ -666,7 +666,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  322 00b0 05       		.uleb128 0x5
  323 00b1 6B000000 		.4byte	0x6b
  324 00b5 04       		.uleb128 0x4
- 325 00b6 15000000 		.4byte	.LASF16
+ 325 00b6 54000000 		.4byte	.LASF16
  326 00ba 02       		.byte	0x2
  327 00bb E401     		.2byte	0x1e4
  328 00bd C1000000 		.4byte	0xc1
@@ -675,20 +675,20 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  331 00c6 02       		.uleb128 0x2
  332 00c7 04       		.byte	0x4
  333 00c8 07       		.byte	0x7
- 334 00c9 E6010000 		.4byte	.LASF17
+ 334 00c9 F0010000 		.4byte	.LASF17
  335 00cd 06       		.uleb128 0x6
  336 00ce 06       		.byte	0x6
  337 00cf 03       		.byte	0x3
  338 00d0 76       		.byte	0x76
  339 00d1 1E010000 		.4byte	0x11e
  340 00d5 07       		.uleb128 0x7
- 341 00d6 32020000 		.4byte	.LASF18
+ 341 00d6 3C020000 		.4byte	.LASF18
  342 00da 03       		.byte	0x3
  343 00db 78       		.byte	0x78
  344 00dc 6B000000 		.4byte	0x6b
  345 00e0 00       		.byte	0
  346 00e1 07       		.uleb128 0x7
- 347 00e2 02020000 		.4byte	.LASF19
+ 347 00e2 0C020000 		.4byte	.LASF19
  348 00e6 03       		.byte	0x3
  349 00e7 7B       		.byte	0x7b
  350 00e8 6B000000 		.4byte	0x6b
@@ -700,34 +700,34 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  356 00f4 6B000000 		.4byte	0x6b
  357 00f8 02       		.byte	0x2
  358 00f9 07       		.uleb128 0x7
- 359 00fa E0000000 		.4byte	.LASF20
+ 359 00fa E5000000 		.4byte	.LASF20
  360 00fe 03       		.byte	0x3
  361 00ff 7D       		.byte	0x7d
  362 0100 6B000000 		.4byte	0x6b
  363 0104 03       		.byte	0x3
  364 0105 07       		.uleb128 0x7
- 365 0106 BF010000 		.4byte	.LASF21
+ 365 0106 C4010000 		.4byte	.LASF21
  366 010a 03       		.byte	0x3
  367 010b 7E       		.byte	0x7e
  368 010c 6B000000 		.4byte	0x6b
  369 0110 04       		.byte	0x4
  370 0111 07       		.uleb128 0x7
- 371 0112 C7010000 		.4byte	.LASF22
+ 371 0112 CC010000 		.4byte	.LASF22
  372 0116 03       		.byte	0x3
  373 0117 7F       		.byte	0x7f
  374 0118 6B000000 		.4byte	0x6b
  375 011c 05       		.byte	0x5
  376 011d 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 13
 
 
  377 011e 09       		.uleb128 0x9
- 378 011f 07020000 		.4byte	.LASF23
+ 378 011f 11020000 		.4byte	.LASF23
  379 0123 03       		.byte	0x3
  380 0124 89       		.byte	0x89
  381 0125 CD000000 		.4byte	0xcd
  382 0129 0A       		.uleb128 0xa
- 383 012a 56000000 		.4byte	.LASF32
+ 383 012a 8F000000 		.4byte	.LASF32
  384 012e 01       		.byte	0x1
  385 012f 48       		.byte	0x48
  386 0130 00000000 		.4byte	.LFB0
@@ -735,7 +735,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  388 0138 01       		.uleb128 0x1
  389 0139 9C       		.byte	0x9c
  390 013a 0B       		.uleb128 0xb
- 391 013b 0B000000 		.4byte	.LASF24
+ 391 013b C9000000 		.4byte	.LASF24
  392 013f 01       		.byte	0x1
  393 0140 97       		.byte	0x97
  394 0141 00000000 		.4byte	.LFB1
@@ -751,7 +751,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  404 015d 29010000 		.4byte	0x129
  405 0161 00       		.byte	0
  406 0162 0B       		.uleb128 0xb
- 407 0163 5E020000 		.4byte	.LASF25
+ 407 0163 68020000 		.4byte	.LASF25
  408 0167 01       		.byte	0x1
  409 0168 D1       		.byte	0xd1
  410 0169 00000000 		.4byte	.LFB2
@@ -760,7 +760,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  413 0172 9C       		.byte	0x9c
  414 0173 99010000 		.4byte	0x199
  415 0177 0D       		.uleb128 0xd
- 416 0178 93010000 		.4byte	.LASF33
+ 416 0178 98010000 		.4byte	.LASF33
  417 017c 01       		.byte	0x1
  418 017d D4       		.byte	0xd4
  419 017e 6B000000 		.4byte	0x6b
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  431 019f 2C01     		.2byte	0x12c
  432 01a1 00000000 		.4byte	.LFB3
  433 01a5 24000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 14
 
 
  434 01a9 01       		.uleb128 0x1
@@ -792,7 +792,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  442 01bd F6010000 		.4byte	0x1f6
  443 01c1 00       		.byte	0
  444 01c2 0F       		.uleb128 0xf
- 445 01c3 3E020000 		.4byte	.LASF34
+ 445 01c3 48020000 		.4byte	.LASF34
  446 01c7 01       		.byte	0x1
  447 01c8 11       		.byte	0x11
  448 01c9 1E010000 		.4byte	0x11e
@@ -800,16 +800,16 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  450 01ce 03       		.byte	0x3
  451 01cf 00000000 		.4byte	I2C_backup
  452 01d3 10       		.uleb128 0x10
- 453 01d4 49020000 		.4byte	.LASF27
+ 453 01d4 53020000 		.4byte	.LASF27
  454 01d8 03       		.byte	0x3
  455 01d9 94       		.byte	0x94
  456 01da 11       		.uleb128 0x11
- 457 01db CF010000 		.4byte	.LASF35
+ 457 01db D4010000 		.4byte	.LASF35
  458 01df 04       		.byte	0x4
  459 01e0 7E       		.byte	0x7e
  460 01e1 6B000000 		.4byte	0x6b
  461 01e5 12       		.uleb128 0x12
- 462 01e6 A9010000 		.4byte	.LASF36
+ 462 01e6 AE010000 		.4byte	.LASF36
  463 01ea 04       		.byte	0x4
  464 01eb 7F       		.byte	0x7f
  465 01ec F6010000 		.4byte	0x1f6
@@ -817,7 +817,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  467 01f1 6B000000 		.4byte	0x6b
  468 01f5 00       		.byte	0
  469 01f6 10       		.uleb128 0x10
- 470 01f7 E5000000 		.4byte	.LASF28
+ 470 01f7 EA000000 		.4byte	.LASF28
  471 01fb 03       		.byte	0x3
  472 01fc 91       		.byte	0x91
  473 01fd 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  488 000c 17       		.uleb128 0x17
  489 000d 11       		.uleb128 0x11
  490 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 15
 
 
  491 000f 10       		.uleb128 0x10
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  545 0045 0B       		.uleb128 0xb
  546 0046 01       		.uleb128 0x1
  547 0047 13       		.uleb128 0x13
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 16
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 16
 
 
  548 0048 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  602 007e 3B       		.uleb128 0x3b
  603 007f 0B       		.uleb128 0xb
  604 0080 27       		.uleb128 0x27
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 17
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 17
 
 
  605 0081 19       		.uleb128 0x19
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  659 00bb 49       		.uleb128 0x49
  660 00bc 13       		.uleb128 0x13
  661 00bd 02       		.uleb128 0x2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 18
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 18
 
 
  662 00be 17       		.uleb128 0x17
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  716 00f5 3B       		.uleb128 0x3b
  717 00f6 0B       		.uleb128 0xb
  718 00f7 27       		.uleb128 0x27
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 19
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 19
 
 
  719 00f8 19       		.uleb128 0x19
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  773 0000 10000000 		.4byte	.LVL2
  774 0004 1D000000 		.4byte	.LVL3-1
  775 0008 0100     		.2byte	0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 20
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 20
 
 
  776 000a 50       		.byte	0x50
@@ -1185,182 +1185,182 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 1
  813 0000 4932435F 		.ascii	"I2C_Wakeup\000"
  813      57616B65 
  813      757000
- 814              	.LASF24:
- 815 000b 4932435F 		.ascii	"I2C_Sleep\000"
- 815      536C6565 
- 815      7000
- 816              	.LASF16:
- 817 0015 72656733 		.ascii	"reg32\000"
- 817      3200
- 818              	.LASF12:
- 819 001b 666C6F61 		.ascii	"float\000"
- 819      7400
- 820              	.LASF3:
- 821 0021 73686F72 		.ascii	"short unsigned int\000"
- 821      7420756E 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 21
+ 814              	.LASF31:
+ 815 000b 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 815      73657273 
+ 815      5C4A6176 
+ 815      6965725C 
+ 815      446F6375 
+ 816 0039 6F726B73 		.ascii	"orkspace\\gnome_cajas.cydsn\000"
+ 816      70616365 
+ 816      5C676E6F 
+ 816      6D655F63 
+ 816      616A6173 
+ 817              	.LASF16:
+ 818 0054 72656733 		.ascii	"reg32\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 21
 
 
- 821      7369676E 
- 821      65642069 
- 821      6E7400
- 822              	.LASF30:
- 823 0034 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2C_PM.c\000"
- 823      6E657261 
- 823      7465645F 
- 823      536F7572 
- 823      63655C50 
- 824              	.LASF32:
- 825 0056 4932435F 		.ascii	"I2C_SaveConfig\000"
- 825      53617665 
- 825      436F6E66 
- 825      696700
- 826              	.LASF31:
- 827 0065 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\Gnome\\"
- 827      73657273 
- 827      5C4A6176 
- 827      6965725C 
- 827      446F6375 
- 828 0092 676E6F6D 		.ascii	"gnome_cajas.cydsn\000"
- 828      655F6361 
- 828      6A61732E 
- 828      63796473 
- 828      6E00
- 829              	.LASF7:
- 830 00a4 6C6F6E67 		.ascii	"long long unsigned int\000"
- 830      206C6F6E 
- 830      6720756E 
- 830      7369676E 
- 830      65642069 
- 831              	.LASF1:
- 832 00bb 756E7369 		.ascii	"unsigned char\000"
- 832      676E6564 
- 832      20636861 
- 832      7200
- 833              	.LASF15:
- 834 00c9 72656738 		.ascii	"reg8\000"
- 834      00
- 835              	.LASF5:
- 836 00ce 6C6F6E67 		.ascii	"long unsigned int\000"
- 836      20756E73 
- 836      69676E65 
- 836      6420696E 
- 836      7400
- 837              	.LASF20:
- 838 00e0 61646472 		.ascii	"addr\000"
- 838      00
- 839              	.LASF28:
- 840 00e5 4932435F 		.ascii	"I2C_Enable\000"
- 840      456E6162 
+ 818      3200
+ 819              	.LASF3:
+ 820 005a 73686F72 		.ascii	"short unsigned int\000"
+ 820      7420756E 
+ 820      7369676E 
+ 820      65642069 
+ 820      6E7400
+ 821              	.LASF30:
+ 822 006d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2C_PM.c\000"
+ 822      6E657261 
+ 822      7465645F 
+ 822      536F7572 
+ 822      63655C50 
+ 823              	.LASF32:
+ 824 008f 4932435F 		.ascii	"I2C_SaveConfig\000"
+ 824      53617665 
+ 824      436F6E66 
+ 824      696700
+ 825              	.LASF12:
+ 826 009e 666C6F61 		.ascii	"float\000"
+ 826      7400
+ 827              	.LASF7:
+ 828 00a4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 828      206C6F6E 
+ 828      6720756E 
+ 828      7369676E 
+ 828      65642069 
+ 829              	.LASF1:
+ 830 00bb 756E7369 		.ascii	"unsigned char\000"
+ 830      676E6564 
+ 830      20636861 
+ 830      7200
+ 831              	.LASF24:
+ 832 00c9 4932435F 		.ascii	"I2C_Sleep\000"
+ 832      536C6565 
+ 832      7000
+ 833              	.LASF5:
+ 834 00d3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 834      20756E73 
+ 834      69676E65 
+ 834      6420696E 
+ 834      7400
+ 835              	.LASF20:
+ 836 00e5 61646472 		.ascii	"addr\000"
+ 836      00
+ 837              	.LASF28:
+ 838 00ea 4932435F 		.ascii	"I2C_Enable\000"
+ 838      456E6162 
+ 838      6C6500
+ 839              	.LASF13:
+ 840 00f5 646F7562 		.ascii	"double\000"
  840      6C6500
- 841              	.LASF13:
- 842 00f0 646F7562 		.ascii	"double\000"
- 842      6C6500
- 843              	.LASF10:
- 844 00f7 75696E74 		.ascii	"uint16\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 22
+ 841              	.LASF10:
+ 842 00fc 75696E74 		.ascii	"uint16\000"
+ 842      313600
+ 843              	.LASF11:
+ 844 0103 75696E74 		.ascii	"uint32\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 22
 
 
- 844      313600
- 845              	.LASF11:
- 846 00fe 75696E74 		.ascii	"uint32\000"
- 846      333200
- 847              	.LASF29:
- 848 0105 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 848      4320342E 
- 848      392E3320 
- 848      32303135 
- 848      30333033 
- 849 0138 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 849      20726576 
- 849      6973696F 
- 849      6E203232 
- 849      31323230 
- 850 016b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 850      66756E63 
- 850      74696F6E 
- 850      2D736563 
- 850      74696F6E 
- 851              	.LASF33:
- 852 0193 696E7453 		.ascii	"intState\000"
- 852      74617465 
+ 844      333200
+ 845              	.LASF29:
+ 846 010a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 846      4320342E 
+ 846      392E3320 
+ 846      32303135 
+ 846      30333033 
+ 847 013d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 847      20726576 
+ 847      6973696F 
+ 847      6E203232 
+ 847      31323230 
+ 848 0170 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 848      66756E63 
+ 848      74696F6E 
+ 848      2D736563 
+ 848      74696F6E 
+ 849              	.LASF33:
+ 850 0198 696E7453 		.ascii	"intState\000"
+ 850      74617465 
+ 850      00
+ 851              	.LASF8:
+ 852 01a1 756E7369 		.ascii	"unsigned int\000"
+ 852      676E6564 
+ 852      20696E74 
  852      00
- 853              	.LASF8:
- 854 019c 756E7369 		.ascii	"unsigned int\000"
- 854      676E6564 
- 854      20696E74 
- 854      00
- 855              	.LASF36:
- 856 01a9 43794578 		.ascii	"CyExitCriticalSection\000"
- 856      69744372 
- 856      69746963 
- 856      616C5365 
- 856      6374696F 
- 857              	.LASF21:
- 858 01bf 636C6B44 		.ascii	"clkDiv1\000"
- 858      69763100 
- 859              	.LASF22:
- 860 01c7 636C6B44 		.ascii	"clkDiv2\000"
- 860      69763200 
- 861              	.LASF35:
- 862 01cf 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 862      74657243 
- 862      72697469 
- 862      63616C53 
- 862      65637469 
+ 853              	.LASF36:
+ 854 01ae 43794578 		.ascii	"CyExitCriticalSection\000"
+ 854      69744372 
+ 854      69746963 
+ 854      616C5365 
+ 854      6374696F 
+ 855              	.LASF21:
+ 856 01c4 636C6B44 		.ascii	"clkDiv1\000"
+ 856      69763100 
+ 857              	.LASF22:
+ 858 01cc 636C6B44 		.ascii	"clkDiv2\000"
+ 858      69763200 
+ 859              	.LASF35:
+ 860 01d4 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 860      74657243 
+ 860      72697469 
+ 860      63616C53 
+ 860      65637469 
+ 861              	.LASF15:
+ 862 01eb 72656738 		.ascii	"reg8\000"
+ 862      00
  863              	.LASF17:
- 864 01e6 73697A65 		.ascii	"sizetype\000"
+ 864 01f0 73697A65 		.ascii	"sizetype\000"
  864      74797065 
  864      00
  865              	.LASF6:
- 866 01ef 6C6F6E67 		.ascii	"long long int\000"
+ 866 01f9 6C6F6E67 		.ascii	"long long int\000"
  866      206C6F6E 
  866      6720696E 
  866      7400
  867              	.LASF14:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc78UgpB.s 			page 23
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccOZu0fs.s 			page 23
 
 
- 868 01fd 63686172 		.ascii	"char\000"
+ 868 0207 63686172 		.ascii	"char\000"
  868      00
  869              	.LASF19:
- 870 0202 78636667 		.ascii	"xcfg\000"
+ 870 020c 78636667 		.ascii	"xcfg\000"
  870      00
  871              	.LASF23:
- 872 0207 4932435F 		.ascii	"I2C_BACKUP_STRUCT\000"
+ 872 0211 4932435F 		.ascii	"I2C_BACKUP_STRUCT\000"
  872      4241434B 
  872      55505F53 
  872      54525543 
  872      5400
  873              	.LASF2:
- 874 0219 73686F72 		.ascii	"short int\000"
+ 874 0223 73686F72 		.ascii	"short int\000"
  874      7420696E 
  874      7400
  875              	.LASF9:
- 876 0223 75696E74 		.ascii	"uint8\000"
+ 876 022d 75696E74 		.ascii	"uint8\000"
  876      3800
  877              	.LASF4:
- 878 0229 6C6F6E67 		.ascii	"long int\000"
+ 878 0233 6C6F6E67 		.ascii	"long int\000"
  878      20696E74 
  878      00
  879              	.LASF18:
- 880 0232 656E6162 		.ascii	"enableState\000"
+ 880 023c 656E6162 		.ascii	"enableState\000"
  880      6C655374 
  880      61746500 
  881              	.LASF34:
- 882 023e 4932435F 		.ascii	"I2C_backup\000"
+ 882 0248 4932435F 		.ascii	"I2C_backup\000"
  882      6261636B 
  882      757000
  883              	.LASF27:
- 884 0249 4932435F 		.ascii	"I2C_Stop\000"
+ 884 0253 4932435F 		.ascii	"I2C_Stop\000"
  884      53746F70 
  884      00
  885              	.LASF0:
- 886 0252 7369676E 		.ascii	"signed char\000"
+ 886 025c 7369676E 		.ascii	"signed char\000"
  886      65642063 
  886      68617200 
  887              	.LASF25:
- 888 025e 4932435F 		.ascii	"I2C_RestoreConfig\000"
+ 888 0268 4932435F 		.ascii	"I2C_RestoreConfig\000"
  888      52657374 
  888      6F726543 
  888      6F6E6669 

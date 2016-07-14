@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
   29:.\Generated_Source\PSoC5/via8bits_P1_stat.c **** *
   30:.\Generated_Source\PSoC5/via8bits_P1_stat.c **** * Parameters:
   31:.\Generated_Source\PSoC5/via8bits_P1_stat.c **** *  None.
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/via8bits_P1_stat.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
   54              		@ args = 0, pretend = 0, frame = 0
   55              		@ frame_needed = 0, uses_anonymous_args = 0
   56 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 3
 
 
   57              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
   88              		.cfi_startproc
   89              		@ args = 0, pretend = 0, frame = 0
   90              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 4
 
 
   91 0000 08B5     		push	{r3, lr}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  122              		.loc 1 104 0
  123              		.cfi_startproc
  124              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 5
 
 
  125              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  129:.\Generated_Source\PSoC5/via8bits_P1_stat.c **** }
  155              		.loc 1 129 0
  156 0004 7047     		bx	lr
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 6
 
 
  157              	.L17:
@@ -322,14 +322,14 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  175 000c 0E000000 		.4byte	.LASF21
  176 0010 01       		.byte	0x1
  177 0011 59010000 		.4byte	.LASF22
- 178 0015 F0010000 		.4byte	.LASF23
+ 178 0015 B0010000 		.4byte	.LASF23
  179 0019 00000000 		.4byte	.Ldebug_ranges0+0
  180 001d 00000000 		.4byte	0
  181 0021 00000000 		.4byte	.Ldebug_line0
  182 0025 02       		.uleb128 0x2
  183 0026 01       		.byte	0x1
  184 0027 06       		.byte	0x6
- 185 0028 E4010000 		.4byte	.LASF0
+ 185 0028 2D020000 		.4byte	.LASF0
  186 002c 02       		.uleb128 0x2
  187 002d 01       		.byte	0x1
  188 002e 08       		.byte	0x8
@@ -337,11 +337,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  190 0033 02       		.uleb128 0x2
  191 0034 02       		.byte	0x2
  192 0035 05       		.byte	0x5
- 193 0036 4B020000 		.4byte	.LASF2
+ 193 0036 55020000 		.4byte	.LASF2
  194 003a 02       		.uleb128 0x2
  195 003b 02       		.byte	0x2
  196 003c 07       		.byte	0x7
- 197 003d D1010000 		.4byte	.LASF3
+ 197 003d 1A020000 		.4byte	.LASF3
  198 0041 02       		.uleb128 0x2
  199 0042 04       		.byte	0x4
  200 0043 05       		.byte	0x5
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  211 0057 08       		.byte	0x8
  212 0058 07       		.byte	0x7
  213 0059 D8000000 		.4byte	.LASF7
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 7
 
 
  214 005d 03       		.uleb128 0x3
@@ -377,7 +377,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  227 0077 02       		.uleb128 0x2
  228 0078 04       		.byte	0x4
  229 0079 04       		.byte	0x4
- 230 007a 45020000 		.4byte	.LASF9
+ 230 007a 4F020000 		.4byte	.LASF9
  231 007e 02       		.uleb128 0x2
  232 007f 08       		.byte	0x8
  233 0080 04       		.byte	0x4
@@ -387,7 +387,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  237 0087 08       		.byte	0x8
  238 0088 85010000 		.4byte	.LASF11
  239 008c 04       		.uleb128 0x4
- 240 008d 55020000 		.4byte	.LASF13
+ 240 008d 5F020000 		.4byte	.LASF13
  241 0091 02       		.byte	0x2
  242 0092 E201     		.2byte	0x1e2
  243 0094 98000000 		.4byte	0x98
@@ -396,7 +396,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  246 009d 02       		.uleb128 0x2
  247 009e 04       		.byte	0x4
  248 009f 07       		.byte	0x7
- 249 00a0 5A020000 		.4byte	.LASF14
+ 249 00a0 64020000 		.4byte	.LASF14
  250 00a4 06       		.uleb128 0x6
  251 00a5 8A010000 		.4byte	.LASF19
  252 00a9 01       		.byte	0x1
@@ -407,7 +407,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  257 00b7 01       		.uleb128 0x1
  258 00b8 9C       		.byte	0x9c
  259 00b9 07       		.uleb128 0x7
- 260 00ba B0010000 		.4byte	.LASF15
+ 260 00ba F9010000 		.4byte	.LASF15
  261 00be 01       		.byte	0x1
  262 00bf 39       		.byte	0x39
  263 00c0 00000000 		.4byte	.LFB1
@@ -416,9 +416,9 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  266 00c9 9C       		.byte	0x9c
  267 00ca F0000000 		.4byte	0xf0
  268 00ce 08       		.uleb128 0x8
- 269 00cf 63020000 		.4byte	.LASF17
+ 269 00cf 6D020000 		.4byte	.LASF17
  270 00d3 01       		.byte	0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 8
 
 
  271 00d4 3B       		.byte	0x3b
@@ -441,7 +441,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  288 0100 9C       		.byte	0x9c
  289 0101 27010000 		.4byte	0x127
  290 0105 08       		.uleb128 0x8
- 291 0106 63020000 		.4byte	.LASF17
+ 291 0106 6D020000 		.4byte	.LASF17
  292 010a 01       		.byte	0x1
  293 010b 52       		.byte	0x52
  294 010c 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  325 0155 00000000 		.4byte	.LFB4
  326 0159 0C000000 		.4byte	.LFE4-.LFB4
  327 015d 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 9
 
 
  328 015e 9C       		.byte	0x9c
@@ -488,7 +488,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  332 0165 7E       		.byte	0x7e
  333 0166 6B000000 		.4byte	0x6b
  334 016a 0C       		.uleb128 0xc
- 335 016b 2F020000 		.4byte	.LASF26
+ 335 016b 39020000 		.4byte	.LASF26
  336 016f 03       		.byte	0x3
  337 0170 7F       		.byte	0x7f
  338 0171 0D       		.uleb128 0xd
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  382 0026 08       		.uleb128 0x8
  383 0027 00       		.byte	0
  384 0028 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 10
 
 
  385 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  439 0060 3B       		.uleb128 0x3b
  440 0061 0B       		.uleb128 0xb
  441 0062 27       		.uleb128 0x27
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 11
 
 
  442 0063 19       		.uleb128 0x19
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  496 009c 00       		.byte	0
  497 009d 3F       		.uleb128 0x3f
  498 009e 19       		.uleb128 0x19
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 12
 
 
  499 009f 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  553 0022 00000000 		.4byte	0
  554              		.section	.debug_aranges,"",%progbits
  555 0000 3C000000 		.4byte	0x3c
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 13
 
 
  556 0004 0200     		.2byte	0x2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  595      31323230 
  596 0074 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  596      66756E63 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 14
 
 
  596      74696F6E 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  616      7200
  617              	.LASF22:
  618 0159 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\via8bits_P1_stat.c\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 15
 
 
  618      6E657261 
@@ -861,58 +861,58 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 1
  625              	.LASF10:
  626 01a9 646F7562 		.ascii	"double\000"
  626      6C6500
- 627              	.LASF15:
- 628 01b0 76696138 		.ascii	"via8bits_P1_stat_InterruptEnable\000"
- 628      62697473 
- 628      5F50315F 
- 628      73746174 
- 628      5F496E74 
- 629              	.LASF3:
- 630 01d1 73686F72 		.ascii	"short unsigned int\000"
- 630      7420756E 
- 630      7369676E 
- 630      65642069 
- 630      6E7400
- 631              	.LASF0:
- 632 01e4 7369676E 		.ascii	"signed char\000"
- 632      65642063 
- 632      68617200 
- 633              	.LASF23:
- 634 01f0 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\Gnome\\"
- 634      73657273 
- 634      5C4A6176 
- 634      6965725C 
- 634      446F6375 
- 635 021d 676E6F6D 		.ascii	"gnome_cajas.cydsn\000"
- 635      655F6361 
- 635      6A61732E 
- 635      63796473 
- 635      6E00
+ 627              	.LASF23:
+ 628 01b0 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 628      73657273 
+ 628      5C4A6176 
+ 628      6965725C 
+ 628      446F6375 
+ 629 01de 6F726B73 		.ascii	"orkspace\\gnome_cajas.cydsn\000"
+ 629      70616365 
+ 629      5C676E6F 
+ 629      6D655F63 
+ 629      616A6173 
+ 630              	.LASF15:
+ 631 01f9 76696138 		.ascii	"via8bits_P1_stat_InterruptEnable\000"
+ 631      62697473 
+ 631      5F50315F 
+ 631      73746174 
+ 631      5F496E74 
+ 632              	.LASF3:
+ 633 021a 73686F72 		.ascii	"short unsigned int\000"
+ 633      7420756E 
+ 633      7369676E 
+ 633      65642069 
+ 633      6E7400
+ 634              	.LASF0:
+ 635 022d 7369676E 		.ascii	"signed char\000"
+ 635      65642063 
+ 635      68617200 
  636              	.LASF26:
- 637 022f 43794578 		.ascii	"CyExitCriticalSection\000"
+ 637 0239 43794578 		.ascii	"CyExitCriticalSection\000"
  637      69744372 
  637      69746963 
  637      616C5365 
  637      6374696F 
  638              	.LASF9:
- 639 0245 666C6F61 		.ascii	"float\000"
+ 639 024f 666C6F61 		.ascii	"float\000"
  639      7400
  640              	.LASF2:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccmKDxRP.s 			page 16
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cctEnvst.s 			page 16
 
 
- 641 024b 73686F72 		.ascii	"short int\000"
+ 641 0255 73686F72 		.ascii	"short int\000"
  641      7420696E 
  641      7400
  642              	.LASF13:
- 643 0255 72656738 		.ascii	"reg8\000"
+ 643 025f 72656738 		.ascii	"reg8\000"
  643      00
  644              	.LASF14:
- 645 025a 73697A65 		.ascii	"sizetype\000"
+ 645 0264 73697A65 		.ascii	"sizetype\000"
  645      74797065 
  645      00
  646              	.LASF17:
- 647 0263 696E7465 		.ascii	"interruptState\000"
+ 647 026d 696E7465 		.ascii	"interruptState\000"
  647      72727570 
  647      74537461 
  647      746500

@@ -23,7 +23,8 @@ void setup_lcd() {
         i2cLCD_Print(&lcd, GNOME_LCD_MODULE_MSG1);
         i2cLCD_SetPosition(&lcd, 1, 0);
         i2cLCD_Print(&lcd, GNOME_LCD_MODULE_MSG2);
-            
+        i2cLCD_SetBlink(&lcd,LCD_BLINKON);
+        
         CySysTickStart();
         CySysTickSetCallback(4,(void*)update_lcd_it);
         lcd_update = 1;
@@ -32,7 +33,7 @@ void setup_lcd() {
 }
 
 void update_lcd_it() {
-    if ((CySysTickGetValue() & 0xFF) == 0xFF) {
+    if ((CySysTickGetValue() & 0x3F) == 0x3F) {
         lcd_update = 1;
     }
 }
@@ -40,16 +41,16 @@ void update_lcd_it() {
 void update_lcd() {
     #if (GNOME_LCD_MODULE_ACTIVE) 
         char str[5];
-        #ifndef GNOME_LCD_A_OPR_OUT
+        #ifndef GNOME_LCD_A_OPT_OUT
             reg8* a = GNOME_LCD_A_ADDR;
             i2cLCD_SetPosition(&lcd, 0, GNOME_LCD_LINE_OFFSET1);
-            sprintf(str, "%03d", *a);
+            sprintf(str, "%02x", *a);
             i2cLCD_Print(&lcd, str);
         #endif
-        #ifndef GNOME_LCD_B_OPR_OUT 
+        #ifndef GNOME_LCD_B_OPT_OUT 
             reg8* b = GNOME_LCD_B_ADDR;
             i2cLCD_SetPosition(&lcd, 1, GNOME_LCD_LINE_OFFSET2);
-            sprintf(str, "%03d", *b);
+            sprintf(str, "%02x", *b);
             i2cLCD_Print(&lcd, str);
         #endif
         

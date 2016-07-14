@@ -1,5 +1,5 @@
 -- Project:   gnome_cajas
--- Generated: 06/14/2016 09:55:18
+-- Generated: 06/15/2016 10:55:09
 -- PSoC Creator  3.3 SP1
 
 ENTITY gnome_cajas IS
@@ -69,7 +69,6 @@ ARCHITECTURE __DEFAULT__ OF gnome_cajas IS
     SIGNAL Net_811_local : bit;
     SIGNAL Net_842_6 : bit;
     ATTRIBUTE POWER OF Net_842_6 : SIGNAL IS true;
-    SIGNAL Net_861 : bit;
     SIGNAL Net_870_0 : bit;
     ATTRIBUTE soft OF Net_870_0 : SIGNAL IS 1;
     SIGNAL Net_870_1 : bit;
@@ -81,6 +80,7 @@ ARCHITECTURE __DEFAULT__ OF gnome_cajas IS
     SIGNAL Net_870_7 : bit;
     ATTRIBUTE soft OF Net_870_7 : SIGNAL IS 1;
     SIGNAL Net_877 : bit;
+    SIGNAL Net_903 : bit;
     SIGNAL P1_signal_0 : bit;
     SIGNAL P1_signal_1 : bit;
     SIGNAL P1_signal_2 : bit;
@@ -870,7 +870,7 @@ BEGIN
         PORT MAP(
             pa_out => Button(0)__PA,
             oe => open,
-            fb => Net_861,
+            fb => Net_903,
             pad_in => Button(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -1695,7 +1695,7 @@ BEGIN
             main_5 => P1_signal_2,
             main_6 => P1_signal_1,
             main_7 => P1_signal_0,
-            main_8 => Net_861,
+            main_8 => Net_903,
             main_9 => \Centr:resetemp\,
             main_10 => \Centr:parocuenta\);
 
@@ -1716,7 +1716,7 @@ BEGIN
             main_4 => P1_signal_2,
             main_5 => P1_signal_1,
             main_6 => P1_signal_0,
-            main_7 => Net_861,
+            main_7 => Net_903,
             main_8 => \Centr:resetemp\,
             main_9 => \Centr:parocuenta\);
 
@@ -1736,7 +1736,7 @@ BEGIN
             main_3 => P1_signal_2,
             main_4 => P1_signal_1,
             main_5 => P1_signal_0,
-            main_6 => Net_861,
+            main_6 => Net_903,
             main_7 => \Centr:resetemp\,
             main_8 => \Centr:parocuenta\);
 
@@ -1755,7 +1755,7 @@ BEGIN
             main_2 => P1_signal_2,
             main_3 => P1_signal_1,
             main_4 => P1_signal_0,
-            main_5 => Net_861,
+            main_5 => Net_903,
             main_6 => \Centr:resetemp\,
             main_7 => \Centr:parocuenta\);
 
@@ -1773,7 +1773,7 @@ BEGIN
             main_1 => P1_signal_2,
             main_2 => P1_signal_1,
             main_3 => P1_signal_0,
-            main_4 => Net_861,
+            main_4 => Net_903,
             main_5 => \Centr:resetemp\,
             main_6 => \Centr:parocuenta\);
 
@@ -1790,7 +1790,7 @@ BEGIN
             main_0 => P1_signal_2,
             main_1 => P1_signal_1,
             main_2 => P1_signal_0,
-            main_3 => Net_861,
+            main_3 => Net_903,
             main_4 => \Centr:resetemp\,
             main_5 => \Centr:parocuenta\);
 
@@ -1806,7 +1806,7 @@ BEGIN
             ar_0 => Net_726,
             main_0 => P1_signal_1,
             main_1 => P1_signal_0,
-            main_2 => Net_861,
+            main_2 => Net_903,
             main_3 => \Centr:resetemp\,
             main_4 => \Centr:parocuenta\);
 
@@ -1821,7 +1821,7 @@ BEGIN
             clock_0 => Net_811,
             ar_0 => Net_726,
             main_0 => P1_signal_0,
-            main_1 => Net_861,
+            main_1 => Net_903,
             main_2 => \Centr:resetemp\,
             main_3 => \Centr:parocuenta\);
 
@@ -1836,7 +1836,7 @@ BEGIN
             clock_0 => Net_811,
             ar_0 => Net_726,
             main_0 => Net_20,
-            main_1 => Net_861,
+            main_1 => Net_903,
             main_2 => \Centr:state_1\,
             main_3 => \Centr:state_0\);
 
@@ -1851,7 +1851,7 @@ BEGIN
             clock_0 => Net_811,
             ar_0 => Net_726,
             main_0 => Net_20,
-            main_1 => Net_861,
+            main_1 => Net_903,
             main_2 => \Centr:state_1\,
             main_3 => \Centr:state_0\);
 

@@ -1543,7 +1543,7 @@ net Net_811
 	switch ":udb@[UDB=(2,4)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(2,4)]:pld0:mc3.clock_0"
 	term   ":udb@[UDB=(2,4)]:pld0:mc3.clock_0"
 end Net_811
-net Net_861
+net Net_903
 	term   ":ioport0:pin7.fb"
 	switch ":ioport0:pin7.fb==>Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v13+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v15"
 	switch "OStub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v13+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v15"
@@ -1585,7 +1585,7 @@ net Net_861
 	term   ":udb@[UDB=(3,3)]:pld1:mc2.main_1"
 	switch ":udb@[UDB=(3,3)]:pld1:input_permute.mc1_main_1==>:udb@[UDB=(3,3)]:pld1:mc1.main_1"
 	term   ":udb@[UDB=(3,3)]:pld1:mc1.main_1"
-end Net_861
+end Net_903
 net \UART:Net_9\
 	term   ":clockblockcell.dclk_glb_0"
 	switch ":clockblockcell.dclk_glb_0==>:udb@[UDB=(3,1)]:clockreset:clk_dp_mux.in_0"

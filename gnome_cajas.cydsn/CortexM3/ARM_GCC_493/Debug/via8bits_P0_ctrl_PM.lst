@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
   29:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c **** *
   30:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c **** * Summary:
   31:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c **** *  Saves the control register value.
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
   59:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c **** *
   60:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c **** *******************************************************************************/
   61:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c **** void via8bits_P0_ctrl_RestoreConfig(void) 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 3
 
 
   62:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c **** {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
   87              		.cfi_offset 3, -8
   88              		.cfi_offset 14, -4
   83:.\Generated_Source\PSoC5/via8bits_P0_ctrl_PM.c ****     via8bits_P0_ctrl_SaveConfig();
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 4
 
 
   89              		.loc 1 83 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  123              		.size	via8bits_P0_ctrl_backup, 1
  124              	via8bits_P0_ctrl_backup:
  125 0000 00       		.space	1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 5
 
 
  126 0001 000000   		.text
@@ -252,45 +252,45 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  134 0006 00000000 		.4byte	.Ldebug_abbrev0
  135 000a 04       		.byte	0x4
  136 000b 01       		.uleb128 0x1
- 137 000c 42010000 		.4byte	.LASF19
+ 137 000c 4C010000 		.4byte	.LASF19
  138 0010 01       		.byte	0x1
- 139 0011 E3000000 		.4byte	.LASF20
- 140 0015 54000000 		.4byte	.LASF21
+ 139 0011 ED000000 		.4byte	.LASF20
+ 140 0015 00000000 		.4byte	.LASF21
  141 0019 00000000 		.4byte	.Ldebug_ranges0+0
  142 001d 00000000 		.4byte	0
  143 0021 00000000 		.4byte	.Ldebug_line0
  144 0025 02       		.uleb128 0x2
  145 0026 01       		.byte	0x1
  146 0027 06       		.byte	0x6
- 147 0028 20020000 		.4byte	.LASF0
+ 147 0028 2A020000 		.4byte	.LASF0
  148 002c 02       		.uleb128 0x2
  149 002d 01       		.byte	0x1
  150 002e 08       		.byte	0x8
- 151 002f AB000000 		.4byte	.LASF1
+ 151 002f B5000000 		.4byte	.LASF1
  152 0033 02       		.uleb128 0x2
  153 0034 02       		.byte	0x2
  154 0035 05       		.byte	0x5
- 155 0036 07020000 		.4byte	.LASF2
+ 155 0036 11020000 		.4byte	.LASF2
  156 003a 02       		.uleb128 0x2
  157 003b 02       		.byte	0x2
  158 003c 07       		.byte	0x7
- 159 003d D0000000 		.4byte	.LASF3
+ 159 003d DA000000 		.4byte	.LASF3
  160 0041 02       		.uleb128 0x2
  161 0042 04       		.byte	0x4
  162 0043 05       		.byte	0x5
- 163 0044 17020000 		.4byte	.LASF4
+ 163 0044 21020000 		.4byte	.LASF4
  164 0048 02       		.uleb128 0x2
  165 0049 04       		.byte	0x4
  166 004a 07       		.byte	0x7
- 167 004b BE000000 		.4byte	.LASF5
+ 167 004b C8000000 		.4byte	.LASF5
  168 004f 02       		.uleb128 0x2
  169 0050 08       		.byte	0x8
  170 0051 05       		.byte	0x5
- 171 0052 F4010000 		.4byte	.LASF6
+ 171 0052 FE010000 		.4byte	.LASF6
  172 0056 02       		.uleb128 0x2
  173 0057 08       		.byte	0x8
  174 0058 07       		.byte	0x7
- 175 0059 DD010000 		.4byte	.LASF7
+ 175 0059 E7010000 		.4byte	.LASF7
  176 005d 03       		.uleb128 0x3
  177 005e 04       		.byte	0x4
  178 005f 05       		.byte	0x5
@@ -298,29 +298,29 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  180 0064 02       		.uleb128 0x2
  181 0065 04       		.byte	0x4
  182 0066 07       		.byte	0x7
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 6
 
 
- 183 0067 D0010000 		.4byte	.LASF8
+ 183 0067 DA010000 		.4byte	.LASF8
  184 006b 04       		.uleb128 0x4
- 185 006c 11020000 		.4byte	.LASF12
+ 185 006c 1B020000 		.4byte	.LASF12
  186 0070 02       		.byte	0x2
  187 0071 3801     		.2byte	0x138
  188 0073 2C000000 		.4byte	0x2c
  189 0077 02       		.uleb128 0x2
  190 0078 04       		.byte	0x4
  191 0079 04       		.byte	0x4
- 192 007a 2F000000 		.4byte	.LASF9
+ 192 007a 97000000 		.4byte	.LASF9
  193 007e 02       		.uleb128 0x2
  194 007f 08       		.byte	0x8
  195 0080 04       		.byte	0x4
- 196 0081 1F010000 		.4byte	.LASF10
+ 196 0081 29010000 		.4byte	.LASF10
  197 0085 02       		.uleb128 0x2
  198 0086 01       		.byte	0x1
  199 0087 08       		.byte	0x8
- 200 0088 02020000 		.4byte	.LASF11
+ 200 0088 0C020000 		.4byte	.LASF11
  201 008c 04       		.uleb128 0x4
- 202 008d B9000000 		.4byte	.LASF13
+ 202 008d C3000000 		.4byte	.LASF13
  203 0091 02       		.byte	0x2
  204 0092 E201     		.2byte	0x1e2
  205 0094 98000000 		.4byte	0x98
@@ -332,19 +332,19 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  211 00a0 1C       		.byte	0x1c
  212 00a1 B2000000 		.4byte	0xb2
  213 00a5 07       		.uleb128 0x7
- 214 00a6 12010000 		.4byte	.LASF22
+ 214 00a6 1C010000 		.4byte	.LASF22
  215 00aa 03       		.byte	0x3
  216 00ab 1E       		.byte	0x1e
  217 00ac 6B000000 		.4byte	0x6b
  218 00b0 00       		.byte	0
  219 00b1 00       		.byte	0
  220 00b2 08       		.uleb128 0x8
- 221 00b3 2C020000 		.4byte	.LASF14
+ 221 00b3 36020000 		.4byte	.LASF14
  222 00b7 03       		.byte	0x3
  223 00b8 20       		.byte	0x20
  224 00b9 9D000000 		.4byte	0x9d
  225 00bd 09       		.uleb128 0x9
- 226 00be 26010000 		.4byte	.LASF15
+ 226 00be 30010000 		.4byte	.LASF15
  227 00c2 01       		.byte	0x1
  228 00c3 28       		.byte	0x28
  229 00c4 00000000 		.4byte	.LFB0
@@ -352,18 +352,18 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  231 00cc 01       		.uleb128 0x1
  232 00cd 9C       		.byte	0x9c
  233 00ce 09       		.uleb128 0x9
- 234 00cf 35000000 		.4byte	.LASF16
+ 234 00cf 78000000 		.4byte	.LASF16
  235 00d3 01       		.byte	0x1
  236 00d4 3D       		.byte	0x3d
  237 00d5 00000000 		.4byte	.LFB1
  238 00d9 14000000 		.4byte	.LFE1-.LFB1
  239 00dd 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 7
 
 
  240 00de 9C       		.byte	0x9c
  241 00df 0A       		.uleb128 0xa
- 242 00e0 18000000 		.4byte	.LASF17
+ 242 00e0 61000000 		.4byte	.LASF17
  243 00e4 01       		.byte	0x1
  244 00e5 51       		.byte	0x51
  245 00e6 00000000 		.4byte	.LFB2
@@ -376,7 +376,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  252 00f9 BD000000 		.4byte	0xbd
  253 00fd 00       		.byte	0
  254 00fe 0A       		.uleb128 0xa
- 255 00ff 93000000 		.4byte	.LASF18
+ 255 00ff 9D000000 		.4byte	.LASF18
  256 0103 01       		.byte	0x1
  257 0104 65       		.byte	0x65
  258 0105 00000000 		.4byte	.LFB3
@@ -389,7 +389,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  265 0118 CE000000 		.4byte	0xce
  266 011c 00       		.byte	0
  267 011d 0C       		.uleb128 0xc
- 268 011e 00000000 		.4byte	.LASF23
+ 268 011e 49000000 		.4byte	.LASF23
  269 0122 01       		.byte	0x1
  270 0123 17       		.byte	0x17
  271 0124 B2000000 		.4byte	0xb2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  294 0010 17       		.uleb128 0x17
  295 0011 00       		.byte	0
  296 0012 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 8
 
 
  297 0013 02       		.uleb128 0x2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  351 0049 00       		.byte	0
  352 004a 07       		.uleb128 0x7
  353 004b 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 9
 
 
  354 004c 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  408 0083 03       		.uleb128 0x3
  409 0084 0E       		.uleb128 0xe
  410 0085 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 10
 
 
  411 0086 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  465 0020 00000000 		.4byte	.LFB2
  466 0024 08000000 		.4byte	.LFE2-.LFB2
  467 0028 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 11
 
 
  468 002c 08000000 		.4byte	.LFE3-.LFB3
@@ -623,142 +623,142 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 1
  485      00000201 
  485      FB0E0D00 
  485      01010101 
- 486              	.LASF23:
- 487 0000 76696138 		.ascii	"via8bits_P0_ctrl_backup\000"
- 487      62697473 
- 487      5F50305F 
- 487      6374726C 
- 487      5F626163 
- 488              	.LASF17:
- 489 0018 76696138 		.ascii	"via8bits_P0_ctrl_Sleep\000"
- 489      62697473 
- 489      5F50305F 
- 489      6374726C 
- 489      5F536C65 
- 490              	.LASF9:
- 491 002f 666C6F61 		.ascii	"float\000"
- 491      7400
- 492              	.LASF16:
- 493 0035 76696138 		.ascii	"via8bits_P0_ctrl_RestoreConfig\000"
- 493      62697473 
- 493      5F50305F 
- 493      6374726C 
- 493      5F526573 
- 494              	.LASF21:
- 495 0054 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\Gnome\\"
- 495      73657273 
- 495      5C4A6176 
- 495      6965725C 
- 495      446F6375 
- 496 0081 676E6F6D 		.ascii	"gnome_cajas.cydsn\000"
- 496      655F6361 
- 496      6A61732E 
- 496      63796473 
- 496      6E00
+ 486              	.LASF21:
+ 487 0000 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 487      73657273 
+ 487      5C4A6176 
+ 487      6965725C 
+ 487      446F6375 
+ 488 002e 6F726B73 		.ascii	"orkspace\\gnome_cajas.cydsn\000"
+ 488      70616365 
+ 488      5C676E6F 
+ 488      6D655F63 
+ 488      616A6173 
+ 489              	.LASF23:
+ 490 0049 76696138 		.ascii	"via8bits_P0_ctrl_backup\000"
+ 490      62697473 
+ 490      5F50305F 
+ 490      6374726C 
+ 490      5F626163 
+ 491              	.LASF17:
+ 492 0061 76696138 		.ascii	"via8bits_P0_ctrl_Sleep\000"
+ 492      62697473 
+ 492      5F50305F 
+ 492      6374726C 
+ 492      5F536C65 
+ 493              	.LASF16:
+ 494 0078 76696138 		.ascii	"via8bits_P0_ctrl_RestoreConfig\000"
+ 494      62697473 
+ 494      5F50305F 
+ 494      6374726C 
+ 494      5F526573 
+ 495              	.LASF9:
+ 496 0097 666C6F61 		.ascii	"float\000"
+ 496      7400
  497              	.LASF18:
- 498 0093 76696138 		.ascii	"via8bits_P0_ctrl_Wakeup\000"
+ 498 009d 76696138 		.ascii	"via8bits_P0_ctrl_Wakeup\000"
  498      62697473 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 12
 
 
  498      5F50305F 
  498      6374726C 
  498      5F57616B 
  499              	.LASF1:
- 500 00ab 756E7369 		.ascii	"unsigned char\000"
+ 500 00b5 756E7369 		.ascii	"unsigned char\000"
  500      676E6564 
  500      20636861 
  500      7200
  501              	.LASF13:
- 502 00b9 72656738 		.ascii	"reg8\000"
+ 502 00c3 72656738 		.ascii	"reg8\000"
  502      00
  503              	.LASF5:
- 504 00be 6C6F6E67 		.ascii	"long unsigned int\000"
+ 504 00c8 6C6F6E67 		.ascii	"long unsigned int\000"
  504      20756E73 
  504      69676E65 
  504      6420696E 
  504      7400
  505              	.LASF3:
- 506 00d0 73686F72 		.ascii	"short unsigned int\000"
+ 506 00da 73686F72 		.ascii	"short unsigned int\000"
  506      7420756E 
  506      7369676E 
  506      65642069 
  506      6E7400
  507              	.LASF20:
- 508 00e3 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\via8bits_P0_ctrl_PM.c\000"
+ 508 00ed 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\via8bits_P0_ctrl_PM.c\000"
  508      6E657261 
  508      7465645F 
  508      536F7572 
  508      63655C50 
  509              	.LASF22:
- 510 0112 636F6E74 		.ascii	"controlState\000"
+ 510 011c 636F6E74 		.ascii	"controlState\000"
  510      726F6C53 
  510      74617465 
  510      00
  511              	.LASF10:
- 512 011f 646F7562 		.ascii	"double\000"
+ 512 0129 646F7562 		.ascii	"double\000"
  512      6C6500
  513              	.LASF15:
- 514 0126 76696138 		.ascii	"via8bits_P0_ctrl_SaveConfig\000"
+ 514 0130 76696138 		.ascii	"via8bits_P0_ctrl_SaveConfig\000"
  514      62697473 
  514      5F50305F 
  514      6374726C 
  514      5F536176 
  515              	.LASF19:
- 516 0142 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 516 014c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  516      4320342E 
  516      392E3320 
  516      32303135 
  516      30333033 
- 517 0175 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 517 017f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  517      20726576 
  517      6973696F 
  517      6E203232 
  517      31323230 
- 518 01a8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 518 01b2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  518      66756E63 
  518      74696F6E 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccq6Fpts.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cck443Za.s 			page 13
 
 
  518      2D736563 
  518      74696F6E 
  519              	.LASF8:
- 520 01d0 756E7369 		.ascii	"unsigned int\000"
+ 520 01da 756E7369 		.ascii	"unsigned int\000"
  520      676E6564 
  520      20696E74 
  520      00
  521              	.LASF7:
- 522 01dd 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 522 01e7 6C6F6E67 		.ascii	"long long unsigned int\000"
  522      206C6F6E 
  522      6720756E 
  522      7369676E 
  522      65642069 
  523              	.LASF6:
- 524 01f4 6C6F6E67 		.ascii	"long long int\000"
+ 524 01fe 6C6F6E67 		.ascii	"long long int\000"
  524      206C6F6E 
  524      6720696E 
  524      7400
  525              	.LASF11:
- 526 0202 63686172 		.ascii	"char\000"
+ 526 020c 63686172 		.ascii	"char\000"
  526      00
  527              	.LASF2:
- 528 0207 73686F72 		.ascii	"short int\000"
+ 528 0211 73686F72 		.ascii	"short int\000"
  528      7420696E 
  528      7400
  529              	.LASF12:
- 530 0211 75696E74 		.ascii	"uint8\000"
+ 530 021b 75696E74 		.ascii	"uint8\000"
  530      3800
  531              	.LASF4:
- 532 0217 6C6F6E67 		.ascii	"long int\000"
+ 532 0221 6C6F6E67 		.ascii	"long int\000"
  532      20696E74 
  532      00
  533              	.LASF0:
- 534 0220 7369676E 		.ascii	"signed char\000"
+ 534 022a 7369676E 		.ascii	"signed char\000"
  534      65642063 
  534      68617200 
  535              	.LASF14:
- 536 022c 76696138 		.ascii	"via8bits_P0_ctrl_BACKUP_STRUCT\000"
+ 536 0236 76696138 		.ascii	"via8bits_P0_ctrl_BACKUP_STRUCT\000"
  536      62697473 
  536      5F50305F 
  536      6374726C 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
   38              	.LVL1:
   39 000a 0B28     		cmp	r0, #11
   40 000c 1DD8     		bhi	.L3
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 2
 
 
   41 000e DFE800F0 		tbb	[pc, r0]
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
   36:.\gnome_inst_decoder.c ****             case 0x06:
   37:.\gnome_inst_decoder.c ****                 return jsr;
   77              		.loc 1 37 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 3
 
 
   78 0032 0620     		movs	r0, #6
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
   61:.\gnome_inst_decoder.c ****     else {
   62:.\gnome_inst_decoder.c ****         switch ((code & 0xF0) >> 4) {
  109              		.loc 1 62 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 4
 
 
  110 0054 0009     		lsrs	r0, r0, #4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
   81:.\gnome_inst_decoder.c ****             case 0x07:
   82:.\gnome_inst_decoder.c ****                 return and_rd;
  146              		.loc 1 82 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 5
 
 
  147 007c 1220     		movs	r0, #18
@@ -296,58 +296,58 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  186 0006 00000000 		.4byte	.Ldebug_abbrev0
  187 000a 04       		.byte	0x4
  188 000b 01       		.uleb128 0x1
- 189 000c DE000000 		.4byte	.LASF46
+ 189 000c 27010000 		.4byte	.LASF46
  190 0010 01       		.byte	0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 6
 
 
- 191 0011 02020000 		.4byte	.LASF47
- 192 0015 67020000 		.4byte	.LASF48
+ 191 0011 4B020000 		.4byte	.LASF47
+ 192 0015 00000000 		.4byte	.LASF48
  193 0019 00000000 		.4byte	.Ldebug_ranges0+0
  194 001d 00000000 		.4byte	0
  195 0021 00000000 		.4byte	.Ldebug_line0
  196 0025 02       		.uleb128 0x2
  197 0026 01       		.byte	0x1
  198 0027 06       		.byte	0x6
- 199 0028 48020000 		.4byte	.LASF0
+ 199 0028 91020000 		.4byte	.LASF0
  200 002c 03       		.uleb128 0x3
- 201 002d 0F000000 		.4byte	.LASF4
+ 201 002d 58000000 		.4byte	.LASF4
  202 0031 02       		.byte	0x2
  203 0032 1D       		.byte	0x1d
  204 0033 37000000 		.4byte	0x37
  205 0037 02       		.uleb128 0x2
  206 0038 01       		.byte	0x1
  207 0039 08       		.byte	0x8
- 208 003a 6A000000 		.4byte	.LASF1
+ 208 003a B3000000 		.4byte	.LASF1
  209 003e 02       		.uleb128 0x2
  210 003f 02       		.byte	0x2
  211 0040 05       		.byte	0x5
- 212 0041 19020000 		.4byte	.LASF2
+ 212 0041 62020000 		.4byte	.LASF2
  213 0045 02       		.uleb128 0x2
  214 0046 02       		.byte	0x2
  215 0047 07       		.byte	0x7
- 216 0048 54020000 		.4byte	.LASF3
+ 216 0048 9D020000 		.4byte	.LASF3
  217 004c 03       		.uleb128 0x3
- 218 004d 34000000 		.4byte	.LASF5
+ 218 004d 7D000000 		.4byte	.LASF5
  219 0051 02       		.byte	0x2
  220 0052 3F       		.byte	0x3f
  221 0053 57000000 		.4byte	0x57
  222 0057 02       		.uleb128 0x2
  223 0058 04       		.byte	0x4
  224 0059 05       		.byte	0x5
- 225 005a 3F020000 		.4byte	.LASF6
+ 225 005a 88020000 		.4byte	.LASF6
  226 005e 02       		.uleb128 0x2
  227 005f 04       		.byte	0x4
  228 0060 07       		.byte	0x7
- 229 0061 7F000000 		.4byte	.LASF7
+ 229 0061 C8000000 		.4byte	.LASF7
  230 0065 02       		.uleb128 0x2
  231 0066 08       		.byte	0x8
  232 0067 05       		.byte	0x5
- 233 0068 D6010000 		.4byte	.LASF8
+ 233 0068 1F020000 		.4byte	.LASF8
  234 006c 02       		.uleb128 0x2
  235 006d 08       		.byte	0x8
  236 006e 07       		.byte	0x7
- 237 006f 97010000 		.4byte	.LASF9
+ 237 006f E0010000 		.4byte	.LASF9
  238 0073 04       		.uleb128 0x4
  239 0074 04       		.byte	0x4
  240 0075 05       		.byte	0x5
@@ -355,36 +355,36 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  242 007a 02       		.uleb128 0x2
  243 007b 04       		.byte	0x4
  244 007c 07       		.byte	0x7
- 245 007d 7C010000 		.4byte	.LASF10
+ 245 007d C5010000 		.4byte	.LASF10
  246 0081 03       		.uleb128 0x3
- 247 0082 AE010000 		.4byte	.LASF11
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 7
+ 247 0082 F7010000 		.4byte	.LASF11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 7
 
 
  248 0086 03       		.byte	0x3
  249 0087 15       		.byte	0x15
  250 0088 2C000000 		.4byte	0x2c
  251 008c 03       		.uleb128 0x3
- 252 008d BD010000 		.4byte	.LASF12
+ 252 008d 06020000 		.4byte	.LASF12
  253 0091 03       		.byte	0x3
  254 0092 2C       		.byte	0x2c
  255 0093 4C000000 		.4byte	0x4c
  256 0097 02       		.uleb128 0x2
  257 0098 04       		.byte	0x4
  258 0099 04       		.byte	0x4
- 259 009a 5A000000 		.4byte	.LASF13
+ 259 009a A3000000 		.4byte	.LASF13
  260 009e 02       		.uleb128 0x2
  261 009f 08       		.byte	0x8
  262 00a0 04       		.byte	0x4
- 263 00a1 CB000000 		.4byte	.LASF14
+ 263 00a1 14010000 		.4byte	.LASF14
  264 00a5 02       		.uleb128 0x2
  265 00a6 01       		.byte	0x1
  266 00a7 08       		.byte	0x8
- 267 00a8 E4010000 		.4byte	.LASF15
+ 267 00a8 2D020000 		.4byte	.LASF15
  268 00ac 02       		.uleb128 0x2
  269 00ad 04       		.byte	0x4
  270 00ae 07       		.byte	0x7
- 271 00af CD010000 		.4byte	.LASF16
+ 271 00af 16020000 		.4byte	.LASF16
  272 00b3 05       		.uleb128 0x5
  273 00b4 02       		.byte	0x2
  274 00b5 04       		.byte	0x4
@@ -404,7 +404,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  288 00ce 01       		.byte	0x1
  289 00cf 00       		.byte	0
  290 00d0 03       		.uleb128 0x3
- 291 00d1 E9010000 		.4byte	.LASF17
+ 291 00d1 32020000 		.4byte	.LASF17
  292 00d5 04       		.byte	0x4
  293 00d6 1C       		.byte	0x1c
  294 00d7 B3000000 		.4byte	0xb3
@@ -414,11 +414,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  298 00de 20       		.byte	0x20
  299 00df FC000000 		.4byte	0xfc
  300 00e3 07       		.uleb128 0x7
- 301 00e4 60000000 		.4byte	.LASF18
+ 301 00e4 A9000000 		.4byte	.LASF18
  302 00e8 04       		.byte	0x4
  303 00e9 21       		.byte	0x21
  304 00ea FC000000 		.4byte	0xfc
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 8
 
 
  305 00ee 00       		.byte	0
@@ -437,7 +437,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  318 010a 03       		.byte	0x3
  319 010b 00       		.byte	0
  320 010c 03       		.uleb128 0x3
- 321 010d 23020000 		.4byte	.LASF19
+ 321 010d 6C020000 		.4byte	.LASF19
  322 0111 04       		.byte	0x4
  323 0112 23       		.byte	0x23
  324 0113 DB000000 		.4byte	0xdb
@@ -447,7 +447,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  328 011a 25       		.byte	0x25
  329 011b 38010000 		.4byte	0x138
  330 011f 07       		.uleb128 0x7
- 331 0120 60000000 		.4byte	.LASF18
+ 331 0120 A9000000 		.4byte	.LASF18
  332 0124 04       		.byte	0x4
  333 0125 26       		.byte	0x26
  334 0126 81000000 		.4byte	0x81
@@ -460,7 +460,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  341 0136 01       		.byte	0x1
  342 0137 00       		.byte	0
  343 0138 03       		.uleb128 0x3
- 344 0139 91000000 		.4byte	.LASF20
+ 344 0139 DA000000 		.4byte	.LASF20
  345 013d 04       		.byte	0x4
  346 013e 28       		.byte	0x28
  347 013f 17010000 		.4byte	0x117
@@ -470,22 +470,22 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  351 0146 2C       		.byte	0x2c
  352 0147 C4010000 		.4byte	0x1c4
  353 014b 0B       		.uleb128 0xb
- 354 014c C5010000 		.4byte	.LASF21
+ 354 014c 0E020000 		.4byte	.LASF21
  355 0150 00       		.sleb128 0
  356 0151 0B       		.uleb128 0xb
- 357 0152 A0000000 		.4byte	.LASF22
+ 357 0152 E9000000 		.4byte	.LASF22
  358 0156 01       		.sleb128 1
  359 0157 0B       		.uleb128 0xb
- 360 0158 B8020000 		.4byte	.LASF23
+ 360 0158 C2020000 		.4byte	.LASF23
  361 015c 02       		.sleb128 2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 9
 
 
  362 015d 0B       		.uleb128 0xb
- 363 015e F1010000 		.4byte	.LASF24
+ 363 015e 3A020000 		.4byte	.LASF24
  364 0162 03       		.sleb128 3
  365 0163 0B       		.uleb128 0xb
- 366 0164 65000000 		.4byte	.LASF25
+ 366 0164 AE000000 		.4byte	.LASF25
  367 0168 04       		.sleb128 4
  368 0169 0C       		.uleb128 0xc
  369 016a 72747300 		.ascii	"rts\000"
@@ -497,7 +497,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  375 0176 72746900 		.ascii	"rti\000"
  376 017a 07       		.sleb128 7
  377 017b 0B       		.uleb128 0xb
- 378 017c B6010000 		.4byte	.LASF26
+ 378 017c FF010000 		.4byte	.LASF26
  379 0180 08       		.sleb128 8
  380 0181 0C       		.uleb128 0xc
  381 0182 726F7200 		.ascii	"ror\000"
@@ -509,36 +509,36 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  387 018e 6E6F7000 		.ascii	"nop\000"
  388 0192 0B       		.sleb128 11
  389 0193 0B       		.uleb128 0xb
- 390 0194 D2000000 		.4byte	.LASF27
+ 390 0194 1B010000 		.4byte	.LASF27
  391 0198 0C       		.sleb128 12
  392 0199 0B       		.uleb128 0xb
- 393 019a 4B000000 		.4byte	.LASF28
+ 393 019a 94000000 		.4byte	.LASF28
  394 019e 0D       		.sleb128 13
  395 019f 0B       		.uleb128 0xb
- 396 01a0 51000000 		.4byte	.LASF29
+ 396 01a0 9A000000 		.4byte	.LASF29
  397 01a4 0E       		.sleb128 14
  398 01a5 0B       		.uleb128 0xb
- 399 01a6 8F010000 		.4byte	.LASF30
+ 399 01a6 D8010000 		.4byte	.LASF30
  400 01aa 0F       		.sleb128 15
  401 01ab 0B       		.uleb128 0xb
- 402 01ac 78000000 		.4byte	.LASF31
+ 402 01ac C1000000 		.4byte	.LASF31
  403 01b0 10       		.sleb128 16
  404 01b1 0B       		.uleb128 0xb
- 405 01b2 3E000000 		.4byte	.LASF32
+ 405 01b2 87000000 		.4byte	.LASF32
  406 01b6 11       		.sleb128 17
  407 01b7 0B       		.uleb128 0xb
- 408 01b8 21000000 		.4byte	.LASF33
+ 408 01b8 6A000000 		.4byte	.LASF33
  409 01bc 12       		.sleb128 18
  410 01bd 0B       		.uleb128 0xb
- 411 01be 19000000 		.4byte	.LASF34
+ 411 01be 62000000 		.4byte	.LASF34
  412 01c2 13       		.sleb128 19
  413 01c3 00       		.byte	0
  414 01c4 03       		.uleb128 0x3
- 415 01c5 F8010000 		.4byte	.LASF35
+ 415 01c5 41020000 		.4byte	.LASF35
  416 01c9 04       		.byte	0x4
  417 01ca 41       		.byte	0x41
  418 01cb 43010000 		.4byte	0x143
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 10
 
 
  419 01cf 05       		.uleb128 0x5
@@ -547,13 +547,13 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  422 01d2 45       		.byte	0x45
  423 01d3 13020000 		.4byte	0x213
  424 01d7 07       		.uleb128 0x7
- 425 01d8 28000000 		.4byte	.LASF36
+ 425 01d8 71000000 		.4byte	.LASF36
  426 01dc 04       		.byte	0x4
  427 01dd 46       		.byte	0x46
  428 01de 81000000 		.4byte	0x81
  429 01e2 00       		.byte	0
  430 01e3 07       		.uleb128 0x7
- 431 01e4 89010000 		.4byte	.LASF37
+ 431 01e4 D2010000 		.4byte	.LASF37
  432 01e8 04       		.byte	0x4
  433 01e9 47       		.byte	0x47
  434 01ea D0000000 		.4byte	0xd0
@@ -565,25 +565,25 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  440 01f5 81000000 		.4byte	0x81
  441 01f9 03       		.byte	0x3
  442 01fa 07       		.uleb128 0x7
- 443 01fb 45000000 		.4byte	.LASF38
+ 443 01fb 8E000000 		.4byte	.LASF38
  444 01ff 04       		.byte	0x4
  445 0200 49       		.byte	0x49
  446 0201 0C010000 		.4byte	0x10c
  447 0205 04       		.byte	0x4
  448 0206 07       		.uleb128 0x7
- 449 0207 A6000000 		.4byte	.LASF39
+ 449 0207 EF000000 		.4byte	.LASF39
  450 020b 04       		.byte	0x4
  451 020c 4A       		.byte	0x4a
  452 020d 38010000 		.4byte	0x138
  453 0211 09       		.byte	0x9
  454 0212 00       		.byte	0
  455 0213 03       		.uleb128 0x3
- 456 0214 35020000 		.4byte	.LASF40
+ 456 0214 7E020000 		.4byte	.LASF40
  457 0218 04       		.byte	0x4
  458 0219 4B       		.byte	0x4b
  459 021a CF010000 		.4byte	0x1cf
  460 021e 0D       		.uleb128 0xd
- 461 021f A6020000 		.4byte	.LASF49
+ 461 021f B0020000 		.4byte	.LASF49
  462 0223 01       		.byte	0x1
  463 0224 0F       		.byte	0xf
  464 0225 C4010000 		.4byte	0x1c4
@@ -593,24 +593,24 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  468 0232 9C       		.byte	0x9c
  469 0233 47020000 		.4byte	0x247
  470 0237 0E       		.uleb128 0xe
- 471 0238 D9000000 		.4byte	.LASF50
+ 471 0238 22010000 		.4byte	.LASF50
  472 023c 01       		.byte	0x1
  473 023d 0F       		.byte	0xf
  474 023e 81000000 		.4byte	0x81
  475 0242 00000000 		.4byte	.LLST0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 11
 
 
  476 0246 00       		.byte	0
  477 0247 0F       		.uleb128 0xf
- 478 0248 BE000000 		.4byte	.LASF41
+ 478 0248 07010000 		.4byte	.LASF41
  479 024c 05       		.byte	0x5
  480 024d 5506     		.2byte	0x655
  481 024f 53020000 		.4byte	0x253
  482 0253 10       		.uleb128 0x10
  483 0254 8C000000 		.4byte	0x8c
  484 0258 11       		.uleb128 0x11
- 485 0259 00000000 		.4byte	.LASF42
+ 485 0259 49000000 		.4byte	.LASF42
  486 025d 04       		.byte	0x4
  487 025e 51       		.byte	0x51
  488 025f 13020000 		.4byte	0x213
@@ -618,7 +618,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  490 0264 03       		.byte	0x3
  491 0265 00000000 		.4byte	normal_context
  492 0269 11       		.uleb128 0x11
- 493 026a B3000000 		.4byte	.LASF43
+ 493 026a FC000000 		.4byte	.LASF43
  494 026e 04       		.byte	0x4
  495 026f 52       		.byte	0x52
  496 0270 13020000 		.4byte	0x213
@@ -626,7 +626,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  498 0275 03       		.byte	0x3
  499 0276 00000000 		.4byte	it_context
  500 027a 11       		.uleb128 0x11
- 501 027b 6C010000 		.4byte	.LASF44
+ 501 027b B5010000 		.4byte	.LASF44
  502 027f 04       		.byte	0x4
  503 0280 54       		.byte	0x54
  504 0281 8B020000 		.4byte	0x28b
@@ -644,7 +644,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  516 029f 0F       		.byte	0xf
  517 02a0 00       		.byte	0
  518 02a1 11       		.uleb128 0x11
- 519 02a2 2B020000 		.4byte	.LASF45
+ 519 02a2 74020000 		.4byte	.LASF45
  520 02a6 04       		.byte	0x4
  521 02a7 56       		.byte	0x56
  522 02a8 91020000 		.4byte	0x291
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  530 02bc AC000000 		.4byte	0xac
  531 02c0 FF       		.byte	0xff
  532 02c1 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 12
 
 
  533 02c2 13       		.uleb128 0x13
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  587 002b 04       		.uleb128 0x4
  588 002c 24       		.uleb128 0x24
  589 002d 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 13
 
 
  590 002e 0B       		.uleb128 0xb
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  644 0064 49       		.uleb128 0x49
  645 0065 13       		.uleb128 0x13
  646 0066 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 14
 
 
  647 0067 13       		.uleb128 0x13
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  701 009d 27       		.uleb128 0x27
  702 009e 19       		.uleb128 0x19
  703 009f 49       		.uleb128 0x49
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 15
 
 
  704 00a0 13       		.uleb128 0x13
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  758 00d7 00       		.byte	0
  759 00d8 03       		.uleb128 0x3
  760 00d9 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 16
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 16
 
 
  761 00da 3A       		.uleb128 0x3a
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  815 001d 56000000 		.4byte	.LVL3
  816 0021 0100     		.2byte	0x1
  817 0023 50       		.byte	0x50
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 17
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 17
 
 
  818 0024 56000000 		.4byte	.LVL3
@@ -1006,233 +1006,233 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 1
  858      00000201 
  858      FB0E0D00 
  858      01010101 
- 859              	.LASF42:
- 860 0000 6E6F726D 		.ascii	"normal_context\000"
- 860      616C5F63 
- 860      6F6E7465 
- 860      787400
- 861              	.LASF4:
- 862 000f 5F5F7569 		.ascii	"__uint8_t\000"
- 862      6E74385F 
- 862      7400
- 863              	.LASF34:
- 864 0019 6A6D705F 		.ascii	"jmp_add\000"
- 864      61646400 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 18
+ 859              	.LASF48:
+ 860 0000 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 860      73657273 
+ 860      5C4A6176 
+ 860      6965725C 
+ 860      446F6375 
+ 861 002e 6F726B73 		.ascii	"orkspace\\gnome_cajas.cydsn\000"
+ 861      70616365 
+ 861      5C676E6F 
+ 861      6D655F63 
+ 861      616A6173 
+ 862              	.LASF42:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 18
 
 
- 865              	.LASF33:
- 866 0021 616E645F 		.ascii	"and_rd\000"
- 866      726400
- 867              	.LASF36:
- 868 0028 61636375 		.ascii	"accumulator\000"
- 868      6D756C61 
- 868      746F7200 
- 869              	.LASF5:
- 870 0034 5F5F696E 		.ascii	"__int32_t\000"
- 870      7433325F 
- 870      7400
- 871              	.LASF32:
- 872 003e 786F725F 		.ascii	"xor_rd\000"
- 872      726400
- 873              	.LASF38:
- 874 0045 73746163 		.ascii	"stack\000"
- 874      6B00
- 875              	.LASF28:
- 876 004b 6164645F 		.ascii	"add_d\000"
- 876      6400
- 877              	.LASF29:
- 878 0051 73746F72 		.ascii	"store_rd\000"
- 878      655F7264 
- 878      00
- 879              	.LASF13:
- 880 005a 666C6F61 		.ascii	"float\000"
- 880      7400
- 881              	.LASF18:
- 882 0060 64617461 		.ascii	"data\000"
- 882      00
- 883              	.LASF25:
- 884 0065 70757368 		.ascii	"push\000"
- 884      00
- 885              	.LASF1:
- 886 006a 756E7369 		.ascii	"unsigned char\000"
- 886      676E6564 
- 886      20636861 
- 886      7200
- 887              	.LASF31:
- 888 0078 6164645F 		.ascii	"add_rd\000"
- 888      726400
- 889              	.LASF7:
- 890 007f 6C6F6E67 		.ascii	"long unsigned int\000"
- 890      20756E73 
- 890      69676E65 
- 890      6420696E 
- 890      7400
- 891              	.LASF20:
- 892 0091 696E645F 		.ascii	"ind_addr_reg_t\000"
- 892      61646472 
- 892      5F726567 
- 892      5F7400
- 893              	.LASF22:
- 894 00a0 7365745F 		.ascii	"set_c\000"
- 894      6300
- 895              	.LASF39:
- 896 00a6 696E645F 		.ascii	"ind_addr_reg\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 19
+ 863 0049 6E6F726D 		.ascii	"normal_context\000"
+ 863      616C5F63 
+ 863      6F6E7465 
+ 863      787400
+ 864              	.LASF4:
+ 865 0058 5F5F7569 		.ascii	"__uint8_t\000"
+ 865      6E74385F 
+ 865      7400
+ 866              	.LASF34:
+ 867 0062 6A6D705F 		.ascii	"jmp_add\000"
+ 867      61646400 
+ 868              	.LASF33:
+ 869 006a 616E645F 		.ascii	"and_rd\000"
+ 869      726400
+ 870              	.LASF36:
+ 871 0071 61636375 		.ascii	"accumulator\000"
+ 871      6D756C61 
+ 871      746F7200 
+ 872              	.LASF5:
+ 873 007d 5F5F696E 		.ascii	"__int32_t\000"
+ 873      7433325F 
+ 873      7400
+ 874              	.LASF32:
+ 875 0087 786F725F 		.ascii	"xor_rd\000"
+ 875      726400
+ 876              	.LASF38:
+ 877 008e 73746163 		.ascii	"stack\000"
+ 877      6B00
+ 878              	.LASF28:
+ 879 0094 6164645F 		.ascii	"add_d\000"
+ 879      6400
+ 880              	.LASF29:
+ 881 009a 73746F72 		.ascii	"store_rd\000"
+ 881      655F7264 
+ 881      00
+ 882              	.LASF13:
+ 883 00a3 666C6F61 		.ascii	"float\000"
+ 883      7400
+ 884              	.LASF18:
+ 885 00a9 64617461 		.ascii	"data\000"
+ 885      00
+ 886              	.LASF25:
+ 887 00ae 70757368 		.ascii	"push\000"
+ 887      00
+ 888              	.LASF1:
+ 889 00b3 756E7369 		.ascii	"unsigned char\000"
+ 889      676E6564 
+ 889      20636861 
+ 889      7200
+ 890              	.LASF31:
+ 891 00c1 6164645F 		.ascii	"add_rd\000"
+ 891      726400
+ 892              	.LASF7:
+ 893 00c8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 893      20756E73 
+ 893      69676E65 
+ 893      6420696E 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 19
 
 
- 896      61646472 
- 896      5F726567 
- 896      00
- 897              	.LASF43:
- 898 00b3 69745F63 		.ascii	"it_context\000"
- 898      6F6E7465 
- 898      787400
- 899              	.LASF41:
- 900 00be 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 900      52784275 
- 900      66666572 
- 900      00
- 901              	.LASF14:
- 902 00cb 646F7562 		.ascii	"double\000"
- 902      6C6500
- 903              	.LASF27:
- 904 00d2 6C6F6164 		.ascii	"load_d\000"
- 904      5F6400
- 905              	.LASF50:
- 906 00d9 636F6465 		.ascii	"code\000"
- 906      00
- 907              	.LASF46:
- 908 00de 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 908      4320342E 
- 908      392E3320 
- 908      32303135 
- 908      30333033 
- 909 0111 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 909      20726576 
- 909      6973696F 
- 909      6E203232 
- 909      31323230 
- 910 0144 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 910      66756E63 
- 910      74696F6E 
- 910      2D736563 
- 910      74696F6E 
- 911              	.LASF44:
- 912 016c 63757272 		.ascii	"current_context\000"
- 912      656E745F 
- 912      636F6E74 
- 912      65787400 
- 913              	.LASF10:
- 914 017c 756E7369 		.ascii	"unsigned int\000"
- 914      676E6564 
- 914      20696E74 
- 914      00
- 915              	.LASF37:
- 916 0189 666C6167 		.ascii	"flags\000"
- 916      7300
- 917              	.LASF30:
- 918 018f 6C6F6164 		.ascii	"load_rd\000"
- 918      5F726400 
- 919              	.LASF9:
- 920 0197 6C6F6E67 		.ascii	"long long unsigned int\000"
- 920      206C6F6E 
- 920      6720756E 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 20
+ 893      7400
+ 894              	.LASF20:
+ 895 00da 696E645F 		.ascii	"ind_addr_reg_t\000"
+ 895      61646472 
+ 895      5F726567 
+ 895      5F7400
+ 896              	.LASF22:
+ 897 00e9 7365745F 		.ascii	"set_c\000"
+ 897      6300
+ 898              	.LASF39:
+ 899 00ef 696E645F 		.ascii	"ind_addr_reg\000"
+ 899      61646472 
+ 899      5F726567 
+ 899      00
+ 900              	.LASF43:
+ 901 00fc 69745F63 		.ascii	"it_context\000"
+ 901      6F6E7465 
+ 901      787400
+ 902              	.LASF41:
+ 903 0107 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 903      52784275 
+ 903      66666572 
+ 903      00
+ 904              	.LASF14:
+ 905 0114 646F7562 		.ascii	"double\000"
+ 905      6C6500
+ 906              	.LASF27:
+ 907 011b 6C6F6164 		.ascii	"load_d\000"
+ 907      5F6400
+ 908              	.LASF50:
+ 909 0122 636F6465 		.ascii	"code\000"
+ 909      00
+ 910              	.LASF46:
+ 911 0127 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 911      4320342E 
+ 911      392E3320 
+ 911      32303135 
+ 911      30333033 
+ 912 015a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 912      20726576 
+ 912      6973696F 
+ 912      6E203232 
+ 912      31323230 
+ 913 018d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 913      66756E63 
+ 913      74696F6E 
+ 913      2D736563 
+ 913      74696F6E 
+ 914              	.LASF44:
+ 915 01b5 63757272 		.ascii	"current_context\000"
+ 915      656E745F 
+ 915      636F6E74 
+ 915      65787400 
+ 916              	.LASF10:
+ 917 01c5 756E7369 		.ascii	"unsigned int\000"
+ 917      676E6564 
+ 917      20696E74 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 20
 
 
- 920      7369676E 
- 920      65642069 
- 921              	.LASF11:
- 922 01ae 75696E74 		.ascii	"uint8_t\000"
- 922      385F7400 
- 923              	.LASF26:
- 924 01b6 6272616E 		.ascii	"branch\000"
- 924      636800
- 925              	.LASF12:
- 926 01bd 696E7433 		.ascii	"int32_t\000"
- 926      325F7400 
- 927              	.LASF21:
- 928 01c5 636C6561 		.ascii	"clear_c\000"
- 928      725F6300 
- 929              	.LASF16:
- 930 01cd 73697A65 		.ascii	"sizetype\000"
- 930      74797065 
- 930      00
- 931              	.LASF8:
- 932 01d6 6C6F6E67 		.ascii	"long long int\000"
- 932      206C6F6E 
- 932      6720696E 
- 932      7400
- 933              	.LASF15:
- 934 01e4 63686172 		.ascii	"char\000"
- 934      00
- 935              	.LASF17:
- 936 01e9 666C6167 		.ascii	"flags_t\000"
- 936      735F7400 
- 937              	.LASF24:
- 938 01f1 736B6970 		.ascii	"skip_z\000"
- 938      5F7A00
- 939              	.LASF35:
- 940 01f8 696E7374 		.ascii	"inst_enum\000"
- 940      5F656E75 
- 940      6D00
- 941              	.LASF47:
- 942 0202 2E5C676E 		.ascii	".\\gnome_inst_decoder.c\000"
- 942      6F6D655F 
- 942      696E7374 
- 942      5F646563 
- 942      6F646572 
- 943              	.LASF2:
- 944 0219 73686F72 		.ascii	"short int\000"
- 944      7420696E 
- 944      7400
- 945              	.LASF19:
- 946 0223 73746163 		.ascii	"stack_t\000"
- 946      6B5F7400 
- 947              	.LASF45:
- 948 022b 72656769 		.ascii	"registers\000"
- 948      73746572 
- 948      7300
- 949              	.LASF40:
- 950 0235 636F6E74 		.ascii	"context_t\000"
- 950      6578745F 
- 950      7400
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccU21Odv.s 			page 21
+ 917      00
+ 918              	.LASF37:
+ 919 01d2 666C6167 		.ascii	"flags\000"
+ 919      7300
+ 920              	.LASF30:
+ 921 01d8 6C6F6164 		.ascii	"load_rd\000"
+ 921      5F726400 
+ 922              	.LASF9:
+ 923 01e0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 923      206C6F6E 
+ 923      6720756E 
+ 923      7369676E 
+ 923      65642069 
+ 924              	.LASF11:
+ 925 01f7 75696E74 		.ascii	"uint8_t\000"
+ 925      385F7400 
+ 926              	.LASF26:
+ 927 01ff 6272616E 		.ascii	"branch\000"
+ 927      636800
+ 928              	.LASF12:
+ 929 0206 696E7433 		.ascii	"int32_t\000"
+ 929      325F7400 
+ 930              	.LASF21:
+ 931 020e 636C6561 		.ascii	"clear_c\000"
+ 931      725F6300 
+ 932              	.LASF16:
+ 933 0216 73697A65 		.ascii	"sizetype\000"
+ 933      74797065 
+ 933      00
+ 934              	.LASF8:
+ 935 021f 6C6F6E67 		.ascii	"long long int\000"
+ 935      206C6F6E 
+ 935      6720696E 
+ 935      7400
+ 936              	.LASF15:
+ 937 022d 63686172 		.ascii	"char\000"
+ 937      00
+ 938              	.LASF17:
+ 939 0232 666C6167 		.ascii	"flags_t\000"
+ 939      735F7400 
+ 940              	.LASF24:
+ 941 023a 736B6970 		.ascii	"skip_z\000"
+ 941      5F7A00
+ 942              	.LASF35:
+ 943 0241 696E7374 		.ascii	"inst_enum\000"
+ 943      5F656E75 
+ 943      6D00
+ 944              	.LASF47:
+ 945 024b 2E5C676E 		.ascii	".\\gnome_inst_decoder.c\000"
+ 945      6F6D655F 
+ 945      696E7374 
+ 945      5F646563 
+ 945      6F646572 
+ 946              	.LASF2:
+ 947 0262 73686F72 		.ascii	"short int\000"
+ 947      7420696E 
+ 947      7400
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccXUMtIw.s 			page 21
 
 
- 951              	.LASF6:
- 952 023f 6C6F6E67 		.ascii	"long int\000"
- 952      20696E74 
- 952      00
- 953              	.LASF0:
- 954 0248 7369676E 		.ascii	"signed char\000"
- 954      65642063 
- 954      68617200 
- 955              	.LASF3:
- 956 0254 73686F72 		.ascii	"short unsigned int\000"
- 956      7420756E 
- 956      7369676E 
- 956      65642069 
- 956      6E7400
- 957              	.LASF48:
- 958 0267 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\Gnome\\"
- 958      73657273 
- 958      5C4A6176 
- 958      6965725C 
- 958      446F6375 
- 959 0294 676E6F6D 		.ascii	"gnome_cajas.cydsn\000"
- 959      655F6361 
- 959      6A61732E 
- 959      63796473 
- 959      6E00
+ 948              	.LASF19:
+ 949 026c 73746163 		.ascii	"stack_t\000"
+ 949      6B5F7400 
+ 950              	.LASF45:
+ 951 0274 72656769 		.ascii	"registers\000"
+ 951      73746572 
+ 951      7300
+ 952              	.LASF40:
+ 953 027e 636F6E74 		.ascii	"context_t\000"
+ 953      6578745F 
+ 953      7400
+ 954              	.LASF6:
+ 955 0288 6C6F6E67 		.ascii	"long int\000"
+ 955      20696E74 
+ 955      00
+ 956              	.LASF0:
+ 957 0291 7369676E 		.ascii	"signed char\000"
+ 957      65642063 
+ 957      68617200 
+ 958              	.LASF3:
+ 959 029d 73686F72 		.ascii	"short unsigned int\000"
+ 959      7420756E 
+ 959      7369676E 
+ 959      65642069 
+ 959      6E7400
  960              	.LASF49:
- 961 02a6 6465636F 		.ascii	"decodeInstruction\000"
+ 961 02b0 6465636F 		.ascii	"decodeInstruction\000"
  961      6465496E 
  961      73747275 
  961      6374696F 
  961      6E00
  962              	.LASF23:
- 963 02b8 736B6970 		.ascii	"skip_c\000"
+ 963 02c2 736B6970 		.ascii	"skip_c\000"
  963      5F6300
  964              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
