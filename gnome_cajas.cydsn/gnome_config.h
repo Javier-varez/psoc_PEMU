@@ -16,8 +16,10 @@
 #include "project.h"
     
 // Debug
-#define GNOME_DEBUGGING_ON              0x00
-#define GNOME_DEBUGGING_PERIOD          500
+#define GNOME_DEBUGGING_ON              0x01
+//#define GNOME_DEBUGGING_PERIOD          1000
+#define GNOME_DEBUGGING_MAX_BREAKPOINTS 0x08
+#define GNOME_DEBUG_MAX_BUFFER_LENGTH   15
     
 // Procesador
 #define GNOME_WORD_SIZE                 0x04    // 4 bits
@@ -98,6 +100,10 @@
 
 #ifdef LCD_gnome_B_reg_sts_sts_reg__REMOVED
     #define GNOME_LCD_B_OPT_OUT 1u
+#endif
+
+#ifdef UART_RX_IT__REMOVED
+    #define GNOME_UART_RX_IT_OPT_OUT 1u
 #endif
 
 #endif // GNOME_CONFIG

@@ -51,6 +51,11 @@
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\I2C_SLAVE.c" value="ARM_C_FILE;I2C" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\I2C_MASTER.c" value="ARM_C_FILE;I2C" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\I2C_PVT.h" value="NONE;I2C" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\Rx_1_aliases.h" value="NONE;Rx_1" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\Rx_1.c" value="ARM_C_FILE;Rx_1" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\Rx_1.h" value="NONE;Rx_1" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\UART_RX_IT.c" value="ARM_C_FILE;UART_RX_IT" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\UART_RX_IT.h" value="NONE;UART_RX_IT" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_Ctrl.h" value="NONE;via8bits_Ctrl" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_Ctrl.c" value="ARM_C_FILE;via8bits_Ctrl" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_Ctrl_PM.c" value="ARM_C_FILE;via8bits_Ctrl" />

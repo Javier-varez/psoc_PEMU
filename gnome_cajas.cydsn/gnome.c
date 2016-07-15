@@ -16,12 +16,8 @@
 #include "gnome_execute.h"
 #include "gnome_memory.h"
 #include "gnome_lcd.h"
-
-#if (GNOME_DEBUGGING_ON == 1)
-    #include <stdio.h>
-#endif
-
-CY_ISR_PROTO(gnome_process_it);
+#include "gnome_debug.h"
+#include "gnome_it.h"
 
 void gnome_switch_clk() {
     #ifndef GNOME_VIA_GNOME_CLK_OPT_OUT 
@@ -41,7 +37,10 @@ void gnome_assert_reset() {
     #endif
 }
 
-void gnome_reset() {
+void gnome_power_on_reset() {
+    // Se realiza la lectura de los códigos de operacion a ejecutar desde la EEPROM.
+    // Inicializa EEPROM
+    EEPROM_Start();
     
     // Inicializa contexto normal
     normal_context.accumulator = 0;
@@ -86,62 +85,31 @@ void gnome_reset() {
 }
 
 void gnome_start() {
-        
-    // Inicializa la UART
-    #if (GNOME_DEBUGGING_ON == 1)
-        UART_Start();
-    #endif
-    
-    // Se realiza la lectura de los códigos de operacion a ejecutar desde la EEPROM.
-    // Inicializa EEPROM
-    EEPROM_Start();
 
     // Config LCD
     setup_lcd(&lcd);
     
     // Reset del micro
-    gnome_reset();
+    gnome_power_on_reset();
     
-    #if (GNOME_DEBUGGING_ON == 1) 
-        UART_PutString("//////////////////////////////////////\n");
-        UART_PutString("//---- GNOME DEBUGGING TERMINAL ----//\n");
-        UART_PutString("//////////////////////////////////////\n");
-        char str[40];
-        if (current_context == &normal_context) 
-            UART_PutString("\tNormal Context\n");
-        else
-            UART_PutString("\tIT Context\n");
-            
-        sprintf(str, "\tNext PC = 0x%02x\n", current_context->PC);
-        UART_PutString(str);
-        sprintf(str, "\tAcc Va= 0x%02x\n", current_context->accumulator);
-        UART_PutString(str);
-        sprintf(str, "\tC, Z = %d, %d\n", current_context->flags.C, current_context->flags.Z);
-        UART_PutString(str);
-        sprintf(str, "\tIND_ADDR_REG =  0x%02x\n", current_context->ind_addr_reg.data);
-        UART_PutString(str);
-        
-        int i = 0;
-        for (i = 0; i < 16; i++) {
-            sprintf(str, "\tREG[%d] = 0x%02x\n", i, gnome_debug_load_reg(i));
-            UART_PutString(str);
-        }
-        UART_PutString("\n\n");
-    #endif
+    // Inicialización del debugger
+    gnome_debug_init();
     
-    // Configure interrupt
-    #ifndef GNOME_ISR_OPT_OUT
-        ISR_StartEx(gnome_process_it);
-    #endif
+    // Habilitar interrupciones
+    gnome_it_init();
     
+    uint8_t code = 0;
     while(1) {
+        
+        gnome_debug_loop(code);
+        update_lcd(&lcd);
         
         CyGlobalIntDisable;
         
         gnome_switch_clk();
         
         // Fetch Instruction & Increment PC
-        uint8_t code = rom[current_context->PC & 0xFF]; 
+        code = rom[current_context->PC & 0xFF]; 
         current_context->PC++;
         
         gnome_switch_clk();
@@ -157,59 +125,10 @@ void gnome_start() {
         exectute(inst, code);
         
         gnome_switch_clk();
-        #if(GNOME_DEBUGGING_ON==1) 
-            char str[40];
-            if (current_context == &normal_context) 
-                UART_PutString("\tNormal Context\n");
-            else
-                UART_PutString("\tIT Context\n");
                 
-            sprintf(str, "\tNext PC = 0x%02x\n", current_context->PC);
-            UART_PutString(str);
-            sprintf(str, "\tInstr = 0x%02x\n", code);
-            UART_PutString(str);
-            sprintf(str, "\tAcc = 0x%02x\n", current_context->accumulator);
-            UART_PutString(str);
-            sprintf(str, "\tC, Z = %d, %d\n", current_context->flags.C, current_context->flags.Z);
-            UART_PutString(str);
-            sprintf(str, "\tIND_ADDR_REG =  0x%02x\n", current_context->ind_addr_reg.data);
-            UART_PutString(str);
-            
-            int i = 0;
-            for (i = 0; i < 16; i++) {
-                sprintf(str, "\tREG[%d] = 0x%02x\n", i, gnome_debug_load_reg(i));
-                UART_PutString(str);
-            }
-            UART_PutString("\n");
-            for (i = 0; i < GNOME_STACK_SIZE; i++) {
-                uint8_t addr = current_context->stack.ptr - i;
-                if (addr >= GNOME_STACK_SIZE) addr += GNOME_STACK_SIZE;
-                sprintf(str, "\tSTACK[%d] = 0x%02x\n", i, current_context->stack.data[addr]);
-                UART_PutString(str);
-            }
-            sprintf(str, "\tSTACK_PTR = 0x%02x\n", current_context->stack.ptr);
-            UART_PutString(str);
-            
-            UART_PutString("\n\n");
-            
-            CyDelay(GNOME_DEBUGGING_PERIOD);
-        #endif
-        
         // Habilitar interrupciones entre instrucciones
         CYGlobalIntEnable;
-        
-        if (lcd_update) update_lcd(&lcd);
     }
 }
-
-CY_ISR(gnome_process_it){
-    if (current_context != &it_context) {
-        current_context = &it_context;
-        
-        // Configuracion del vector de interrupcion.
-        current_context->PC = GNOME_IT_VECTOR;
-    }
-}
-
 
 /* [] END OF FILE */

@@ -40,22 +40,27 @@ void update_lcd_it() {
 
 void update_lcd() {
     #if (GNOME_LCD_MODULE_ACTIVE) 
-        char str[5];
-        #ifndef GNOME_LCD_A_OPT_OUT
-            reg8* a = GNOME_LCD_A_ADDR;
-            i2cLCD_SetPosition(&lcd, 0, GNOME_LCD_LINE_OFFSET1);
-            sprintf(str, "%02x", *a);
-            i2cLCD_Print(&lcd, str);
-        #endif
-        #ifndef GNOME_LCD_B_OPT_OUT 
-            reg8* b = GNOME_LCD_B_ADDR;
-            i2cLCD_SetPosition(&lcd, 1, GNOME_LCD_LINE_OFFSET2);
-            sprintf(str, "%02x", *b);
-            i2cLCD_Print(&lcd, str);
-        #endif
+        
+        if (lcd_update) {
+            char str[5];
+            #ifndef GNOME_LCD_A_OPT_OUT
+                reg8* a = GNOME_LCD_A_ADDR;
+                i2cLCD_SetPosition(&lcd, 0, GNOME_LCD_LINE_OFFSET1);
+                sprintf(str, "%02x", *a);
+                i2cLCD_Print(&lcd, str);
+            #endif
+            #ifndef GNOME_LCD_B_OPT_OUT 
+                reg8* b = GNOME_LCD_B_ADDR;
+                i2cLCD_SetPosition(&lcd, 1, GNOME_LCD_LINE_OFFSET2);
+                sprintf(str, "%02x", *b);
+                i2cLCD_Print(&lcd, str);
+            #endif
+        }
+        //#if (!GNOME_DEBUGGING_ON)
+            lcd_update = 0;
+        //#endif
         
     #endif
-    lcd_update = 0;
 }
 
 /* [] END OF FILE */

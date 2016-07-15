@@ -417,66 +417,6 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>UART</name>
-      <description>UART</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>TX_UART_TX_DATA</name>
-          <description>TX Data Register</description>
-          <addressOffset>0x40006546</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>TX_UART_TX_STATUS</name>
-          <description>TX status register</description>
-          <addressOffset>0x40006566</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>UART_TX_STS_COMPLETE</name>
-              <description>No description available</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_TX_STS_FIFO_EMPTY</name>
-              <description>No description available</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_TX_STS_FIFO_FULL</name>
-              <description>No description available</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_TX_STS_FIFO_NOT_FULL</name>
-              <description>No description available</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
       <name>LCD_gnome_B_reg</name>
       <description>No description available</description>
       <baseAddress>0x40006463</baseAddress>
@@ -634,7 +574,7 @@
     <peripheral>
       <name>LCD_gnome_A_reg</name>
       <description>No description available</description>
-      <baseAddress>0x40006460</baseAddress>
+      <baseAddress>0x40006461</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -787,9 +727,156 @@
       </registers>
     </peripheral>
     <peripheral>
+      <name>UART</name>
+      <description>UART</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>RX_UART_RX_ADDRESS1</name>
+          <description>RX Address1 Register</description>
+          <addressOffset>0x40006528</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_ADDRESS2</name>
+          <description>RX Address2 Register</description>
+          <addressOffset>0x40006538</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>TX_UART_TX_DATA</name>
+          <description>TX Data Register</description>
+          <addressOffset>0x40006544</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_DATA</name>
+          <description>RX Data Register</description>
+          <addressOffset>0x40006548</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>TX_UART_TX_STATUS</name>
+          <description>TX status register</description>
+          <addressOffset>0x40006564</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>UART_TX_STS_COMPLETE</name>
+              <description>No description available</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_TX_STS_FIFO_EMPTY</name>
+              <description>No description available</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_TX_STS_FIFO_FULL</name>
+              <description>No description available</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_TX_STS_FIFO_NOT_FULL</name>
+              <description>No description available</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RX_UART_RX_STATUS</name>
+          <description>RX status register</description>
+          <addressOffset>0x40006567</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>UART_RX_STS_MRKSPC</name>
+              <description>No description available</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_BREAK</name>
+              <description>No description available</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_PAR_ERROR</name>
+              <description>No description available</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_STOP_ERROR</name>
+              <description>No description available</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_OVERRUN</name>
+              <description>No description available</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_FIFO_NOTEMPTY</name>
+              <description>No description available</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_ADDR_MATCH</name>
+              <description>No description available</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>via8bits_P1_stat</name>
       <description>No description available</description>
-      <baseAddress>0x40006567</baseAddress>
+      <baseAddress>0x40006566</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -965,7 +1052,7 @@
     <peripheral>
       <name>via8bits_Stat</name>
       <description>No description available</description>
-      <baseAddress>0x40006461</baseAddress>
+      <baseAddress>0x40006464</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1120,7 +1207,7 @@
     <peripheral>
       <name>via8bits_Ctrl</name>
       <description>No description available</description>
-      <baseAddress>0x40006475</baseAddress>
+      <baseAddress>0x40006472</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1141,7 +1228,7 @@
     <peripheral>
       <name>via8bits_P0_ctrl</name>
       <description>No description available</description>
-      <baseAddress>0x40006472</baseAddress>
+      <baseAddress>0x40006474</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1162,7 +1249,7 @@
     <peripheral>
       <name>via8bits_P1_ctrl</name>
       <description>No description available</description>
-      <baseAddress>0x40006477</baseAddress>
+      <baseAddress>0x40006575</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1183,7 +1270,7 @@
     <peripheral>
       <name>via8bits_P0_stat</name>
       <description>No description available</description>
-      <baseAddress>0x40006465</baseAddress>
+      <baseAddress>0x40006467</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>

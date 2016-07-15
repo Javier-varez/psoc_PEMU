@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 1
   29:.\gnome_lcd.c ****         CySysTickSetCallback(4,(void*)update_lcd_it);
   30:.\gnome_lcd.c ****         lcd_update = 1;
   31:.\gnome_lcd.c **** 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 2
 
 
   32:.\gnome_lcd.c ****     #endif
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 1
   21:.\gnome_lcd.c ****         i2cLCD_SetPosition(&lcd, 0, 0);
   73              		.loc 1 21 0
   74 0006 134C     		ldr	r4, .L8
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 3
 
 
   75 0008 2046     		mov	r0, r4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 1
  121 0052 00BF     		.align	2
  122              	.L8:
  123 0054 00000000 		.word	lcd
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 4
 
 
  124 0058 00000000 		.word	.LC0
@@ -204,1456 +204,1518 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 1
  140              		.cfi_startproc
  141              		@ args = 0, pretend = 0, frame = 8
  142              		@ frame_needed = 0, uses_anonymous_args = 0
- 143 0000 30B5     		push	{r4, r5, lr}
- 144              		.cfi_def_cfa_offset 12
- 145              		.cfi_offset 4, -12
- 146              		.cfi_offset 5, -8
- 147              		.cfi_offset 14, -4
- 148 0002 83B0     		sub	sp, sp, #12
- 149              		.cfi_def_cfa_offset 24
- 150              	.LVL10:
   42:.\gnome_lcd.c ****     #if (GNOME_LCD_MODULE_ACTIVE) 
-  43:.\gnome_lcd.c ****         char str[5];
-  44:.\gnome_lcd.c ****         #ifndef GNOME_LCD_A_OPT_OUT
-  45:.\gnome_lcd.c ****             reg8* a = GNOME_LCD_A_ADDR;
-  46:.\gnome_lcd.c ****             i2cLCD_SetPosition(&lcd, 0, GNOME_LCD_LINE_OFFSET1);
- 151              		.loc 1 46 0
- 152 0004 124C     		ldr	r4, .L12
- 153 0006 2046     		mov	r0, r4
- 154 0008 0021     		movs	r1, #0
- 155 000a 0622     		movs	r2, #6
- 156 000c FFF7FEFF 		bl	i2cLCD_SetPosition
- 157              	.LVL11:
-  47:.\gnome_lcd.c ****             sprintf(str, "%02x", *a);
- 158              		.loc 1 47 0
- 159 0010 104B     		ldr	r3, .L12+4
- 160 0012 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 161 0014 104D     		ldr	r5, .L12+8
- 162 0016 6846     		mov	r0, sp
- 163 0018 2946     		mov	r1, r5
- 164 001a FFF7FEFF 		bl	sprintf
- 165              	.LVL12:
-  48:.\gnome_lcd.c ****             i2cLCD_Print(&lcd, str);
- 166              		.loc 1 48 0
- 167 001e 2046     		mov	r0, r4
- 168 0020 6946     		mov	r1, sp
- 169 0022 FFF7FEFF 		bl	i2cLCD_Print
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 5
+  43:.\gnome_lcd.c ****         
+  44:.\gnome_lcd.c ****         if (lcd_update) {
+ 143              		.loc 1 44 0
+ 144 0000 174B     		ldr	r3, .L14
+ 145 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 146 0004 13F0FF0F 		tst	r3, #255
+ 147 0008 26D0     		beq	.L13
+  41:.\gnome_lcd.c ****     #if (GNOME_LCD_MODULE_ACTIVE) 
+ 148              		.loc 1 41 0
+ 149 000a 30B5     		push	{r4, r5, lr}
+ 150              		.cfi_def_cfa_offset 12
+ 151              		.cfi_offset 4, -12
+ 152              		.cfi_offset 5, -8
+ 153              		.cfi_offset 14, -4
+ 154 000c 83B0     		sub	sp, sp, #12
+ 155              		.cfi_def_cfa_offset 24
+ 156              	.LVL10:
+ 157              	.LBB2:
+  45:.\gnome_lcd.c ****             char str[5];
+  46:.\gnome_lcd.c ****             #ifndef GNOME_LCD_A_OPT_OUT
+  47:.\gnome_lcd.c ****                 reg8* a = GNOME_LCD_A_ADDR;
+  48:.\gnome_lcd.c ****                 i2cLCD_SetPosition(&lcd, 0, GNOME_LCD_LINE_OFFSET1);
+ 158              		.loc 1 48 0
+ 159 000e 154C     		ldr	r4, .L14+4
+ 160 0010 2046     		mov	r0, r4
+ 161 0012 0021     		movs	r1, #0
+ 162 0014 0622     		movs	r2, #6
+ 163 0016 FFF7FEFF 		bl	i2cLCD_SetPosition
+ 164              	.LVL11:
+  49:.\gnome_lcd.c ****                 sprintf(str, "%02x", *a);
+ 165              		.loc 1 49 0
+ 166 001a 134B     		ldr	r3, .L14+8
+ 167 001c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 5
 
 
- 170              	.LVL13:
-  49:.\gnome_lcd.c ****         #endif
-  50:.\gnome_lcd.c ****         #ifndef GNOME_LCD_B_OPT_OUT 
-  51:.\gnome_lcd.c ****             reg8* b = GNOME_LCD_B_ADDR;
-  52:.\gnome_lcd.c ****             i2cLCD_SetPosition(&lcd, 1, GNOME_LCD_LINE_OFFSET2);
- 171              		.loc 1 52 0
- 172 0026 2046     		mov	r0, r4
- 173 0028 0121     		movs	r1, #1
- 174 002a 0622     		movs	r2, #6
- 175 002c FFF7FEFF 		bl	i2cLCD_SetPosition
- 176              	.LVL14:
-  53:.\gnome_lcd.c ****             sprintf(str, "%02x", *b);
- 177              		.loc 1 53 0
- 178 0030 0A4B     		ldr	r3, .L12+12
- 179 0032 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 180 0034 6846     		mov	r0, sp
- 181 0036 2946     		mov	r1, r5
- 182 0038 FFF7FEFF 		bl	sprintf
- 183              	.LVL15:
-  54:.\gnome_lcd.c ****             i2cLCD_Print(&lcd, str);
- 184              		.loc 1 54 0
- 185 003c 2046     		mov	r0, r4
- 186 003e 6946     		mov	r1, sp
- 187 0040 FFF7FEFF 		bl	i2cLCD_Print
- 188              	.LVL16:
-  55:.\gnome_lcd.c ****         #endif
-  56:.\gnome_lcd.c ****         
-  57:.\gnome_lcd.c ****     #endif
-  58:.\gnome_lcd.c ****     lcd_update = 0;
- 189              		.loc 1 58 0
- 190 0044 0022     		movs	r2, #0
- 191 0046 064B     		ldr	r3, .L12+16
- 192 0048 1A70     		strb	r2, [r3]
-  59:.\gnome_lcd.c **** }
- 193              		.loc 1 59 0
- 194 004a 03B0     		add	sp, sp, #12
- 195              		.cfi_def_cfa_offset 12
- 196              		@ sp needed
- 197 004c 30BD     		pop	{r4, r5, pc}
- 198              	.L13:
- 199 004e 00BF     		.align	2
- 200              	.L12:
- 201 0050 00000000 		.word	lcd
- 202 0054 60640040 		.word	1073767520
- 203 0058 10000000 		.word	.LC2
- 204 005c 63640040 		.word	1073767523
- 205 0060 00000000 		.word	lcd_update
- 206              		.cfi_endproc
- 207              	.LFE65:
- 208              		.size	update_lcd, .-update_lcd
- 209              		.comm	lcd_update,1,1
- 210              		.comm	lcd,134,4
- 211              		.section	.rodata.str1.4,"aMS",%progbits,1
- 212              		.align	2
- 213              	.LC0:
- 214 0000 43473A20 		.ascii	"CG: 0x\000"
- 214      307800
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 6
+ 168 001e 134D     		ldr	r5, .L14+12
+ 169 0020 6846     		mov	r0, sp
+ 170 0022 2946     		mov	r1, r5
+ 171 0024 FFF7FEFF 		bl	sprintf
+ 172              	.LVL12:
+  50:.\gnome_lcd.c ****                 i2cLCD_Print(&lcd, str);
+ 173              		.loc 1 50 0
+ 174 0028 2046     		mov	r0, r4
+ 175 002a 6946     		mov	r1, sp
+ 176 002c FFF7FEFF 		bl	i2cLCD_Print
+ 177              	.LVL13:
+  51:.\gnome_lcd.c ****             #endif
+  52:.\gnome_lcd.c ****             #ifndef GNOME_LCD_B_OPT_OUT 
+  53:.\gnome_lcd.c ****                 reg8* b = GNOME_LCD_B_ADDR;
+  54:.\gnome_lcd.c ****                 i2cLCD_SetPosition(&lcd, 1, GNOME_LCD_LINE_OFFSET2);
+ 178              		.loc 1 54 0
+ 179 0030 2046     		mov	r0, r4
+ 180 0032 0121     		movs	r1, #1
+ 181 0034 0622     		movs	r2, #6
+ 182 0036 FFF7FEFF 		bl	i2cLCD_SetPosition
+ 183              	.LVL14:
+  55:.\gnome_lcd.c ****                 sprintf(str, "%02x", *b);
+ 184              		.loc 1 55 0
+ 185 003a 0D4B     		ldr	r3, .L14+16
+ 186 003c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 187 003e 6846     		mov	r0, sp
+ 188 0040 2946     		mov	r1, r5
+ 189 0042 FFF7FEFF 		bl	sprintf
+ 190              	.LVL15:
+  56:.\gnome_lcd.c ****                 i2cLCD_Print(&lcd, str);
+ 191              		.loc 1 56 0
+ 192 0046 2046     		mov	r0, r4
+ 193 0048 6946     		mov	r1, sp
+ 194 004a FFF7FEFF 		bl	i2cLCD_Print
+ 195              	.LVL16:
+ 196              	.LBE2:
+  57:.\gnome_lcd.c ****             #endif
+  58:.\gnome_lcd.c ****         }
+  59:.\gnome_lcd.c ****         //#if (!GNOME_DEBUGGING_ON)
+  60:.\gnome_lcd.c ****             lcd_update = 0;
+ 197              		.loc 1 60 0
+ 198 004e 0022     		movs	r2, #0
+ 199 0050 034B     		ldr	r3, .L14
+ 200 0052 1A70     		strb	r2, [r3]
+  61:.\gnome_lcd.c ****         //#endif
+  62:.\gnome_lcd.c ****         
+  63:.\gnome_lcd.c ****     #endif
+  64:.\gnome_lcd.c **** }
+ 201              		.loc 1 64 0
+ 202 0054 03B0     		add	sp, sp, #12
+ 203              		.cfi_def_cfa_offset 12
+ 204              		@ sp needed
+ 205 0056 30BD     		pop	{r4, r5, pc}
+ 206              	.LVL17:
+ 207              	.L13:
+ 208              		.cfi_def_cfa_offset 0
+ 209              		.cfi_restore 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 6
 
 
- 215 0007 00       		.space	1
- 216              	.LC1:
- 217 0008 43503A20 		.ascii	"CP: 0x\000"
- 217      307800
- 218 000f 00       		.space	1
- 219              	.LC2:
- 220 0010 25303278 		.ascii	"%02x\000"
- 220      00
- 221 0015 000000   		.text
- 222              	.Letext0:
- 223              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 224              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 225              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 226              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
- 227              		.file 6 ".\\i2cLCD.h"
- 228              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
- 229              		.file 8 ".\\gnome_lcd.h"
- 230              		.file 9 "Generated_Source\\PSoC5/I2C.h"
- 231              		.file 10 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9
- 232              		.section	.debug_info,"",%progbits
- 233              	.Ldebug_info0:
- 234 0000 7B040000 		.4byte	0x47b
- 235 0004 0400     		.2byte	0x4
- 236 0006 00000000 		.4byte	.Ldebug_abbrev0
- 237 000a 04       		.byte	0x4
- 238 000b 01       		.uleb128 0x1
- 239 000c D8010000 		.4byte	.LASF43
- 240 0010 01       		.byte	0x1
- 241 0011 E3020000 		.4byte	.LASF44
- 242 0015 4F010000 		.4byte	.LASF45
- 243 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 244 001d 00000000 		.4byte	0
- 245 0021 00000000 		.4byte	.Ldebug_line0
- 246 0025 02       		.uleb128 0x2
- 247 0026 01       		.byte	0x1
- 248 0027 06       		.byte	0x6
- 249 0028 FA020000 		.4byte	.LASF0
- 250 002c 03       		.uleb128 0x3
- 251 002d 0B000000 		.4byte	.LASF3
- 252 0031 02       		.byte	0x2
- 253 0032 1D       		.byte	0x1d
- 254 0033 37000000 		.4byte	0x37
- 255 0037 02       		.uleb128 0x2
- 256 0038 01       		.byte	0x1
- 257 0039 08       		.byte	0x8
- 258 003a 1A010000 		.4byte	.LASF1
- 259 003e 02       		.uleb128 0x2
- 260 003f 02       		.byte	0x2
- 261 0040 05       		.byte	0x5
- 262 0041 D0020000 		.4byte	.LASF2
- 263 0045 03       		.uleb128 0x3
- 264 0046 28010000 		.4byte	.LASF4
- 265 004a 02       		.byte	0x2
- 266 004b 2B       		.byte	0x2b
- 267 004c 50000000 		.4byte	0x50
- 268 0050 02       		.uleb128 0x2
- 269 0051 02       		.byte	0x2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 7
+ 210              		.cfi_restore 5
+ 211              		.cfi_restore 14
+  60:.\gnome_lcd.c ****         //#endif
+ 212              		.loc 1 60 0
+ 213 0058 0022     		movs	r2, #0
+ 214 005a 014B     		ldr	r3, .L14
+ 215 005c 1A70     		strb	r2, [r3]
+ 216 005e 7047     		bx	lr
+ 217              	.L15:
+ 218              		.align	2
+ 219              	.L14:
+ 220 0060 00000000 		.word	lcd_update
+ 221 0064 00000000 		.word	lcd
+ 222 0068 61640040 		.word	1073767521
+ 223 006c 10000000 		.word	.LC2
+ 224 0070 63640040 		.word	1073767523
+ 225              		.cfi_endproc
+ 226              	.LFE65:
+ 227              		.size	update_lcd, .-update_lcd
+ 228              		.comm	lcd_update,1,1
+ 229              		.comm	lcd,134,4
+ 230              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 231              		.align	2
+ 232              	.LC0:
+ 233 0000 43473A20 		.ascii	"CG: 0x\000"
+ 233      307800
+ 234 0007 00       		.space	1
+ 235              	.LC1:
+ 236 0008 43503A20 		.ascii	"CP: 0x\000"
+ 236      307800
+ 237 000f 00       		.space	1
+ 238              	.LC2:
+ 239 0010 25303278 		.ascii	"%02x\000"
+ 239      00
+ 240 0015 000000   		.text
+ 241              	.Letext0:
+ 242              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 243              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 244              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 245              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+ 246              		.file 6 ".\\i2cLCD.h"
+ 247              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 248              		.file 8 ".\\gnome_lcd.h"
+ 249              		.file 9 "Generated_Source\\PSoC5/I2C.h"
+ 250              		.file 10 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9
+ 251              		.section	.debug_info,"",%progbits
+ 252              	.Ldebug_info0:
+ 253 0000 85040000 		.4byte	0x485
+ 254 0004 0400     		.2byte	0x4
+ 255 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 256 000a 04       		.byte	0x4
+ 257 000b 01       		.uleb128 0x1
+ 258 000c D8010000 		.4byte	.LASF43
+ 259 0010 01       		.byte	0x1
+ 260 0011 E3020000 		.4byte	.LASF44
+ 261 0015 4F010000 		.4byte	.LASF45
+ 262 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 7
 
 
- 270 0052 07       		.byte	0x7
- 271 0053 C6000000 		.4byte	.LASF5
- 272 0057 03       		.uleb128 0x3
- 273 0058 52000000 		.4byte	.LASF6
- 274 005c 02       		.byte	0x2
- 275 005d 3F       		.byte	0x3f
- 276 005e 62000000 		.4byte	0x62
- 277 0062 02       		.uleb128 0x2
- 278 0063 04       		.byte	0x4
- 279 0064 05       		.byte	0x5
- 280 0065 F1020000 		.4byte	.LASF7
- 281 0069 02       		.uleb128 0x2
- 282 006a 04       		.byte	0x4
- 283 006b 07       		.byte	0x7
- 284 006c B4000000 		.4byte	.LASF8
- 285 0070 02       		.uleb128 0x2
- 286 0071 08       		.byte	0x8
- 287 0072 05       		.byte	0x5
- 288 0073 97020000 		.4byte	.LASF9
- 289 0077 02       		.uleb128 0x2
- 290 0078 08       		.byte	0x8
- 291 0079 07       		.byte	0x7
- 292 007a B8010000 		.4byte	.LASF10
- 293 007e 04       		.uleb128 0x4
- 294 007f 04       		.byte	0x4
- 295 0080 05       		.byte	0x5
- 296 0081 696E7400 		.ascii	"int\000"
- 297 0085 02       		.uleb128 0x2
- 298 0086 04       		.byte	0x4
- 299 0087 07       		.byte	0x7
- 300 0088 AB010000 		.4byte	.LASF11
- 301 008c 02       		.uleb128 0x2
- 302 008d 04       		.byte	0x4
- 303 008e 07       		.byte	0x7
- 304 008f 8E020000 		.4byte	.LASF12
- 305 0093 05       		.uleb128 0x5
- 306 0094 04       		.byte	0x4
- 307 0095 99000000 		.4byte	0x99
- 308 0099 06       		.uleb128 0x6
- 309 009a 05       		.uleb128 0x5
- 310 009b 04       		.byte	0x4
- 311 009c A0000000 		.4byte	0xa0
- 312 00a0 02       		.uleb128 0x2
- 313 00a1 01       		.byte	0x1
- 314 00a2 08       		.byte	0x8
- 315 00a3 A5020000 		.4byte	.LASF13
- 316 00a7 05       		.uleb128 0x5
- 317 00a8 04       		.byte	0x4
- 318 00a9 AD000000 		.4byte	0xad
- 319 00ad 07       		.uleb128 0x7
- 320 00ae A0000000 		.4byte	0xa0
- 321 00b2 03       		.uleb128 0x3
- 322 00b3 5C000000 		.4byte	.LASF14
- 323 00b7 03       		.byte	0x3
- 324 00b8 15       		.byte	0x15
- 325 00b9 2C000000 		.4byte	0x2c
- 326 00bd 03       		.uleb128 0x3
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 8
+ 263 001d 00000000 		.4byte	0
+ 264 0021 00000000 		.4byte	.Ldebug_line0
+ 265 0025 02       		.uleb128 0x2
+ 266 0026 01       		.byte	0x1
+ 267 0027 06       		.byte	0x6
+ 268 0028 FA020000 		.4byte	.LASF0
+ 269 002c 03       		.uleb128 0x3
+ 270 002d 0B000000 		.4byte	.LASF3
+ 271 0031 02       		.byte	0x2
+ 272 0032 1D       		.byte	0x1d
+ 273 0033 37000000 		.4byte	0x37
+ 274 0037 02       		.uleb128 0x2
+ 275 0038 01       		.byte	0x1
+ 276 0039 08       		.byte	0x8
+ 277 003a 1A010000 		.4byte	.LASF1
+ 278 003e 02       		.uleb128 0x2
+ 279 003f 02       		.byte	0x2
+ 280 0040 05       		.byte	0x5
+ 281 0041 D0020000 		.4byte	.LASF2
+ 282 0045 03       		.uleb128 0x3
+ 283 0046 28010000 		.4byte	.LASF4
+ 284 004a 02       		.byte	0x2
+ 285 004b 2B       		.byte	0x2b
+ 286 004c 50000000 		.4byte	0x50
+ 287 0050 02       		.uleb128 0x2
+ 288 0051 02       		.byte	0x2
+ 289 0052 07       		.byte	0x7
+ 290 0053 C6000000 		.4byte	.LASF5
+ 291 0057 03       		.uleb128 0x3
+ 292 0058 52000000 		.4byte	.LASF6
+ 293 005c 02       		.byte	0x2
+ 294 005d 3F       		.byte	0x3f
+ 295 005e 62000000 		.4byte	0x62
+ 296 0062 02       		.uleb128 0x2
+ 297 0063 04       		.byte	0x4
+ 298 0064 05       		.byte	0x5
+ 299 0065 F1020000 		.4byte	.LASF7
+ 300 0069 02       		.uleb128 0x2
+ 301 006a 04       		.byte	0x4
+ 302 006b 07       		.byte	0x7
+ 303 006c B4000000 		.4byte	.LASF8
+ 304 0070 02       		.uleb128 0x2
+ 305 0071 08       		.byte	0x8
+ 306 0072 05       		.byte	0x5
+ 307 0073 97020000 		.4byte	.LASF9
+ 308 0077 02       		.uleb128 0x2
+ 309 0078 08       		.byte	0x8
+ 310 0079 07       		.byte	0x7
+ 311 007a B8010000 		.4byte	.LASF10
+ 312 007e 04       		.uleb128 0x4
+ 313 007f 04       		.byte	0x4
+ 314 0080 05       		.byte	0x5
+ 315 0081 696E7400 		.ascii	"int\000"
+ 316 0085 02       		.uleb128 0x2
+ 317 0086 04       		.byte	0x4
+ 318 0087 07       		.byte	0x7
+ 319 0088 AB010000 		.4byte	.LASF11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 8
 
 
- 327 00be DA020000 		.4byte	.LASF15
- 328 00c2 03       		.byte	0x3
- 329 00c3 21       		.byte	0x21
- 330 00c4 45000000 		.4byte	0x45
- 331 00c8 03       		.uleb128 0x3
- 332 00c9 86020000 		.4byte	.LASF16
- 333 00cd 03       		.byte	0x3
- 334 00ce 2C       		.byte	0x2c
- 335 00cf 57000000 		.4byte	0x57
- 336 00d3 08       		.uleb128 0x8
- 337 00d4 92000000 		.4byte	.LASF17
- 338 00d8 04       		.byte	0x4
- 339 00d9 3801     		.2byte	0x138
- 340 00db 37000000 		.4byte	0x37
- 341 00df 08       		.uleb128 0x8
- 342 00e0 98010000 		.4byte	.LASF18
- 343 00e4 04       		.byte	0x4
- 344 00e5 3A01     		.2byte	0x13a
- 345 00e7 69000000 		.4byte	0x69
- 346 00eb 02       		.uleb128 0x2
- 347 00ec 04       		.byte	0x4
- 348 00ed 04       		.byte	0x4
- 349 00ee 7C000000 		.4byte	.LASF19
- 350 00f2 02       		.uleb128 0x2
- 351 00f3 08       		.byte	0x8
- 352 00f4 04       		.byte	0x4
- 353 00f5 33010000 		.4byte	.LASF20
- 354 00f9 08       		.uleb128 0x8
- 355 00fa A0000000 		.4byte	.LASF21
- 356 00fe 04       		.byte	0x4
- 357 00ff E201     		.2byte	0x1e2
- 358 0101 05010000 		.4byte	0x105
- 359 0105 09       		.uleb128 0x9
- 360 0106 D3000000 		.4byte	0xd3
- 361 010a 03       		.uleb128 0x3
- 362 010b AA020000 		.4byte	.LASF22
- 363 010f 05       		.byte	0x5
- 364 0110 AD       		.byte	0xad
- 365 0111 93000000 		.4byte	0x93
- 366 0115 09       		.uleb128 0x9
- 367 0116 B2000000 		.4byte	0xb2
- 368 011a 0A       		.uleb128 0xa
- 369 011b 86       		.byte	0x86
- 370 011c 06       		.byte	0x6
- 371 011d 3F       		.byte	0x3f
- 372 011e 77010000 		.4byte	0x177
- 373 0122 0B       		.uleb128 0xb
- 374 0123 00000000 		.4byte	.LASF23
- 375 0127 06       		.byte	0x6
- 376 0128 40       		.byte	0x40
- 377 0129 B2000000 		.4byte	0xb2
- 378 012d 00       		.byte	0
- 379 012e 0B       		.uleb128 0xb
- 380 012f 28000000 		.4byte	.LASF24
- 381 0133 06       		.byte	0x6
- 382 0134 41       		.byte	0x41
- 383 0135 B2000000 		.4byte	0xb2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 9
+ 320 008c 02       		.uleb128 0x2
+ 321 008d 04       		.byte	0x4
+ 322 008e 07       		.byte	0x7
+ 323 008f 8E020000 		.4byte	.LASF12
+ 324 0093 05       		.uleb128 0x5
+ 325 0094 04       		.byte	0x4
+ 326 0095 99000000 		.4byte	0x99
+ 327 0099 06       		.uleb128 0x6
+ 328 009a 05       		.uleb128 0x5
+ 329 009b 04       		.byte	0x4
+ 330 009c A0000000 		.4byte	0xa0
+ 331 00a0 02       		.uleb128 0x2
+ 332 00a1 01       		.byte	0x1
+ 333 00a2 08       		.byte	0x8
+ 334 00a3 A5020000 		.4byte	.LASF13
+ 335 00a7 05       		.uleb128 0x5
+ 336 00a8 04       		.byte	0x4
+ 337 00a9 AD000000 		.4byte	0xad
+ 338 00ad 07       		.uleb128 0x7
+ 339 00ae A0000000 		.4byte	0xa0
+ 340 00b2 03       		.uleb128 0x3
+ 341 00b3 5C000000 		.4byte	.LASF14
+ 342 00b7 03       		.byte	0x3
+ 343 00b8 15       		.byte	0x15
+ 344 00b9 2C000000 		.4byte	0x2c
+ 345 00bd 03       		.uleb128 0x3
+ 346 00be DA020000 		.4byte	.LASF15
+ 347 00c2 03       		.byte	0x3
+ 348 00c3 21       		.byte	0x21
+ 349 00c4 45000000 		.4byte	0x45
+ 350 00c8 03       		.uleb128 0x3
+ 351 00c9 86020000 		.4byte	.LASF16
+ 352 00cd 03       		.byte	0x3
+ 353 00ce 2C       		.byte	0x2c
+ 354 00cf 57000000 		.4byte	0x57
+ 355 00d3 08       		.uleb128 0x8
+ 356 00d4 92000000 		.4byte	.LASF17
+ 357 00d8 04       		.byte	0x4
+ 358 00d9 3801     		.2byte	0x138
+ 359 00db 37000000 		.4byte	0x37
+ 360 00df 08       		.uleb128 0x8
+ 361 00e0 98010000 		.4byte	.LASF18
+ 362 00e4 04       		.byte	0x4
+ 363 00e5 3A01     		.2byte	0x13a
+ 364 00e7 69000000 		.4byte	0x69
+ 365 00eb 02       		.uleb128 0x2
+ 366 00ec 04       		.byte	0x4
+ 367 00ed 04       		.byte	0x4
+ 368 00ee 7C000000 		.4byte	.LASF19
+ 369 00f2 02       		.uleb128 0x2
+ 370 00f3 08       		.byte	0x8
+ 371 00f4 04       		.byte	0x4
+ 372 00f5 33010000 		.4byte	.LASF20
+ 373 00f9 08       		.uleb128 0x8
+ 374 00fa A0000000 		.4byte	.LASF21
+ 375 00fe 04       		.byte	0x4
+ 376 00ff E201     		.2byte	0x1e2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 9
 
 
- 384 0139 01       		.byte	0x1
- 385 013a 0B       		.uleb128 0xb
- 386 013b CF010000 		.4byte	.LASF25
- 387 013f 06       		.byte	0x6
- 388 0140 42       		.byte	0x42
- 389 0141 B2000000 		.4byte	0xb2
- 390 0145 02       		.byte	0x2
- 391 0146 0B       		.uleb128 0xb
- 392 0147 E4000000 		.4byte	.LASF26
- 393 014b 06       		.byte	0x6
- 394 014c 43       		.byte	0x43
- 395 014d B2000000 		.4byte	0xb2
- 396 0151 03       		.byte	0x3
- 397 0152 0B       		.uleb128 0xb
- 398 0153 98000000 		.4byte	.LASF27
- 399 0157 06       		.byte	0x6
- 400 0158 44       		.byte	0x44
- 401 0159 B2000000 		.4byte	0xb2
- 402 015d 04       		.byte	0x4
- 403 015e 0B       		.uleb128 0xb
- 404 015f BC020000 		.4byte	.LASF28
- 405 0163 06       		.byte	0x6
- 406 0164 45       		.byte	0x45
- 407 0165 B2000000 		.4byte	0xb2
- 408 0169 05       		.byte	0x5
- 409 016a 0B       		.uleb128 0xb
- 410 016b 70020000 		.4byte	.LASF29
- 411 016f 06       		.byte	0x6
- 412 0170 46       		.byte	0x46
- 413 0171 77010000 		.4byte	0x177
- 414 0175 06       		.byte	0x6
- 415 0176 00       		.byte	0
- 416 0177 0C       		.uleb128 0xc
- 417 0178 A0000000 		.4byte	0xa0
- 418 017c 8D010000 		.4byte	0x18d
- 419 0180 0D       		.uleb128 0xd
- 420 0181 8C000000 		.4byte	0x8c
- 421 0185 07       		.byte	0x7
- 422 0186 0D       		.uleb128 0xd
- 423 0187 8C000000 		.4byte	0x8c
- 424 018b 0F       		.byte	0xf
- 425 018c 00       		.byte	0
- 426 018d 03       		.uleb128 0x3
- 427 018e 3A010000 		.4byte	.LASF30
- 428 0192 06       		.byte	0x6
- 429 0193 47       		.byte	0x47
- 430 0194 1A010000 		.4byte	0x11a
- 431 0198 0E       		.uleb128 0xe
- 432 0199 6E000000 		.4byte	.LASF31
- 433 019d 01       		.byte	0x1
- 434 019e 23       		.byte	0x23
- 435 019f 00000000 		.4byte	.LFB64
- 436 01a3 1C000000 		.4byte	.LFE64-.LFB64
- 437 01a7 01       		.uleb128 0x1
- 438 01a8 9C       		.byte	0x9c
- 439 01a9 B7010000 		.4byte	0x1b7
- 440 01ad 0F       		.uleb128 0xf
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 10
+ 377 0101 05010000 		.4byte	0x105
+ 378 0105 09       		.uleb128 0x9
+ 379 0106 D3000000 		.4byte	0xd3
+ 380 010a 03       		.uleb128 0x3
+ 381 010b AA020000 		.4byte	.LASF22
+ 382 010f 05       		.byte	0x5
+ 383 0110 AD       		.byte	0xad
+ 384 0111 93000000 		.4byte	0x93
+ 385 0115 09       		.uleb128 0x9
+ 386 0116 B2000000 		.4byte	0xb2
+ 387 011a 0A       		.uleb128 0xa
+ 388 011b 86       		.byte	0x86
+ 389 011c 06       		.byte	0x6
+ 390 011d 3F       		.byte	0x3f
+ 391 011e 77010000 		.4byte	0x177
+ 392 0122 0B       		.uleb128 0xb
+ 393 0123 00000000 		.4byte	.LASF23
+ 394 0127 06       		.byte	0x6
+ 395 0128 40       		.byte	0x40
+ 396 0129 B2000000 		.4byte	0xb2
+ 397 012d 00       		.byte	0
+ 398 012e 0B       		.uleb128 0xb
+ 399 012f 28000000 		.4byte	.LASF24
+ 400 0133 06       		.byte	0x6
+ 401 0134 41       		.byte	0x41
+ 402 0135 B2000000 		.4byte	0xb2
+ 403 0139 01       		.byte	0x1
+ 404 013a 0B       		.uleb128 0xb
+ 405 013b CF010000 		.4byte	.LASF25
+ 406 013f 06       		.byte	0x6
+ 407 0140 42       		.byte	0x42
+ 408 0141 B2000000 		.4byte	0xb2
+ 409 0145 02       		.byte	0x2
+ 410 0146 0B       		.uleb128 0xb
+ 411 0147 E4000000 		.4byte	.LASF26
+ 412 014b 06       		.byte	0x6
+ 413 014c 43       		.byte	0x43
+ 414 014d B2000000 		.4byte	0xb2
+ 415 0151 03       		.byte	0x3
+ 416 0152 0B       		.uleb128 0xb
+ 417 0153 98000000 		.4byte	.LASF27
+ 418 0157 06       		.byte	0x6
+ 419 0158 44       		.byte	0x44
+ 420 0159 B2000000 		.4byte	0xb2
+ 421 015d 04       		.byte	0x4
+ 422 015e 0B       		.uleb128 0xb
+ 423 015f BC020000 		.4byte	.LASF28
+ 424 0163 06       		.byte	0x6
+ 425 0164 45       		.byte	0x45
+ 426 0165 B2000000 		.4byte	0xb2
+ 427 0169 05       		.byte	0x5
+ 428 016a 0B       		.uleb128 0xb
+ 429 016b 70020000 		.4byte	.LASF29
+ 430 016f 06       		.byte	0x6
+ 431 0170 46       		.byte	0x46
+ 432 0171 77010000 		.4byte	0x177
+ 433 0175 06       		.byte	0x6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 10
 
 
- 441 01ae 06000000 		.4byte	.LVL0
- 442 01b2 CC030000 		.4byte	0x3cc
- 443 01b6 00       		.byte	0
- 444 01b7 0E       		.uleb128 0xe
- 445 01b8 66020000 		.4byte	.LASF32
- 446 01bc 01       		.byte	0x1
- 447 01bd 11       		.byte	0x11
- 448 01be 00000000 		.4byte	.LFB63
- 449 01c2 68000000 		.4byte	.LFE63-.LFB63
- 450 01c6 01       		.uleb128 0x1
- 451 01c7 9C       		.byte	0x9c
- 452 01c8 A5020000 		.4byte	0x2a5
- 453 01cc 0F       		.uleb128 0xf
- 454 01cd 06000000 		.4byte	.LVL1
- 455 01d1 D7030000 		.4byte	0x3d7
- 456 01d5 10       		.uleb128 0x10
- 457 01d6 12000000 		.4byte	.LVL2
- 458 01da DE030000 		.4byte	0x3de
- 459 01de F4010000 		.4byte	0x1f4
- 460 01e2 11       		.uleb128 0x11
- 461 01e3 01       		.uleb128 0x1
- 462 01e4 52       		.byte	0x52
- 463 01e5 01       		.uleb128 0x1
- 464 01e6 38       		.byte	0x38
- 465 01e7 11       		.uleb128 0x11
- 466 01e8 01       		.uleb128 0x1
- 467 01e9 51       		.byte	0x51
- 468 01ea 02       		.uleb128 0x2
- 469 01eb 08       		.byte	0x8
- 470 01ec 27       		.byte	0x27
- 471 01ed 11       		.uleb128 0x11
- 472 01ee 01       		.uleb128 0x1
- 473 01ef 50       		.byte	0x50
- 474 01f0 02       		.uleb128 0x2
- 475 01f1 74       		.byte	0x74
- 476 01f2 00       		.sleb128 0
- 477 01f3 00       		.byte	0
- 478 01f4 10       		.uleb128 0x10
- 479 01f5 1C000000 		.4byte	.LVL3
- 480 01f9 FF030000 		.4byte	0x3ff
- 481 01fd 12020000 		.4byte	0x212
- 482 0201 11       		.uleb128 0x11
- 483 0202 01       		.uleb128 0x1
- 484 0203 52       		.byte	0x52
- 485 0204 01       		.uleb128 0x1
- 486 0205 30       		.byte	0x30
- 487 0206 11       		.uleb128 0x11
- 488 0207 01       		.uleb128 0x1
- 489 0208 51       		.byte	0x51
- 490 0209 01       		.uleb128 0x1
- 491 020a 30       		.byte	0x30
- 492 020b 11       		.uleb128 0x11
- 493 020c 01       		.uleb128 0x1
- 494 020d 50       		.byte	0x50
- 495 020e 02       		.uleb128 0x2
- 496 020f 74       		.byte	0x74
- 497 0210 00       		.sleb128 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 11
+ 434 0176 00       		.byte	0
+ 435 0177 0C       		.uleb128 0xc
+ 436 0178 A0000000 		.4byte	0xa0
+ 437 017c 8D010000 		.4byte	0x18d
+ 438 0180 0D       		.uleb128 0xd
+ 439 0181 8C000000 		.4byte	0x8c
+ 440 0185 07       		.byte	0x7
+ 441 0186 0D       		.uleb128 0xd
+ 442 0187 8C000000 		.4byte	0x8c
+ 443 018b 0F       		.byte	0xf
+ 444 018c 00       		.byte	0
+ 445 018d 03       		.uleb128 0x3
+ 446 018e 3A010000 		.4byte	.LASF30
+ 447 0192 06       		.byte	0x6
+ 448 0193 47       		.byte	0x47
+ 449 0194 1A010000 		.4byte	0x11a
+ 450 0198 0E       		.uleb128 0xe
+ 451 0199 6E000000 		.4byte	.LASF31
+ 452 019d 01       		.byte	0x1
+ 453 019e 23       		.byte	0x23
+ 454 019f 00000000 		.4byte	.LFB64
+ 455 01a3 1C000000 		.4byte	.LFE64-.LFB64
+ 456 01a7 01       		.uleb128 0x1
+ 457 01a8 9C       		.byte	0x9c
+ 458 01a9 B7010000 		.4byte	0x1b7
+ 459 01ad 0F       		.uleb128 0xf
+ 460 01ae 06000000 		.4byte	.LVL0
+ 461 01b2 D6030000 		.4byte	0x3d6
+ 462 01b6 00       		.byte	0
+ 463 01b7 0E       		.uleb128 0xe
+ 464 01b8 66020000 		.4byte	.LASF32
+ 465 01bc 01       		.byte	0x1
+ 466 01bd 11       		.byte	0x11
+ 467 01be 00000000 		.4byte	.LFB63
+ 468 01c2 68000000 		.4byte	.LFE63-.LFB63
+ 469 01c6 01       		.uleb128 0x1
+ 470 01c7 9C       		.byte	0x9c
+ 471 01c8 A5020000 		.4byte	0x2a5
+ 472 01cc 0F       		.uleb128 0xf
+ 473 01cd 06000000 		.4byte	.LVL1
+ 474 01d1 E1030000 		.4byte	0x3e1
+ 475 01d5 10       		.uleb128 0x10
+ 476 01d6 12000000 		.4byte	.LVL2
+ 477 01da E8030000 		.4byte	0x3e8
+ 478 01de F4010000 		.4byte	0x1f4
+ 479 01e2 11       		.uleb128 0x11
+ 480 01e3 01       		.uleb128 0x1
+ 481 01e4 52       		.byte	0x52
+ 482 01e5 01       		.uleb128 0x1
+ 483 01e6 38       		.byte	0x38
+ 484 01e7 11       		.uleb128 0x11
+ 485 01e8 01       		.uleb128 0x1
+ 486 01e9 51       		.byte	0x51
+ 487 01ea 02       		.uleb128 0x2
+ 488 01eb 08       		.byte	0x8
+ 489 01ec 27       		.byte	0x27
+ 490 01ed 11       		.uleb128 0x11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 11
 
 
- 498 0211 00       		.byte	0
- 499 0212 10       		.uleb128 0x10
- 500 0213 24000000 		.4byte	.LVL4
- 501 0217 1A040000 		.4byte	0x41a
- 502 021b 2F020000 		.4byte	0x22f
- 503 021f 11       		.uleb128 0x11
- 504 0220 01       		.uleb128 0x1
- 505 0221 51       		.byte	0x51
- 506 0222 05       		.uleb128 0x5
- 507 0223 03       		.byte	0x3
- 508 0224 00000000 		.4byte	.LC0
- 509 0228 11       		.uleb128 0x11
- 510 0229 01       		.uleb128 0x1
- 511 022a 50       		.byte	0x50
- 512 022b 02       		.uleb128 0x2
- 513 022c 74       		.byte	0x74
- 514 022d 00       		.sleb128 0
- 515 022e 00       		.byte	0
- 516 022f 10       		.uleb128 0x10
- 517 0230 2E000000 		.4byte	.LVL5
- 518 0234 FF030000 		.4byte	0x3ff
- 519 0238 4D020000 		.4byte	0x24d
- 520 023c 11       		.uleb128 0x11
- 521 023d 01       		.uleb128 0x1
- 522 023e 52       		.byte	0x52
- 523 023f 01       		.uleb128 0x1
- 524 0240 30       		.byte	0x30
- 525 0241 11       		.uleb128 0x11
- 526 0242 01       		.uleb128 0x1
- 527 0243 51       		.byte	0x51
- 528 0244 01       		.uleb128 0x1
- 529 0245 31       		.byte	0x31
- 530 0246 11       		.uleb128 0x11
- 531 0247 01       		.uleb128 0x1
- 532 0248 50       		.byte	0x50
- 533 0249 02       		.uleb128 0x2
- 534 024a 74       		.byte	0x74
- 535 024b 00       		.sleb128 0
- 536 024c 00       		.byte	0
- 537 024d 10       		.uleb128 0x10
- 538 024e 36000000 		.4byte	.LVL6
- 539 0252 1A040000 		.4byte	0x41a
- 540 0256 6A020000 		.4byte	0x26a
- 541 025a 11       		.uleb128 0x11
- 542 025b 01       		.uleb128 0x1
- 543 025c 51       		.byte	0x51
- 544 025d 05       		.uleb128 0x5
- 545 025e 03       		.byte	0x3
- 546 025f 08000000 		.4byte	.LC1
- 547 0263 11       		.uleb128 0x11
- 548 0264 01       		.uleb128 0x1
- 549 0265 50       		.byte	0x50
- 550 0266 02       		.uleb128 0x2
- 551 0267 74       		.byte	0x74
- 552 0268 00       		.sleb128 0
- 553 0269 00       		.byte	0
- 554 026a 10       		.uleb128 0x10
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 12
+ 491 01ee 01       		.uleb128 0x1
+ 492 01ef 50       		.byte	0x50
+ 493 01f0 02       		.uleb128 0x2
+ 494 01f1 74       		.byte	0x74
+ 495 01f2 00       		.sleb128 0
+ 496 01f3 00       		.byte	0
+ 497 01f4 10       		.uleb128 0x10
+ 498 01f5 1C000000 		.4byte	.LVL3
+ 499 01f9 09040000 		.4byte	0x409
+ 500 01fd 12020000 		.4byte	0x212
+ 501 0201 11       		.uleb128 0x11
+ 502 0202 01       		.uleb128 0x1
+ 503 0203 52       		.byte	0x52
+ 504 0204 01       		.uleb128 0x1
+ 505 0205 30       		.byte	0x30
+ 506 0206 11       		.uleb128 0x11
+ 507 0207 01       		.uleb128 0x1
+ 508 0208 51       		.byte	0x51
+ 509 0209 01       		.uleb128 0x1
+ 510 020a 30       		.byte	0x30
+ 511 020b 11       		.uleb128 0x11
+ 512 020c 01       		.uleb128 0x1
+ 513 020d 50       		.byte	0x50
+ 514 020e 02       		.uleb128 0x2
+ 515 020f 74       		.byte	0x74
+ 516 0210 00       		.sleb128 0
+ 517 0211 00       		.byte	0
+ 518 0212 10       		.uleb128 0x10
+ 519 0213 24000000 		.4byte	.LVL4
+ 520 0217 24040000 		.4byte	0x424
+ 521 021b 2F020000 		.4byte	0x22f
+ 522 021f 11       		.uleb128 0x11
+ 523 0220 01       		.uleb128 0x1
+ 524 0221 51       		.byte	0x51
+ 525 0222 05       		.uleb128 0x5
+ 526 0223 03       		.byte	0x3
+ 527 0224 00000000 		.4byte	.LC0
+ 528 0228 11       		.uleb128 0x11
+ 529 0229 01       		.uleb128 0x1
+ 530 022a 50       		.byte	0x50
+ 531 022b 02       		.uleb128 0x2
+ 532 022c 74       		.byte	0x74
+ 533 022d 00       		.sleb128 0
+ 534 022e 00       		.byte	0
+ 535 022f 10       		.uleb128 0x10
+ 536 0230 2E000000 		.4byte	.LVL5
+ 537 0234 09040000 		.4byte	0x409
+ 538 0238 4D020000 		.4byte	0x24d
+ 539 023c 11       		.uleb128 0x11
+ 540 023d 01       		.uleb128 0x1
+ 541 023e 52       		.byte	0x52
+ 542 023f 01       		.uleb128 0x1
+ 543 0240 30       		.byte	0x30
+ 544 0241 11       		.uleb128 0x11
+ 545 0242 01       		.uleb128 0x1
+ 546 0243 51       		.byte	0x51
+ 547 0244 01       		.uleb128 0x1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 12
 
 
- 555 026b 3E000000 		.4byte	.LVL7
- 556 026f 30040000 		.4byte	0x430
- 557 0273 83020000 		.4byte	0x283
- 558 0277 11       		.uleb128 0x11
- 559 0278 01       		.uleb128 0x1
- 560 0279 51       		.byte	0x51
- 561 027a 01       		.uleb128 0x1
- 562 027b 31       		.byte	0x31
- 563 027c 11       		.uleb128 0x11
- 564 027d 01       		.uleb128 0x1
- 565 027e 50       		.byte	0x50
- 566 027f 02       		.uleb128 0x2
- 567 0280 74       		.byte	0x74
- 568 0281 00       		.sleb128 0
- 569 0282 00       		.byte	0
- 570 0283 0F       		.uleb128 0xf
- 571 0284 42000000 		.4byte	.LVL8
- 572 0288 46040000 		.4byte	0x446
- 573 028c 12       		.uleb128 0x12
- 574 028d 4A000000 		.4byte	.LVL9
- 575 0291 4D040000 		.4byte	0x44d
- 576 0295 11       		.uleb128 0x11
- 577 0296 01       		.uleb128 0x1
- 578 0297 51       		.byte	0x51
- 579 0298 05       		.uleb128 0x5
- 580 0299 03       		.byte	0x3
- 581 029a 00000000 		.4byte	update_lcd_it
- 582 029e 11       		.uleb128 0x11
- 583 029f 01       		.uleb128 0x1
- 584 02a0 50       		.byte	0x50
- 585 02a1 01       		.uleb128 0x1
- 586 02a2 34       		.byte	0x34
- 587 02a3 00       		.byte	0
- 588 02a4 00       		.byte	0
- 589 02a5 0E       		.uleb128 0xe
- 590 02a6 47000000 		.4byte	.LASF33
- 591 02aa 01       		.byte	0x1
- 592 02ab 29       		.byte	0x29
- 593 02ac 00000000 		.4byte	.LFB65
- 594 02b0 64000000 		.4byte	.LFE65-.LFB65
- 595 02b4 01       		.uleb128 0x1
- 596 02b5 9C       		.byte	0x9c
- 597 02b6 83030000 		.4byte	0x383
- 598 02ba 13       		.uleb128 0x13
- 599 02bb 73747200 		.ascii	"str\000"
- 600 02bf 01       		.byte	0x1
- 601 02c0 2B       		.byte	0x2b
- 602 02c1 83030000 		.4byte	0x383
- 603 02c5 02       		.uleb128 0x2
- 604 02c6 91       		.byte	0x91
- 605 02c7 68       		.sleb128 -24
- 606 02c8 14       		.uleb128 0x14
- 607 02c9 6100     		.ascii	"a\000"
- 608 02cb 01       		.byte	0x1
- 609 02cc 2D       		.byte	0x2d
- 610 02cd 93030000 		.4byte	0x393
- 611 02d1 60640040 		.4byte	0x40006460
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 13
+ 548 0245 31       		.byte	0x31
+ 549 0246 11       		.uleb128 0x11
+ 550 0247 01       		.uleb128 0x1
+ 551 0248 50       		.byte	0x50
+ 552 0249 02       		.uleb128 0x2
+ 553 024a 74       		.byte	0x74
+ 554 024b 00       		.sleb128 0
+ 555 024c 00       		.byte	0
+ 556 024d 10       		.uleb128 0x10
+ 557 024e 36000000 		.4byte	.LVL6
+ 558 0252 24040000 		.4byte	0x424
+ 559 0256 6A020000 		.4byte	0x26a
+ 560 025a 11       		.uleb128 0x11
+ 561 025b 01       		.uleb128 0x1
+ 562 025c 51       		.byte	0x51
+ 563 025d 05       		.uleb128 0x5
+ 564 025e 03       		.byte	0x3
+ 565 025f 08000000 		.4byte	.LC1
+ 566 0263 11       		.uleb128 0x11
+ 567 0264 01       		.uleb128 0x1
+ 568 0265 50       		.byte	0x50
+ 569 0266 02       		.uleb128 0x2
+ 570 0267 74       		.byte	0x74
+ 571 0268 00       		.sleb128 0
+ 572 0269 00       		.byte	0
+ 573 026a 10       		.uleb128 0x10
+ 574 026b 3E000000 		.4byte	.LVL7
+ 575 026f 3A040000 		.4byte	0x43a
+ 576 0273 83020000 		.4byte	0x283
+ 577 0277 11       		.uleb128 0x11
+ 578 0278 01       		.uleb128 0x1
+ 579 0279 51       		.byte	0x51
+ 580 027a 01       		.uleb128 0x1
+ 581 027b 31       		.byte	0x31
+ 582 027c 11       		.uleb128 0x11
+ 583 027d 01       		.uleb128 0x1
+ 584 027e 50       		.byte	0x50
+ 585 027f 02       		.uleb128 0x2
+ 586 0280 74       		.byte	0x74
+ 587 0281 00       		.sleb128 0
+ 588 0282 00       		.byte	0
+ 589 0283 0F       		.uleb128 0xf
+ 590 0284 42000000 		.4byte	.LVL8
+ 591 0288 50040000 		.4byte	0x450
+ 592 028c 12       		.uleb128 0x12
+ 593 028d 4A000000 		.4byte	.LVL9
+ 594 0291 57040000 		.4byte	0x457
+ 595 0295 11       		.uleb128 0x11
+ 596 0296 01       		.uleb128 0x1
+ 597 0297 51       		.byte	0x51
+ 598 0298 05       		.uleb128 0x5
+ 599 0299 03       		.byte	0x3
+ 600 029a 00000000 		.4byte	update_lcd_it
+ 601 029e 11       		.uleb128 0x11
+ 602 029f 01       		.uleb128 0x1
+ 603 02a0 50       		.byte	0x50
+ 604 02a1 01       		.uleb128 0x1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 13
 
 
- 612 02d5 14       		.uleb128 0x14
- 613 02d6 6200     		.ascii	"b\000"
- 614 02d8 01       		.byte	0x1
- 615 02d9 33       		.byte	0x33
- 616 02da 93030000 		.4byte	0x393
- 617 02de 63640040 		.4byte	0x40006463
- 618 02e2 10       		.uleb128 0x10
- 619 02e3 10000000 		.4byte	.LVL11
- 620 02e7 FF030000 		.4byte	0x3ff
- 621 02eb 00030000 		.4byte	0x300
- 622 02ef 11       		.uleb128 0x11
- 623 02f0 01       		.uleb128 0x1
- 624 02f1 52       		.byte	0x52
- 625 02f2 01       		.uleb128 0x1
- 626 02f3 36       		.byte	0x36
- 627 02f4 11       		.uleb128 0x11
- 628 02f5 01       		.uleb128 0x1
- 629 02f6 51       		.byte	0x51
- 630 02f7 01       		.uleb128 0x1
- 631 02f8 30       		.byte	0x30
- 632 02f9 11       		.uleb128 0x11
- 633 02fa 01       		.uleb128 0x1
- 634 02fb 50       		.byte	0x50
- 635 02fc 02       		.uleb128 0x2
- 636 02fd 74       		.byte	0x74
- 637 02fe 00       		.sleb128 0
- 638 02ff 00       		.byte	0
- 639 0300 10       		.uleb128 0x10
- 640 0301 1E000000 		.4byte	.LVL12
- 641 0305 67040000 		.4byte	0x467
- 642 0309 1A030000 		.4byte	0x31a
- 643 030d 11       		.uleb128 0x11
- 644 030e 01       		.uleb128 0x1
- 645 030f 51       		.byte	0x51
- 646 0310 02       		.uleb128 0x2
- 647 0311 75       		.byte	0x75
- 648 0312 00       		.sleb128 0
- 649 0313 11       		.uleb128 0x11
- 650 0314 01       		.uleb128 0x1
- 651 0315 50       		.byte	0x50
- 652 0316 02       		.uleb128 0x2
- 653 0317 7D       		.byte	0x7d
- 654 0318 00       		.sleb128 0
- 655 0319 00       		.byte	0
- 656 031a 10       		.uleb128 0x10
- 657 031b 26000000 		.4byte	.LVL13
- 658 031f 1A040000 		.4byte	0x41a
- 659 0323 34030000 		.4byte	0x334
- 660 0327 11       		.uleb128 0x11
- 661 0328 01       		.uleb128 0x1
- 662 0329 51       		.byte	0x51
- 663 032a 02       		.uleb128 0x2
- 664 032b 7D       		.byte	0x7d
- 665 032c 00       		.sleb128 0
- 666 032d 11       		.uleb128 0x11
- 667 032e 01       		.uleb128 0x1
- 668 032f 50       		.byte	0x50
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 14
+ 605 02a2 34       		.byte	0x34
+ 606 02a3 00       		.byte	0
+ 607 02a4 00       		.byte	0
+ 608 02a5 0E       		.uleb128 0xe
+ 609 02a6 47000000 		.4byte	.LASF33
+ 610 02aa 01       		.byte	0x1
+ 611 02ab 29       		.byte	0x29
+ 612 02ac 00000000 		.4byte	.LFB65
+ 613 02b0 74000000 		.4byte	.LFE65-.LFB65
+ 614 02b4 01       		.uleb128 0x1
+ 615 02b5 9C       		.byte	0x9c
+ 616 02b6 8D030000 		.4byte	0x38d
+ 617 02ba 13       		.uleb128 0x13
+ 618 02bb 0E000000 		.4byte	.LBB2
+ 619 02bf 40000000 		.4byte	.LBE2-.LBB2
+ 620 02c3 14       		.uleb128 0x14
+ 621 02c4 73747200 		.ascii	"str\000"
+ 622 02c8 01       		.byte	0x1
+ 623 02c9 2D       		.byte	0x2d
+ 624 02ca 8D030000 		.4byte	0x38d
+ 625 02ce 02       		.uleb128 0x2
+ 626 02cf 91       		.byte	0x91
+ 627 02d0 68       		.sleb128 -24
+ 628 02d1 15       		.uleb128 0x15
+ 629 02d2 6100     		.ascii	"a\000"
+ 630 02d4 01       		.byte	0x1
+ 631 02d5 2F       		.byte	0x2f
+ 632 02d6 9D030000 		.4byte	0x39d
+ 633 02da 00000000 		.4byte	.LLST0
+ 634 02de 15       		.uleb128 0x15
+ 635 02df 6200     		.ascii	"b\000"
+ 636 02e1 01       		.byte	0x1
+ 637 02e2 35       		.byte	0x35
+ 638 02e3 9D030000 		.4byte	0x39d
+ 639 02e7 18000000 		.4byte	.LLST1
+ 640 02eb 10       		.uleb128 0x10
+ 641 02ec 1A000000 		.4byte	.LVL11
+ 642 02f0 09040000 		.4byte	0x409
+ 643 02f4 09030000 		.4byte	0x309
+ 644 02f8 11       		.uleb128 0x11
+ 645 02f9 01       		.uleb128 0x1
+ 646 02fa 52       		.byte	0x52
+ 647 02fb 01       		.uleb128 0x1
+ 648 02fc 36       		.byte	0x36
+ 649 02fd 11       		.uleb128 0x11
+ 650 02fe 01       		.uleb128 0x1
+ 651 02ff 51       		.byte	0x51
+ 652 0300 01       		.uleb128 0x1
+ 653 0301 30       		.byte	0x30
+ 654 0302 11       		.uleb128 0x11
+ 655 0303 01       		.uleb128 0x1
+ 656 0304 50       		.byte	0x50
+ 657 0305 02       		.uleb128 0x2
+ 658 0306 74       		.byte	0x74
+ 659 0307 00       		.sleb128 0
+ 660 0308 00       		.byte	0
+ 661 0309 10       		.uleb128 0x10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 14
 
 
- 669 0330 02       		.uleb128 0x2
- 670 0331 74       		.byte	0x74
- 671 0332 00       		.sleb128 0
- 672 0333 00       		.byte	0
- 673 0334 10       		.uleb128 0x10
- 674 0335 30000000 		.4byte	.LVL14
- 675 0339 FF030000 		.4byte	0x3ff
- 676 033d 52030000 		.4byte	0x352
- 677 0341 11       		.uleb128 0x11
- 678 0342 01       		.uleb128 0x1
- 679 0343 52       		.byte	0x52
- 680 0344 01       		.uleb128 0x1
- 681 0345 36       		.byte	0x36
- 682 0346 11       		.uleb128 0x11
- 683 0347 01       		.uleb128 0x1
- 684 0348 51       		.byte	0x51
- 685 0349 01       		.uleb128 0x1
- 686 034a 31       		.byte	0x31
- 687 034b 11       		.uleb128 0x11
- 688 034c 01       		.uleb128 0x1
- 689 034d 50       		.byte	0x50
- 690 034e 02       		.uleb128 0x2
- 691 034f 74       		.byte	0x74
- 692 0350 00       		.sleb128 0
- 693 0351 00       		.byte	0
- 694 0352 10       		.uleb128 0x10
- 695 0353 3C000000 		.4byte	.LVL15
- 696 0357 67040000 		.4byte	0x467
- 697 035b 6C030000 		.4byte	0x36c
- 698 035f 11       		.uleb128 0x11
- 699 0360 01       		.uleb128 0x1
- 700 0361 51       		.byte	0x51
- 701 0362 02       		.uleb128 0x2
- 702 0363 75       		.byte	0x75
- 703 0364 00       		.sleb128 0
- 704 0365 11       		.uleb128 0x11
- 705 0366 01       		.uleb128 0x1
- 706 0367 50       		.byte	0x50
- 707 0368 02       		.uleb128 0x2
- 708 0369 7D       		.byte	0x7d
- 709 036a 00       		.sleb128 0
- 710 036b 00       		.byte	0
- 711 036c 12       		.uleb128 0x12
- 712 036d 44000000 		.4byte	.LVL16
- 713 0371 1A040000 		.4byte	0x41a
- 714 0375 11       		.uleb128 0x11
- 715 0376 01       		.uleb128 0x1
- 716 0377 51       		.byte	0x51
- 717 0378 02       		.uleb128 0x2
- 718 0379 7D       		.byte	0x7d
- 719 037a 00       		.sleb128 0
- 720 037b 11       		.uleb128 0x11
- 721 037c 01       		.uleb128 0x1
- 722 037d 50       		.byte	0x50
- 723 037e 02       		.uleb128 0x2
- 724 037f 74       		.byte	0x74
- 725 0380 00       		.sleb128 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 15
+ 662 030a 28000000 		.4byte	.LVL12
+ 663 030e 71040000 		.4byte	0x471
+ 664 0312 23030000 		.4byte	0x323
+ 665 0316 11       		.uleb128 0x11
+ 666 0317 01       		.uleb128 0x1
+ 667 0318 51       		.byte	0x51
+ 668 0319 02       		.uleb128 0x2
+ 669 031a 75       		.byte	0x75
+ 670 031b 00       		.sleb128 0
+ 671 031c 11       		.uleb128 0x11
+ 672 031d 01       		.uleb128 0x1
+ 673 031e 50       		.byte	0x50
+ 674 031f 02       		.uleb128 0x2
+ 675 0320 7D       		.byte	0x7d
+ 676 0321 00       		.sleb128 0
+ 677 0322 00       		.byte	0
+ 678 0323 10       		.uleb128 0x10
+ 679 0324 30000000 		.4byte	.LVL13
+ 680 0328 24040000 		.4byte	0x424
+ 681 032c 3D030000 		.4byte	0x33d
+ 682 0330 11       		.uleb128 0x11
+ 683 0331 01       		.uleb128 0x1
+ 684 0332 51       		.byte	0x51
+ 685 0333 02       		.uleb128 0x2
+ 686 0334 7D       		.byte	0x7d
+ 687 0335 00       		.sleb128 0
+ 688 0336 11       		.uleb128 0x11
+ 689 0337 01       		.uleb128 0x1
+ 690 0338 50       		.byte	0x50
+ 691 0339 02       		.uleb128 0x2
+ 692 033a 74       		.byte	0x74
+ 693 033b 00       		.sleb128 0
+ 694 033c 00       		.byte	0
+ 695 033d 10       		.uleb128 0x10
+ 696 033e 3A000000 		.4byte	.LVL14
+ 697 0342 09040000 		.4byte	0x409
+ 698 0346 5B030000 		.4byte	0x35b
+ 699 034a 11       		.uleb128 0x11
+ 700 034b 01       		.uleb128 0x1
+ 701 034c 52       		.byte	0x52
+ 702 034d 01       		.uleb128 0x1
+ 703 034e 36       		.byte	0x36
+ 704 034f 11       		.uleb128 0x11
+ 705 0350 01       		.uleb128 0x1
+ 706 0351 51       		.byte	0x51
+ 707 0352 01       		.uleb128 0x1
+ 708 0353 31       		.byte	0x31
+ 709 0354 11       		.uleb128 0x11
+ 710 0355 01       		.uleb128 0x1
+ 711 0356 50       		.byte	0x50
+ 712 0357 02       		.uleb128 0x2
+ 713 0358 74       		.byte	0x74
+ 714 0359 00       		.sleb128 0
+ 715 035a 00       		.byte	0
+ 716 035b 10       		.uleb128 0x10
+ 717 035c 46000000 		.4byte	.LVL15
+ 718 0360 71040000 		.4byte	0x471
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 15
 
 
- 726 0381 00       		.byte	0
- 727 0382 00       		.byte	0
- 728 0383 0C       		.uleb128 0xc
- 729 0384 A0000000 		.4byte	0xa0
- 730 0388 93030000 		.4byte	0x393
- 731 038c 0D       		.uleb128 0xd
- 732 038d 8C000000 		.4byte	0x8c
- 733 0391 04       		.byte	0x4
- 734 0392 00       		.byte	0
- 735 0393 05       		.uleb128 0x5
- 736 0394 04       		.byte	0x4
- 737 0395 F9000000 		.4byte	0xf9
- 738 0399 15       		.uleb128 0x15
- 739 039a 00010000 		.4byte	.LASF34
- 740 039e 07       		.byte	0x7
- 741 039f 5506     		.2byte	0x655
- 742 03a1 A5030000 		.4byte	0x3a5
- 743 03a5 09       		.uleb128 0x9
- 744 03a6 C8000000 		.4byte	0xc8
- 745 03aa 16       		.uleb128 0x16
- 746 03ab 6C636400 		.ascii	"lcd\000"
- 747 03af 08       		.byte	0x8
- 748 03b0 12       		.byte	0x12
- 749 03b1 8D010000 		.4byte	0x18d
- 750 03b5 05       		.uleb128 0x5
- 751 03b6 03       		.byte	0x3
- 752 03b7 00000000 		.4byte	lcd
- 753 03bb 17       		.uleb128 0x17
- 754 03bc D9000000 		.4byte	.LASF35
- 755 03c0 08       		.byte	0x8
- 756 03c1 14       		.byte	0x14
- 757 03c2 15010000 		.4byte	0x115
- 758 03c6 05       		.uleb128 0x5
- 759 03c7 03       		.byte	0x3
- 760 03c8 00000000 		.4byte	lcd_update
- 761 03cc 18       		.uleb128 0x18
- 762 03cd EE000000 		.4byte	.LASF46
- 763 03d1 05       		.byte	0x5
- 764 03d2 B7       		.byte	0xb7
- 765 03d3 DF000000 		.4byte	0xdf
- 766 03d7 19       		.uleb128 0x19
- 767 03d8 64000000 		.4byte	.LASF40
- 768 03dc 09       		.byte	0x9
- 769 03dd 93       		.byte	0x93
- 770 03de 1A       		.uleb128 0x1a
- 771 03df 9F010000 		.4byte	.LASF36
- 772 03e3 06       		.byte	0x6
- 773 03e4 4A       		.byte	0x4a
- 774 03e5 F9030000 		.4byte	0x3f9
- 775 03e9 1B       		.uleb128 0x1b
- 776 03ea F9030000 		.4byte	0x3f9
- 777 03ee 1B       		.uleb128 0x1b
- 778 03ef BD000000 		.4byte	0xbd
- 779 03f3 1B       		.uleb128 0x1b
- 780 03f4 B2000000 		.4byte	0xb2
- 781 03f8 00       		.byte	0
- 782 03f9 05       		.uleb128 0x5
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 16
+ 719 0364 75030000 		.4byte	0x375
+ 720 0368 11       		.uleb128 0x11
+ 721 0369 01       		.uleb128 0x1
+ 722 036a 51       		.byte	0x51
+ 723 036b 02       		.uleb128 0x2
+ 724 036c 75       		.byte	0x75
+ 725 036d 00       		.sleb128 0
+ 726 036e 11       		.uleb128 0x11
+ 727 036f 01       		.uleb128 0x1
+ 728 0370 50       		.byte	0x50
+ 729 0371 02       		.uleb128 0x2
+ 730 0372 7D       		.byte	0x7d
+ 731 0373 00       		.sleb128 0
+ 732 0374 00       		.byte	0
+ 733 0375 12       		.uleb128 0x12
+ 734 0376 4E000000 		.4byte	.LVL16
+ 735 037a 24040000 		.4byte	0x424
+ 736 037e 11       		.uleb128 0x11
+ 737 037f 01       		.uleb128 0x1
+ 738 0380 51       		.byte	0x51
+ 739 0381 02       		.uleb128 0x2
+ 740 0382 7D       		.byte	0x7d
+ 741 0383 00       		.sleb128 0
+ 742 0384 11       		.uleb128 0x11
+ 743 0385 01       		.uleb128 0x1
+ 744 0386 50       		.byte	0x50
+ 745 0387 02       		.uleb128 0x2
+ 746 0388 74       		.byte	0x74
+ 747 0389 00       		.sleb128 0
+ 748 038a 00       		.byte	0
+ 749 038b 00       		.byte	0
+ 750 038c 00       		.byte	0
+ 751 038d 0C       		.uleb128 0xc
+ 752 038e A0000000 		.4byte	0xa0
+ 753 0392 9D030000 		.4byte	0x39d
+ 754 0396 0D       		.uleb128 0xd
+ 755 0397 8C000000 		.4byte	0x8c
+ 756 039b 04       		.byte	0x4
+ 757 039c 00       		.byte	0
+ 758 039d 05       		.uleb128 0x5
+ 759 039e 04       		.byte	0x4
+ 760 039f F9000000 		.4byte	0xf9
+ 761 03a3 16       		.uleb128 0x16
+ 762 03a4 00010000 		.4byte	.LASF34
+ 763 03a8 07       		.byte	0x7
+ 764 03a9 5506     		.2byte	0x655
+ 765 03ab AF030000 		.4byte	0x3af
+ 766 03af 09       		.uleb128 0x9
+ 767 03b0 C8000000 		.4byte	0xc8
+ 768 03b4 17       		.uleb128 0x17
+ 769 03b5 6C636400 		.ascii	"lcd\000"
+ 770 03b9 08       		.byte	0x8
+ 771 03ba 12       		.byte	0x12
+ 772 03bb 8D010000 		.4byte	0x18d
+ 773 03bf 05       		.uleb128 0x5
+ 774 03c0 03       		.byte	0x3
+ 775 03c1 00000000 		.4byte	lcd
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 16
 
 
- 783 03fa 04       		.byte	0x4
- 784 03fb 8D010000 		.4byte	0x18d
- 785 03ff 1A       		.uleb128 0x1a
- 786 0400 15000000 		.4byte	.LASF37
- 787 0404 06       		.byte	0x6
- 788 0405 4F       		.byte	0x4f
- 789 0406 1A040000 		.4byte	0x41a
- 790 040a 1B       		.uleb128 0x1b
- 791 040b F9030000 		.4byte	0x3f9
- 792 040f 1B       		.uleb128 0x1b
- 793 0410 B2000000 		.4byte	0xb2
- 794 0414 1B       		.uleb128 0x1b
- 795 0415 B2000000 		.4byte	0xb2
- 796 0419 00       		.byte	0
- 797 041a 1A       		.uleb128 0x1a
- 798 041b 0D010000 		.4byte	.LASF38
- 799 041f 06       		.byte	0x6
- 800 0420 4D       		.byte	0x4d
- 801 0421 30040000 		.4byte	0x430
- 802 0425 1B       		.uleb128 0x1b
- 803 0426 F9030000 		.4byte	0x3f9
- 804 042a 1B       		.uleb128 0x1b
- 805 042b 9A000000 		.4byte	0x9a
- 806 042f 00       		.byte	0
- 807 0430 1A       		.uleb128 0x1a
- 808 0431 82000000 		.4byte	.LASF39
- 809 0435 06       		.byte	0x6
- 810 0436 54       		.byte	0x54
- 811 0437 46040000 		.4byte	0x446
- 812 043b 1B       		.uleb128 0x1b
- 813 043c F9030000 		.4byte	0x3f9
- 814 0440 1B       		.uleb128 0x1b
- 815 0441 B2000000 		.4byte	0xb2
- 816 0445 00       		.byte	0
- 817 0446 19       		.uleb128 0x19
- 818 0447 A5000000 		.4byte	.LASF41
- 819 044b 05       		.byte	0x5
- 820 044c AF       		.byte	0xaf
- 821 044d 1C       		.uleb128 0x1c
- 822 044e 32000000 		.4byte	.LASF47
- 823 0452 05       		.byte	0x5
- 824 0453 B8       		.byte	0xb8
- 825 0454 0A010000 		.4byte	0x10a
- 826 0458 67040000 		.4byte	0x467
- 827 045c 1B       		.uleb128 0x1b
- 828 045d DF000000 		.4byte	0xdf
- 829 0461 1B       		.uleb128 0x1b
- 830 0462 0A010000 		.4byte	0x10a
- 831 0466 00       		.byte	0
- 832 0467 1D       		.uleb128 0x1d
- 833 0468 06030000 		.4byte	.LASF42
- 834 046c 0A       		.byte	0xa
- 835 046d DE       		.byte	0xde
- 836 046e 7E000000 		.4byte	0x7e
- 837 0472 1B       		.uleb128 0x1b
- 838 0473 9A000000 		.4byte	0x9a
- 839 0477 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 17
+ 776 03c5 18       		.uleb128 0x18
+ 777 03c6 D9000000 		.4byte	.LASF35
+ 778 03ca 08       		.byte	0x8
+ 779 03cb 14       		.byte	0x14
+ 780 03cc 15010000 		.4byte	0x115
+ 781 03d0 05       		.uleb128 0x5
+ 782 03d1 03       		.byte	0x3
+ 783 03d2 00000000 		.4byte	lcd_update
+ 784 03d6 19       		.uleb128 0x19
+ 785 03d7 EE000000 		.4byte	.LASF46
+ 786 03db 05       		.byte	0x5
+ 787 03dc B7       		.byte	0xb7
+ 788 03dd DF000000 		.4byte	0xdf
+ 789 03e1 1A       		.uleb128 0x1a
+ 790 03e2 64000000 		.4byte	.LASF40
+ 791 03e6 09       		.byte	0x9
+ 792 03e7 93       		.byte	0x93
+ 793 03e8 1B       		.uleb128 0x1b
+ 794 03e9 9F010000 		.4byte	.LASF36
+ 795 03ed 06       		.byte	0x6
+ 796 03ee 4A       		.byte	0x4a
+ 797 03ef 03040000 		.4byte	0x403
+ 798 03f3 1C       		.uleb128 0x1c
+ 799 03f4 03040000 		.4byte	0x403
+ 800 03f8 1C       		.uleb128 0x1c
+ 801 03f9 BD000000 		.4byte	0xbd
+ 802 03fd 1C       		.uleb128 0x1c
+ 803 03fe B2000000 		.4byte	0xb2
+ 804 0402 00       		.byte	0
+ 805 0403 05       		.uleb128 0x5
+ 806 0404 04       		.byte	0x4
+ 807 0405 8D010000 		.4byte	0x18d
+ 808 0409 1B       		.uleb128 0x1b
+ 809 040a 15000000 		.4byte	.LASF37
+ 810 040e 06       		.byte	0x6
+ 811 040f 4F       		.byte	0x4f
+ 812 0410 24040000 		.4byte	0x424
+ 813 0414 1C       		.uleb128 0x1c
+ 814 0415 03040000 		.4byte	0x403
+ 815 0419 1C       		.uleb128 0x1c
+ 816 041a B2000000 		.4byte	0xb2
+ 817 041e 1C       		.uleb128 0x1c
+ 818 041f B2000000 		.4byte	0xb2
+ 819 0423 00       		.byte	0
+ 820 0424 1B       		.uleb128 0x1b
+ 821 0425 0D010000 		.4byte	.LASF38
+ 822 0429 06       		.byte	0x6
+ 823 042a 4D       		.byte	0x4d
+ 824 042b 3A040000 		.4byte	0x43a
+ 825 042f 1C       		.uleb128 0x1c
+ 826 0430 03040000 		.4byte	0x403
+ 827 0434 1C       		.uleb128 0x1c
+ 828 0435 9A000000 		.4byte	0x9a
+ 829 0439 00       		.byte	0
+ 830 043a 1B       		.uleb128 0x1b
+ 831 043b 82000000 		.4byte	.LASF39
+ 832 043f 06       		.byte	0x6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 17
 
 
- 840 0478 A7000000 		.4byte	0xa7
- 841 047c 1E       		.uleb128 0x1e
- 842 047d 00       		.byte	0
- 843 047e 00       		.byte	0
- 844              		.section	.debug_abbrev,"",%progbits
- 845              	.Ldebug_abbrev0:
- 846 0000 01       		.uleb128 0x1
- 847 0001 11       		.uleb128 0x11
- 848 0002 01       		.byte	0x1
- 849 0003 25       		.uleb128 0x25
- 850 0004 0E       		.uleb128 0xe
- 851 0005 13       		.uleb128 0x13
- 852 0006 0B       		.uleb128 0xb
- 853 0007 03       		.uleb128 0x3
- 854 0008 0E       		.uleb128 0xe
- 855 0009 1B       		.uleb128 0x1b
- 856 000a 0E       		.uleb128 0xe
- 857 000b 55       		.uleb128 0x55
- 858 000c 17       		.uleb128 0x17
- 859 000d 11       		.uleb128 0x11
- 860 000e 01       		.uleb128 0x1
- 861 000f 10       		.uleb128 0x10
- 862 0010 17       		.uleb128 0x17
- 863 0011 00       		.byte	0
- 864 0012 00       		.byte	0
- 865 0013 02       		.uleb128 0x2
- 866 0014 24       		.uleb128 0x24
- 867 0015 00       		.byte	0
- 868 0016 0B       		.uleb128 0xb
- 869 0017 0B       		.uleb128 0xb
- 870 0018 3E       		.uleb128 0x3e
- 871 0019 0B       		.uleb128 0xb
- 872 001a 03       		.uleb128 0x3
- 873 001b 0E       		.uleb128 0xe
- 874 001c 00       		.byte	0
- 875 001d 00       		.byte	0
- 876 001e 03       		.uleb128 0x3
- 877 001f 16       		.uleb128 0x16
- 878 0020 00       		.byte	0
- 879 0021 03       		.uleb128 0x3
- 880 0022 0E       		.uleb128 0xe
- 881 0023 3A       		.uleb128 0x3a
- 882 0024 0B       		.uleb128 0xb
- 883 0025 3B       		.uleb128 0x3b
- 884 0026 0B       		.uleb128 0xb
- 885 0027 49       		.uleb128 0x49
- 886 0028 13       		.uleb128 0x13
- 887 0029 00       		.byte	0
- 888 002a 00       		.byte	0
- 889 002b 04       		.uleb128 0x4
- 890 002c 24       		.uleb128 0x24
- 891 002d 00       		.byte	0
- 892 002e 0B       		.uleb128 0xb
- 893 002f 0B       		.uleb128 0xb
- 894 0030 3E       		.uleb128 0x3e
- 895 0031 0B       		.uleb128 0xb
- 896 0032 03       		.uleb128 0x3
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 18
+ 833 0440 54       		.byte	0x54
+ 834 0441 50040000 		.4byte	0x450
+ 835 0445 1C       		.uleb128 0x1c
+ 836 0446 03040000 		.4byte	0x403
+ 837 044a 1C       		.uleb128 0x1c
+ 838 044b B2000000 		.4byte	0xb2
+ 839 044f 00       		.byte	0
+ 840 0450 1A       		.uleb128 0x1a
+ 841 0451 A5000000 		.4byte	.LASF41
+ 842 0455 05       		.byte	0x5
+ 843 0456 AF       		.byte	0xaf
+ 844 0457 1D       		.uleb128 0x1d
+ 845 0458 32000000 		.4byte	.LASF47
+ 846 045c 05       		.byte	0x5
+ 847 045d B8       		.byte	0xb8
+ 848 045e 0A010000 		.4byte	0x10a
+ 849 0462 71040000 		.4byte	0x471
+ 850 0466 1C       		.uleb128 0x1c
+ 851 0467 DF000000 		.4byte	0xdf
+ 852 046b 1C       		.uleb128 0x1c
+ 853 046c 0A010000 		.4byte	0x10a
+ 854 0470 00       		.byte	0
+ 855 0471 1E       		.uleb128 0x1e
+ 856 0472 06030000 		.4byte	.LASF42
+ 857 0476 0A       		.byte	0xa
+ 858 0477 DE       		.byte	0xde
+ 859 0478 7E000000 		.4byte	0x7e
+ 860 047c 1C       		.uleb128 0x1c
+ 861 047d 9A000000 		.4byte	0x9a
+ 862 0481 1C       		.uleb128 0x1c
+ 863 0482 A7000000 		.4byte	0xa7
+ 864 0486 1F       		.uleb128 0x1f
+ 865 0487 00       		.byte	0
+ 866 0488 00       		.byte	0
+ 867              		.section	.debug_abbrev,"",%progbits
+ 868              	.Ldebug_abbrev0:
+ 869 0000 01       		.uleb128 0x1
+ 870 0001 11       		.uleb128 0x11
+ 871 0002 01       		.byte	0x1
+ 872 0003 25       		.uleb128 0x25
+ 873 0004 0E       		.uleb128 0xe
+ 874 0005 13       		.uleb128 0x13
+ 875 0006 0B       		.uleb128 0xb
+ 876 0007 03       		.uleb128 0x3
+ 877 0008 0E       		.uleb128 0xe
+ 878 0009 1B       		.uleb128 0x1b
+ 879 000a 0E       		.uleb128 0xe
+ 880 000b 55       		.uleb128 0x55
+ 881 000c 17       		.uleb128 0x17
+ 882 000d 11       		.uleb128 0x11
+ 883 000e 01       		.uleb128 0x1
+ 884 000f 10       		.uleb128 0x10
+ 885 0010 17       		.uleb128 0x17
+ 886 0011 00       		.byte	0
+ 887 0012 00       		.byte	0
+ 888 0013 02       		.uleb128 0x2
+ 889 0014 24       		.uleb128 0x24
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 18
 
 
- 897 0033 08       		.uleb128 0x8
- 898 0034 00       		.byte	0
- 899 0035 00       		.byte	0
- 900 0036 05       		.uleb128 0x5
- 901 0037 0F       		.uleb128 0xf
- 902 0038 00       		.byte	0
- 903 0039 0B       		.uleb128 0xb
- 904 003a 0B       		.uleb128 0xb
- 905 003b 49       		.uleb128 0x49
- 906 003c 13       		.uleb128 0x13
- 907 003d 00       		.byte	0
- 908 003e 00       		.byte	0
- 909 003f 06       		.uleb128 0x6
- 910 0040 15       		.uleb128 0x15
- 911 0041 00       		.byte	0
- 912 0042 27       		.uleb128 0x27
- 913 0043 19       		.uleb128 0x19
- 914 0044 00       		.byte	0
- 915 0045 00       		.byte	0
- 916 0046 07       		.uleb128 0x7
- 917 0047 26       		.uleb128 0x26
- 918 0048 00       		.byte	0
- 919 0049 49       		.uleb128 0x49
- 920 004a 13       		.uleb128 0x13
- 921 004b 00       		.byte	0
- 922 004c 00       		.byte	0
- 923 004d 08       		.uleb128 0x8
- 924 004e 16       		.uleb128 0x16
- 925 004f 00       		.byte	0
- 926 0050 03       		.uleb128 0x3
- 927 0051 0E       		.uleb128 0xe
- 928 0052 3A       		.uleb128 0x3a
- 929 0053 0B       		.uleb128 0xb
- 930 0054 3B       		.uleb128 0x3b
- 931 0055 05       		.uleb128 0x5
- 932 0056 49       		.uleb128 0x49
- 933 0057 13       		.uleb128 0x13
- 934 0058 00       		.byte	0
- 935 0059 00       		.byte	0
- 936 005a 09       		.uleb128 0x9
- 937 005b 35       		.uleb128 0x35
- 938 005c 00       		.byte	0
- 939 005d 49       		.uleb128 0x49
- 940 005e 13       		.uleb128 0x13
- 941 005f 00       		.byte	0
- 942 0060 00       		.byte	0
- 943 0061 0A       		.uleb128 0xa
- 944 0062 13       		.uleb128 0x13
- 945 0063 01       		.byte	0x1
- 946 0064 0B       		.uleb128 0xb
- 947 0065 0B       		.uleb128 0xb
- 948 0066 3A       		.uleb128 0x3a
- 949 0067 0B       		.uleb128 0xb
- 950 0068 3B       		.uleb128 0x3b
- 951 0069 0B       		.uleb128 0xb
- 952 006a 01       		.uleb128 0x1
- 953 006b 13       		.uleb128 0x13
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 19
+ 890 0015 00       		.byte	0
+ 891 0016 0B       		.uleb128 0xb
+ 892 0017 0B       		.uleb128 0xb
+ 893 0018 3E       		.uleb128 0x3e
+ 894 0019 0B       		.uleb128 0xb
+ 895 001a 03       		.uleb128 0x3
+ 896 001b 0E       		.uleb128 0xe
+ 897 001c 00       		.byte	0
+ 898 001d 00       		.byte	0
+ 899 001e 03       		.uleb128 0x3
+ 900 001f 16       		.uleb128 0x16
+ 901 0020 00       		.byte	0
+ 902 0021 03       		.uleb128 0x3
+ 903 0022 0E       		.uleb128 0xe
+ 904 0023 3A       		.uleb128 0x3a
+ 905 0024 0B       		.uleb128 0xb
+ 906 0025 3B       		.uleb128 0x3b
+ 907 0026 0B       		.uleb128 0xb
+ 908 0027 49       		.uleb128 0x49
+ 909 0028 13       		.uleb128 0x13
+ 910 0029 00       		.byte	0
+ 911 002a 00       		.byte	0
+ 912 002b 04       		.uleb128 0x4
+ 913 002c 24       		.uleb128 0x24
+ 914 002d 00       		.byte	0
+ 915 002e 0B       		.uleb128 0xb
+ 916 002f 0B       		.uleb128 0xb
+ 917 0030 3E       		.uleb128 0x3e
+ 918 0031 0B       		.uleb128 0xb
+ 919 0032 03       		.uleb128 0x3
+ 920 0033 08       		.uleb128 0x8
+ 921 0034 00       		.byte	0
+ 922 0035 00       		.byte	0
+ 923 0036 05       		.uleb128 0x5
+ 924 0037 0F       		.uleb128 0xf
+ 925 0038 00       		.byte	0
+ 926 0039 0B       		.uleb128 0xb
+ 927 003a 0B       		.uleb128 0xb
+ 928 003b 49       		.uleb128 0x49
+ 929 003c 13       		.uleb128 0x13
+ 930 003d 00       		.byte	0
+ 931 003e 00       		.byte	0
+ 932 003f 06       		.uleb128 0x6
+ 933 0040 15       		.uleb128 0x15
+ 934 0041 00       		.byte	0
+ 935 0042 27       		.uleb128 0x27
+ 936 0043 19       		.uleb128 0x19
+ 937 0044 00       		.byte	0
+ 938 0045 00       		.byte	0
+ 939 0046 07       		.uleb128 0x7
+ 940 0047 26       		.uleb128 0x26
+ 941 0048 00       		.byte	0
+ 942 0049 49       		.uleb128 0x49
+ 943 004a 13       		.uleb128 0x13
+ 944 004b 00       		.byte	0
+ 945 004c 00       		.byte	0
+ 946 004d 08       		.uleb128 0x8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 19
 
 
- 954 006c 00       		.byte	0
- 955 006d 00       		.byte	0
- 956 006e 0B       		.uleb128 0xb
- 957 006f 0D       		.uleb128 0xd
- 958 0070 00       		.byte	0
- 959 0071 03       		.uleb128 0x3
- 960 0072 0E       		.uleb128 0xe
- 961 0073 3A       		.uleb128 0x3a
- 962 0074 0B       		.uleb128 0xb
- 963 0075 3B       		.uleb128 0x3b
- 964 0076 0B       		.uleb128 0xb
- 965 0077 49       		.uleb128 0x49
- 966 0078 13       		.uleb128 0x13
- 967 0079 38       		.uleb128 0x38
- 968 007a 0B       		.uleb128 0xb
- 969 007b 00       		.byte	0
- 970 007c 00       		.byte	0
- 971 007d 0C       		.uleb128 0xc
- 972 007e 01       		.uleb128 0x1
- 973 007f 01       		.byte	0x1
- 974 0080 49       		.uleb128 0x49
- 975 0081 13       		.uleb128 0x13
- 976 0082 01       		.uleb128 0x1
- 977 0083 13       		.uleb128 0x13
- 978 0084 00       		.byte	0
- 979 0085 00       		.byte	0
- 980 0086 0D       		.uleb128 0xd
- 981 0087 21       		.uleb128 0x21
- 982 0088 00       		.byte	0
- 983 0089 49       		.uleb128 0x49
- 984 008a 13       		.uleb128 0x13
- 985 008b 2F       		.uleb128 0x2f
- 986 008c 0B       		.uleb128 0xb
- 987 008d 00       		.byte	0
- 988 008e 00       		.byte	0
- 989 008f 0E       		.uleb128 0xe
- 990 0090 2E       		.uleb128 0x2e
- 991 0091 01       		.byte	0x1
- 992 0092 3F       		.uleb128 0x3f
- 993 0093 19       		.uleb128 0x19
- 994 0094 03       		.uleb128 0x3
- 995 0095 0E       		.uleb128 0xe
- 996 0096 3A       		.uleb128 0x3a
- 997 0097 0B       		.uleb128 0xb
- 998 0098 3B       		.uleb128 0x3b
- 999 0099 0B       		.uleb128 0xb
- 1000 009a 11       		.uleb128 0x11
- 1001 009b 01       		.uleb128 0x1
- 1002 009c 12       		.uleb128 0x12
- 1003 009d 06       		.uleb128 0x6
- 1004 009e 40       		.uleb128 0x40
- 1005 009f 18       		.uleb128 0x18
- 1006 00a0 9742     		.uleb128 0x2117
- 1007 00a2 19       		.uleb128 0x19
- 1008 00a3 01       		.uleb128 0x1
- 1009 00a4 13       		.uleb128 0x13
- 1010 00a5 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 20
+ 947 004e 16       		.uleb128 0x16
+ 948 004f 00       		.byte	0
+ 949 0050 03       		.uleb128 0x3
+ 950 0051 0E       		.uleb128 0xe
+ 951 0052 3A       		.uleb128 0x3a
+ 952 0053 0B       		.uleb128 0xb
+ 953 0054 3B       		.uleb128 0x3b
+ 954 0055 05       		.uleb128 0x5
+ 955 0056 49       		.uleb128 0x49
+ 956 0057 13       		.uleb128 0x13
+ 957 0058 00       		.byte	0
+ 958 0059 00       		.byte	0
+ 959 005a 09       		.uleb128 0x9
+ 960 005b 35       		.uleb128 0x35
+ 961 005c 00       		.byte	0
+ 962 005d 49       		.uleb128 0x49
+ 963 005e 13       		.uleb128 0x13
+ 964 005f 00       		.byte	0
+ 965 0060 00       		.byte	0
+ 966 0061 0A       		.uleb128 0xa
+ 967 0062 13       		.uleb128 0x13
+ 968 0063 01       		.byte	0x1
+ 969 0064 0B       		.uleb128 0xb
+ 970 0065 0B       		.uleb128 0xb
+ 971 0066 3A       		.uleb128 0x3a
+ 972 0067 0B       		.uleb128 0xb
+ 973 0068 3B       		.uleb128 0x3b
+ 974 0069 0B       		.uleb128 0xb
+ 975 006a 01       		.uleb128 0x1
+ 976 006b 13       		.uleb128 0x13
+ 977 006c 00       		.byte	0
+ 978 006d 00       		.byte	0
+ 979 006e 0B       		.uleb128 0xb
+ 980 006f 0D       		.uleb128 0xd
+ 981 0070 00       		.byte	0
+ 982 0071 03       		.uleb128 0x3
+ 983 0072 0E       		.uleb128 0xe
+ 984 0073 3A       		.uleb128 0x3a
+ 985 0074 0B       		.uleb128 0xb
+ 986 0075 3B       		.uleb128 0x3b
+ 987 0076 0B       		.uleb128 0xb
+ 988 0077 49       		.uleb128 0x49
+ 989 0078 13       		.uleb128 0x13
+ 990 0079 38       		.uleb128 0x38
+ 991 007a 0B       		.uleb128 0xb
+ 992 007b 00       		.byte	0
+ 993 007c 00       		.byte	0
+ 994 007d 0C       		.uleb128 0xc
+ 995 007e 01       		.uleb128 0x1
+ 996 007f 01       		.byte	0x1
+ 997 0080 49       		.uleb128 0x49
+ 998 0081 13       		.uleb128 0x13
+ 999 0082 01       		.uleb128 0x1
+ 1000 0083 13       		.uleb128 0x13
+ 1001 0084 00       		.byte	0
+ 1002 0085 00       		.byte	0
+ 1003 0086 0D       		.uleb128 0xd
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 20
 
 
- 1011 00a6 00       		.byte	0
- 1012 00a7 0F       		.uleb128 0xf
- 1013 00a8 898201   		.uleb128 0x4109
- 1014 00ab 00       		.byte	0
- 1015 00ac 11       		.uleb128 0x11
- 1016 00ad 01       		.uleb128 0x1
- 1017 00ae 31       		.uleb128 0x31
- 1018 00af 13       		.uleb128 0x13
- 1019 00b0 00       		.byte	0
- 1020 00b1 00       		.byte	0
- 1021 00b2 10       		.uleb128 0x10
- 1022 00b3 898201   		.uleb128 0x4109
- 1023 00b6 01       		.byte	0x1
- 1024 00b7 11       		.uleb128 0x11
- 1025 00b8 01       		.uleb128 0x1
- 1026 00b9 31       		.uleb128 0x31
- 1027 00ba 13       		.uleb128 0x13
- 1028 00bb 01       		.uleb128 0x1
- 1029 00bc 13       		.uleb128 0x13
- 1030 00bd 00       		.byte	0
- 1031 00be 00       		.byte	0
- 1032 00bf 11       		.uleb128 0x11
- 1033 00c0 8A8201   		.uleb128 0x410a
- 1034 00c3 00       		.byte	0
- 1035 00c4 02       		.uleb128 0x2
- 1036 00c5 18       		.uleb128 0x18
- 1037 00c6 9142     		.uleb128 0x2111
- 1038 00c8 18       		.uleb128 0x18
- 1039 00c9 00       		.byte	0
- 1040 00ca 00       		.byte	0
- 1041 00cb 12       		.uleb128 0x12
- 1042 00cc 898201   		.uleb128 0x4109
- 1043 00cf 01       		.byte	0x1
- 1044 00d0 11       		.uleb128 0x11
- 1045 00d1 01       		.uleb128 0x1
- 1046 00d2 31       		.uleb128 0x31
- 1047 00d3 13       		.uleb128 0x13
- 1048 00d4 00       		.byte	0
- 1049 00d5 00       		.byte	0
- 1050 00d6 13       		.uleb128 0x13
- 1051 00d7 34       		.uleb128 0x34
- 1052 00d8 00       		.byte	0
- 1053 00d9 03       		.uleb128 0x3
- 1054 00da 08       		.uleb128 0x8
- 1055 00db 3A       		.uleb128 0x3a
- 1056 00dc 0B       		.uleb128 0xb
- 1057 00dd 3B       		.uleb128 0x3b
- 1058 00de 0B       		.uleb128 0xb
- 1059 00df 49       		.uleb128 0x49
- 1060 00e0 13       		.uleb128 0x13
- 1061 00e1 02       		.uleb128 0x2
- 1062 00e2 18       		.uleb128 0x18
- 1063 00e3 00       		.byte	0
- 1064 00e4 00       		.byte	0
- 1065 00e5 14       		.uleb128 0x14
- 1066 00e6 34       		.uleb128 0x34
- 1067 00e7 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 21
+ 1004 0087 21       		.uleb128 0x21
+ 1005 0088 00       		.byte	0
+ 1006 0089 49       		.uleb128 0x49
+ 1007 008a 13       		.uleb128 0x13
+ 1008 008b 2F       		.uleb128 0x2f
+ 1009 008c 0B       		.uleb128 0xb
+ 1010 008d 00       		.byte	0
+ 1011 008e 00       		.byte	0
+ 1012 008f 0E       		.uleb128 0xe
+ 1013 0090 2E       		.uleb128 0x2e
+ 1014 0091 01       		.byte	0x1
+ 1015 0092 3F       		.uleb128 0x3f
+ 1016 0093 19       		.uleb128 0x19
+ 1017 0094 03       		.uleb128 0x3
+ 1018 0095 0E       		.uleb128 0xe
+ 1019 0096 3A       		.uleb128 0x3a
+ 1020 0097 0B       		.uleb128 0xb
+ 1021 0098 3B       		.uleb128 0x3b
+ 1022 0099 0B       		.uleb128 0xb
+ 1023 009a 11       		.uleb128 0x11
+ 1024 009b 01       		.uleb128 0x1
+ 1025 009c 12       		.uleb128 0x12
+ 1026 009d 06       		.uleb128 0x6
+ 1027 009e 40       		.uleb128 0x40
+ 1028 009f 18       		.uleb128 0x18
+ 1029 00a0 9742     		.uleb128 0x2117
+ 1030 00a2 19       		.uleb128 0x19
+ 1031 00a3 01       		.uleb128 0x1
+ 1032 00a4 13       		.uleb128 0x13
+ 1033 00a5 00       		.byte	0
+ 1034 00a6 00       		.byte	0
+ 1035 00a7 0F       		.uleb128 0xf
+ 1036 00a8 898201   		.uleb128 0x4109
+ 1037 00ab 00       		.byte	0
+ 1038 00ac 11       		.uleb128 0x11
+ 1039 00ad 01       		.uleb128 0x1
+ 1040 00ae 31       		.uleb128 0x31
+ 1041 00af 13       		.uleb128 0x13
+ 1042 00b0 00       		.byte	0
+ 1043 00b1 00       		.byte	0
+ 1044 00b2 10       		.uleb128 0x10
+ 1045 00b3 898201   		.uleb128 0x4109
+ 1046 00b6 01       		.byte	0x1
+ 1047 00b7 11       		.uleb128 0x11
+ 1048 00b8 01       		.uleb128 0x1
+ 1049 00b9 31       		.uleb128 0x31
+ 1050 00ba 13       		.uleb128 0x13
+ 1051 00bb 01       		.uleb128 0x1
+ 1052 00bc 13       		.uleb128 0x13
+ 1053 00bd 00       		.byte	0
+ 1054 00be 00       		.byte	0
+ 1055 00bf 11       		.uleb128 0x11
+ 1056 00c0 8A8201   		.uleb128 0x410a
+ 1057 00c3 00       		.byte	0
+ 1058 00c4 02       		.uleb128 0x2
+ 1059 00c5 18       		.uleb128 0x18
+ 1060 00c6 9142     		.uleb128 0x2111
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 21
 
 
- 1068 00e8 03       		.uleb128 0x3
- 1069 00e9 08       		.uleb128 0x8
- 1070 00ea 3A       		.uleb128 0x3a
- 1071 00eb 0B       		.uleb128 0xb
- 1072 00ec 3B       		.uleb128 0x3b
- 1073 00ed 0B       		.uleb128 0xb
- 1074 00ee 49       		.uleb128 0x49
- 1075 00ef 13       		.uleb128 0x13
- 1076 00f0 1C       		.uleb128 0x1c
- 1077 00f1 06       		.uleb128 0x6
- 1078 00f2 00       		.byte	0
- 1079 00f3 00       		.byte	0
- 1080 00f4 15       		.uleb128 0x15
- 1081 00f5 34       		.uleb128 0x34
- 1082 00f6 00       		.byte	0
- 1083 00f7 03       		.uleb128 0x3
- 1084 00f8 0E       		.uleb128 0xe
- 1085 00f9 3A       		.uleb128 0x3a
- 1086 00fa 0B       		.uleb128 0xb
- 1087 00fb 3B       		.uleb128 0x3b
- 1088 00fc 05       		.uleb128 0x5
- 1089 00fd 49       		.uleb128 0x49
- 1090 00fe 13       		.uleb128 0x13
- 1091 00ff 3F       		.uleb128 0x3f
- 1092 0100 19       		.uleb128 0x19
- 1093 0101 3C       		.uleb128 0x3c
- 1094 0102 19       		.uleb128 0x19
- 1095 0103 00       		.byte	0
- 1096 0104 00       		.byte	0
- 1097 0105 16       		.uleb128 0x16
- 1098 0106 34       		.uleb128 0x34
- 1099 0107 00       		.byte	0
- 1100 0108 03       		.uleb128 0x3
- 1101 0109 08       		.uleb128 0x8
- 1102 010a 3A       		.uleb128 0x3a
- 1103 010b 0B       		.uleb128 0xb
- 1104 010c 3B       		.uleb128 0x3b
- 1105 010d 0B       		.uleb128 0xb
- 1106 010e 49       		.uleb128 0x49
- 1107 010f 13       		.uleb128 0x13
- 1108 0110 3F       		.uleb128 0x3f
- 1109 0111 19       		.uleb128 0x19
- 1110 0112 02       		.uleb128 0x2
- 1111 0113 18       		.uleb128 0x18
- 1112 0114 00       		.byte	0
- 1113 0115 00       		.byte	0
- 1114 0116 17       		.uleb128 0x17
- 1115 0117 34       		.uleb128 0x34
- 1116 0118 00       		.byte	0
- 1117 0119 03       		.uleb128 0x3
- 1118 011a 0E       		.uleb128 0xe
- 1119 011b 3A       		.uleb128 0x3a
- 1120 011c 0B       		.uleb128 0xb
- 1121 011d 3B       		.uleb128 0x3b
- 1122 011e 0B       		.uleb128 0xb
- 1123 011f 49       		.uleb128 0x49
- 1124 0120 13       		.uleb128 0x13
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 22
+ 1061 00c8 18       		.uleb128 0x18
+ 1062 00c9 00       		.byte	0
+ 1063 00ca 00       		.byte	0
+ 1064 00cb 12       		.uleb128 0x12
+ 1065 00cc 898201   		.uleb128 0x4109
+ 1066 00cf 01       		.byte	0x1
+ 1067 00d0 11       		.uleb128 0x11
+ 1068 00d1 01       		.uleb128 0x1
+ 1069 00d2 31       		.uleb128 0x31
+ 1070 00d3 13       		.uleb128 0x13
+ 1071 00d4 00       		.byte	0
+ 1072 00d5 00       		.byte	0
+ 1073 00d6 13       		.uleb128 0x13
+ 1074 00d7 0B       		.uleb128 0xb
+ 1075 00d8 01       		.byte	0x1
+ 1076 00d9 11       		.uleb128 0x11
+ 1077 00da 01       		.uleb128 0x1
+ 1078 00db 12       		.uleb128 0x12
+ 1079 00dc 06       		.uleb128 0x6
+ 1080 00dd 00       		.byte	0
+ 1081 00de 00       		.byte	0
+ 1082 00df 14       		.uleb128 0x14
+ 1083 00e0 34       		.uleb128 0x34
+ 1084 00e1 00       		.byte	0
+ 1085 00e2 03       		.uleb128 0x3
+ 1086 00e3 08       		.uleb128 0x8
+ 1087 00e4 3A       		.uleb128 0x3a
+ 1088 00e5 0B       		.uleb128 0xb
+ 1089 00e6 3B       		.uleb128 0x3b
+ 1090 00e7 0B       		.uleb128 0xb
+ 1091 00e8 49       		.uleb128 0x49
+ 1092 00e9 13       		.uleb128 0x13
+ 1093 00ea 02       		.uleb128 0x2
+ 1094 00eb 18       		.uleb128 0x18
+ 1095 00ec 00       		.byte	0
+ 1096 00ed 00       		.byte	0
+ 1097 00ee 15       		.uleb128 0x15
+ 1098 00ef 34       		.uleb128 0x34
+ 1099 00f0 00       		.byte	0
+ 1100 00f1 03       		.uleb128 0x3
+ 1101 00f2 08       		.uleb128 0x8
+ 1102 00f3 3A       		.uleb128 0x3a
+ 1103 00f4 0B       		.uleb128 0xb
+ 1104 00f5 3B       		.uleb128 0x3b
+ 1105 00f6 0B       		.uleb128 0xb
+ 1106 00f7 49       		.uleb128 0x49
+ 1107 00f8 13       		.uleb128 0x13
+ 1108 00f9 02       		.uleb128 0x2
+ 1109 00fa 17       		.uleb128 0x17
+ 1110 00fb 00       		.byte	0
+ 1111 00fc 00       		.byte	0
+ 1112 00fd 16       		.uleb128 0x16
+ 1113 00fe 34       		.uleb128 0x34
+ 1114 00ff 00       		.byte	0
+ 1115 0100 03       		.uleb128 0x3
+ 1116 0101 0E       		.uleb128 0xe
+ 1117 0102 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 22
 
 
- 1125 0121 3F       		.uleb128 0x3f
- 1126 0122 19       		.uleb128 0x19
- 1127 0123 02       		.uleb128 0x2
- 1128 0124 18       		.uleb128 0x18
- 1129 0125 00       		.byte	0
- 1130 0126 00       		.byte	0
- 1131 0127 18       		.uleb128 0x18
- 1132 0128 2E       		.uleb128 0x2e
- 1133 0129 00       		.byte	0
- 1134 012a 3F       		.uleb128 0x3f
- 1135 012b 19       		.uleb128 0x19
- 1136 012c 03       		.uleb128 0x3
- 1137 012d 0E       		.uleb128 0xe
- 1138 012e 3A       		.uleb128 0x3a
- 1139 012f 0B       		.uleb128 0xb
- 1140 0130 3B       		.uleb128 0x3b
- 1141 0131 0B       		.uleb128 0xb
- 1142 0132 27       		.uleb128 0x27
- 1143 0133 19       		.uleb128 0x19
- 1144 0134 49       		.uleb128 0x49
- 1145 0135 13       		.uleb128 0x13
- 1146 0136 3C       		.uleb128 0x3c
- 1147 0137 19       		.uleb128 0x19
- 1148 0138 00       		.byte	0
- 1149 0139 00       		.byte	0
- 1150 013a 19       		.uleb128 0x19
- 1151 013b 2E       		.uleb128 0x2e
- 1152 013c 00       		.byte	0
- 1153 013d 3F       		.uleb128 0x3f
- 1154 013e 19       		.uleb128 0x19
- 1155 013f 03       		.uleb128 0x3
- 1156 0140 0E       		.uleb128 0xe
- 1157 0141 3A       		.uleb128 0x3a
- 1158 0142 0B       		.uleb128 0xb
- 1159 0143 3B       		.uleb128 0x3b
- 1160 0144 0B       		.uleb128 0xb
- 1161 0145 27       		.uleb128 0x27
- 1162 0146 19       		.uleb128 0x19
- 1163 0147 3C       		.uleb128 0x3c
- 1164 0148 19       		.uleb128 0x19
- 1165 0149 00       		.byte	0
- 1166 014a 00       		.byte	0
- 1167 014b 1A       		.uleb128 0x1a
- 1168 014c 2E       		.uleb128 0x2e
- 1169 014d 01       		.byte	0x1
- 1170 014e 3F       		.uleb128 0x3f
- 1171 014f 19       		.uleb128 0x19
- 1172 0150 03       		.uleb128 0x3
- 1173 0151 0E       		.uleb128 0xe
- 1174 0152 3A       		.uleb128 0x3a
- 1175 0153 0B       		.uleb128 0xb
- 1176 0154 3B       		.uleb128 0x3b
- 1177 0155 0B       		.uleb128 0xb
- 1178 0156 27       		.uleb128 0x27
- 1179 0157 19       		.uleb128 0x19
- 1180 0158 3C       		.uleb128 0x3c
- 1181 0159 19       		.uleb128 0x19
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 23
+ 1118 0103 0B       		.uleb128 0xb
+ 1119 0104 3B       		.uleb128 0x3b
+ 1120 0105 05       		.uleb128 0x5
+ 1121 0106 49       		.uleb128 0x49
+ 1122 0107 13       		.uleb128 0x13
+ 1123 0108 3F       		.uleb128 0x3f
+ 1124 0109 19       		.uleb128 0x19
+ 1125 010a 3C       		.uleb128 0x3c
+ 1126 010b 19       		.uleb128 0x19
+ 1127 010c 00       		.byte	0
+ 1128 010d 00       		.byte	0
+ 1129 010e 17       		.uleb128 0x17
+ 1130 010f 34       		.uleb128 0x34
+ 1131 0110 00       		.byte	0
+ 1132 0111 03       		.uleb128 0x3
+ 1133 0112 08       		.uleb128 0x8
+ 1134 0113 3A       		.uleb128 0x3a
+ 1135 0114 0B       		.uleb128 0xb
+ 1136 0115 3B       		.uleb128 0x3b
+ 1137 0116 0B       		.uleb128 0xb
+ 1138 0117 49       		.uleb128 0x49
+ 1139 0118 13       		.uleb128 0x13
+ 1140 0119 3F       		.uleb128 0x3f
+ 1141 011a 19       		.uleb128 0x19
+ 1142 011b 02       		.uleb128 0x2
+ 1143 011c 18       		.uleb128 0x18
+ 1144 011d 00       		.byte	0
+ 1145 011e 00       		.byte	0
+ 1146 011f 18       		.uleb128 0x18
+ 1147 0120 34       		.uleb128 0x34
+ 1148 0121 00       		.byte	0
+ 1149 0122 03       		.uleb128 0x3
+ 1150 0123 0E       		.uleb128 0xe
+ 1151 0124 3A       		.uleb128 0x3a
+ 1152 0125 0B       		.uleb128 0xb
+ 1153 0126 3B       		.uleb128 0x3b
+ 1154 0127 0B       		.uleb128 0xb
+ 1155 0128 49       		.uleb128 0x49
+ 1156 0129 13       		.uleb128 0x13
+ 1157 012a 3F       		.uleb128 0x3f
+ 1158 012b 19       		.uleb128 0x19
+ 1159 012c 02       		.uleb128 0x2
+ 1160 012d 18       		.uleb128 0x18
+ 1161 012e 00       		.byte	0
+ 1162 012f 00       		.byte	0
+ 1163 0130 19       		.uleb128 0x19
+ 1164 0131 2E       		.uleb128 0x2e
+ 1165 0132 00       		.byte	0
+ 1166 0133 3F       		.uleb128 0x3f
+ 1167 0134 19       		.uleb128 0x19
+ 1168 0135 03       		.uleb128 0x3
+ 1169 0136 0E       		.uleb128 0xe
+ 1170 0137 3A       		.uleb128 0x3a
+ 1171 0138 0B       		.uleb128 0xb
+ 1172 0139 3B       		.uleb128 0x3b
+ 1173 013a 0B       		.uleb128 0xb
+ 1174 013b 27       		.uleb128 0x27
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 23
 
 
- 1182 015a 01       		.uleb128 0x1
- 1183 015b 13       		.uleb128 0x13
- 1184 015c 00       		.byte	0
- 1185 015d 00       		.byte	0
- 1186 015e 1B       		.uleb128 0x1b
- 1187 015f 05       		.uleb128 0x5
- 1188 0160 00       		.byte	0
- 1189 0161 49       		.uleb128 0x49
- 1190 0162 13       		.uleb128 0x13
- 1191 0163 00       		.byte	0
- 1192 0164 00       		.byte	0
- 1193 0165 1C       		.uleb128 0x1c
- 1194 0166 2E       		.uleb128 0x2e
- 1195 0167 01       		.byte	0x1
- 1196 0168 3F       		.uleb128 0x3f
- 1197 0169 19       		.uleb128 0x19
- 1198 016a 03       		.uleb128 0x3
- 1199 016b 0E       		.uleb128 0xe
- 1200 016c 3A       		.uleb128 0x3a
- 1201 016d 0B       		.uleb128 0xb
- 1202 016e 3B       		.uleb128 0x3b
- 1203 016f 0B       		.uleb128 0xb
- 1204 0170 27       		.uleb128 0x27
- 1205 0171 19       		.uleb128 0x19
- 1206 0172 49       		.uleb128 0x49
- 1207 0173 13       		.uleb128 0x13
- 1208 0174 3C       		.uleb128 0x3c
- 1209 0175 19       		.uleb128 0x19
- 1210 0176 01       		.uleb128 0x1
- 1211 0177 13       		.uleb128 0x13
- 1212 0178 00       		.byte	0
- 1213 0179 00       		.byte	0
- 1214 017a 1D       		.uleb128 0x1d
- 1215 017b 2E       		.uleb128 0x2e
- 1216 017c 01       		.byte	0x1
- 1217 017d 3F       		.uleb128 0x3f
- 1218 017e 19       		.uleb128 0x19
- 1219 017f 03       		.uleb128 0x3
- 1220 0180 0E       		.uleb128 0xe
- 1221 0181 3A       		.uleb128 0x3a
- 1222 0182 0B       		.uleb128 0xb
- 1223 0183 3B       		.uleb128 0x3b
- 1224 0184 0B       		.uleb128 0xb
- 1225 0185 27       		.uleb128 0x27
- 1226 0186 19       		.uleb128 0x19
- 1227 0187 49       		.uleb128 0x49
- 1228 0188 13       		.uleb128 0x13
- 1229 0189 3C       		.uleb128 0x3c
- 1230 018a 19       		.uleb128 0x19
- 1231 018b 00       		.byte	0
- 1232 018c 00       		.byte	0
- 1233 018d 1E       		.uleb128 0x1e
- 1234 018e 18       		.uleb128 0x18
- 1235 018f 00       		.byte	0
- 1236 0190 00       		.byte	0
- 1237 0191 00       		.byte	0
- 1238 0192 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 24
+ 1175 013c 19       		.uleb128 0x19
+ 1176 013d 49       		.uleb128 0x49
+ 1177 013e 13       		.uleb128 0x13
+ 1178 013f 3C       		.uleb128 0x3c
+ 1179 0140 19       		.uleb128 0x19
+ 1180 0141 00       		.byte	0
+ 1181 0142 00       		.byte	0
+ 1182 0143 1A       		.uleb128 0x1a
+ 1183 0144 2E       		.uleb128 0x2e
+ 1184 0145 00       		.byte	0
+ 1185 0146 3F       		.uleb128 0x3f
+ 1186 0147 19       		.uleb128 0x19
+ 1187 0148 03       		.uleb128 0x3
+ 1188 0149 0E       		.uleb128 0xe
+ 1189 014a 3A       		.uleb128 0x3a
+ 1190 014b 0B       		.uleb128 0xb
+ 1191 014c 3B       		.uleb128 0x3b
+ 1192 014d 0B       		.uleb128 0xb
+ 1193 014e 27       		.uleb128 0x27
+ 1194 014f 19       		.uleb128 0x19
+ 1195 0150 3C       		.uleb128 0x3c
+ 1196 0151 19       		.uleb128 0x19
+ 1197 0152 00       		.byte	0
+ 1198 0153 00       		.byte	0
+ 1199 0154 1B       		.uleb128 0x1b
+ 1200 0155 2E       		.uleb128 0x2e
+ 1201 0156 01       		.byte	0x1
+ 1202 0157 3F       		.uleb128 0x3f
+ 1203 0158 19       		.uleb128 0x19
+ 1204 0159 03       		.uleb128 0x3
+ 1205 015a 0E       		.uleb128 0xe
+ 1206 015b 3A       		.uleb128 0x3a
+ 1207 015c 0B       		.uleb128 0xb
+ 1208 015d 3B       		.uleb128 0x3b
+ 1209 015e 0B       		.uleb128 0xb
+ 1210 015f 27       		.uleb128 0x27
+ 1211 0160 19       		.uleb128 0x19
+ 1212 0161 3C       		.uleb128 0x3c
+ 1213 0162 19       		.uleb128 0x19
+ 1214 0163 01       		.uleb128 0x1
+ 1215 0164 13       		.uleb128 0x13
+ 1216 0165 00       		.byte	0
+ 1217 0166 00       		.byte	0
+ 1218 0167 1C       		.uleb128 0x1c
+ 1219 0168 05       		.uleb128 0x5
+ 1220 0169 00       		.byte	0
+ 1221 016a 49       		.uleb128 0x49
+ 1222 016b 13       		.uleb128 0x13
+ 1223 016c 00       		.byte	0
+ 1224 016d 00       		.byte	0
+ 1225 016e 1D       		.uleb128 0x1d
+ 1226 016f 2E       		.uleb128 0x2e
+ 1227 0170 01       		.byte	0x1
+ 1228 0171 3F       		.uleb128 0x3f
+ 1229 0172 19       		.uleb128 0x19
+ 1230 0173 03       		.uleb128 0x3
+ 1231 0174 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 24
 
 
- 1239              		.section	.debug_aranges,"",%progbits
- 1240 0000 2C000000 		.4byte	0x2c
- 1241 0004 0200     		.2byte	0x2
- 1242 0006 00000000 		.4byte	.Ldebug_info0
- 1243 000a 04       		.byte	0x4
- 1244 000b 00       		.byte	0
- 1245 000c 0000     		.2byte	0
- 1246 000e 0000     		.2byte	0
- 1247 0010 00000000 		.4byte	.LFB64
- 1248 0014 1C000000 		.4byte	.LFE64-.LFB64
- 1249 0018 00000000 		.4byte	.LFB63
- 1250 001c 68000000 		.4byte	.LFE63-.LFB63
- 1251 0020 00000000 		.4byte	.LFB65
- 1252 0024 64000000 		.4byte	.LFE65-.LFB65
- 1253 0028 00000000 		.4byte	0
- 1254 002c 00000000 		.4byte	0
- 1255              		.section	.debug_ranges,"",%progbits
- 1256              	.Ldebug_ranges0:
- 1257 0000 00000000 		.4byte	.LFB64
- 1258 0004 1C000000 		.4byte	.LFE64
- 1259 0008 00000000 		.4byte	.LFB63
- 1260 000c 68000000 		.4byte	.LFE63
- 1261 0010 00000000 		.4byte	.LFB65
- 1262 0014 64000000 		.4byte	.LFE65
- 1263 0018 00000000 		.4byte	0
- 1264 001c 00000000 		.4byte	0
- 1265              		.section	.debug_line,"",%progbits
- 1266              	.Ldebug_line0:
- 1267 0000 D3010000 		.section	.debug_str,"MS",%progbits,1
- 1267      02008C01 
- 1267      00000201 
- 1267      FB0E0D00 
- 1267      01010101 
- 1268              	.LASF23:
- 1269 0000 64657641 		.ascii	"devAddress\000"
- 1269      64647265 
- 1269      737300
- 1270              	.LASF3:
- 1271 000b 5F5F7569 		.ascii	"__uint8_t\000"
- 1271      6E74385F 
- 1271      7400
- 1272              	.LASF37:
- 1273 0015 6932634C 		.ascii	"i2cLCD_SetPosition\000"
- 1273      43445F53 
- 1273      6574506F 
- 1273      73697469 
- 1273      6F6E00
- 1274              	.LASF24:
- 1275 0028 6261636B 		.ascii	"backlight\000"
- 1275      6C696768 
- 1275      7400
- 1276              	.LASF47:
- 1277 0032 43795379 		.ascii	"CySysTickSetCallback\000"
- 1277      73546963 
- 1277      6B536574 
- 1277      43616C6C 
- 1277      6261636B 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 25
+ 1232 0175 3A       		.uleb128 0x3a
+ 1233 0176 0B       		.uleb128 0xb
+ 1234 0177 3B       		.uleb128 0x3b
+ 1235 0178 0B       		.uleb128 0xb
+ 1236 0179 27       		.uleb128 0x27
+ 1237 017a 19       		.uleb128 0x19
+ 1238 017b 49       		.uleb128 0x49
+ 1239 017c 13       		.uleb128 0x13
+ 1240 017d 3C       		.uleb128 0x3c
+ 1241 017e 19       		.uleb128 0x19
+ 1242 017f 01       		.uleb128 0x1
+ 1243 0180 13       		.uleb128 0x13
+ 1244 0181 00       		.byte	0
+ 1245 0182 00       		.byte	0
+ 1246 0183 1E       		.uleb128 0x1e
+ 1247 0184 2E       		.uleb128 0x2e
+ 1248 0185 01       		.byte	0x1
+ 1249 0186 3F       		.uleb128 0x3f
+ 1250 0187 19       		.uleb128 0x19
+ 1251 0188 03       		.uleb128 0x3
+ 1252 0189 0E       		.uleb128 0xe
+ 1253 018a 3A       		.uleb128 0x3a
+ 1254 018b 0B       		.uleb128 0xb
+ 1255 018c 3B       		.uleb128 0x3b
+ 1256 018d 0B       		.uleb128 0xb
+ 1257 018e 27       		.uleb128 0x27
+ 1258 018f 19       		.uleb128 0x19
+ 1259 0190 49       		.uleb128 0x49
+ 1260 0191 13       		.uleb128 0x13
+ 1261 0192 3C       		.uleb128 0x3c
+ 1262 0193 19       		.uleb128 0x19
+ 1263 0194 00       		.byte	0
+ 1264 0195 00       		.byte	0
+ 1265 0196 1F       		.uleb128 0x1f
+ 1266 0197 18       		.uleb128 0x18
+ 1267 0198 00       		.byte	0
+ 1268 0199 00       		.byte	0
+ 1269 019a 00       		.byte	0
+ 1270 019b 00       		.byte	0
+ 1271              		.section	.debug_loc,"",%progbits
+ 1272              	.Ldebug_loc0:
+ 1273              	.LLST0:
+ 1274 0000 0E000000 		.4byte	.LVL10
+ 1275 0004 58000000 		.4byte	.LVL17
+ 1276 0008 0600     		.2byte	0x6
+ 1277 000a 0C       		.byte	0xc
+ 1278 000b 61640040 		.4byte	0x40006461
+ 1279 000f 9F       		.byte	0x9f
+ 1280 0010 00000000 		.4byte	0
+ 1281 0014 00000000 		.4byte	0
+ 1282              	.LLST1:
+ 1283 0018 30000000 		.4byte	.LVL13
+ 1284 001c 58000000 		.4byte	.LVL17
+ 1285 0020 0600     		.2byte	0x6
+ 1286 0022 0C       		.byte	0xc
+ 1287 0023 63640040 		.4byte	0x40006463
+ 1288 0027 9F       		.byte	0x9f
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 25
 
 
- 1278              	.LASF33:
- 1279 0047 75706461 		.ascii	"update_lcd\000"
- 1279      74655F6C 
- 1279      636400
- 1280              	.LASF6:
- 1281 0052 5F5F696E 		.ascii	"__int32_t\000"
- 1281      7433325F 
- 1281      7400
- 1282              	.LASF14:
- 1283 005c 75696E74 		.ascii	"uint8_t\000"
- 1283      385F7400 
- 1284              	.LASF40:
- 1285 0064 4932435F 		.ascii	"I2C_Start\000"
- 1285      53746172 
- 1285      7400
- 1286              	.LASF31:
- 1287 006e 75706461 		.ascii	"update_lcd_it\000"
- 1287      74655F6C 
- 1287      63645F69 
- 1287      7400
- 1288              	.LASF19:
- 1289 007c 666C6F61 		.ascii	"float\000"
- 1289      7400
- 1290              	.LASF39:
- 1291 0082 6932634C 		.ascii	"i2cLCD_SetBlink\000"
- 1291      43445F53 
- 1291      6574426C 
- 1291      696E6B00 
- 1292              	.LASF17:
- 1293 0092 75696E74 		.ascii	"uint8\000"
- 1293      3800
- 1294              	.LASF27:
- 1295 0098 626C696E 		.ascii	"blinkON\000"
- 1295      6B4F4E00 
- 1296              	.LASF21:
- 1297 00a0 72656738 		.ascii	"reg8\000"
- 1297      00
- 1298              	.LASF41:
- 1299 00a5 43795379 		.ascii	"CySysTickStart\000"
- 1299      73546963 
- 1299      6B537461 
- 1299      727400
- 1300              	.LASF8:
- 1301 00b4 6C6F6E67 		.ascii	"long unsigned int\000"
- 1301      20756E73 
- 1301      69676E65 
- 1301      6420696E 
- 1301      7400
- 1302              	.LASF5:
- 1303 00c6 73686F72 		.ascii	"short unsigned int\000"
- 1303      7420756E 
- 1303      7369676E 
- 1303      65642069 
- 1303      6E7400
- 1304              	.LASF35:
- 1305 00d9 6C63645F 		.ascii	"lcd_update\000"
- 1305      75706461 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 26
+ 1289 0028 00000000 		.4byte	0
+ 1290 002c 00000000 		.4byte	0
+ 1291              		.section	.debug_aranges,"",%progbits
+ 1292 0000 2C000000 		.4byte	0x2c
+ 1293 0004 0200     		.2byte	0x2
+ 1294 0006 00000000 		.4byte	.Ldebug_info0
+ 1295 000a 04       		.byte	0x4
+ 1296 000b 00       		.byte	0
+ 1297 000c 0000     		.2byte	0
+ 1298 000e 0000     		.2byte	0
+ 1299 0010 00000000 		.4byte	.LFB64
+ 1300 0014 1C000000 		.4byte	.LFE64-.LFB64
+ 1301 0018 00000000 		.4byte	.LFB63
+ 1302 001c 68000000 		.4byte	.LFE63-.LFB63
+ 1303 0020 00000000 		.4byte	.LFB65
+ 1304 0024 74000000 		.4byte	.LFE65-.LFB65
+ 1305 0028 00000000 		.4byte	0
+ 1306 002c 00000000 		.4byte	0
+ 1307              		.section	.debug_ranges,"",%progbits
+ 1308              	.Ldebug_ranges0:
+ 1309 0000 00000000 		.4byte	.LFB64
+ 1310 0004 1C000000 		.4byte	.LFE64
+ 1311 0008 00000000 		.4byte	.LFB63
+ 1312 000c 68000000 		.4byte	.LFE63
+ 1313 0010 00000000 		.4byte	.LFB65
+ 1314 0014 74000000 		.4byte	.LFE65
+ 1315 0018 00000000 		.4byte	0
+ 1316 001c 00000000 		.4byte	0
+ 1317              		.section	.debug_line,"",%progbits
+ 1318              	.Ldebug_line0:
+ 1319 0000 D6010000 		.section	.debug_str,"MS",%progbits,1
+ 1319      02008C01 
+ 1319      00000201 
+ 1319      FB0E0D00 
+ 1319      01010101 
+ 1320              	.LASF23:
+ 1321 0000 64657641 		.ascii	"devAddress\000"
+ 1321      64647265 
+ 1321      737300
+ 1322              	.LASF3:
+ 1323 000b 5F5F7569 		.ascii	"__uint8_t\000"
+ 1323      6E74385F 
+ 1323      7400
+ 1324              	.LASF37:
+ 1325 0015 6932634C 		.ascii	"i2cLCD_SetPosition\000"
+ 1325      43445F53 
+ 1325      6574506F 
+ 1325      73697469 
+ 1325      6F6E00
+ 1326              	.LASF24:
+ 1327 0028 6261636B 		.ascii	"backlight\000"
+ 1327      6C696768 
+ 1327      7400
+ 1328              	.LASF47:
+ 1329 0032 43795379 		.ascii	"CySysTickSetCallback\000"
+ 1329      73546963 
+ 1329      6B536574 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 26
 
 
- 1305      746500
- 1306              	.LASF26:
- 1307 00e4 64697370 		.ascii	"displayON\000"
- 1307      6C61794F 
- 1307      4E00
- 1308              	.LASF46:
- 1309 00ee 43795379 		.ascii	"CySysTickGetValue\000"
- 1309      73546963 
- 1309      6B476574 
- 1309      56616C75 
- 1309      6500
- 1310              	.LASF34:
- 1311 0100 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1311      52784275 
- 1311      66666572 
- 1311      00
- 1312              	.LASF38:
- 1313 010d 6932634C 		.ascii	"i2cLCD_Print\000"
- 1313      43445F50 
- 1313      72696E74 
- 1313      00
- 1314              	.LASF1:
- 1315 011a 756E7369 		.ascii	"unsigned char\000"
- 1315      676E6564 
- 1315      20636861 
- 1315      7200
- 1316              	.LASF4:
- 1317 0128 5F5F7569 		.ascii	"__uint16_t\000"
- 1317      6E743136 
- 1317      5F7400
- 1318              	.LASF20:
- 1319 0133 646F7562 		.ascii	"double\000"
- 1319      6C6500
- 1320              	.LASF30:
- 1321 013a 6932634C 		.ascii	"i2cLCD_HandleTypeDef\000"
- 1321      43445F48 
- 1321      616E646C 
- 1321      65547970 
- 1321      65446566 
- 1322              	.LASF45:
- 1323 014f 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
- 1323      73657273 
- 1323      5C4A6176 
- 1323      6965725C 
- 1323      446F6375 
- 1324 017d 6F726B73 		.ascii	"orkspace\\gnome_cajas.cydsn\000"
- 1324      70616365 
- 1324      5C676E6F 
- 1324      6D655F63 
- 1324      616A6173 
- 1325              	.LASF18:
- 1326 0198 75696E74 		.ascii	"uint32\000"
- 1326      333200
- 1327              	.LASF36:
- 1328 019f 6932634C 		.ascii	"i2cLCD_Init\000"
- 1328      43445F49 
- 1328      6E697400 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 27
+ 1329      43616C6C 
+ 1329      6261636B 
+ 1330              	.LASF33:
+ 1331 0047 75706461 		.ascii	"update_lcd\000"
+ 1331      74655F6C 
+ 1331      636400
+ 1332              	.LASF6:
+ 1333 0052 5F5F696E 		.ascii	"__int32_t\000"
+ 1333      7433325F 
+ 1333      7400
+ 1334              	.LASF14:
+ 1335 005c 75696E74 		.ascii	"uint8_t\000"
+ 1335      385F7400 
+ 1336              	.LASF40:
+ 1337 0064 4932435F 		.ascii	"I2C_Start\000"
+ 1337      53746172 
+ 1337      7400
+ 1338              	.LASF31:
+ 1339 006e 75706461 		.ascii	"update_lcd_it\000"
+ 1339      74655F6C 
+ 1339      63645F69 
+ 1339      7400
+ 1340              	.LASF19:
+ 1341 007c 666C6F61 		.ascii	"float\000"
+ 1341      7400
+ 1342              	.LASF39:
+ 1343 0082 6932634C 		.ascii	"i2cLCD_SetBlink\000"
+ 1343      43445F53 
+ 1343      6574426C 
+ 1343      696E6B00 
+ 1344              	.LASF17:
+ 1345 0092 75696E74 		.ascii	"uint8\000"
+ 1345      3800
+ 1346              	.LASF27:
+ 1347 0098 626C696E 		.ascii	"blinkON\000"
+ 1347      6B4F4E00 
+ 1348              	.LASF21:
+ 1349 00a0 72656738 		.ascii	"reg8\000"
+ 1349      00
+ 1350              	.LASF41:
+ 1351 00a5 43795379 		.ascii	"CySysTickStart\000"
+ 1351      73546963 
+ 1351      6B537461 
+ 1351      727400
+ 1352              	.LASF8:
+ 1353 00b4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1353      20756E73 
+ 1353      69676E65 
+ 1353      6420696E 
+ 1353      7400
+ 1354              	.LASF5:
+ 1355 00c6 73686F72 		.ascii	"short unsigned int\000"
+ 1355      7420756E 
+ 1355      7369676E 
+ 1355      65642069 
+ 1355      6E7400
+ 1356              	.LASF35:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 27
 
 
- 1329              	.LASF11:
- 1330 01ab 756E7369 		.ascii	"unsigned int\000"
- 1330      676E6564 
- 1330      20696E74 
- 1330      00
- 1331              	.LASF10:
- 1332 01b8 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1332      206C6F6E 
- 1332      6720756E 
- 1332      7369676E 
- 1332      65642069 
- 1333              	.LASF25:
- 1334 01cf 63757273 		.ascii	"cursorON\000"
- 1334      6F724F4E 
- 1334      00
- 1335              	.LASF43:
- 1336 01d8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1336      4320342E 
- 1336      392E3320 
- 1336      32303135 
- 1336      30333033 
- 1337 020b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1337      20726576 
- 1337      6973696F 
- 1337      6E203232 
- 1337      31323230 
- 1338 023e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1338      66756E63 
- 1338      74696F6E 
- 1338      2D736563 
- 1338      74696F6E 
- 1339              	.LASF32:
- 1340 0266 73657475 		.ascii	"setup_lcd\000"
- 1340      705F6C63 
- 1340      6400
- 1341              	.LASF29:
- 1342 0270 63757374 		.ascii	"customCharIdentifiers\000"
- 1342      6F6D4368 
- 1342      61724964 
- 1342      656E7469 
- 1342      66696572 
- 1343              	.LASF16:
- 1344 0286 696E7433 		.ascii	"int32_t\000"
- 1344      325F7400 
- 1345              	.LASF12:
- 1346 028e 73697A65 		.ascii	"sizetype\000"
- 1346      74797065 
- 1346      00
- 1347              	.LASF9:
- 1348 0297 6C6F6E67 		.ascii	"long long int\000"
- 1348      206C6F6E 
- 1348      6720696E 
- 1348      7400
- 1349              	.LASF13:
- 1350 02a5 63686172 		.ascii	"char\000"
- 1350      00
- 1351              	.LASF22:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccZhYLXV.s 			page 28
+ 1357 00d9 6C63645F 		.ascii	"lcd_update\000"
+ 1357      75706461 
+ 1357      746500
+ 1358              	.LASF26:
+ 1359 00e4 64697370 		.ascii	"displayON\000"
+ 1359      6C61794F 
+ 1359      4E00
+ 1360              	.LASF46:
+ 1361 00ee 43795379 		.ascii	"CySysTickGetValue\000"
+ 1361      73546963 
+ 1361      6B476574 
+ 1361      56616C75 
+ 1361      6500
+ 1362              	.LASF34:
+ 1363 0100 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1363      52784275 
+ 1363      66666572 
+ 1363      00
+ 1364              	.LASF38:
+ 1365 010d 6932634C 		.ascii	"i2cLCD_Print\000"
+ 1365      43445F50 
+ 1365      72696E74 
+ 1365      00
+ 1366              	.LASF1:
+ 1367 011a 756E7369 		.ascii	"unsigned char\000"
+ 1367      676E6564 
+ 1367      20636861 
+ 1367      7200
+ 1368              	.LASF4:
+ 1369 0128 5F5F7569 		.ascii	"__uint16_t\000"
+ 1369      6E743136 
+ 1369      5F7400
+ 1370              	.LASF20:
+ 1371 0133 646F7562 		.ascii	"double\000"
+ 1371      6C6500
+ 1372              	.LASF30:
+ 1373 013a 6932634C 		.ascii	"i2cLCD_HandleTypeDef\000"
+ 1373      43445F48 
+ 1373      616E646C 
+ 1373      65547970 
+ 1373      65446566 
+ 1374              	.LASF45:
+ 1375 014f 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 1375      73657273 
+ 1375      5C4A6176 
+ 1375      6965725C 
+ 1375      446F6375 
+ 1376 017d 6F726B73 		.ascii	"orkspace\\gnome_cajas.cydsn\000"
+ 1376      70616365 
+ 1376      5C676E6F 
+ 1376      6D655F63 
+ 1376      616A6173 
+ 1377              	.LASF18:
+ 1378 0198 75696E74 		.ascii	"uint32\000"
+ 1378      333200
+ 1379              	.LASF36:
+ 1380 019f 6932634C 		.ascii	"i2cLCD_Init\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 28
 
 
- 1352 02aa 63795379 		.ascii	"cySysTickCallback\000"
- 1352      73546963 
- 1352      6B43616C 
- 1352      6C626163 
- 1352      6B00
- 1353              	.LASF28:
- 1354 02bc 6E756D62 		.ascii	"numberOfCustomChars\000"
- 1354      65724F66 
- 1354      43757374 
- 1354      6F6D4368 
- 1354      61727300 
- 1355              	.LASF2:
- 1356 02d0 73686F72 		.ascii	"short int\000"
- 1356      7420696E 
- 1356      7400
- 1357              	.LASF15:
- 1358 02da 75696E74 		.ascii	"uint16_t\000"
- 1358      31365F74 
- 1358      00
- 1359              	.LASF44:
- 1360 02e3 2E5C676E 		.ascii	".\\gnome_lcd.c\000"
- 1360      6F6D655F 
- 1360      6C63642E 
- 1360      6300
- 1361              	.LASF7:
- 1362 02f1 6C6F6E67 		.ascii	"long int\000"
- 1362      20696E74 
- 1362      00
- 1363              	.LASF0:
- 1364 02fa 7369676E 		.ascii	"signed char\000"
- 1364      65642063 
- 1364      68617200 
- 1365              	.LASF42:
- 1366 0306 73707269 		.ascii	"sprintf\000"
- 1366      6E746600 
- 1367              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1380      43445F49 
+ 1380      6E697400 
+ 1381              	.LASF11:
+ 1382 01ab 756E7369 		.ascii	"unsigned int\000"
+ 1382      676E6564 
+ 1382      20696E74 
+ 1382      00
+ 1383              	.LASF10:
+ 1384 01b8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1384      206C6F6E 
+ 1384      6720756E 
+ 1384      7369676E 
+ 1384      65642069 
+ 1385              	.LASF25:
+ 1386 01cf 63757273 		.ascii	"cursorON\000"
+ 1386      6F724F4E 
+ 1386      00
+ 1387              	.LASF43:
+ 1388 01d8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1388      4320342E 
+ 1388      392E3320 
+ 1388      32303135 
+ 1388      30333033 
+ 1389 020b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1389      20726576 
+ 1389      6973696F 
+ 1389      6E203232 
+ 1389      31323230 
+ 1390 023e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1390      66756E63 
+ 1390      74696F6E 
+ 1390      2D736563 
+ 1390      74696F6E 
+ 1391              	.LASF32:
+ 1392 0266 73657475 		.ascii	"setup_lcd\000"
+ 1392      705F6C63 
+ 1392      6400
+ 1393              	.LASF29:
+ 1394 0270 63757374 		.ascii	"customCharIdentifiers\000"
+ 1394      6F6D4368 
+ 1394      61724964 
+ 1394      656E7469 
+ 1394      66696572 
+ 1395              	.LASF16:
+ 1396 0286 696E7433 		.ascii	"int32_t\000"
+ 1396      325F7400 
+ 1397              	.LASF12:
+ 1398 028e 73697A65 		.ascii	"sizetype\000"
+ 1398      74797065 
+ 1398      00
+ 1399              	.LASF9:
+ 1400 0297 6C6F6E67 		.ascii	"long long int\000"
+ 1400      206C6F6E 
+ 1400      6720696E 
+ 1400      7400
+ 1401              	.LASF13:
+ 1402 02a5 63686172 		.ascii	"char\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccTp8Djb.s 			page 29
+
+
+ 1402      00
+ 1403              	.LASF22:
+ 1404 02aa 63795379 		.ascii	"cySysTickCallback\000"
+ 1404      73546963 
+ 1404      6B43616C 
+ 1404      6C626163 
+ 1404      6B00
+ 1405              	.LASF28:
+ 1406 02bc 6E756D62 		.ascii	"numberOfCustomChars\000"
+ 1406      65724F66 
+ 1406      43757374 
+ 1406      6F6D4368 
+ 1406      61727300 
+ 1407              	.LASF2:
+ 1408 02d0 73686F72 		.ascii	"short int\000"
+ 1408      7420696E 
+ 1408      7400
+ 1409              	.LASF15:
+ 1410 02da 75696E74 		.ascii	"uint16_t\000"
+ 1410      31365F74 
+ 1410      00
+ 1411              	.LASF44:
+ 1412 02e3 2E5C676E 		.ascii	".\\gnome_lcd.c\000"
+ 1412      6F6D655F 
+ 1412      6C63642E 
+ 1412      6300
+ 1413              	.LASF7:
+ 1414 02f1 6C6F6E67 		.ascii	"long int\000"
+ 1414      20696E74 
+ 1414      00
+ 1415              	.LASF0:
+ 1416 02fa 7369676E 		.ascii	"signed char\000"
+ 1416      65642063 
+ 1416      68617200 
+ 1417              	.LASF42:
+ 1418 0306 73707269 		.ascii	"sprintf\000"
+ 1418      6E746600 
+ 1419              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
