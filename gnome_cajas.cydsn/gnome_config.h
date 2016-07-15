@@ -17,7 +17,6 @@
     
 // Debug
 #define GNOME_DEBUGGING_ON              0x01
-//#define GNOME_DEBUGGING_PERIOD          1000
 #define GNOME_DEBUGGING_MAX_BREAKPOINTS 0x08
 #define GNOME_DEBUG_MAX_BUFFER_LENGTH   15
     

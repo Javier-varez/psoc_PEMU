@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
   27              		.loc 1 28 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 2
 
 
   30              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
   72              	.LVL7:
   73              	.L2:
   37:.\gnome_debug.c ****             gnome_debug_state.breakpoints[i].active = 0x00;
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 3
 
 
   74              		.loc 1 37 0 is_stmt 0 discriminator 1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
   55:.\gnome_debug.c ****     #if(GNOME_DEBUGGING_ON==1) 
   56:.\gnome_debug.c ****         CyGlobalIntDisable;      
   57:.\gnome_debug.c ****         // Check if debugger should activate (by reaching a new breakpoint)
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 4
 
 
   58:.\gnome_debug.c ****         uint8_t i;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  133 0010 3948     		ldr	r0, .L16+8
  134              	.LVL11:
  135 0012 FFF7FEFF 		bl	UART_PutString
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 5
 
 
  136              	.LVL12:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  180 0054 2368     		ldr	r3, [r4]
  181 0056 6846     		mov	r0, sp
  182 0058 2C49     		ldr	r1, .L16+28
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 6
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 6
 
 
  183 005a 5A78     		ldrb	r2, [r3, #1]	@ zero_extendqisi2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  227 009a F0DD     		ble	.L11
  110:.\gnome_debug.c ****         }
  111:.\gnome_debug.c ****         UART_PutString("\r\n");
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 7
 
 
  228              		.loc 1 111 0 is_stmt 1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  118:.\gnome_debug.c ****         sprintf(str, "\tSTACK_PTR = 0x%02x\r\n", current_context->stack.ptr);
  274              		.loc 1 118 0 is_stmt 1
  275 00d2 074B     		ldr	r3, .L16
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 8
 
 
  276 00d4 1B68     		ldr	r3, [r3]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  324              		.loc 1 54 0
  325              		.cfi_startproc
  326              		@ args = 0, pretend = 0, frame = 40
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 9
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 9
 
 
  327              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  374 0036 6846     		mov	r0, sp
  375 0038 FFF7FEFF 		bl	UART_PutString
  376              	.LVL49:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 10
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 10
 
 
  377 003c 03E0     		b	.L21
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  422              	@ 82 ".\gnome_debug.c" 1
  423 0066 62B6     		CPSIE   i
  424              	@ 0 "" 2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 11
 
 
   84:.\gnome_debug.c **** 
@@ -626,7 +626,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  446              	gnome_debug_toggle_breakpoint:
  447              	.LFB66:
  124:.\gnome_debug.c **** 
- 125:.\gnome_debug.c **** 
+ 125:.\gnome_debug.c **** #if GNOME_DEBUGGING_ON
  126:.\gnome_debug.c **** uint8_t gnome_debug_toggle_breakpoint(uint8_t PC) {
  448              		.loc 1 126 0
  449              		.cfi_startproc
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  469 0014 154B     		ldr	r3, .L39
  470              	.LVL58:
  471 0016 03EB4000 		add	r0, r3, r0, lsl #1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 12
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 12
 
 
  472 001a C378     		ldrb	r3, [r0, #3]	@ zero_extendqisi2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  504              		.cfi_def_cfa_offset 4
  505              		.cfi_offset 4, -4
  141:.\gnome_debug.c ****                 gnome_debug_state.breakpoints[i].pc = PC;
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 13
 
 
  506              		.loc 1 141 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  553 006a 7047     		bx	lr
  554              	.L40:
  555              		.align	2
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 14
 
 
  556              	.L39:
@@ -794,7 +794,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  566              		.type	gnome_tx_uart_it, %function
  567              	gnome_tx_uart_it:
  568              	.LFB67:
- 152:.\gnome_debug.c **** 
+ 152:.\gnome_debug.c **** #endif
  153:.\gnome_debug.c **** 
  154:.\gnome_debug.c **** CY_ISR(gnome_tx_uart_it) {
  569              		.loc 1 154 0
@@ -808,12 +808,13 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  577              		.cfi_offset 14, -4
  578 0002 8BB0     		sub	sp, sp, #44
  579              		.cfi_def_cfa_offset 56
- 155:.\gnome_debug.c ****     while(UART_ReadRxStatus() == UART_RX_STS_FIFO_NOTEMPTY) {
- 580              		.loc 1 155 0
+ 155:.\gnome_debug.c ****     #if GNOME_DEBUGGING_ON
+ 156:.\gnome_debug.c ****     while(UART_ReadRxStatus() == UART_RX_STS_FIFO_NOTEMPTY) {
+ 580              		.loc 1 156 0
  581 0004 85E0     		b	.L42
  582              	.L56:
- 156:.\gnome_debug.c ****         gnome_console.buffer[gnome_console.ptr++] = UART_ReadRxData();
- 583              		.loc 1 156 0
+ 157:.\gnome_debug.c ****         gnome_console.buffer[gnome_console.ptr++] = UART_ReadRxData();
+ 583              		.loc 1 157 0
  584 0006 464C     		ldr	r4, .L59
  585 0008 E57B     		ldrb	r5, [r4, #15]	@ zero_extendqisi2
  586 000a 6B1C     		adds	r3, r5, #1
@@ -821,114 +822,114 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  588 000e FFF7FEFF 		bl	UART_ReadRxData
  589              	.LVL73:
  590 0012 6055     		strb	r0, [r4, r5]
- 157:.\gnome_debug.c ****         if (gnome_console.ptr >= GNOME_DEBUG_MAX_BUFFER_LENGTH) gnome_console.ptr = 0;
- 591              		.loc 1 157 0
+ 158:.\gnome_debug.c ****         if (gnome_console.ptr >= GNOME_DEBUG_MAX_BUFFER_LENGTH) gnome_console.ptr = 0;
+ 591              		.loc 1 158 0
  592 0014 E37B     		ldrb	r3, [r4, #15]	@ zero_extendqisi2
  593 0016 0E2B     		cmp	r3, #14
  594 0018 01D9     		bls	.L43
- 595              		.loc 1 157 0 is_stmt 0 discriminator 1
+ 595              		.loc 1 158 0 is_stmt 0 discriminator 1
  596 001a 0022     		movs	r2, #0
  597 001c E273     		strb	r2, [r4, #15]
  598              	.L43:
- 158:.\gnome_debug.c ****         if (gnome_console.buffer[gnome_console.ptr-1] == ' ') {
- 599              		.loc 1 158 0 is_stmt 1
+ 159:.\gnome_debug.c ****         if (gnome_console.buffer[gnome_console.ptr-1] == ' ') {
+ 599              		.loc 1 159 0 is_stmt 1
  600 001e 404B     		ldr	r3, .L59
  601 0020 DA7B     		ldrb	r2, [r3, #15]	@ zero_extendqisi2
  602 0022 511E     		subs	r1, r2, #1
  603 0024 5B5C     		ldrb	r3, [r3, r1]	@ zero_extendqisi2
  604 0026 202B     		cmp	r3, #32
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 15
+
+
  605 0028 05D1     		bne	.L44
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 15
-
-
- 159:.\gnome_debug.c ****             gnome_debug_state.stop = 0;
- 606              		.loc 1 159 0
+ 160:.\gnome_debug.c ****             gnome_debug_state.stop = 0;
+ 606              		.loc 1 160 0
  607 002a 0023     		movs	r3, #0
  608 002c 3D4A     		ldr	r2, .L59+4
  609 002e 5370     		strb	r3, [r2, #1]
- 160:.\gnome_debug.c ****             gnome_console.ptr = 0;
- 610              		.loc 1 160 0
+ 161:.\gnome_debug.c ****             gnome_console.ptr = 0;
+ 610              		.loc 1 161 0
  611 0030 3B4A     		ldr	r2, .L59
  612 0032 D373     		strb	r3, [r2, #15]
  613 0034 6DE0     		b	.L42
  614              	.L44:
- 161:.\gnome_debug.c ****         }
- 162:.\gnome_debug.c ****         else if (gnome_console.buffer[gnome_console.ptr-1] == 0x1b) {
- 615              		.loc 1 162 0
+ 162:.\gnome_debug.c ****         }
+ 163:.\gnome_debug.c ****         else if (gnome_console.buffer[gnome_console.ptr-1] == 0x1b) {
+ 615              		.loc 1 163 0
  616 0036 1B2B     		cmp	r3, #27
  617 0038 14D1     		bne	.L46
- 163:.\gnome_debug.c ****             if (gnome_debug_state.active) {
- 618              		.loc 1 163 0
+ 164:.\gnome_debug.c ****             if (gnome_debug_state.active) {
+ 618              		.loc 1 164 0
  619 003a 3A4B     		ldr	r3, .L59+4
  620 003c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  621 003e 3BB1     		cbz	r3, .L47
- 164:.\gnome_debug.c ****                 gnome_debug_state.stop = 0;
- 622              		.loc 1 164 0
+ 165:.\gnome_debug.c ****                 gnome_debug_state.stop = 0;
+ 622              		.loc 1 165 0
  623 0040 384B     		ldr	r3, .L59+4
  624 0042 0022     		movs	r2, #0
  625 0044 5A70     		strb	r2, [r3, #1]
- 165:.\gnome_debug.c ****                 gnome_debug_state.active = 0;
- 626              		.loc 1 165 0
+ 166:.\gnome_debug.c ****                 gnome_debug_state.active = 0;
+ 626              		.loc 1 166 0
  627 0046 1A70     		strb	r2, [r3]
- 166:.\gnome_debug.c ****                 UART_PutString("\r\nPROCESSOR ON RUN MODE\r\n\r\n");
- 628              		.loc 1 166 0
+ 167:.\gnome_debug.c ****                 UART_PutString("\r\nPROCESSOR ON RUN MODE\r\n\r\n");
+ 628              		.loc 1 167 0
  629 0048 3748     		ldr	r0, .L59+8
  630 004a FFF7FEFF 		bl	UART_PutString
  631              	.LVL74:
  632 004e 05E0     		b	.L48
  633              	.L47:
- 167:.\gnome_debug.c ****             }
- 168:.\gnome_debug.c ****             else { 
- 169:.\gnome_debug.c ****                 gnome_debug_state.active = 1;
- 634              		.loc 1 169 0
+ 168:.\gnome_debug.c ****             }
+ 169:.\gnome_debug.c ****             else { 
+ 170:.\gnome_debug.c ****                 gnome_debug_state.active = 1;
+ 634              		.loc 1 170 0
  635 0050 0122     		movs	r2, #1
  636 0052 344B     		ldr	r3, .L59+4
  637 0054 1A70     		strb	r2, [r3]
- 170:.\gnome_debug.c ****                 UART_PutString("\r\nPROCESSOR ON HALT MODE\r\n\r\n");
- 638              		.loc 1 170 0
+ 171:.\gnome_debug.c ****                 UART_PutString("\r\nPROCESSOR ON HALT MODE\r\n\r\n");
+ 638              		.loc 1 171 0
  639 0056 3548     		ldr	r0, .L59+12
  640 0058 FFF7FEFF 		bl	UART_PutString
  641              	.LVL75:
  642              	.L48:
- 171:.\gnome_debug.c ****             }
- 172:.\gnome_debug.c ****             gnome_console.ptr = 0;
- 643              		.loc 1 172 0
+ 172:.\gnome_debug.c ****             }
+ 173:.\gnome_debug.c ****             gnome_console.ptr = 0;
+ 643              		.loc 1 173 0
  644 005c 0022     		movs	r2, #0
  645 005e 304B     		ldr	r3, .L59
  646 0060 DA73     		strb	r2, [r3, #15]
  647 0062 56E0     		b	.L42
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 16
+
+
  648              	.L46:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 16
-
-
- 173:.\gnome_debug.c ****         }
- 174:.\gnome_debug.c ****         else if (gnome_console.buffer[gnome_console.ptr-1] == '\r') {
- 649              		.loc 1 174 0
+ 174:.\gnome_debug.c ****         }
+ 175:.\gnome_debug.c ****         else if (gnome_console.buffer[gnome_console.ptr-1] == '\r') {
+ 649              		.loc 1 175 0
  650 0064 0D2B     		cmp	r3, #13
  651 0066 49D1     		bne	.L49
  652              	.LBB4:
- 175:.\gnome_debug.c ****             gnome_console.buffer[gnome_console.ptr-1] = '\0';
- 653              		.loc 1 175 0
+ 176:.\gnome_debug.c ****             gnome_console.buffer[gnome_console.ptr-1] = '\0';
+ 653              		.loc 1 176 0
  654 0068 2D48     		ldr	r0, .L59
  655 006a 0023     		movs	r3, #0
  656 006c 4354     		strb	r3, [r0, r1]
- 176:.\gnome_debug.c ****             gnome_console.ptr = 0;
- 657              		.loc 1 176 0
+ 177:.\gnome_debug.c ****             gnome_console.ptr = 0;
+ 657              		.loc 1 177 0
  658 006e C373     		strb	r3, [r0, #15]
- 177:.\gnome_debug.c ****             
- 178:.\gnome_debug.c ****             char *substr = strstr(gnome_console.buffer, "TB=0x");
- 659              		.loc 1 178 0
+ 178:.\gnome_debug.c ****             
+ 179:.\gnome_debug.c ****             char *substr = strstr(gnome_console.buffer, "TB=0x");
+ 659              		.loc 1 179 0
  660 0070 2F49     		ldr	r1, .L59+16
  661 0072 FFF7FEFF 		bl	strstr
  662              	.LVL76:
- 179:.\gnome_debug.c ****             if (substr) {
- 663              		.loc 1 179 0
+ 180:.\gnome_debug.c ****             if (substr) {
+ 663              		.loc 1 180 0
  664 0076 20B3     		cbz	r0, .L50
  665              	.LVL77:
  666              	.LBB5:
- 180:.\gnome_debug.c ****                 substr += sizeof("TB=0x")-1;
- 181:.\gnome_debug.c ****                 uint8_t PC = strtol(substr, NULL, 16);
- 667              		.loc 1 181 0
+ 181:.\gnome_debug.c ****                 substr += sizeof("TB=0x")-1;
+ 182:.\gnome_debug.c ****                 uint8_t PC = strtol(substr, NULL, 16);
+ 667              		.loc 1 182 0
  668 0078 0530     		adds	r0, r0, #5
  669              	.LVL78:
  670 007a 0021     		movs	r1, #0
@@ -937,35 +938,35 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  673              	.LVL79:
  674 0082 0446     		mov	r4, r0
  675              	.LVL80:
- 182:.\gnome_debug.c ****                 
- 183:.\gnome_debug.c ****                 uint8_t state = gnome_debug_toggle_breakpoint(PC);
- 676              		.loc 1 183 0
+ 183:.\gnome_debug.c ****                 
+ 184:.\gnome_debug.c ****                 uint8_t state = gnome_debug_toggle_breakpoint(PC);
+ 676              		.loc 1 184 0
  677 0084 C0B2     		uxtb	r0, r0
  678 0086 FFF7FEFF 		bl	gnome_debug_toggle_breakpoint
  679              	.LVL81:
- 184:.\gnome_debug.c ****                 if (state & 0x01) {
- 680              		.loc 1 184 0
+ 185:.\gnome_debug.c ****                 if (state & 0x01) {
+ 680              		.loc 1 185 0
  681 008a 10F0010F 		tst	r0, #1
  682 008e 14D0     		beq	.L51
- 185:.\gnome_debug.c ****                     if (state & 0x02) {
- 683              		.loc 1 185 0
+ 186:.\gnome_debug.c ****                     if (state & 0x02) {
+ 683              		.loc 1 186 0
  684 0090 10F0020F 		tst	r0, #2
  685 0094 08D0     		beq	.L52
  686              	.LBB6:
- 186:.\gnome_debug.c ****                         char str[40];
- 187:.\gnome_debug.c ****                         sprintf(str, "Active breakpoint at 0x%02x\r\n", PC);
- 687              		.loc 1 187 0
+ 187:.\gnome_debug.c ****                         char str[40];
+ 188:.\gnome_debug.c ****                         sprintf(str, "Active breakpoint at 0x%02x\r\n", PC);
+ 687              		.loc 1 188 0
  688 0096 6846     		mov	r0, sp
  689              	.LVL82:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 17
+
+
  690 0098 2649     		ldr	r1, .L59+20
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 17
-
-
  691 009a E2B2     		uxtb	r2, r4
  692 009c FFF7FEFF 		bl	sprintf
  693              	.LVL83:
- 188:.\gnome_debug.c ****                         UART_PutString(str);
- 694              		.loc 1 188 0
+ 189:.\gnome_debug.c ****                         UART_PutString(str);
+ 694              		.loc 1 189 0
  695 00a0 6846     		mov	r0, sp
  696 00a2 FFF7FEFF 		bl	UART_PutString
  697              	.LVL84:
@@ -974,18 +975,18 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  700              	.LVL85:
  701              	.L52:
  702              	.LBB7:
- 189:.\gnome_debug.c ****                     } else {
- 190:.\gnome_debug.c ****                         char str[40];
- 191:.\gnome_debug.c ****                         sprintf(str, "Eliminated breakpoint at 0x%02x\r\n", PC);
- 703              		.loc 1 191 0 discriminator 2
+ 190:.\gnome_debug.c ****                     } else {
+ 191:.\gnome_debug.c ****                         char str[40];
+ 192:.\gnome_debug.c ****                         sprintf(str, "Eliminated breakpoint at 0x%02x\r\n", PC);
+ 703              		.loc 1 192 0 discriminator 2
  704 00a8 6846     		mov	r0, sp
  705              	.LVL86:
  706 00aa 2349     		ldr	r1, .L59+24
  707 00ac E2B2     		uxtb	r2, r4
  708 00ae FFF7FEFF 		bl	sprintf
  709              	.LVL87:
- 192:.\gnome_debug.c ****                         UART_PutString(str);
- 710              		.loc 1 192 0 discriminator 2
+ 193:.\gnome_debug.c ****                         UART_PutString(str);
+ 710              		.loc 1 193 0 discriminator 2
  711 00b2 6846     		mov	r0, sp
  712 00b4 FFF7FEFF 		bl	UART_PutString
  713              	.LVL88:
@@ -993,11 +994,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  715              	.LVL89:
  716              	.L51:
  717              	.LBE7:
- 193:.\gnome_debug.c ****                     }
- 194:.\gnome_debug.c ****                 }
- 195:.\gnome_debug.c ****                 else {
- 196:.\gnome_debug.c ****                     UART_PutString("All breakpoints are used\r\n");
- 718              		.loc 1 196 0
+ 194:.\gnome_debug.c ****                     }
+ 195:.\gnome_debug.c ****                 }
+ 196:.\gnome_debug.c ****                 else {
+ 197:.\gnome_debug.c ****                     UART_PutString("All breakpoints are used\r\n");
+ 718              		.loc 1 197 0
  719 00ba 2048     		ldr	r0, .L59+28
  720              	.LVL90:
  721 00bc FFF7FEFF 		bl	UART_PutString
@@ -1006,10 +1007,10 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  724              	.LVL92:
  725              	.L50:
  726              	.LBE5:
- 197:.\gnome_debug.c ****                 }
- 198:.\gnome_debug.c ****             }
- 199:.\gnome_debug.c ****             else if (strstr(gnome_console.buffer, "LB")) {
- 727              		.loc 1 199 0
+ 198:.\gnome_debug.c ****                 }
+ 199:.\gnome_debug.c ****             }
+ 200:.\gnome_debug.c ****             else if (strstr(gnome_console.buffer, "LB")) {
+ 727              		.loc 1 200 0
  728 00c2 1748     		ldr	r0, .L59
  729              	.LVL93:
  730 00c4 1E49     		ldr	r1, .L59+32
@@ -1017,24 +1018,24 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  732              	.LVL94:
  733 00ca 98B9     		cbnz	r0, .L57
  734              	.LBB8:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 18
+
+
  735 00cc 21E0     		b	.L42
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 18
-
-
  736              	.LVL95:
  737              	.L55:
- 200:.\gnome_debug.c ****                 uint8_t i = 0;
- 201:.\gnome_debug.c ****                 for (i = 0; i < GNOME_DEBUGGING_MAX_BREAKPOINTS; i++) {
- 202:.\gnome_debug.c ****                     if (gnome_debug_state.breakpoints[i].active) {
- 738              		.loc 1 202 0
+ 201:.\gnome_debug.c ****                 uint8_t i = 0;
+ 202:.\gnome_debug.c ****                 for (i = 0; i < GNOME_DEBUGGING_MAX_BREAKPOINTS; i++) {
+ 203:.\gnome_debug.c ****                     if (gnome_debug_state.breakpoints[i].active) {
+ 738              		.loc 1 203 0
  739 00ce 154B     		ldr	r3, .L59+4
  740 00d0 03EB4403 		add	r3, r3, r4, lsl #1
  741 00d4 DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
  742 00d6 53B1     		cbz	r3, .L54
  743              	.LBB9:
- 203:.\gnome_debug.c ****                         char str[40];
- 204:.\gnome_debug.c ****                         sprintf(str, "Active breakpoint at 0x%02x\r\n", gnome_debug_state.breakpoin
- 744              		.loc 1 204 0
+ 204:.\gnome_debug.c ****                         char str[40];
+ 205:.\gnome_debug.c ****                         sprintf(str, "Active breakpoint at 0x%02x\r\n", gnome_debug_state.breakpoin
+ 744              		.loc 1 205 0
  745 00d8 124B     		ldr	r3, .L59+4
  746 00da 03EB4403 		add	r3, r3, r4, lsl #1
  747 00de 6846     		mov	r0, sp
@@ -1042,15 +1043,15 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  749 00e2 9A78     		ldrb	r2, [r3, #2]	@ zero_extendqisi2
  750 00e4 FFF7FEFF 		bl	sprintf
  751              	.LVL96:
- 205:.\gnome_debug.c ****                         UART_PutString(str);
- 752              		.loc 1 205 0
+ 206:.\gnome_debug.c ****                         UART_PutString(str);
+ 752              		.loc 1 206 0
  753 00e8 6846     		mov	r0, sp
  754 00ea FFF7FEFF 		bl	UART_PutString
  755              	.LVL97:
  756              	.L54:
  757              	.LBE9:
- 201:.\gnome_debug.c ****                     if (gnome_debug_state.breakpoints[i].active) {
- 758              		.loc 1 201 0 discriminator 2
+ 202:.\gnome_debug.c ****                     if (gnome_debug_state.breakpoints[i].active) {
+ 758              		.loc 1 202 0 discriminator 2
  759 00ee 0134     		adds	r4, r4, #1
  760              	.LVL98:
  761 00f0 E4B2     		uxtb	r4, r4
@@ -1063,8 +1064,8 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  768              	.L53:
  769              	.LVL101:
  770              	.LBB10:
- 201:.\gnome_debug.c ****                     if (gnome_debug_state.breakpoints[i].active) {
- 771              		.loc 1 201 0 is_stmt 0 discriminator 1
+ 202:.\gnome_debug.c ****                     if (gnome_debug_state.breakpoints[i].active) {
+ 771              		.loc 1 202 0 is_stmt 0 discriminator 1
  772 00f6 072C     		cmp	r4, #7
  773 00f8 E9D9     		bls	.L55
  774 00fa 0AE0     		b	.L42
@@ -1072,42 +1073,43 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  776              	.L49:
  777              	.LBE10:
  778              	.LBE4:
- 206:.\gnome_debug.c ****                     }
- 207:.\gnome_debug.c ****                 }
- 208:.\gnome_debug.c ****             }
- 209:.\gnome_debug.c ****         }
- 210:.\gnome_debug.c ****         else if (gnome_console.buffer[gnome_console.ptr-1] == 0x7F) {
- 779              		.loc 1 210 0 is_stmt 1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 19
+ 207:.\gnome_debug.c ****                     }
+ 208:.\gnome_debug.c ****                 }
+ 209:.\gnome_debug.c ****             }
+ 210:.\gnome_debug.c ****         }
+ 211:.\gnome_debug.c ****         else if (gnome_console.buffer[gnome_console.ptr-1] == 0x7F) {
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 19
 
 
+ 779              		.loc 1 211 0 is_stmt 1
  780 00fc 7F2B     		cmp	r3, #127
  781 00fe 08D1     		bne	.L42
- 211:.\gnome_debug.c ****             gnome_console.ptr--;
  212:.\gnome_debug.c ****             gnome_console.ptr--;
- 782              		.loc 1 212 0
+ 213:.\gnome_debug.c ****             gnome_console.ptr--;
+ 782              		.loc 1 213 0
  783 0100 023A     		subs	r2, r2, #2
  784 0102 02F0FF02 		and	r2, r2, #255
  785 0106 064B     		ldr	r3, .L59
  786 0108 DA73     		strb	r2, [r3, #15]
- 213:.\gnome_debug.c ****             if (gnome_console.ptr >= GNOME_DEBUG_MAX_BUFFER_LENGTH) gnome_console.ptr = 0;
- 787              		.loc 1 213 0
+ 214:.\gnome_debug.c ****             if (gnome_console.ptr >= GNOME_DEBUG_MAX_BUFFER_LENGTH) gnome_console.ptr = 0;
+ 787              		.loc 1 214 0
  788 010a 0E2A     		cmp	r2, #14
  789 010c 01D9     		bls	.L42
- 790              		.loc 1 213 0 is_stmt 0 discriminator 1
+ 790              		.loc 1 214 0 is_stmt 0 discriminator 1
  791 010e 0022     		movs	r2, #0
  792 0110 DA73     		strb	r2, [r3, #15]
  793              	.L42:
- 155:.\gnome_debug.c ****         gnome_console.buffer[gnome_console.ptr++] = UART_ReadRxData();
- 794              		.loc 1 155 0 is_stmt 1
+ 156:.\gnome_debug.c ****         gnome_console.buffer[gnome_console.ptr++] = UART_ReadRxData();
+ 794              		.loc 1 156 0 is_stmt 1
  795 0112 FFF7FEFF 		bl	UART_ReadRxStatus
  796              	.LVL103:
  797 0116 2028     		cmp	r0, #32
  798 0118 3FF475AF 		beq	.L56
- 214:.\gnome_debug.c ****         }
- 215:.\gnome_debug.c ****     }
- 216:.\gnome_debug.c **** }
- 799              		.loc 1 216 0
+ 215:.\gnome_debug.c ****         }
+ 216:.\gnome_debug.c ****     }
+ 217:.\gnome_debug.c ****     #endif
+ 218:.\gnome_debug.c **** }
+ 799              		.loc 1 218 0
  800 011c 0BB0     		add	sp, sp, #44
  801              		.cfi_def_cfa_offset 12
  802              		@ sp needed
@@ -1136,11 +1138,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  825              		.comm	it_context,11,4
  826              		.comm	normal_context,11,4
  827              		.section	.rodata.str1.4,"aMS",%progbits,1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 20
+
+
  828              		.align	2
  829              	.LC0:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 20
-
-
  830 0000 2F2F2F2F 		.ascii	"//////////////////////////////////////\015\012\000"
  830      2F2F2F2F 
  830      2F2F2F2F 
@@ -1196,11 +1198,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  852              	.LC8:
  853 00d0 09524547 		.ascii	"\011REG_DIR_INDIRECTO =  0x%02x\015\012\000"
  853      5F444952 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 21
+
+
  853      5F494E44 
  853      49524543 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 21
-
-
  853      544F203D 
  854 00ef 00       		.space	1
  855              	.LC9:
@@ -1256,11 +1258,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  879              	.LC18:
  880 01a8 41637469 		.ascii	"Active breakpoint at 0x%02x\015\012\000"
  880      76652062 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 22
+
+
  880      7265616B 
  880      706F696E 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 22
-
-
  880      74206174 
  881 01c6 0000     		.space	2
  882              	.LC19:
@@ -1316,11 +1318,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  924 0031 02       		.byte	0x2
  925 0032 1D       		.byte	0x1d
  926 0033 37000000 		.4byte	0x37
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 23
+
+
  927 0037 02       		.uleb128 0x2
  928 0038 01       		.byte	0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 23
-
-
  929 0039 08       		.byte	0x8
  930 003a 29020000 		.4byte	.LASF1
  931 003e 02       		.uleb128 0x2
@@ -1376,11 +1378,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  981 009d 3801     		.2byte	0x138
  982 009f 37000000 		.4byte	0x37
  983 00a3 02       		.uleb128 0x2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 24
+
+
  984 00a4 04       		.byte	0x4
  985 00a5 04       		.byte	0x4
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 24
-
-
  986 00a6 AA010000 		.4byte	.LASF14
  987 00aa 02       		.uleb128 0x2
  988 00ab 08       		.byte	0x8
@@ -1436,11 +1438,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1038 010b 81000000 		.4byte	0x81
  1039 010f 01       		.byte	0x1
  1040 0110 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 25
+
+
  1041 0111 03       		.uleb128 0x3
  1042 0112 B8030000 		.4byte	.LASF20
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 25
-
-
  1043 0116 05       		.byte	0x5
  1044 0117 1C       		.byte	0x1c
  1045 0118 F4000000 		.4byte	0xf4
@@ -1496,11 +1498,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1095 017a 54000000 		.4byte	.LASF23
  1096 017e 05       		.byte	0x5
  1097 017f 28       		.byte	0x28
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 26
+
+
  1098 0180 58010000 		.4byte	0x158
  1099 0184 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 26
-
-
  1100 0185 0B       		.byte	0xb
  1101 0186 05       		.byte	0x5
  1102 0187 45       		.byte	0x45
@@ -1556,11 +1558,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1152 01e7 CE000000 		.4byte	.LASF29
  1153 01eb 06       		.byte	0x6
  1154 01ec 15       		.byte	0x15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 27
+
+
  1155 01ed 81000000 		.4byte	0x81
  1156 01f1 01       		.byte	0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 27
-
-
  1157 01f2 00       		.byte	0
  1158 01f3 03       		.uleb128 0x3
  1159 01f4 2D030000 		.4byte	.LASF30
@@ -1616,11 +1618,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1209 0259 00       		.byte	0
  1210 025a 0B       		.uleb128 0xb
  1211 025b 70747200 		.ascii	"ptr\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 28
+
+
  1212 025f 06       		.byte	0x6
  1213 0260 22       		.byte	0x22
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 28
-
-
  1214 0261 81000000 		.4byte	0x81
  1215 0265 0F       		.byte	0xf
  1216 0266 00       		.byte	0
@@ -1676,11 +1678,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1266 02cb 38030000 		.4byte	0x338
  1267 02cf 10       		.uleb128 0x10
  1268 02d0 6900     		.ascii	"i\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 29
+
+
  1269 02d2 01       		.byte	0x1
  1270 02d3 24       		.byte	0x24
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 29
-
-
  1271 02d4 81000000 		.4byte	0x81
  1272 02d8 00000000 		.4byte	.LLST0
  1273 02dc 11       		.uleb128 0x11
@@ -1736,11 +1738,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1323 033e 57       		.byte	0x57
  1324 033f 00000000 		.4byte	.LFB65
  1325 0343 28010000 		.4byte	.LFE65-.LFB65
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 30
+
+
  1326 0347 01       		.uleb128 0x1
  1327 0348 9C       		.byte	0x9c
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 30
-
-
  1328 0349 97050000 		.4byte	0x597
  1329 034d 16       		.uleb128 0x16
  1330 034e EE020000 		.4byte	.LASF43
@@ -1796,11 +1798,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1380 03b4 00       		.sleb128 0
  1381 03b5 00       		.byte	0
  1382 03b6 14       		.uleb128 0x14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 31
+
+
  1383 03b7 CC000000 		.4byte	.LVL37
  1384 03bb 44090000 		.4byte	0x944
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 31
-
-
  1385 03bf 13       		.uleb128 0x13
  1386 03c0 01       		.uleb128 0x1
  1387 03c1 50       		.byte	0x50
@@ -1856,11 +1858,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1437 0420 01       		.uleb128 0x1
  1438 0421 50       		.byte	0x50
  1439 0422 02       		.uleb128 0x2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 32
+
+
  1440 0423 7D       		.byte	0x7d
  1441 0424 00       		.sleb128 0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 32
-
-
  1442 0425 00       		.byte	0
  1443 0426 12       		.uleb128 0x12
  1444 0427 3C000000 		.4byte	.LVL18
@@ -1916,11 +1918,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1494 047a 12       		.uleb128 0x12
  1495 047b 54000000 		.4byte	.LVL21
  1496 047f 44090000 		.4byte	0x944
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 33
+
+
  1497 0483 8E040000 		.4byte	0x48e
  1498 0487 13       		.uleb128 0x13
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 33
-
-
  1499 0488 01       		.uleb128 0x1
  1500 0489 50       		.byte	0x50
  1501 048a 02       		.uleb128 0x2
@@ -1976,11 +1978,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1551 04dd 7A000000 		.4byte	.LVL25
  1552 04e1 44090000 		.4byte	0x944
  1553 04e5 F0040000 		.4byte	0x4f0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 34
+
+
  1554 04e9 13       		.uleb128 0x13
  1555 04ea 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 34
-
-
  1556 04eb 50       		.byte	0x50
  1557 04ec 02       		.uleb128 0x2
  1558 04ed 7D       		.byte	0x7d
@@ -2036,11 +2038,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1608 0540 44090000 		.4byte	0x944
  1609 0544 52050000 		.4byte	0x552
  1610 0548 13       		.uleb128 0x13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 35
+
+
  1611 0549 01       		.uleb128 0x1
  1612 054a 50       		.byte	0x50
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 35
-
-
  1613 054b 05       		.uleb128 0x5
  1614 054c 03       		.byte	0x3
  1615 054d 04010000 		.4byte	.LC10
@@ -2096,11 +2098,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1665 05ac 01       		.byte	0x1
  1666 05ad 36       		.byte	0x36
  1667 05ae 00000000 		.4byte	.LFB64
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 36
+
+
  1668 05b2 78000000 		.4byte	.LFE64-.LFB64
  1669 05b6 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 36
-
-
  1670 05b7 9C       		.byte	0x9c
  1671 05b8 32060000 		.4byte	0x632
  1672 05bc 16       		.uleb128 0x16
@@ -2156,11 +2158,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1722 061f 00       		.byte	0
  1723 0620 00       		.byte	0
  1724 0621 14       		.uleb128 0x14
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 37
+
+
  1725 0622 52000000 		.4byte	.LVL54
  1726 0626 38030000 		.4byte	0x338
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 37
-
-
  1727 062a 13       		.uleb128 0x13
  1728 062b 01       		.uleb128 0x1
  1729 062c 50       		.byte	0x50
@@ -2214,26 +2216,26 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1777 0698 19       		.uleb128 0x19
  1778 0699 63000000 		.4byte	.LASF46
  1779 069d 01       		.byte	0x1
- 1780 069e B2       		.byte	0xb2
+ 1780 069e B3       		.byte	0xb3
  1781 069f DE000000 		.4byte	0xde
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 38
+
+
  1782 06a3 EB010000 		.4byte	.LLST9
  1783 06a7 18       		.uleb128 0x18
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 38
-
-
  1784 06a8 78000000 		.4byte	.LBB5
  1785 06ac 4A000000 		.4byte	.LBE5-.LBB5
  1786 06b0 AA070000 		.4byte	0x7aa
  1787 06b4 10       		.uleb128 0x10
  1788 06b5 504300   		.ascii	"PC\000"
  1789 06b8 01       		.byte	0x1
- 1790 06b9 B5       		.byte	0xb5
+ 1790 06b9 B6       		.byte	0xb6
  1791 06ba 81000000 		.4byte	0x81
  1792 06be 21020000 		.4byte	.LLST10
  1793 06c2 19       		.uleb128 0x19
  1794 06c3 6A000000 		.4byte	.LASF47
  1795 06c7 01       		.byte	0x1
- 1796 06c8 B7       		.byte	0xb7
+ 1796 06c8 B8       		.byte	0xb8
  1797 06c9 81000000 		.4byte	0x81
  1798 06cd 34020000 		.4byte	.LLST11
  1799 06d1 18       		.uleb128 0x18
@@ -2243,7 +2245,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1803 06de 17       		.uleb128 0x17
  1804 06df 73747200 		.ascii	"str\000"
  1805 06e3 01       		.byte	0x1
- 1806 06e4 BA       		.byte	0xba
+ 1806 06e4 BB       		.byte	0xbb
  1807 06e5 97050000 		.4byte	0x597
  1808 06e9 02       		.uleb128 0x2
  1809 06ea 91       		.byte	0x91
@@ -2276,11 +2278,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1836 0711 00       		.byte	0
  1837 0712 14       		.uleb128 0x14
  1838 0713 A6000000 		.4byte	.LVL84
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 39
+
+
  1839 0717 44090000 		.4byte	0x944
  1840 071b 13       		.uleb128 0x13
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 39
-
-
  1841 071c 01       		.uleb128 0x1
  1842 071d 50       		.byte	0x50
  1843 071e 02       		.uleb128 0x2
@@ -2295,7 +2297,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1852 0730 17       		.uleb128 0x17
  1853 0731 73747200 		.ascii	"str\000"
  1854 0735 01       		.byte	0x1
- 1855 0736 BE       		.byte	0xbe
+ 1855 0736 BF       		.byte	0xbf
  1856 0737 97050000 		.4byte	0x597
  1857 073b 02       		.uleb128 0x2
  1858 073c 91       		.byte	0x91
@@ -2336,11 +2338,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1893 0771 7D       		.byte	0x7d
  1894 0772 00       		.sleb128 0
  1895 0773 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 40
+
+
  1896 0774 00       		.byte	0
  1897 0775 12       		.uleb128 0x12
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 40
-
-
  1898 0776 82000000 		.4byte	.LVL79
  1899 077a A1090000 		.4byte	0x9a1
  1900 077e 8D070000 		.4byte	0x78d
@@ -2375,7 +2377,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1929 07b3 10       		.uleb128 0x10
  1930 07b4 6900     		.ascii	"i\000"
  1931 07b6 01       		.byte	0x1
- 1932 07b7 C8       		.byte	0xc8
+ 1932 07b7 C9       		.byte	0xc9
  1933 07b8 81000000 		.4byte	0x81
  1934 07bc 5D020000 		.4byte	.LLST12
  1935 07c0 1D       		.uleb128 0x1d
@@ -2384,7 +2386,7 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1938 07c9 17       		.uleb128 0x17
  1939 07ca 73747200 		.ascii	"str\000"
  1940 07ce 01       		.byte	0x1
- 1941 07cf CB       		.byte	0xcb
+ 1941 07cf CC       		.byte	0xcc
  1942 07d0 97050000 		.4byte	0x597
  1943 07d4 02       		.uleb128 0x2
  1944 07d5 91       		.byte	0x91
@@ -2396,11 +2398,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  1950 07e4 13       		.uleb128 0x13
  1951 07e5 01       		.uleb128 0x1
  1952 07e6 51       		.byte	0x51
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 41
+
+
  1953 07e7 05       		.uleb128 0x5
  1954 07e8 03       		.byte	0x3
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 41
-
-
  1955 07e9 A8010000 		.4byte	.LC18
  1956 07ed 13       		.uleb128 0x13
  1957 07ee 01       		.uleb128 0x1
@@ -2456,11 +2458,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2007 083b 00       		.byte	0
  2008 083c 00       		.byte	0
  2009 083d 11       		.uleb128 0x11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 42
+
+
  2010 083e 12000000 		.4byte	.LVL73
  2011 0842 E0090000 		.4byte	0x9e0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 42
-
-
  2012 0846 12       		.uleb128 0x12
  2013 0847 4E000000 		.4byte	.LVL74
  2014 084b 44090000 		.4byte	0x944
@@ -2516,11 +2518,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2064 08b7 54       		.byte	0x54
  2065 08b8 C2080000 		.4byte	0x8c2
  2066 08bc 05       		.uleb128 0x5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 43
+
+
  2067 08bd 03       		.byte	0x3
  2068 08be 00000000 		.4byte	current_context
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 43
-
-
  2069 08c2 06       		.uleb128 0x6
  2070 08c3 04       		.byte	0x4
  2071 08c4 C8010000 		.4byte	0x1c8
@@ -2576,11 +2578,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2121 0932 19       		.byte	0x19
  2122 0933 AF020000 		.4byte	0x2af
  2123 0937 05       		.uleb128 0x5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 44
+
+
  2124 0938 03       		.byte	0x3
  2125 0939 00000000 		.4byte	via_state
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 44
-
-
  2126 093d 21       		.uleb128 0x21
  2127 093e 40030000 		.4byte	.LASF69
  2128 0942 09       		.byte	0x9
@@ -2636,11 +2638,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2178 09b0 23       		.uleb128 0x23
  2179 09b1 E4000000 		.4byte	0xe4
  2180 09b5 23       		.uleb128 0x23
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 45
+
+
  2181 09b6 C0090000 		.4byte	0x9c0
  2182 09ba 23       		.uleb128 0x23
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 45
-
-
  2183 09bb 73000000 		.4byte	0x73
  2184 09bf 00       		.byte	0
  2185 09c0 06       		.uleb128 0x6
@@ -2696,11 +2698,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2235 0017 0B       		.uleb128 0xb
  2236 0018 3E       		.uleb128 0x3e
  2237 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 46
+
+
  2238 001a 03       		.uleb128 0x3
  2239 001b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 46
-
-
  2240 001c 00       		.byte	0
  2241 001d 00       		.byte	0
  2242 001e 03       		.uleb128 0x3
@@ -2756,11 +2758,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2292 0050 19       		.uleb128 0x19
  2293 0051 00       		.byte	0
  2294 0052 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 47
+
+
  2295 0053 08       		.uleb128 0x8
  2296 0054 26       		.uleb128 0x26
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 47
-
-
  2297 0055 00       		.byte	0
  2298 0056 49       		.uleb128 0x49
  2299 0057 13       		.uleb128 0x13
@@ -2816,11 +2818,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2349 0089 0B       		.uleb128 0xb
  2350 008a 00       		.byte	0
  2351 008b 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 48
+
+
  2352 008c 0D       		.uleb128 0xd
  2353 008d 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 48
-
-
  2354 008e 01       		.byte	0x1
  2355 008f 49       		.uleb128 0x49
  2356 0090 13       		.uleb128 0x13
@@ -2876,11 +2878,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2406 00c3 00       		.byte	0
  2407 00c4 00       		.byte	0
  2408 00c5 11       		.uleb128 0x11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 49
+
+
  2409 00c6 898201   		.uleb128 0x4109
  2410 00c9 00       		.byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 49
-
-
  2411 00ca 11       		.uleb128 0x11
  2412 00cb 01       		.uleb128 0x1
  2413 00cc 31       		.uleb128 0x31
@@ -2936,11 +2938,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2463 0105 40       		.uleb128 0x40
  2464 0106 18       		.uleb128 0x18
  2465 0107 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 50
+
+
  2466 0109 19       		.uleb128 0x19
  2467 010a 01       		.uleb128 0x1
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 50
-
-
  2468 010b 13       		.uleb128 0x13
  2469 010c 00       		.byte	0
  2470 010d 00       		.byte	0
@@ -2996,11 +2998,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2520 013f 0B       		.uleb128 0xb
  2521 0140 49       		.uleb128 0x49
  2522 0141 13       		.uleb128 0x13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 51
+
+
  2523 0142 02       		.uleb128 0x2
  2524 0143 17       		.uleb128 0x17
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 51
-
-
  2525 0144 00       		.byte	0
  2526 0145 00       		.byte	0
  2527 0146 1A       		.uleb128 0x1a
@@ -3056,11 +3058,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2577 0179 00       		.byte	0
  2578 017a 1D       		.uleb128 0x1d
  2579 017b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 52
+
+
  2580 017c 01       		.byte	0x1
  2581 017d 11       		.uleb128 0x11
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 52
-
-
  2582 017e 01       		.uleb128 0x1
  2583 017f 12       		.uleb128 0x12
  2584 0180 06       		.uleb128 0x6
@@ -3116,11 +3118,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2634 01b2 02       		.uleb128 0x2
  2635 01b3 18       		.uleb128 0x18
  2636 01b4 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 53
+
+
  2637 01b5 00       		.byte	0
  2638 01b6 21       		.uleb128 0x21
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 53
-
-
  2639 01b7 2E       		.uleb128 0x2e
  2640 01b8 00       		.byte	0
  2641 01b9 3F       		.uleb128 0x3f
@@ -3176,11 +3178,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2691 01eb 0B       		.uleb128 0xb
  2692 01ec 27       		.uleb128 0x27
  2693 01ed 19       		.uleb128 0x19
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 54
+
+
  2694 01ee 49       		.uleb128 0x49
  2695 01ef 13       		.uleb128 0x13
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 54
-
-
  2696 01f0 3C       		.uleb128 0x3c
  2697 01f1 19       		.uleb128 0x19
  2698 01f2 01       		.uleb128 0x1
@@ -3236,11 +3238,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2748 0032 0100     		.2byte	0x1
  2749 0034 50       		.byte	0x50
  2750 0035 12000000 		.4byte	.LVL11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 55
+
+
  2751 0039 18000000 		.4byte	.LVL13
  2752 003d 0400     		.2byte	0x4
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 55
-
-
  2753 003f F3       		.byte	0xf3
  2754 0040 01       		.uleb128 0x1
  2755 0041 50       		.byte	0x50
@@ -3296,11 +3298,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2805 00c0 0400     		.2byte	0x4
  2806 00c2 F3       		.byte	0xf3
  2807 00c3 01       		.uleb128 0x1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 56
+
+
  2808 00c4 50       		.byte	0x50
  2809 00c5 9F       		.byte	0x9f
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 56
-
-
  2810 00c6 3E000000 		.4byte	.LVL50
  2811 00ca 46000000 		.4byte	.LVL53
  2812 00ce 0100     		.2byte	0x1
@@ -3356,11 +3358,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2862 0148 9F       		.byte	0x9f
  2863 0149 06000000 		.4byte	.LVL57
  2864 014d 16000000 		.4byte	.LVL58
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 57
+
+
  2865 0151 0100     		.2byte	0x1
  2866 0153 53       		.byte	0x53
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 57
-
-
  2867 0154 2E000000 		.4byte	.LVL60
  2868 0158 30000000 		.4byte	.LVL61
  2869 015c 0100     		.2byte	0x1
@@ -3416,11 +3418,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2919 01e0 0100     		.2byte	0x1
  2920 01e2 50       		.byte	0x50
  2921 01e3 00000000 		.4byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 58
+
+
  2922 01e7 00000000 		.4byte	0
  2923              	.LLST9:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 58
-
-
  2924 01eb 76000000 		.4byte	.LVL76
  2925 01ef 78000000 		.4byte	.LVL77
  2926 01f3 0100     		.2byte	0x1
@@ -3476,11 +3478,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  2976 0277 FC000000 		.4byte	.LVL102
  2977 027b 0100     		.2byte	0x1
  2978 027d 54       		.byte	0x54
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 59
+
+
  2979 027e 00000000 		.4byte	0
  2980 0282 00000000 		.4byte	0
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 59
-
-
  2981              		.section	.debug_aranges,"",%progbits
  2982 0000 3C000000 		.4byte	0x3c
  2983 0004 0200     		.2byte	0x2
@@ -3536,11 +3538,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  3025      64656600 
  3026              	.LASF27:
  3027 0014 696E645F 		.ascii	"ind_addr_reg\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 60
+
+
  3027      61646472 
  3027      5F726567 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 60
-
-
  3027      00
  3028              	.LASF59:
  3029 0021 676E6F6D 		.ascii	"gnome_debug_load_reg\000"
@@ -3596,11 +3598,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  3051      6275675F 
  3051      696E6974 
  3051      00
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 61
+
+
  3052              	.LASF52:
  3053 00c4 72656769 		.ascii	"registers\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 61
-
-
  3053      73746572 
  3053      7300
  3054              	.LASF29:
@@ -3656,11 +3658,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  3076              	.LASF8:
  3077 01bc 6C6F6E67 		.ascii	"long long int\000"
  3077      206C6F6E 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 62
+
+
  3077      6720696E 
  3077      7400
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 62
-
-
  3078              	.LASF57:
  3079 01ca 55415254 		.ascii	"UART_RX_IT_StartEx\000"
  3079      5F52585F 
@@ -3716,11 +3718,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  3100 027a 6F726B73 		.ascii	"orkspace\\gnome_cajas.cydsn\000"
  3100      70616365 
  3100      5C676E6F 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 63
+
+
  3100      6D655F63 
  3100      616A6173 
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 63
-
-
  3101              	.LASF45:
  3102 0295 676E6F6D 		.ascii	"gnome_tx_uart_it\000"
  3102      655F7478 
@@ -3776,11 +3778,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  3124      00
  3125              	.LASF17:
  3126 0328 63686172 		.ascii	"char\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 64
+
+
  3126      00
  3127              	.LASF30:
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 64
-
-
  3128 032d 42726561 		.ascii	"Breakpoint_typedef\000"
  3128      6B706F69 
  3128      6E745F74 
@@ -3836,11 +3838,11 @@ ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 1
  3153              	.LASF61:
  3154 03c0 73747273 		.ascii	"strstr\000"
  3154      747200
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cccq6idr.s 			page 65
+
+
  3155              	.LASF19:
  3156 03c7 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccIDDOaA.s 			page 65
-
-
  3156      74797065 
  3156      00
  3157              	.LASF6:

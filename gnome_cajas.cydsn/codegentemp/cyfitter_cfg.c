@@ -135,19 +135,19 @@ CYPACKED typedef struct
 #define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x4800007Cu)
 
 /* UDB_0_1_1_CONFIG Address: CYDEV_UCFG_B1_P4_U0_BASE Size (bytes): 128 */
-#define BS_UDB_0_1_1_CONFIG_VAL ((const uint8 CYFAR *)0x480007C4u)
+#define BS_UDB_0_1_1_CONFIG_VAL ((const uint8 CYFAR *)0x480007DCu)
 
 /* IOPINS0_0 Address: CYREG_PRT0_DR Size (bytes): 10 */
-#define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)0x48000844u)
+#define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)0x4800085Cu)
 
 /* IOPINS0_7 Address: CYREG_PRT12_DR Size (bytes): 10 */
-#define BS_IOPINS0_7_VAL ((const uint8 CYFAR *)0x48000850u)
+#define BS_IOPINS0_7_VAL ((const uint8 CYFAR *)0x48000868u)
 
 /* IOPINS0_1 Address: CYREG_PRT1_DR Size (bytes): 10 */
-#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x4800085Cu)
+#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x48000874u)
 
 /* IOPINS0_2 Address: CYREG_PRT2_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000868u)
+#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000880u)
 
 
 /*******************************************************************************
@@ -405,6 +405,9 @@ void cyfitter_cfg(void)
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT12_DR), (const void CYFAR *)(BS_IOPINS0_7_VAL), 10u);
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT1_DR), (const void CYFAR *)(BS_IOPINS0_1_VAL), 10u);
 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT2_DM0), (const void CYFAR *)(BS_IOPINS0_2_VAL), 8u);
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_B0_P0_U0_CFG24), 0xC4u);
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_B0_P0_U1_CFG24), 0xC4u);
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_B0_P2_U1_CFG24), 0xC4u);
 	/* Switch Boost to the precision bandgap reference from its internal reference */
 	CY_SET_REG8((void CYXDATA *)CYREG_BOOST_CR2, (CY_GET_REG8((void CYXDATA *)CYREG_BOOST_CR2) | 0x08u));
 

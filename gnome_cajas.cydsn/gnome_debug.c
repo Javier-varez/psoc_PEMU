@@ -122,7 +122,7 @@ void gnome_debug_print_state(uint8_t code) {
     #endif
 }
 
-
+#if GNOME_DEBUGGING_ON
 uint8_t gnome_debug_toggle_breakpoint(uint8_t PC) {
     uint8_t i = 0, found = 0;
     
@@ -149,9 +149,10 @@ uint8_t gnome_debug_toggle_breakpoint(uint8_t PC) {
     
     return found;
 }
-
+#endif
 
 CY_ISR(gnome_tx_uart_it) {
+    #if GNOME_DEBUGGING_ON
     while(UART_ReadRxStatus() == UART_RX_STS_FIFO_NOTEMPTY) {
         gnome_console.buffer[gnome_console.ptr++] = UART_ReadRxData();
         if (gnome_console.ptr >= GNOME_DEBUG_MAX_BUFFER_LENGTH) gnome_console.ptr = 0;
@@ -213,6 +214,7 @@ CY_ISR(gnome_tx_uart_it) {
             if (gnome_console.ptr >= GNOME_DEBUG_MAX_BUFFER_LENGTH) gnome_console.ptr = 0;
         }
     }
+    #endif
 }
 
 

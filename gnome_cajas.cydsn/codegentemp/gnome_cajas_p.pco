@@ -1,111 +1,111 @@
 dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 dont_use_io iocell 1 3
-set_location "\UART:BUART:sRX:RxShifter:u0\" datapathcell 1 1 2 
-set_location "\UART:BUART:counter_load_not\" macrocell 3 2 1 0
+set_location "Net_784_3" macrocell 3 3 1 1
+set_location "\UART:BUART:rx_bitclk_enable\" macrocell 0 1 1 0
+set_location "Net_870_7" macrocell 3 4 1 2
+set_location "Net_870_3" macrocell 3 4 0 3
 set_location "\UART:BUART:rx_status_4\" macrocell 2 1 0 1
-set_location "\UART:BUART:tx_status_2\" macrocell 2 0 1 0
-set_location "\UART:BUART:tx_state_0\" macrocell 2 0 1 3
-set_location "Net_870_6" macrocell 2 3 1 1
-set_location "Net_796_0" macrocell 3 1 1 1
-set_location "Net_597_4" macrocell 3 4 0 3
-set_location "\UART:BUART:rx_state_2\" macrocell 1 1 1 0
-set_location "\MODULE_9:g1:a0:gx:u0:lt_7\" macrocell 2 2 1 1
-set_location "Net_784_7" macrocell 2 5 0 0
-set_location "\UART:BUART:sRX:RxBitCounter\" count7cell 1 1 7 
-set_location "\UART:BUART:pollcount_1\" macrocell 2 0 1 2
-set_location "\Centr:parocuenta\" macrocell 3 5 1 0
-set_location "\UART:BUART:tx_status_0\" macrocell 2 2 0 3
-set_location "\UART:BUART:sTX:TxShifter:u0\" datapathcell 2 0 2 
-set_location "Net_784_0" macrocell 2 5 1 1
-set_location "Net_659" macrocell 2 5 1 2
-set_location "Net_597_6" macrocell 3 4 0 1
-set_location "\UART:BUART:tx_bitclk\" macrocell 3 2 1 1
-set_location "Net_585" macrocell 0 1 0 0
-set_location "Net_784_2" macrocell 2 4 0 2
-set_location "P1_signal_2" macrocell 3 3 1 1
-set_location "\Centr:state_0\" macrocell 3 5 1 1
-set_location "P1_signal_5" macrocell 3 3 0 2
-set_location "\UART:BUART:rx_counter_load\" macrocell 1 1 0 1
-set_location "\UART:BUART:tx_ctrl_mark_last\" macrocell 1 1 1 1
-set_location "Net_597_3" macrocell 3 4 1 0
-set_location "Net_870_7" macrocell 2 4 1 3
-set_location "\MODULE_10:g1:a0:gx:u0:gt_5\" macrocell 3 2 0 2
-set_location "Net_870_3" macrocell 2 3 0 1
-set_location "Net_784_1" macrocell 2 4 0 3
-set_location "\UART:BUART:rx_state_3\" macrocell 1 1 0 2
-set_location "Net_870_5" macrocell 2 2 0 2
-set_location "\MODULE_9:g1:a0:gx:u0:gt_5\" macrocell 3 2 0 0
-set_location "\UART:BUART:rx_postpoll\" macrocell 2 0 0 2
-set_location "P1_signal_6" macrocell 3 3 0 1
-set_location "\UART:BUART:rx_last\" macrocell 2 1 0 3
-set_location "Net_796_7" macrocell 3 1 0 2
-set_location "\UART:BUART:rx_status_5\" macrocell 2 1 0 0
-set_location "\Centr:c\" macrocell 2 5 1 0
-set_location "\UART:BUART:sTX:sCLOCK:TxBitClkGen\" datapathcell 3 2 2 
-set_location "Net_796_3" macrocell 3 1 1 3
-set_location "Net_784_5" macrocell 2 5 0 2
-set_location "\UART:BUART:pollcount_0\" macrocell 2 1 1 2
-set_location "\Centr:v_1\" macrocell 3 5 0 2
-set_location "\UART:BUART:rx_state_0\" macrocell 1 1 0 0
-set_location "Net_870_0" macrocell 2 4 1 1
-set_location "Net_660" macrocell 3 5 0 3
-set_location "Net_796_2" macrocell 3 0 0 1
-set_location "\MODULE_9:g1:a0:gx:u0:lt_2\" macrocell 3 2 0 3
-set_location "Net_784_4" macrocell 2 4 0 0
-set_location "Net_597_7" macrocell 3 4 0 0
-set_location "\Centr:v_0\" macrocell 3 5 0 1
-set_location "Net_597_0" macrocell 3 4 1 1
-set_location "Net_784_6" macrocell 2 5 0 1
-set_location "\UART:BUART:txn\" macrocell 2 0 0 0
-set_location "\Centr:state_1\" macrocell 3 5 1 2
-set_location "\UART:BUART:sRX:RxSts\" statusicell 2 1 4 
-set_location "\MODULE_9:g1:a0:gx:u0:lt_5\" macrocell 3 2 0 1
-set_location "Net_597_2" macrocell 3 4 1 3
-set_location "Net_796_6" macrocell 3 1 0 3
-set_location "\UART:BUART:tx_state_1\" macrocell 2 2 0 1
-set_location "\Centr:resetemp\" macrocell 3 5 0 0
-set_location "Net_796_1" macrocell 3 1 1 0
-set_location "\UART:BUART:rx_state_stop1_reg\" macrocell 1 1 1 3
-set_location "P1_signal_1" macrocell 3 3 1 2
-set_location "Net_870_2" macrocell 2 3 0 2
-set_location "Net_877" macrocell 3 2 1 3
-set_location "Net_784_3" macrocell 2 4 0 1
-set_location "Net_597_1" macrocell 3 4 1 2
-set_location "P1_signal_0" macrocell 3 5 1 3
-set_location "P1_signal_3" macrocell 3 3 1 0
-set_location "Net_796_4" macrocell 3 1 1 2
-set_location "\UART:BUART:sTX:TxSts\" statusicell 2 0 4 
-set_location "Net_870_1" macrocell 2 3 1 0
-set_location "\UART:BUART:rx_load_fifo\" macrocell 1 1 0 3
-set_location "\MODULE_9:g1:a0:gx:u0:gt_2\" macrocell 3 3 1 3
-set_location "P1_signal_4" macrocell 3 3 0 3
-set_location "\Centr:d\" macrocell 2 5 0 3
-set_location "Net_870_4" macrocell 2 3 0 3
-set_location "P1_signal_7" macrocell 3 3 0 0
-set_location "\UART:BUART:rx_bitclk_enable\" macrocell 2 1 1 0
-set_location "Net_796_5" macrocell 3 1 0 1
-set_location "Net_597_5" macrocell 3 4 0 2
+set_location "Net_597_1" macrocell 2 4 1 3
+set_location "\UART:BUART:tx_state_0\" macrocell 2 0 0 3
+set_location "Net_870_5" macrocell 3 4 1 0
+set_location "\UART:BUART:sRX:RxShifter:u0\" datapathcell 1 1 2 
+set_location "\MODULE_9:g1:a0:gx:u0:lt_2\" macrocell 3 1 0 2
 set_location "\UART:BUART:rx_status_3\" macrocell 1 1 1 2
-set_location "\UART:BUART:tx_state_2\" macrocell 2 2 0 0
+set_location "\Centr:parocuenta\" macrocell 2 5 1 0
+set_location "\Centr:v_0\" macrocell 2 5 0 1
+set_location "Net_796_7" macrocell 3 1 0 3
+set_location "\UART:BUART:rx_status_5\" macrocell 2 1 0 0
+set_location "Net_952" macrocell 3 2 0 2
+set_location "\Centr:d\" macrocell 3 5 0 3
+set_location "\UART:BUART:rx_postpoll\" macrocell 2 0 1 1
+set_location "Net_796_3" macrocell 3 1 1 1
+set_location "Net_597_5" macrocell 2 4 0 2
+set_location "Net_585" macrocell 2 1 1 0
+set_location "\MODULE_10:g1:a0:gx:u0:lt_5\" macrocell 3 1 1 3
+set_location "\UART:BUART:sTX:TxShifter:u0\" datapathcell 2 0 2 
+set_location "P1_signal_2" macrocell 2 2 1 1
+set_location "P1_signal_5" macrocell 2 2 0 2
+set_location "Net_870_6" macrocell 3 4 1 1
+set_location "Net_796_0" macrocell 3 0 0 1
+set_location "Net_784_4" macrocell 3 3 1 0
+set_location "Net_597_7" macrocell 2 4 0 0
+set_location "\MODULE_9:g1:a0:gx:u0:gt_2\" macrocell 2 2 1 3
+set_location "P1_signal_6" macrocell 2 2 0 1
+set_location "Net_597_0" macrocell 3 5 1 0
+set_location "Net_784_6" macrocell 3 3 0 1
+set_location "\Centr:state_1\" macrocell 2 5 1 2
+set_location "\UART:BUART:sRX:RxBitCounter\" count7cell 1 1 7 
+set_location "\UART:BUART:rx_state_2\" macrocell 1 1 1 0
+set_location "Net_597_2" macrocell 2 4 1 2
+set_location "\UART:BUART:tx_state_2\" macrocell 3 0 1 0
+set_location "\Centr:v_1\" macrocell 2 5 0 2
+set_location "\UART:BUART:rx_counter_load\" macrocell 1 1 0 1
+set_location "\UART:BUART:sTX:sCLOCK:TxBitClkGen\" datapathcell 2 3 2 
+set_location "Net_870_2" macrocell 3 4 0 2
+set_location "Net_597_3" macrocell 2 4 1 1
+set_location "\UART:BUART:counter_load_not\" macrocell 2 3 1 1
+set_location "Net_784_1" macrocell 3 3 1 3
+set_location "Net_796_4" macrocell 3 1 1 2
+set_location "Net_660" macrocell 2 5 0 3
+set_location "\UART:BUART:pollcount_1\" macrocell 2 0 1 2
+set_location "\MODULE_9:g1:a0:gx:u0:lt_7\" macrocell 3 2 0 1
+set_location "Net_870_1" macrocell 3 4 0 1
+set_location "\UART:BUART:rx_load_fifo\" macrocell 1 1 0 3
+set_location "\UART:BUART:tx_status_0\" macrocell 2 0 0 1
+set_location "\Centr:c\" macrocell 3 5 0 1
+set_location "Net_870_4" macrocell 3 4 0 0
+set_location "\UART:BUART:txn\" macrocell 2 3 0 0
+set_location "Net_796_5" macrocell 3 1 1 0
+set_location "\UART:BUART:tx_ctrl_mark_last\" macrocell 2 1 1 3
+set_location "Net_784_5" macrocell 3 3 0 2
+set_location "\UART:BUART:sRX:RxSts\" statusicell 2 1 4 
+set_location "\UART:BUART:tx_bitclk\" macrocell 2 3 1 2
+set_location "\UART:BUART:tx_state_1\" macrocell 3 0 0 0
+set_location "\Centr:resetemp\" macrocell 2 5 0 0
+set_location "P1_signal_1" macrocell 2 2 1 2
+set_location "\MODULE_9:g1:a0:gx:u0:gt_5\" macrocell 3 2 1 1
+set_location "\UART:BUART:pollcount_0\" macrocell 2 0 1 3
+set_location "Net_870_0" macrocell 3 3 0 3
+set_location "\UART:BUART:tx_status_2\" macrocell 2 0 0 2
+set_location "\UART:BUART:rx_state_0\" macrocell 1 1 0 0
+set_location "P1_signal_0" macrocell 2 5 1 3
+set_location "P1_signal_3" macrocell 2 2 1 0
+set_location "\MODULE_10:g1:a0:gx:u0:gt_5\" macrocell 3 2 1 0
+set_location "Net_796_2" macrocell 3 1 0 0
+set_location "Net_597_4" macrocell 2 4 1 0
+set_location "Net_784_7" macrocell 3 3 0 0
+set_location "\UART:BUART:sTX:TxSts\" statusicell 2 0 4 
+set_location "\UART:BUART:rx_state_3\" macrocell 1 1 0 2
+set_location "\UART:BUART:rx_last\" macrocell 2 3 1 0
+set_location "P1_signal_4" macrocell 2 2 0 3
+set_location "Net_784_0" macrocell 3 5 0 0
+set_location "Net_659" macrocell 3 5 0 2
+set_location "P1_signal_7" macrocell 2 2 0 0
+set_location "Net_597_6" macrocell 2 4 0 1
+set_location "Net_784_2" macrocell 3 3 1 2
+set_location "Net_796_6" macrocell 3 0 0 2
+set_location "\Centr:state_0\" macrocell 2 5 1 1
+set_location "Net_796_1" macrocell 3 1 0 1
+set_location "\UART:BUART:rx_state_stop1_reg\" macrocell 1 1 1 3
 set_location "\via8bits:gnome_res:Sync:ctrl_reg\" controlcell 2 4 6 
-set_location "\via8bits:Stat:sts:sts_reg\" statuscell 2 3 3 
+set_location "\via8bits:Stat:sts:sts_reg\" statuscell 3 5 3 
 set_location "\I2C:I2C_FF\" i2ccell -1 -1 0
 set_io "LED(0)" iocell 2 1
 set_location "\I2C:I2C_IRQ\" interrupt -1 -1 15
 set_location "UART_RX_IT" interrupt -1 -1 0
-set_location "\via8bits:Ctrl:Sync:ctrl_reg\" controlcell 3 4 6 
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "\via8bits:Ctrl:Sync:ctrl_reg\" controlcell 3 2 6 
 # Note: port 12 is the logical name for port 7
 set_io "Tx_1(0)" iocell 12 7
-set_location "ClockBlock" clockblockcell -1 -1 0
 set_io "i2c_sda(0)" iocell 1 7
 set_location "\via8bits:P1_stat:sts:sts_reg\" statuscell 3 1 3 
-set_location "\via8bits:P0_stat:sts:sts_reg\" statuscell 2 2 3 
-set_location "\LCD_gnome:B_reg:sts:sts_reg\" statuscell 2 4 3 
-set_location "\LCD_gnome:A_reg:sts:sts_reg\" statuscell 3 5 3 
+set_location "\via8bits:P0_stat:sts:sts_reg\" statuscell 3 2 3 
+set_location "\LCD_gnome:A_reg:sts:sts_reg\" statuscell 2 5 3 
+set_location "\LCD_gnome:B_reg:sts:sts_reg\" statuscell 3 3 3 
 set_io "i2c_scl(0)" iocell 1 6
-set_io "Button(0)" iocell 0 7
 # Note: port 12 is the logical name for port 7
 set_io "Rx_1(0)" iocell 12 6
-set_location "\via8bits:P0_ctrl:Sync:ctrl_reg\" controlcell 2 3 6 
-set_location "\via8bits:P1_ctrl:Sync:ctrl_reg\" controlcell 3 0 6 
+set_io "Button(0)" iocell 0 7
+set_location "\via8bits:P0_ctrl:Sync:ctrl_reg\" controlcell 3 4 6 
+set_location "\via8bits:P1_ctrl:Sync:ctrl_reg\" controlcell 3 1 6 

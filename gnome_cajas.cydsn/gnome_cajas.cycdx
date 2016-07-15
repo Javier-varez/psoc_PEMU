@@ -87,9 +87,9 @@
   </block>
   <block name="LCD_gnome" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="LCD_gnome_B_reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LCD_gnome_B_reg_STATUS_REG" address="0x40006463" bitWidth="8" desc="" hidden="false" />
-      <register name="LCD_gnome_B_reg_MASK_REG" address="0x40006483" bitWidth="8" desc="" hidden="false" />
-      <register name="LCD_gnome_B_reg_STATUS_AUX_CTL_REG" address="0x40006493" bitWidth="8" desc="" hidden="false">
+      <register name="LCD_gnome_B_reg_STATUS_REG" address="0x40006465" bitWidth="8" desc="" hidden="false" />
+      <register name="LCD_gnome_B_reg_MASK_REG" address="0x40006485" bitWidth="8" desc="" hidden="false" />
+      <register name="LCD_gnome_B_reg_STATUS_AUX_CTL_REG" address="0x40006495" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -117,9 +117,9 @@
       </register>
     </block>
     <block name="LCD_gnome_A_reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LCD_gnome_A_reg_STATUS_REG" address="0x40006461" bitWidth="8" desc="" hidden="false" />
-      <register name="LCD_gnome_A_reg_MASK_REG" address="0x40006481" bitWidth="8" desc="" hidden="false" />
-      <register name="LCD_gnome_A_reg_STATUS_AUX_CTL_REG" address="0x40006491" bitWidth="8" desc="" hidden="false">
+      <register name="LCD_gnome_A_reg_STATUS_REG" address="0x40006460" bitWidth="8" desc="" hidden="false" />
+      <register name="LCD_gnome_A_reg_MASK_REG" address="0x40006480" bitWidth="8" desc="" hidden="false" />
+      <register name="LCD_gnome_A_reg_STATUS_AUX_CTL_REG" address="0x40006490" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -148,6 +148,10 @@
     </block>
   </block>
   <block name="EEPROM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="UART_RX_IT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Rx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Tx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART" BASE="0x0" SIZE="0x0" desc="UART" visible="true" hidden="false">
     <block name="IntClock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -172,16 +176,12 @@
       <field name="UART_RX_STS_ADDR_MATCH" from="6" to="6" access="R" resetVal="" desc="" />
     </register>
   </block>
-  <block name="Tx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Rx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="UART_RX_IT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="DigitalComp_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="cy_constant_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DigitalComp_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_constant_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DigitalComp_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="via8bits" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="mux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -221,9 +221,9 @@
     </block>
     <block name="via8bits_gnome_clk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="via8bits_Stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_Stat_STATUS_REG" address="0x40006464" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_Stat_MASK_REG" address="0x40006484" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_Stat_STATUS_AUX_CTL_REG" address="0x40006494" bitWidth="8" desc="" hidden="false">
+      <register name="via8bits_Stat_STATUS_REG" address="0x40006461" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits_Stat_MASK_REG" address="0x40006481" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits_Stat_STATUS_AUX_CTL_REG" address="0x40006491" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -251,18 +251,18 @@
       </register>
     </block>
     <block name="via8bits_Ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_Ctrl_CONTROL_REG" address="0x40006472" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits_Ctrl_CONTROL_REG" address="0x40006476" bitWidth="8" desc="" hidden="false" />
     </block>
     <block name="via8bits_P0_ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_P0_ctrl_CONTROL_REG" address="0x40006474" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits_P0_ctrl_CONTROL_REG" address="0x40006472" bitWidth="8" desc="" hidden="false" />
     </block>
     <block name="via8bits_P1_ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_P1_ctrl_CONTROL_REG" address="0x40006575" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits_P1_ctrl_CONTROL_REG" address="0x40006576" bitWidth="8" desc="" hidden="false" />
     </block>
     <block name="via8bits_P0_stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_P0_stat_STATUS_REG" address="0x40006467" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_P0_stat_MASK_REG" address="0x40006487" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_P0_stat_STATUS_AUX_CTL_REG" address="0x40006497" bitWidth="8" desc="" hidden="false">
+      <register name="via8bits_P0_stat_STATUS_REG" address="0x40006466" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits_P0_stat_MASK_REG" address="0x40006486" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits_P0_stat_STATUS_AUX_CTL_REG" address="0x40006496" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -298,5 +298,5 @@
   <block name="Centr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_constant_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="i2c_scl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_constant_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>
