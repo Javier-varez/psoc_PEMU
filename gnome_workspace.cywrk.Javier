@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="gnome_workspace\gnome_cajas\Header Files">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="gnome_workspace\gnome_cajas\gnome_cajas.cydwr">
 <ExpandedNodeIds>
 <v>gnome_workspace</v>
 <v>gnome_workspace\gnome_cajas</v>
@@ -42,7 +42,6 @@
 <v>gnome_workspace\gnome_cajas\Source Files\i2cLCD.c</v>
 <v>gnome_workspace\gnome_cajas\Source Files\main.c</v>
 <v>gnome_workspace\gnome_cajas\Generated_Source</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5</v>
 <v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Button</v>
 <v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Button\Button.c</v>
 <v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Button\Button.h</v>
@@ -425,26 +424,8 @@
 <v>gnome_workspace\gnome_cajas\Source Files\main.c</v>
 <v>gnome_workspace\gnome_cajas\Generated_Source</v>
 <v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Button</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Button\Button.c</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Button\Button.h</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Button\Button_aliases.h</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Clock_3</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Clock_3\Clock_3.c</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\Clock_3\Clock_3.h</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
-<v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>gnome_workspace\gnome_psoc4</v>
+<v>gnome_workspace\gnome_psoc5</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="gnome_workspace\gnome_cajas\via8bits\via8bits.cysch">
@@ -711,16 +692,6 @@
 <v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR.lst</v>
 <v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_gnome_A_reg.lst</v>
 <v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_gnome_B_reg.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\LED.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\Rx_1.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\UART.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_BOOT.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_INT.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_IntClock.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_PM.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_RX_IT.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits_Ctrl.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -822,16 +793,6 @@
 <v>gnome_workspace\gnome_psoc4\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>gnome_workspace\gnome_psoc5</v>
 <v>gnome_workspace\gnome_psoc5\PSoC 5 Architecture TRM</v>
-<v>gnome_workspace\gnome_psoc5\CY8C58LP Family Datasheet</v>
-<v>gnome_workspace\gnome_psoc5\System Reference Guides</v>
-<v>gnome_workspace\gnome_psoc5\System Reference Guides\cy_boot_v5_30</v>
-<v>gnome_workspace\gnome_psoc5\BasicCounter_v1_0.pdf</v>
-<v>gnome_workspace\gnome_psoc5\cy_clock_v2_20</v>
-<v>gnome_workspace\gnome_psoc5\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>gnome_workspace\gnome_psoc5\cy_constant_v1_0</v>
-<v>gnome_workspace\gnome_psoc5\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
-<v>gnome_workspace\gnome_psoc5\cy_isr_v1_70.pdf</v>
-<v>gnome_workspace\gnome_psoc5\cy_pins_v2_20</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -846,13 +807,10 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\gnome_cajas.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\gnome_cajas.cydsn\gnome_config.h" />
-<name v=".\gnome_cajas.cydsn\gnome.c" />
-<name v=".\gnome_cajas.cydsn\gnome_cajas.cydwr" />
+<name v=".\gnome_cajas.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\gnome_cajas.cydsn\gnome_debug.c" />
-<name v=".\gnome_cajas.cydsn\gnome_debug.h" />
-<name v=".\gnome_cajas.cydsn\gnome_lcd.c" />
+<name v=".\gnome_cajas.cydsn\gnome_cajas.cydwr" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
