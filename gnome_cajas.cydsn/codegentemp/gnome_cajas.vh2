@@ -2,7 +2,7 @@
 --	Conversion of gnome_cajas.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Jul 15 02:35:58 2016
+--	Wed Aug 17 00:23:41 2016
 --
 
 USE cypress.cypress.all;
@@ -12,214 +12,214 @@ ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
 END top_RTL;
 --------------------------------------------------------
 ARCHITECTURE R_T_L OF top_RTL IS
-SIGNAL \via8bits:Ctrl:clk\ : bit;
-SIGNAL \via8bits:Ctrl:rst\ : bit;
+SIGNAL \via8bits1:Ctrl:clk\ : bit;
+SIGNAL \via8bits1:Ctrl:rst\ : bit;
 SIGNAL Net_20 : bit;
-SIGNAL \via8bits:Ctrl:control_out_0\ : bit;
-SIGNAL \via8bits:P1_io\ : bit;
-SIGNAL \via8bits:Ctrl:control_out_1\ : bit;
+SIGNAL \via8bits1:Ctrl:control_out_0\ : bit;
+SIGNAL \via8bits1:P1_io\ : bit;
+SIGNAL \via8bits1:Ctrl:control_out_1\ : bit;
 SIGNAL Net_19 : bit;
-SIGNAL \via8bits:Ctrl:control_out_2\ : bit;
-SIGNAL \via8bits:P0_io\ : bit;
-SIGNAL \via8bits:Ctrl:control_out_3\ : bit;
-SIGNAL \via8bits:Net_1\ : bit;
-SIGNAL \via8bits:Ctrl:control_out_4\ : bit;
-SIGNAL \via8bits:Net_2\ : bit;
-SIGNAL \via8bits:Ctrl:control_out_5\ : bit;
-SIGNAL \via8bits:Net_3\ : bit;
-SIGNAL \via8bits:Ctrl:control_out_6\ : bit;
-SIGNAL \via8bits:Net_4\ : bit;
-SIGNAL \via8bits:Ctrl:control_out_7\ : bit;
-SIGNAL \via8bits:Ctrl:control_7\ : bit;
-SIGNAL \via8bits:Ctrl:control_6\ : bit;
-SIGNAL \via8bits:Ctrl:control_5\ : bit;
-SIGNAL \via8bits:Ctrl:control_4\ : bit;
-SIGNAL \via8bits:Ctrl:control_3\ : bit;
-SIGNAL \via8bits:Ctrl:control_2\ : bit;
-SIGNAL \via8bits:Ctrl:control_1\ : bit;
-SIGNAL \via8bits:Ctrl:control_0\ : bit;
-SIGNAL \via8bits:Stat:status_0\ : bit;
+SIGNAL \via8bits1:Ctrl:control_out_2\ : bit;
+SIGNAL \via8bits1:P0_io\ : bit;
+SIGNAL \via8bits1:Ctrl:control_out_3\ : bit;
+SIGNAL \via8bits1:Net_1\ : bit;
+SIGNAL \via8bits1:Ctrl:control_out_4\ : bit;
+SIGNAL \via8bits1:Net_2\ : bit;
+SIGNAL \via8bits1:Ctrl:control_out_5\ : bit;
+SIGNAL \via8bits1:Net_3\ : bit;
+SIGNAL \via8bits1:Ctrl:control_out_6\ : bit;
+SIGNAL \via8bits1:Net_4\ : bit;
+SIGNAL \via8bits1:Ctrl:control_out_7\ : bit;
+SIGNAL \via8bits1:Ctrl:control_7\ : bit;
+SIGNAL \via8bits1:Ctrl:control_6\ : bit;
+SIGNAL \via8bits1:Ctrl:control_5\ : bit;
+SIGNAL \via8bits1:Ctrl:control_4\ : bit;
+SIGNAL \via8bits1:Ctrl:control_3\ : bit;
+SIGNAL \via8bits1:Ctrl:control_2\ : bit;
+SIGNAL \via8bits1:Ctrl:control_1\ : bit;
+SIGNAL \via8bits1:Ctrl:control_0\ : bit;
+SIGNAL \via8bits1:Stat:status_0\ : bit;
 SIGNAL Net_660 : bit;
-SIGNAL \via8bits:Stat:status_1\ : bit;
-SIGNAL \via8bits:Stat:status_2\ : bit;
+SIGNAL \via8bits1:Stat:status_1\ : bit;
+SIGNAL \via8bits1:Stat:status_2\ : bit;
 SIGNAL Net_659 : bit;
-SIGNAL \via8bits:Stat:status_3\ : bit;
-SIGNAL \via8bits:Stat:status_4\ : bit;
-SIGNAL \via8bits:Stat:status_5\ : bit;
-SIGNAL \via8bits:Stat:status_6\ : bit;
-SIGNAL \via8bits:Stat:status_7\ : bit;
+SIGNAL \via8bits1:Stat:status_3\ : bit;
+SIGNAL \via8bits1:Stat:status_4\ : bit;
+SIGNAL \via8bits1:Stat:status_5\ : bit;
+SIGNAL \via8bits1:Stat:status_6\ : bit;
+SIGNAL \via8bits1:Stat:status_7\ : bit;
 SIGNAL zero : bit;
 SIGNAL Net_12 : bit;
-SIGNAL \via8bits:P0_ctrl:clk\ : bit;
-SIGNAL \via8bits:P0_ctrl:rst\ : bit;
-SIGNAL \via8bits:Net_489_7\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_out_7\ : bit;
-SIGNAL \via8bits:Net_489_6\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_out_6\ : bit;
-SIGNAL \via8bits:Net_489_5\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_out_5\ : bit;
-SIGNAL \via8bits:Net_489_4\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_out_4\ : bit;
-SIGNAL \via8bits:Net_489_3\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_out_3\ : bit;
-SIGNAL \via8bits:Net_489_2\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_out_2\ : bit;
-SIGNAL \via8bits:Net_489_1\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_out_1\ : bit;
-SIGNAL \via8bits:Net_489_0\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_out_0\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_7\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_6\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_5\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_4\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_3\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_2\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_1\ : bit;
-SIGNAL \via8bits:P0_ctrl:control_0\ : bit;
-SIGNAL \via8bits:P0_stat:status_7\ : bit;
+SIGNAL \via8bits1:P0_ctrl:clk\ : bit;
+SIGNAL \via8bits1:P0_ctrl:rst\ : bit;
+SIGNAL \via8bits1:Net_489_7\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_out_7\ : bit;
+SIGNAL \via8bits1:Net_489_6\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_out_6\ : bit;
+SIGNAL \via8bits1:Net_489_5\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_out_5\ : bit;
+SIGNAL \via8bits1:Net_489_4\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_out_4\ : bit;
+SIGNAL \via8bits1:Net_489_3\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_out_3\ : bit;
+SIGNAL \via8bits1:Net_489_2\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_out_2\ : bit;
+SIGNAL \via8bits1:Net_489_1\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_out_1\ : bit;
+SIGNAL \via8bits1:Net_489_0\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_out_0\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_7\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_6\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_5\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_4\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_3\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_2\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_1\ : bit;
+SIGNAL \via8bits1:P0_ctrl:control_0\ : bit;
+SIGNAL \via8bits1:P0_stat:status_7\ : bit;
 SIGNAL Net_870_7 : bit;
 ATTRIBUTE soft of Net_870_7:SIGNAL IS '1';
-SIGNAL \via8bits:P0_stat:status_6\ : bit;
+SIGNAL \via8bits1:P0_stat:status_6\ : bit;
 SIGNAL Net_870_6 : bit;
-SIGNAL \via8bits:P0_stat:status_5\ : bit;
+SIGNAL \via8bits1:P0_stat:status_5\ : bit;
 SIGNAL Net_870_5 : bit;
-SIGNAL \via8bits:P0_stat:status_4\ : bit;
+SIGNAL \via8bits1:P0_stat:status_4\ : bit;
 SIGNAL Net_870_4 : bit;
-SIGNAL \via8bits:P0_stat:status_3\ : bit;
+SIGNAL \via8bits1:P0_stat:status_3\ : bit;
 SIGNAL Net_870_3 : bit;
-SIGNAL \via8bits:P0_stat:status_2\ : bit;
+SIGNAL \via8bits1:P0_stat:status_2\ : bit;
 SIGNAL Net_870_2 : bit;
-SIGNAL \via8bits:P0_stat:status_1\ : bit;
+SIGNAL \via8bits1:P0_stat:status_1\ : bit;
 SIGNAL Net_870_1 : bit;
-SIGNAL \via8bits:P0_stat:status_0\ : bit;
+SIGNAL \via8bits1:P0_stat:status_0\ : bit;
 SIGNAL Net_870_0 : bit;
 ATTRIBUTE soft of Net_870_0:SIGNAL IS '1';
-SIGNAL \via8bits:P1_ctrl:clk\ : bit;
-SIGNAL \via8bits:P1_ctrl:rst\ : bit;
-SIGNAL \via8bits:Net_495_7\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_out_7\ : bit;
-SIGNAL \via8bits:Net_495_6\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_out_6\ : bit;
-SIGNAL \via8bits:Net_495_5\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_out_5\ : bit;
-SIGNAL \via8bits:Net_495_4\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_out_4\ : bit;
-SIGNAL \via8bits:Net_495_3\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_out_3\ : bit;
-SIGNAL \via8bits:Net_495_2\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_out_2\ : bit;
-SIGNAL \via8bits:Net_495_1\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_out_1\ : bit;
-SIGNAL \via8bits:Net_495_0\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_out_0\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_7\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_6\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_5\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_4\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_3\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_2\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_1\ : bit;
-SIGNAL \via8bits:P1_ctrl:control_0\ : bit;
-SIGNAL \via8bits:P1_stat:status_7\ : bit;
+SIGNAL \via8bits1:P1_ctrl:clk\ : bit;
+SIGNAL \via8bits1:P1_ctrl:rst\ : bit;
+SIGNAL \via8bits1:Net_495_7\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_out_7\ : bit;
+SIGNAL \via8bits1:Net_495_6\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_out_6\ : bit;
+SIGNAL \via8bits1:Net_495_5\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_out_5\ : bit;
+SIGNAL \via8bits1:Net_495_4\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_out_4\ : bit;
+SIGNAL \via8bits1:Net_495_3\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_out_3\ : bit;
+SIGNAL \via8bits1:Net_495_2\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_out_2\ : bit;
+SIGNAL \via8bits1:Net_495_1\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_out_1\ : bit;
+SIGNAL \via8bits1:Net_495_0\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_out_0\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_7\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_6\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_5\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_4\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_3\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_2\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_1\ : bit;
+SIGNAL \via8bits1:P1_ctrl:control_0\ : bit;
+SIGNAL \via8bits1:P1_stat:status_7\ : bit;
 SIGNAL Net_796_7 : bit;
-SIGNAL \via8bits:P1_stat:status_6\ : bit;
+SIGNAL \via8bits1:P1_stat:status_6\ : bit;
 SIGNAL Net_796_6 : bit;
-SIGNAL \via8bits:P1_stat:status_5\ : bit;
+SIGNAL \via8bits1:P1_stat:status_5\ : bit;
 SIGNAL Net_796_5 : bit;
-SIGNAL \via8bits:P1_stat:status_4\ : bit;
+SIGNAL \via8bits1:P1_stat:status_4\ : bit;
 SIGNAL Net_796_4 : bit;
-SIGNAL \via8bits:P1_stat:status_3\ : bit;
+SIGNAL \via8bits1:P1_stat:status_3\ : bit;
 SIGNAL Net_796_3 : bit;
-SIGNAL \via8bits:P1_stat:status_2\ : bit;
+SIGNAL \via8bits1:P1_stat:status_2\ : bit;
 SIGNAL Net_796_2 : bit;
-SIGNAL \via8bits:P1_stat:status_1\ : bit;
+SIGNAL \via8bits1:P1_stat:status_1\ : bit;
 SIGNAL Net_796_1 : bit;
-SIGNAL \via8bits:P1_stat:status_0\ : bit;
+SIGNAL \via8bits1:P1_stat:status_0\ : bit;
 SIGNAL Net_796_0 : bit;
-SIGNAL \via8bits:mux_1:tmp__mux_1_reg_7\ : bit;
+SIGNAL \via8bits1:mux_1:tmp__mux_1_reg_7\ : bit;
 SIGNAL Net_791_7 : bit;
-SIGNAL \via8bits:mux_1:tmp__mux_1_reg_6\ : bit;
+SIGNAL \via8bits1:mux_1:tmp__mux_1_reg_6\ : bit;
 SIGNAL Net_791_6 : bit;
-SIGNAL \via8bits:mux_1:tmp__mux_1_reg_5\ : bit;
+SIGNAL \via8bits1:mux_1:tmp__mux_1_reg_5\ : bit;
 SIGNAL Net_791_5 : bit;
-SIGNAL \via8bits:mux_1:tmp__mux_1_reg_4\ : bit;
+SIGNAL \via8bits1:mux_1:tmp__mux_1_reg_4\ : bit;
 SIGNAL Net_791_4 : bit;
-SIGNAL \via8bits:mux_1:tmp__mux_1_reg_3\ : bit;
+SIGNAL \via8bits1:mux_1:tmp__mux_1_reg_3\ : bit;
 SIGNAL Net_791_3 : bit;
-SIGNAL \via8bits:mux_1:tmp__mux_1_reg_2\ : bit;
+SIGNAL \via8bits1:mux_1:tmp__mux_1_reg_2\ : bit;
 SIGNAL Net_791_2 : bit;
-SIGNAL \via8bits:mux_1:tmp__mux_1_reg_1\ : bit;
+SIGNAL \via8bits1:mux_1:tmp__mux_1_reg_1\ : bit;
 SIGNAL Net_791_1 : bit;
-SIGNAL \via8bits:mux_1:tmp__mux_1_reg_0\ : bit;
+SIGNAL \via8bits1:mux_1:tmp__mux_1_reg_0\ : bit;
 SIGNAL Net_791_0 : bit;
-SIGNAL \via8bits:mux_2:tmp__mux_2_reg_7\ : bit;
+SIGNAL \via8bits1:mux_2:tmp__mux_2_reg_7\ : bit;
 SIGNAL P1_signal_7 : bit;
-SIGNAL \via8bits:mux_2:tmp__mux_2_reg_6\ : bit;
+SIGNAL \via8bits1:mux_2:tmp__mux_2_reg_6\ : bit;
 SIGNAL P1_signal_6 : bit;
-SIGNAL \via8bits:mux_2:tmp__mux_2_reg_5\ : bit;
+SIGNAL \via8bits1:mux_2:tmp__mux_2_reg_5\ : bit;
 SIGNAL P1_signal_5 : bit;
-SIGNAL \via8bits:mux_2:tmp__mux_2_reg_4\ : bit;
+SIGNAL \via8bits1:mux_2:tmp__mux_2_reg_4\ : bit;
 SIGNAL P1_signal_4 : bit;
-SIGNAL \via8bits:mux_2:tmp__mux_2_reg_3\ : bit;
+SIGNAL \via8bits1:mux_2:tmp__mux_2_reg_3\ : bit;
 SIGNAL P1_signal_3 : bit;
-SIGNAL \via8bits:mux_2:tmp__mux_2_reg_2\ : bit;
+SIGNAL \via8bits1:mux_2:tmp__mux_2_reg_2\ : bit;
 SIGNAL P1_signal_2 : bit;
-SIGNAL \via8bits:mux_2:tmp__mux_2_reg_1\ : bit;
+SIGNAL \via8bits1:mux_2:tmp__mux_2_reg_1\ : bit;
 SIGNAL P1_signal_1 : bit;
-SIGNAL \via8bits:mux_2:tmp__mux_2_reg_0\ : bit;
+SIGNAL \via8bits1:mux_2:tmp__mux_2_reg_0\ : bit;
 SIGNAL P1_signal_0 : bit;
-SIGNAL \via8bits:gnome_clk:clk\ : bit;
-SIGNAL \via8bits:gnome_clk:rst\ : bit;
+SIGNAL \via8bits1:gnome_clk:clk\ : bit;
+SIGNAL \via8bits1:gnome_clk:rst\ : bit;
 SIGNAL Net_851 : bit;
-SIGNAL \via8bits:gnome_clk:control_out_0\ : bit;
-SIGNAL \via8bits:Net_74\ : bit;
-SIGNAL \via8bits:gnome_clk:control_out_1\ : bit;
-SIGNAL \via8bits:Net_75\ : bit;
-SIGNAL \via8bits:gnome_clk:control_out_2\ : bit;
-SIGNAL \via8bits:Net_76\ : bit;
-SIGNAL \via8bits:gnome_clk:control_out_3\ : bit;
-SIGNAL \via8bits:Net_78\ : bit;
-SIGNAL \via8bits:gnome_clk:control_out_4\ : bit;
-SIGNAL \via8bits:Net_79\ : bit;
-SIGNAL \via8bits:gnome_clk:control_out_5\ : bit;
-SIGNAL \via8bits:Net_80\ : bit;
-SIGNAL \via8bits:gnome_clk:control_out_6\ : bit;
-SIGNAL \via8bits:Net_81\ : bit;
-SIGNAL \via8bits:gnome_clk:control_out_7\ : bit;
-SIGNAL \via8bits:gnome_clk:control_7\ : bit;
-SIGNAL \via8bits:gnome_clk:control_6\ : bit;
-SIGNAL \via8bits:gnome_clk:control_5\ : bit;
-SIGNAL \via8bits:gnome_clk:control_4\ : bit;
-SIGNAL \via8bits:gnome_clk:control_3\ : bit;
-SIGNAL \via8bits:gnome_clk:control_2\ : bit;
-SIGNAL \via8bits:gnome_clk:control_1\ : bit;
-SIGNAL \via8bits:gnome_clk:control_0\ : bit;
-SIGNAL \via8bits:gnome_res:clk\ : bit;
-SIGNAL \via8bits:gnome_res:rst\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_out_0\ : bit;
+SIGNAL \via8bits1:Net_74\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_out_1\ : bit;
+SIGNAL \via8bits1:Net_75\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_out_2\ : bit;
+SIGNAL \via8bits1:Net_76\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_out_3\ : bit;
+SIGNAL \via8bits1:Net_78\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_out_4\ : bit;
+SIGNAL \via8bits1:Net_79\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_out_5\ : bit;
+SIGNAL \via8bits1:Net_80\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_out_6\ : bit;
+SIGNAL \via8bits1:Net_81\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_out_7\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_7\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_6\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_5\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_4\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_3\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_2\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_1\ : bit;
+SIGNAL \via8bits1:gnome_clk:control_0\ : bit;
+SIGNAL \via8bits1:gnome_res:clk\ : bit;
+SIGNAL \via8bits1:gnome_res:rst\ : bit;
 SIGNAL Net_726 : bit;
-SIGNAL \via8bits:gnome_res:control_out_0\ : bit;
-SIGNAL \via8bits:Net_93\ : bit;
-SIGNAL \via8bits:gnome_res:control_out_1\ : bit;
-SIGNAL \via8bits:Net_94\ : bit;
-SIGNAL \via8bits:gnome_res:control_out_2\ : bit;
-SIGNAL \via8bits:Net_95\ : bit;
-SIGNAL \via8bits:gnome_res:control_out_3\ : bit;
-SIGNAL \via8bits:Net_96\ : bit;
-SIGNAL \via8bits:gnome_res:control_out_4\ : bit;
-SIGNAL \via8bits:Net_97\ : bit;
-SIGNAL \via8bits:gnome_res:control_out_5\ : bit;
-SIGNAL \via8bits:Net_98\ : bit;
-SIGNAL \via8bits:gnome_res:control_out_6\ : bit;
-SIGNAL \via8bits:Net_99\ : bit;
-SIGNAL \via8bits:gnome_res:control_out_7\ : bit;
-SIGNAL \via8bits:gnome_res:control_7\ : bit;
-SIGNAL \via8bits:gnome_res:control_6\ : bit;
-SIGNAL \via8bits:gnome_res:control_5\ : bit;
-SIGNAL \via8bits:gnome_res:control_4\ : bit;
-SIGNAL \via8bits:gnome_res:control_3\ : bit;
-SIGNAL \via8bits:gnome_res:control_2\ : bit;
-SIGNAL \via8bits:gnome_res:control_1\ : bit;
-SIGNAL \via8bits:gnome_res:control_0\ : bit;
+SIGNAL \via8bits1:gnome_res:control_out_0\ : bit;
+SIGNAL \via8bits1:Net_93\ : bit;
+SIGNAL \via8bits1:gnome_res:control_out_1\ : bit;
+SIGNAL \via8bits1:Net_94\ : bit;
+SIGNAL \via8bits1:gnome_res:control_out_2\ : bit;
+SIGNAL \via8bits1:Net_95\ : bit;
+SIGNAL \via8bits1:gnome_res:control_out_3\ : bit;
+SIGNAL \via8bits1:Net_96\ : bit;
+SIGNAL \via8bits1:gnome_res:control_out_4\ : bit;
+SIGNAL \via8bits1:Net_97\ : bit;
+SIGNAL \via8bits1:gnome_res:control_out_5\ : bit;
+SIGNAL \via8bits1:Net_98\ : bit;
+SIGNAL \via8bits1:gnome_res:control_out_6\ : bit;
+SIGNAL \via8bits1:Net_99\ : bit;
+SIGNAL \via8bits1:gnome_res:control_out_7\ : bit;
+SIGNAL \via8bits1:gnome_res:control_7\ : bit;
+SIGNAL \via8bits1:gnome_res:control_6\ : bit;
+SIGNAL \via8bits1:gnome_res:control_5\ : bit;
+SIGNAL \via8bits1:gnome_res:control_4\ : bit;
+SIGNAL \via8bits1:gnome_res:control_3\ : bit;
+SIGNAL \via8bits1:gnome_res:control_2\ : bit;
+SIGNAL \via8bits1:gnome_res:control_1\ : bit;
+SIGNAL \via8bits1:gnome_res:control_0\ : bit;
 SIGNAL Net_34 : bit;
 SIGNAL Net_811 : bit;
 SIGNAL Net_842_7 : bit;
@@ -1364,6 +1364,210 @@ SIGNAL \UART:BUART:sRX:MODULE_8:gte\ : bit;
 ATTRIBUTE port_state_att of \UART:BUART:sRX:MODULE_8:gte\:SIGNAL IS 2;
 SIGNAL \UART:BUART:sRX:MODULE_8:lte\ : bit;
 ATTRIBUTE port_state_att of \UART:BUART:sRX:MODULE_8:lte\:SIGNAL IS 2;
+SIGNAL \via8bits2:Ctrl:clk\ : bit;
+SIGNAL \via8bits2:Ctrl:rst\ : bit;
+SIGNAL Net_974 : bit;
+SIGNAL \via8bits2:Ctrl:control_out_0\ : bit;
+SIGNAL \via8bits2:P1_io\ : bit;
+SIGNAL \via8bits2:Ctrl:control_out_1\ : bit;
+SIGNAL Net_973 : bit;
+SIGNAL \via8bits2:Ctrl:control_out_2\ : bit;
+SIGNAL \via8bits2:P0_io\ : bit;
+SIGNAL \via8bits2:Ctrl:control_out_3\ : bit;
+SIGNAL \via8bits2:Net_1\ : bit;
+SIGNAL \via8bits2:Ctrl:control_out_4\ : bit;
+SIGNAL \via8bits2:Net_2\ : bit;
+SIGNAL \via8bits2:Ctrl:control_out_5\ : bit;
+SIGNAL \via8bits2:Net_3\ : bit;
+SIGNAL \via8bits2:Ctrl:control_out_6\ : bit;
+SIGNAL \via8bits2:Net_4\ : bit;
+SIGNAL \via8bits2:Ctrl:control_out_7\ : bit;
+SIGNAL \via8bits2:Ctrl:control_7\ : bit;
+SIGNAL \via8bits2:Ctrl:control_6\ : bit;
+SIGNAL \via8bits2:Ctrl:control_5\ : bit;
+SIGNAL \via8bits2:Ctrl:control_4\ : bit;
+SIGNAL \via8bits2:Ctrl:control_3\ : bit;
+SIGNAL \via8bits2:Ctrl:control_2\ : bit;
+SIGNAL \via8bits2:Ctrl:control_1\ : bit;
+SIGNAL \via8bits2:Ctrl:control_0\ : bit;
+SIGNAL \via8bits2:Stat:status_0\ : bit;
+SIGNAL Net_992 : bit;
+SIGNAL \via8bits2:Stat:status_1\ : bit;
+SIGNAL \via8bits2:Stat:status_2\ : bit;
+SIGNAL \via8bits2:Stat:status_3\ : bit;
+SIGNAL \via8bits2:Stat:status_4\ : bit;
+SIGNAL \via8bits2:Stat:status_5\ : bit;
+SIGNAL \via8bits2:Stat:status_6\ : bit;
+SIGNAL \via8bits2:Stat:status_7\ : bit;
+SIGNAL Net_981 : bit;
+SIGNAL \via8bits2:P0_ctrl:clk\ : bit;
+SIGNAL \via8bits2:P0_ctrl:rst\ : bit;
+SIGNAL \via8bits2:Net_489_7\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_out_7\ : bit;
+SIGNAL \via8bits2:Net_489_6\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_out_6\ : bit;
+SIGNAL \via8bits2:Net_489_5\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_out_5\ : bit;
+SIGNAL \via8bits2:Net_489_4\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_out_4\ : bit;
+SIGNAL \via8bits2:Net_489_3\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_out_3\ : bit;
+SIGNAL \via8bits2:Net_489_2\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_out_2\ : bit;
+SIGNAL \via8bits2:Net_489_1\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_out_1\ : bit;
+SIGNAL \via8bits2:Net_489_0\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_out_0\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_7\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_6\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_5\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_4\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_3\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_2\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_1\ : bit;
+SIGNAL \via8bits2:P0_ctrl:control_0\ : bit;
+SIGNAL \via8bits2:P0_stat:status_7\ : bit;
+SIGNAL Net_975_7 : bit;
+SIGNAL \via8bits2:P0_stat:status_6\ : bit;
+SIGNAL Net_975_6 : bit;
+SIGNAL \via8bits2:P0_stat:status_5\ : bit;
+SIGNAL Net_975_5 : bit;
+SIGNAL \via8bits2:P0_stat:status_4\ : bit;
+SIGNAL Net_975_4 : bit;
+SIGNAL \via8bits2:P0_stat:status_3\ : bit;
+SIGNAL Net_975_3 : bit;
+SIGNAL \via8bits2:P0_stat:status_2\ : bit;
+SIGNAL Net_975_2 : bit;
+SIGNAL \via8bits2:P0_stat:status_1\ : bit;
+SIGNAL Net_975_1 : bit;
+SIGNAL \via8bits2:P0_stat:status_0\ : bit;
+SIGNAL Net_975_0 : bit;
+SIGNAL \via8bits2:P1_ctrl:clk\ : bit;
+SIGNAL \via8bits2:P1_ctrl:rst\ : bit;
+SIGNAL \via8bits2:Net_495_7\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_out_7\ : bit;
+SIGNAL \via8bits2:Net_495_6\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_out_6\ : bit;
+SIGNAL \via8bits2:Net_495_5\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_out_5\ : bit;
+SIGNAL \via8bits2:Net_495_4\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_out_4\ : bit;
+SIGNAL \via8bits2:Net_495_3\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_out_3\ : bit;
+SIGNAL \via8bits2:Net_495_2\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_out_2\ : bit;
+SIGNAL \via8bits2:Net_495_1\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_out_1\ : bit;
+SIGNAL \via8bits2:Net_495_0\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_out_0\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_7\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_6\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_5\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_4\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_3\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_2\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_1\ : bit;
+SIGNAL \via8bits2:P1_ctrl:control_0\ : bit;
+SIGNAL \via8bits2:P1_stat:status_7\ : bit;
+SIGNAL Net_976_7 : bit;
+SIGNAL \via8bits2:P1_stat:status_6\ : bit;
+SIGNAL Net_976_6 : bit;
+SIGNAL \via8bits2:P1_stat:status_5\ : bit;
+SIGNAL Net_976_5 : bit;
+SIGNAL \via8bits2:P1_stat:status_4\ : bit;
+SIGNAL Net_976_4 : bit;
+SIGNAL \via8bits2:P1_stat:status_3\ : bit;
+SIGNAL Net_976_3 : bit;
+SIGNAL \via8bits2:P1_stat:status_2\ : bit;
+SIGNAL Net_976_2 : bit;
+SIGNAL \via8bits2:P1_stat:status_1\ : bit;
+SIGNAL Net_976_1 : bit;
+SIGNAL \via8bits2:P1_stat:status_0\ : bit;
+SIGNAL Net_976_0 : bit;
+SIGNAL \via8bits2:mux_1:tmp__mux_1_reg_7\ : bit;
+SIGNAL Net_971_7 : bit;
+SIGNAL \via8bits2:mux_1:tmp__mux_1_reg_6\ : bit;
+SIGNAL Net_971_6 : bit;
+SIGNAL \via8bits2:mux_1:tmp__mux_1_reg_5\ : bit;
+SIGNAL Net_971_5 : bit;
+SIGNAL \via8bits2:mux_1:tmp__mux_1_reg_4\ : bit;
+SIGNAL Net_971_4 : bit;
+SIGNAL \via8bits2:mux_1:tmp__mux_1_reg_3\ : bit;
+SIGNAL Net_971_3 : bit;
+SIGNAL \via8bits2:mux_1:tmp__mux_1_reg_2\ : bit;
+SIGNAL Net_971_2 : bit;
+SIGNAL \via8bits2:mux_1:tmp__mux_1_reg_1\ : bit;
+SIGNAL Net_971_1 : bit;
+SIGNAL \via8bits2:mux_1:tmp__mux_1_reg_0\ : bit;
+SIGNAL Net_971_0 : bit;
+SIGNAL \via8bits2:mux_2:tmp__mux_2_reg_7\ : bit;
+SIGNAL Net_972_7 : bit;
+SIGNAL \via8bits2:mux_2:tmp__mux_2_reg_6\ : bit;
+SIGNAL Net_972_6 : bit;
+SIGNAL \via8bits2:mux_2:tmp__mux_2_reg_5\ : bit;
+SIGNAL Net_972_5 : bit;
+SIGNAL \via8bits2:mux_2:tmp__mux_2_reg_4\ : bit;
+SIGNAL Net_972_4 : bit;
+SIGNAL \via8bits2:mux_2:tmp__mux_2_reg_3\ : bit;
+SIGNAL Net_972_3 : bit;
+SIGNAL \via8bits2:mux_2:tmp__mux_2_reg_2\ : bit;
+SIGNAL Net_972_2 : bit;
+SIGNAL \via8bits2:mux_2:tmp__mux_2_reg_1\ : bit;
+SIGNAL Net_972_1 : bit;
+SIGNAL \via8bits2:mux_2:tmp__mux_2_reg_0\ : bit;
+SIGNAL Net_972_0 : bit;
+SIGNAL \via8bits2:gnome_clk:clk\ : bit;
+SIGNAL \via8bits2:gnome_clk:rst\ : bit;
+SIGNAL Net_977 : bit;
+SIGNAL \via8bits2:gnome_clk:control_out_0\ : bit;
+SIGNAL \via8bits2:Net_74\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_out_1\ : bit;
+SIGNAL \via8bits2:Net_75\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_out_2\ : bit;
+SIGNAL \via8bits2:Net_76\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_out_3\ : bit;
+SIGNAL \via8bits2:Net_78\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_out_4\ : bit;
+SIGNAL \via8bits2:Net_79\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_out_5\ : bit;
+SIGNAL \via8bits2:Net_80\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_out_6\ : bit;
+SIGNAL \via8bits2:Net_81\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_out_7\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_7\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_6\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_5\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_4\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_3\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_2\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_1\ : bit;
+SIGNAL \via8bits2:gnome_clk:control_0\ : bit;
+SIGNAL \via8bits2:gnome_res:clk\ : bit;
+SIGNAL \via8bits2:gnome_res:rst\ : bit;
+SIGNAL Net_978 : bit;
+SIGNAL \via8bits2:gnome_res:control_out_0\ : bit;
+SIGNAL \via8bits2:Net_93\ : bit;
+SIGNAL \via8bits2:gnome_res:control_out_1\ : bit;
+SIGNAL \via8bits2:Net_94\ : bit;
+SIGNAL \via8bits2:gnome_res:control_out_2\ : bit;
+SIGNAL \via8bits2:Net_95\ : bit;
+SIGNAL \via8bits2:gnome_res:control_out_3\ : bit;
+SIGNAL \via8bits2:Net_96\ : bit;
+SIGNAL \via8bits2:gnome_res:control_out_4\ : bit;
+SIGNAL \via8bits2:Net_97\ : bit;
+SIGNAL \via8bits2:gnome_res:control_out_5\ : bit;
+SIGNAL \via8bits2:Net_98\ : bit;
+SIGNAL \via8bits2:gnome_res:control_out_6\ : bit;
+SIGNAL \via8bits2:Net_99\ : bit;
+SIGNAL \via8bits2:gnome_res:control_out_7\ : bit;
+SIGNAL \via8bits2:gnome_res:control_7\ : bit;
+SIGNAL \via8bits2:gnome_res:control_6\ : bit;
+SIGNAL \via8bits2:gnome_res:control_5\ : bit;
+SIGNAL \via8bits2:gnome_res:control_4\ : bit;
+SIGNAL \via8bits2:gnome_res:control_3\ : bit;
+SIGNAL \via8bits2:gnome_res:control_2\ : bit;
+SIGNAL \via8bits2:gnome_res:control_1\ : bit;
+SIGNAL \via8bits2:gnome_res:control_0\ : bit;
 SIGNAL \MODULE_9:g1:a0:newa_7\ : bit;
 SIGNAL MODIN8_7 : bit;
 SIGNAL \MODULE_9:g1:a0:newa_6\ : bit;
@@ -1688,45 +1892,45 @@ BEGIN
 
 zero <=  ('0') ;
 
-Net_870_7 <= ((\via8bits:P0_io\ and \via8bits:Net_489_7\));
+Net_870_7 <= ((\via8bits1:P0_io\ and \via8bits1:Net_489_7\));
 
-Net_870_6 <= ((\via8bits:P0_io\ and \via8bits:Net_489_6\));
+Net_870_6 <= ((\via8bits1:P0_io\ and \via8bits1:Net_489_6\));
 
-Net_870_5 <= ((\via8bits:P0_io\ and \via8bits:Net_489_5\));
+Net_870_5 <= ((\via8bits1:P0_io\ and \via8bits1:Net_489_5\));
 
-Net_870_4 <= ((\via8bits:P0_io\ and \via8bits:Net_489_4\));
+Net_870_4 <= ((\via8bits1:P0_io\ and \via8bits1:Net_489_4\));
 
-Net_870_3 <= ((\via8bits:P0_io\ and \via8bits:Net_489_3\));
+Net_870_3 <= ((\via8bits1:P0_io\ and \via8bits1:Net_489_3\));
 
-Net_870_2 <= ((\via8bits:P0_io\ and \via8bits:Net_489_2\));
+Net_870_2 <= ((\via8bits1:P0_io\ and \via8bits1:Net_489_2\));
 
-Net_870_1 <= ((\via8bits:P0_io\ and \via8bits:Net_489_1\));
+Net_870_1 <= ((\via8bits1:P0_io\ and \via8bits1:Net_489_1\));
 
-Net_870_0 <= ((\via8bits:P0_io\ and \via8bits:Net_489_0\));
+Net_870_0 <= ((\via8bits1:P0_io\ and \via8bits1:Net_489_0\));
 
-Net_796_7 <= ((not \via8bits:P1_io\ and P1_signal_7)
-	OR (\via8bits:P1_io\ and \via8bits:Net_495_7\));
+Net_796_7 <= ((not \via8bits1:P1_io\ and P1_signal_7)
+	OR (\via8bits1:P1_io\ and \via8bits1:Net_495_7\));
 
-Net_796_6 <= ((not \via8bits:P1_io\ and P1_signal_6)
-	OR (\via8bits:P1_io\ and \via8bits:Net_495_6\));
+Net_796_6 <= ((not \via8bits1:P1_io\ and P1_signal_6)
+	OR (\via8bits1:P1_io\ and \via8bits1:Net_495_6\));
 
-Net_796_5 <= ((not \via8bits:P1_io\ and P1_signal_5)
-	OR (\via8bits:P1_io\ and \via8bits:Net_495_5\));
+Net_796_5 <= ((not \via8bits1:P1_io\ and P1_signal_5)
+	OR (\via8bits1:P1_io\ and \via8bits1:Net_495_5\));
 
-Net_796_4 <= ((not \via8bits:P1_io\ and P1_signal_4)
-	OR (\via8bits:P1_io\ and \via8bits:Net_495_4\));
+Net_796_4 <= ((not \via8bits1:P1_io\ and P1_signal_4)
+	OR (\via8bits1:P1_io\ and \via8bits1:Net_495_4\));
 
-Net_796_3 <= ((not \via8bits:P1_io\ and P1_signal_3)
-	OR (\via8bits:P1_io\ and \via8bits:Net_495_3\));
+Net_796_3 <= ((not \via8bits1:P1_io\ and P1_signal_3)
+	OR (\via8bits1:P1_io\ and \via8bits1:Net_495_3\));
 
-Net_796_2 <= ((not \via8bits:P1_io\ and P1_signal_2)
-	OR (\via8bits:P1_io\ and \via8bits:Net_495_2\));
+Net_796_2 <= ((not \via8bits1:P1_io\ and P1_signal_2)
+	OR (\via8bits1:P1_io\ and \via8bits1:Net_495_2\));
 
-Net_796_1 <= ((not \via8bits:P1_io\ and P1_signal_1)
-	OR (\via8bits:P1_io\ and \via8bits:Net_495_1\));
+Net_796_1 <= ((not \via8bits1:P1_io\ and P1_signal_1)
+	OR (\via8bits1:P1_io\ and \via8bits1:Net_495_1\));
 
-Net_796_0 <= ((not \via8bits:P1_io\ and P1_signal_0)
-	OR (\via8bits:P1_io\ and \via8bits:Net_495_0\));
+Net_796_0 <= ((not \via8bits1:P1_io\ and P1_signal_0)
+	OR (\via8bits1:P1_io\ and \via8bits1:Net_495_0\));
 
 Net_842_6 <=  ('1') ;
 
@@ -2080,6 +2284,38 @@ Net_585 <= (not \UART:BUART:txn\);
 
 \UART:BUART:rx_address_detected\\D\ <= ((not \UART:BUART:reset_reg\ and \UART:BUART:rx_address_detected\));
 
+Net_975_7 <= ((\via8bits2:P0_io\ and \via8bits2:Net_489_7\));
+
+Net_975_6 <= ((\via8bits2:P0_io\ and \via8bits2:Net_489_6\));
+
+Net_975_5 <= ((\via8bits2:P0_io\ and \via8bits2:Net_489_5\));
+
+Net_975_4 <= ((\via8bits2:P0_io\ and \via8bits2:Net_489_4\));
+
+Net_975_3 <= ((\via8bits2:P0_io\ and \via8bits2:Net_489_3\));
+
+Net_975_2 <= ((\via8bits2:P0_io\ and \via8bits2:Net_489_2\));
+
+Net_975_1 <= ((\via8bits2:P0_io\ and \via8bits2:Net_489_1\));
+
+Net_975_0 <= ((\via8bits2:P0_io\ and \via8bits2:Net_489_0\));
+
+Net_976_7 <= ((\via8bits2:P1_io\ and \via8bits2:Net_495_7\));
+
+Net_976_6 <= ((\via8bits2:P1_io\ and \via8bits2:Net_495_6\));
+
+Net_976_5 <= ((\via8bits2:P1_io\ and \via8bits2:Net_495_5\));
+
+Net_976_4 <= ((\via8bits2:P1_io\ and \via8bits2:Net_495_4\));
+
+Net_976_3 <= ((\via8bits2:P1_io\ and \via8bits2:Net_495_3\));
+
+Net_976_2 <= ((\via8bits2:P1_io\ and \via8bits2:Net_495_2\));
+
+Net_976_1 <= ((\via8bits2:P1_io\ and \via8bits2:Net_495_1\));
+
+Net_976_0 <= ((\via8bits2:P1_io\ and \via8bits2:Net_495_0\));
+
 \MODULE_9:g1:a0:gx:u0:lt_7\ <= ((not P1_signal_7 and not P1_signal_6));
 
 \MODULE_9:g1:a0:gx:u0:gt_5\ <= (P1_signal_3
@@ -2096,7 +2332,7 @@ Net_585 <= (not \UART:BUART:txn\);
 
 \MODULE_10:g1:a0:gx:u0:gt_5\ <= ((P1_signal_5 and P1_signal_4));
 
-\via8bits:Ctrl:Sync:ctrl_reg\:cy_psoc3_control
+\via8bits1:Ctrl:Sync:ctrl_reg\:cy_psoc3_control
 	GENERIC MAP(cy_init_value=>"00000000",
 		cy_force_order=>'1',
 		cy_ctrl_mode_1=>"00000000",
@@ -2104,16 +2340,16 @@ Net_585 <= (not \UART:BUART:txn\);
 		cy_ext_reset=>'0')
 	PORT MAP(reset=>zero,
 		clock=>zero,
-		control=>(\via8bits:Ctrl:control_7\, \via8bits:Ctrl:control_6\, \via8bits:Ctrl:control_5\, \via8bits:Ctrl:control_4\,
-			\via8bits:P0_io\, Net_19, \via8bits:P1_io\, Net_20));
-\via8bits:Stat:sts:sts_reg\:cy_psoc3_status
+		control=>(\via8bits1:Ctrl:control_7\, \via8bits1:Ctrl:control_6\, \via8bits1:Ctrl:control_5\, \via8bits1:Ctrl:control_4\,
+			\via8bits1:P0_io\, Net_19, \via8bits1:P1_io\, Net_20));
+\via8bits1:Stat:sts:sts_reg\:cy_psoc3_status
 	GENERIC MAP(cy_force_order=>'1',
 		cy_md_select=>"00000000")
 	PORT MAP(reset=>zero,
 		clock=>Net_12,
 		status=>(zero, zero, zero, zero,
 			Net_659, Net_659, Net_660, Net_660));
-\via8bits:P0_ctrl:Sync:ctrl_reg\:cy_psoc3_control
+\via8bits1:P0_ctrl:Sync:ctrl_reg\:cy_psoc3_control
 	GENERIC MAP(cy_init_value=>"00000000",
 		cy_force_order=>'1',
 		cy_ctrl_mode_1=>"00000000",
@@ -2121,16 +2357,16 @@ Net_585 <= (not \UART:BUART:txn\);
 		cy_ext_reset=>'0')
 	PORT MAP(reset=>zero,
 		clock=>zero,
-		control=>(\via8bits:Net_489_7\, \via8bits:Net_489_6\, \via8bits:Net_489_5\, \via8bits:Net_489_4\,
-			\via8bits:Net_489_3\, \via8bits:Net_489_2\, \via8bits:Net_489_1\, \via8bits:Net_489_0\));
-\via8bits:P0_stat:sts:sts_reg\:cy_psoc3_status
+		control=>(\via8bits1:Net_489_7\, \via8bits1:Net_489_6\, \via8bits1:Net_489_5\, \via8bits1:Net_489_4\,
+			\via8bits1:Net_489_3\, \via8bits1:Net_489_2\, \via8bits1:Net_489_1\, \via8bits1:Net_489_0\));
+\via8bits1:P0_stat:sts:sts_reg\:cy_psoc3_status
 	GENERIC MAP(cy_force_order=>'1',
 		cy_md_select=>"00000000")
 	PORT MAP(reset=>zero,
 		clock=>Net_12,
 		status=>(Net_870_7, Net_870_6, Net_870_5, Net_870_4,
 			Net_870_3, Net_870_2, Net_870_1, Net_870_0));
-\via8bits:P1_ctrl:Sync:ctrl_reg\:cy_psoc3_control
+\via8bits1:P1_ctrl:Sync:ctrl_reg\:cy_psoc3_control
 	GENERIC MAP(cy_init_value=>"00000000",
 		cy_force_order=>'1',
 		cy_ctrl_mode_1=>"00000000",
@@ -2138,16 +2374,16 @@ Net_585 <= (not \UART:BUART:txn\);
 		cy_ext_reset=>'0')
 	PORT MAP(reset=>zero,
 		clock=>zero,
-		control=>(\via8bits:Net_495_7\, \via8bits:Net_495_6\, \via8bits:Net_495_5\, \via8bits:Net_495_4\,
-			\via8bits:Net_495_3\, \via8bits:Net_495_2\, \via8bits:Net_495_1\, \via8bits:Net_495_0\));
-\via8bits:P1_stat:sts:sts_reg\:cy_psoc3_status
+		control=>(\via8bits1:Net_495_7\, \via8bits1:Net_495_6\, \via8bits1:Net_495_5\, \via8bits1:Net_495_4\,
+			\via8bits1:Net_495_3\, \via8bits1:Net_495_2\, \via8bits1:Net_495_1\, \via8bits1:Net_495_0\));
+\via8bits1:P1_stat:sts:sts_reg\:cy_psoc3_status
 	GENERIC MAP(cy_force_order=>'1',
 		cy_md_select=>"00000000")
 	PORT MAP(reset=>zero,
 		clock=>Net_12,
 		status=>(Net_796_7, Net_796_6, Net_796_5, Net_796_4,
 			Net_796_3, Net_796_2, Net_796_1, Net_796_0));
-\via8bits:gnome_clk:Sync:ctrl_reg\:cy_psoc3_control
+\via8bits1:gnome_clk:Sync:ctrl_reg\:cy_psoc3_control
 	GENERIC MAP(cy_init_value=>"00000000",
 		cy_force_order=>'1',
 		cy_ctrl_mode_1=>"00000000",
@@ -2155,9 +2391,9 @@ Net_585 <= (not \UART:BUART:txn\);
 		cy_ext_reset=>'0')
 	PORT MAP(reset=>zero,
 		clock=>zero,
-		control=>(\via8bits:gnome_clk:control_7\, \via8bits:gnome_clk:control_6\, \via8bits:gnome_clk:control_5\, \via8bits:gnome_clk:control_4\,
-			\via8bits:gnome_clk:control_3\, \via8bits:gnome_clk:control_2\, \via8bits:gnome_clk:control_1\, \via8bits:gnome_clk:control_0\));
-\via8bits:gnome_res:Sync:ctrl_reg\:cy_psoc3_control
+		control=>(\via8bits1:gnome_clk:control_7\, \via8bits1:gnome_clk:control_6\, \via8bits1:gnome_clk:control_5\, \via8bits1:gnome_clk:control_4\,
+			\via8bits1:gnome_clk:control_3\, \via8bits1:gnome_clk:control_2\, \via8bits1:gnome_clk:control_1\, \via8bits1:gnome_clk:control_0\));
+\via8bits1:gnome_res:Sync:ctrl_reg\:cy_psoc3_control
 	GENERIC MAP(cy_init_value=>"00000000",
 		cy_force_order=>'1',
 		cy_ctrl_mode_1=>"00000000",
@@ -2165,8 +2401,8 @@ Net_585 <= (not \UART:BUART:txn\);
 		cy_ext_reset=>'0')
 	PORT MAP(reset=>zero,
 		clock=>zero,
-		control=>(\via8bits:gnome_res:control_7\, \via8bits:gnome_res:control_6\, \via8bits:gnome_res:control_5\, \via8bits:gnome_res:control_4\,
-			\via8bits:gnome_res:control_3\, \via8bits:gnome_res:control_2\, \via8bits:gnome_res:control_1\, Net_726));
+		control=>(\via8bits1:gnome_res:control_7\, \via8bits1:gnome_res:control_6\, \via8bits1:gnome_res:control_5\, \via8bits1:gnome_res:control_4\,
+			\via8bits1:gnome_res:control_3\, \via8bits1:gnome_res:control_2\, \via8bits1:gnome_res:control_1\, Net_726));
 ISR:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00")
 	PORT MAP(int_signal=>zero);
@@ -3001,6 +3237,97 @@ Tx_1:cy_psoc3_pins_v1_10
 		status=>(zero, \UART:BUART:rx_status_5\, \UART:BUART:rx_status_4\, \UART:BUART:rx_status_3\,
 			\UART:BUART:rx_status_2\, zero, zero),
 		interrupt=>Net_943);
+\via8bits2:Ctrl:Sync:ctrl_reg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"00000000",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>zero,
+		control=>(\via8bits2:Ctrl:control_7\, \via8bits2:Ctrl:control_6\, \via8bits2:Ctrl:control_5\, \via8bits2:Ctrl:control_4\,
+			\via8bits2:P0_io\, \via8bits2:Ctrl:control_2\, \via8bits2:P1_io\, \via8bits2:Ctrl:control_0\));
+\via8bits2:Stat:sts:sts_reg\:cy_psoc3_status
+	GENERIC MAP(cy_force_order=>'1',
+		cy_md_select=>"00000000")
+	PORT MAP(reset=>zero,
+		clock=>Net_981,
+		status=>(zero, zero, zero, zero,
+			Net_992, Net_992, Net_992, Net_992));
+\via8bits2:P0_ctrl:Sync:ctrl_reg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"00000000",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>zero,
+		control=>(\via8bits2:Net_489_7\, \via8bits2:Net_489_6\, \via8bits2:Net_489_5\, \via8bits2:Net_489_4\,
+			\via8bits2:Net_489_3\, \via8bits2:Net_489_2\, \via8bits2:Net_489_1\, \via8bits2:Net_489_0\));
+\via8bits2:P0_stat:sts:sts_reg\:cy_psoc3_status
+	GENERIC MAP(cy_force_order=>'1',
+		cy_md_select=>"00000000")
+	PORT MAP(reset=>zero,
+		clock=>Net_981,
+		status=>(Net_975_7, Net_975_6, Net_975_5, Net_975_4,
+			Net_975_3, Net_975_2, Net_975_1, Net_975_0));
+\via8bits2:P1_ctrl:Sync:ctrl_reg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"00000000",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>zero,
+		control=>(\via8bits2:Net_495_7\, \via8bits2:Net_495_6\, \via8bits2:Net_495_5\, \via8bits2:Net_495_4\,
+			\via8bits2:Net_495_3\, \via8bits2:Net_495_2\, \via8bits2:Net_495_1\, \via8bits2:Net_495_0\));
+\via8bits2:P1_stat:sts:sts_reg\:cy_psoc3_status
+	GENERIC MAP(cy_force_order=>'1',
+		cy_md_select=>"00000000")
+	PORT MAP(reset=>zero,
+		clock=>Net_981,
+		status=>(Net_976_7, Net_976_6, Net_976_5, Net_976_4,
+			Net_976_3, Net_976_2, Net_976_1, Net_976_0));
+\via8bits2:gnome_clk:Sync:ctrl_reg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"00000000",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>zero,
+		control=>(\via8bits2:gnome_clk:control_7\, \via8bits2:gnome_clk:control_6\, \via8bits2:gnome_clk:control_5\, \via8bits2:gnome_clk:control_4\,
+			\via8bits2:gnome_clk:control_3\, \via8bits2:gnome_clk:control_2\, \via8bits2:gnome_clk:control_1\, \via8bits2:gnome_clk:control_0\));
+\via8bits2:gnome_res:Sync:ctrl_reg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"00000000",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>zero,
+		control=>(\via8bits2:gnome_res:control_7\, \via8bits2:gnome_res:control_6\, \via8bits2:gnome_res:control_5\, \via8bits2:gnome_res:control_4\,
+			\via8bits2:gnome_res:control_3\, \via8bits2:gnome_res:control_2\, \via8bits2:gnome_res:control_1\, \via8bits2:gnome_res:control_0\));
+Clock_4:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"f305a45d-5a55-4b64-bcc2-a236b5036f65",
+		source_clock_id=>"75C2148C-3656-4d8a-846D-0CAE99AB6FF7",
+		divisor=>0,
+		period=>"0",
+		is_direct=>'1',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_981,
+		dig_domain_out=>open);
+Clock_5:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"622774ad-f868-49a5-8a00-37b43ecbd6ea",
+		source_clock_id=>"315365C3-2E3E-4f04-84A2-BB564A173261",
+		divisor=>0,
+		period=>"16666666666666.7",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_992,
+		dig_domain_out=>open);
 \MODULE_9:g1:a0:gx:u0:gne(2):c4:c6:u1\:cy_buf
 	PORT MAP(x=>\MODULE_9:g1:a0:gx:u0:lt_7\,
 		y=>\MODULE_9:g1:a0:gx:u0:lti_2\);

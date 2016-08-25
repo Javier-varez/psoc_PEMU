@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
+  <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DigitalComp_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="i2c_sda" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="I2C" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="BusClock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -87,9 +91,9 @@
   </block>
   <block name="LCD_gnome" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="LCD_gnome_B_reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LCD_gnome_B_reg_STATUS_REG" address="0x40006465" bitWidth="8" desc="" hidden="false" />
-      <register name="LCD_gnome_B_reg_MASK_REG" address="0x40006485" bitWidth="8" desc="" hidden="false" />
-      <register name="LCD_gnome_B_reg_STATUS_AUX_CTL_REG" address="0x40006495" bitWidth="8" desc="" hidden="false">
+      <register name="LCD_gnome_B_reg_STATUS_REG" address="0x40006462" bitWidth="8" desc="" hidden="false" />
+      <register name="LCD_gnome_B_reg_MASK_REG" address="0x40006482" bitWidth="8" desc="" hidden="false" />
+      <register name="LCD_gnome_B_reg_STATUS_AUX_CTL_REG" address="0x40006492" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -117,9 +121,9 @@
       </register>
     </block>
     <block name="LCD_gnome_A_reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LCD_gnome_A_reg_STATUS_REG" address="0x40006460" bitWidth="8" desc="" hidden="false" />
-      <register name="LCD_gnome_A_reg_MASK_REG" address="0x40006480" bitWidth="8" desc="" hidden="false" />
-      <register name="LCD_gnome_A_reg_STATUS_AUX_CTL_REG" address="0x40006490" bitWidth="8" desc="" hidden="false">
+      <register name="LCD_gnome_A_reg_STATUS_REG" address="0x40006466" bitWidth="8" desc="" hidden="false" />
+      <register name="LCD_gnome_A_reg_MASK_REG" address="0x40006486" bitWidth="8" desc="" hidden="false" />
+      <register name="LCD_gnome_A_reg_STATUS_AUX_CTL_REG" address="0x40006496" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -147,26 +151,16 @@
       </register>
     </block>
   </block>
-  <block name="EEPROM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="UART_RX_IT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Rx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Tx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_constant_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART" BASE="0x0" SIZE="0x0" desc="UART" visible="true" hidden="false">
     <block name="IntClock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="BUART" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="RX_UART_RX_ADDRESS1" address="0x40006528" bitWidth="8" desc="RX Address1 Register" hidden="false" />
-    <register name="RX_UART_RX_ADDRESS2" address="0x40006538" bitWidth="8" desc="RX Address2 Register" hidden="false" />
-    <register name="TX_UART_TX_DATA" address="0x40006544" bitWidth="8" desc="TX Data Register" hidden="false" />
-    <register name="RX_UART_RX_DATA" address="0x40006548" bitWidth="8" desc="RX Data Register" hidden="false" />
-    <register name="TX_UART_TX_STATUS" address="0x40006564" bitWidth="8" desc="TX status register" hidden="false">
-      <field name="UART_TX_STS_COMPLETE" from="0" to="0" access="R" resetVal="" desc="" />
-      <field name="UART_TX_STS_FIFO_EMPTY" from="1" to="1" access="R" resetVal="" desc="" />
-      <field name="UART_TX_STS_FIFO_FULL" from="2" to="2" access="R" resetVal="" desc="" />
-      <field name="UART_TX_STS_FIFO_NOT_FULL" from="3" to="3" access="R" resetVal="" desc="" />
-    </register>
-    <register name="RX_UART_RX_STATUS" address="0x40006567" bitWidth="8" desc="RX status register" hidden="false">
+    <register name="RX_UART_RX_STATUS" address="0x40006469" bitWidth="8" desc="RX status register" hidden="false">
       <field name="UART_RX_STS_MRKSPC" from="0" to="0" access="R" resetVal="" desc="" />
       <field name="UART_RX_STS_BREAK" from="1" to="1" access="R" resetVal="" desc="" />
       <field name="UART_RX_STS_PAR_ERROR" from="2" to="2" access="R" resetVal="" desc="" />
@@ -175,20 +169,23 @@
       <field name="UART_RX_STS_FIFO_NOTEMPTY" from="5" to="5" access="R" resetVal="" desc="" />
       <field name="UART_RX_STS_ADDR_MATCH" from="6" to="6" access="R" resetVal="" desc="" />
     </register>
+    <register name="RX_UART_RX_ADDRESS1" address="0x4000652A" bitWidth="8" desc="RX Address1 Register" hidden="false" />
+    <register name="RX_UART_RX_ADDRESS2" address="0x4000653A" bitWidth="8" desc="RX Address2 Register" hidden="false" />
+    <register name="TX_UART_TX_DATA" address="0x40006547" bitWidth="8" desc="TX Data Register" hidden="false" />
+    <register name="RX_UART_RX_DATA" address="0x4000654A" bitWidth="8" desc="RX Data Register" hidden="false" />
+    <register name="TX_UART_TX_STATUS" address="0x40006567" bitWidth="8" desc="TX status register" hidden="false">
+      <field name="UART_TX_STS_COMPLETE" from="0" to="0" access="R" resetVal="" desc="" />
+      <field name="UART_TX_STS_FIFO_EMPTY" from="1" to="1" access="R" resetVal="" desc="" />
+      <field name="UART_TX_STS_FIFO_FULL" from="2" to="2" access="R" resetVal="" desc="" />
+      <field name="UART_TX_STS_FIFO_NOT_FULL" from="3" to="3" access="R" resetVal="" desc="" />
+    </register>
   </block>
-  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="DigitalComp_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="cy_constant_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="DigitalComp_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="via8bits" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+  <block name="via8bits2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="mux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="via8bits_P1_stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_P1_stat_STATUS_REG" address="0x40006566" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_P1_stat_MASK_REG" address="0x40006586" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_P1_stat_STATUS_AUX_CTL_REG" address="0x40006596" bitWidth="8" desc="" hidden="false">
+    <block name="via8bits2_P1_stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits2_P1_stat_STATUS_REG" address="0x40006468" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits2_P1_stat_MASK_REG" address="0x40006488" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits2_P1_stat_STATUS_AUX_CTL_REG" address="0x40006498" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -216,14 +213,12 @@
       </register>
     </block>
     <block name="mux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="via8bits_gnome_res" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_gnome_res_CONTROL_REG" address="0x40006473" bitWidth="8" desc="" hidden="false" />
-    </block>
-    <block name="via8bits_gnome_clk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="via8bits_Stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_Stat_STATUS_REG" address="0x40006461" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_Stat_MASK_REG" address="0x40006481" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_Stat_STATUS_AUX_CTL_REG" address="0x40006491" bitWidth="8" desc="" hidden="false">
+    <block name="via8bits2_gnome_res" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="via8bits2_gnome_clk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="via8bits2_Stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits2_Stat_STATUS_REG" address="0x40006463" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits2_Stat_MASK_REG" address="0x40006483" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits2_Stat_STATUS_AUX_CTL_REG" address="0x40006493" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -250,19 +245,132 @@
         </field>
       </register>
     </block>
-    <block name="via8bits_Ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_Ctrl_CONTROL_REG" address="0x40006476" bitWidth="8" desc="" hidden="false" />
+    <block name="via8bits2_Ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits2_Ctrl_CONTROL_REG" address="0x4000657B" bitWidth="8" desc="" hidden="false" />
     </block>
-    <block name="via8bits_P0_ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_P0_ctrl_CONTROL_REG" address="0x40006472" bitWidth="8" desc="" hidden="false" />
+    <block name="via8bits2_P0_ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits2_P0_ctrl_CONTROL_REG" address="0x40006575" bitWidth="8" desc="" hidden="false" />
     </block>
-    <block name="via8bits_P1_ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_P1_ctrl_CONTROL_REG" address="0x40006576" bitWidth="8" desc="" hidden="false" />
+    <block name="via8bits2_P1_ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits2_P1_ctrl_CONTROL_REG" address="0x40006478" bitWidth="8" desc="" hidden="false" />
     </block>
-    <block name="via8bits_P0_stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="via8bits_P0_stat_STATUS_REG" address="0x40006466" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_P0_stat_MASK_REG" address="0x40006486" bitWidth="8" desc="" hidden="false" />
-      <register name="via8bits_P0_stat_STATUS_AUX_CTL_REG" address="0x40006496" bitWidth="8" desc="" hidden="false">
+    <block name="via8bits2_P0_stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits2_P0_stat_STATUS_REG" address="0x40006565" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits2_P0_stat_MASK_REG" address="0x40006585" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits2_P0_stat_STATUS_AUX_CTL_REG" address="0x40006595" bitWidth="8" desc="" hidden="false">
+        <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
+          <value name="ENABLED" value="1" desc="Enable counter" />
+          <value name="DISABLED" value="0" desc="Disable counter" />
+        </field>
+        <field name="INTRENBL" from="4" to="4" access="RW" resetVal="" desc="Enables or disables the Interrupt">
+          <value name="ENABLED" value="1" desc="Interrupt enabled" />
+          <value name="DISABLED" value="0" desc="Interrupt disabled" />
+        </field>
+        <field name="FIFO1LEVEL" from="3" to="3" access="RW" resetVal="" desc="FIFO level">
+          <value name="ENABLED" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+          <value name="DISABLED" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+        </field>
+        <field name="FIFO0LEVEL" from="2" to="2" access="RW" resetVal="" desc="FIFO level">
+          <value name="ENABLED" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+          <value name="DISABLED" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+        </field>
+        <field name="FIFO1CLEAR" from="1" to="1" access="RW" resetVal="" desc="FIFO clear">
+          <value name="ENABLED" value="1" desc="Clear FIFO state" />
+          <value name="DISABLED" value="0" desc="Normal FIFO operation" />
+        </field>
+        <field name="FIFO0CLEAR" from="0" to="0" access="RW" resetVal="" desc="FIFO clear">
+          <value name="ENABLED" value="1" desc="Clear FIFO state" />
+          <value name="DISABLED" value="0" desc="Normal FIFO operation" />
+        </field>
+      </register>
+    </block>
+  </block>
+  <block name="cy_constant_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Rx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DigitalComp_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_constant_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="via8bits1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="mux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="via8bits1_P1_stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits1_P1_stat_STATUS_REG" address="0x40006460" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits1_P1_stat_MASK_REG" address="0x40006480" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits1_P1_stat_STATUS_AUX_CTL_REG" address="0x40006490" bitWidth="8" desc="" hidden="false">
+        <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
+          <value name="ENABLED" value="1" desc="Enable counter" />
+          <value name="DISABLED" value="0" desc="Disable counter" />
+        </field>
+        <field name="INTRENBL" from="4" to="4" access="RW" resetVal="" desc="Enables or disables the Interrupt">
+          <value name="ENABLED" value="1" desc="Interrupt enabled" />
+          <value name="DISABLED" value="0" desc="Interrupt disabled" />
+        </field>
+        <field name="FIFO1LEVEL" from="3" to="3" access="RW" resetVal="" desc="FIFO level">
+          <value name="ENABLED" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+          <value name="DISABLED" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+        </field>
+        <field name="FIFO0LEVEL" from="2" to="2" access="RW" resetVal="" desc="FIFO level">
+          <value name="ENABLED" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+          <value name="DISABLED" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+        </field>
+        <field name="FIFO1CLEAR" from="1" to="1" access="RW" resetVal="" desc="FIFO clear">
+          <value name="ENABLED" value="1" desc="Clear FIFO state" />
+          <value name="DISABLED" value="0" desc="Normal FIFO operation" />
+        </field>
+        <field name="FIFO0CLEAR" from="0" to="0" access="RW" resetVal="" desc="FIFO clear">
+          <value name="ENABLED" value="1" desc="Clear FIFO state" />
+          <value name="DISABLED" value="0" desc="Normal FIFO operation" />
+        </field>
+      </register>
+    </block>
+    <block name="mux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="via8bits1_gnome_res" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits1_gnome_res_CONTROL_REG" address="0x40006474" bitWidth="8" desc="" hidden="false" />
+    </block>
+    <block name="via8bits1_gnome_clk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="via8bits1_Stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits1_Stat_STATUS_REG" address="0x40006461" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits1_Stat_MASK_REG" address="0x40006481" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits1_Stat_STATUS_AUX_CTL_REG" address="0x40006491" bitWidth="8" desc="" hidden="false">
+        <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
+          <value name="ENABLED" value="1" desc="Enable counter" />
+          <value name="DISABLED" value="0" desc="Disable counter" />
+        </field>
+        <field name="INTRENBL" from="4" to="4" access="RW" resetVal="" desc="Enables or disables the Interrupt">
+          <value name="ENABLED" value="1" desc="Interrupt enabled" />
+          <value name="DISABLED" value="0" desc="Interrupt disabled" />
+        </field>
+        <field name="FIFO1LEVEL" from="3" to="3" access="RW" resetVal="" desc="FIFO level">
+          <value name="ENABLED" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+          <value name="DISABLED" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+        </field>
+        <field name="FIFO0LEVEL" from="2" to="2" access="RW" resetVal="" desc="FIFO level">
+          <value name="ENABLED" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+          <value name="DISABLED" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+        </field>
+        <field name="FIFO1CLEAR" from="1" to="1" access="RW" resetVal="" desc="FIFO clear">
+          <value name="ENABLED" value="1" desc="Clear FIFO state" />
+          <value name="DISABLED" value="0" desc="Normal FIFO operation" />
+        </field>
+        <field name="FIFO0CLEAR" from="0" to="0" access="RW" resetVal="" desc="FIFO clear">
+          <value name="ENABLED" value="1" desc="Clear FIFO state" />
+          <value name="DISABLED" value="0" desc="Normal FIFO operation" />
+        </field>
+      </register>
+    </block>
+    <block name="via8bits1_Ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits1_Ctrl_CONTROL_REG" address="0x40006475" bitWidth="8" desc="" hidden="false" />
+    </block>
+    <block name="via8bits1_P0_ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits1_P0_ctrl_CONTROL_REG" address="0x40006476" bitWidth="8" desc="" hidden="false" />
+    </block>
+    <block name="via8bits1_P1_ctrl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits1_P1_ctrl_CONTROL_REG" address="0x40006470" bitWidth="8" desc="" hidden="false" />
+    </block>
+    <block name="via8bits1_P0_stat" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="via8bits1_P0_stat_STATUS_REG" address="0x40006566" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits1_P0_stat_MASK_REG" address="0x40006586" bitWidth="8" desc="" hidden="false" />
+      <register name="via8bits1_P0_stat_STATUS_AUX_CTL_REG" address="0x40006596" bitWidth="8" desc="" hidden="false">
         <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
           <value name="ENABLED" value="1" desc="Enable counter" />
           <value name="DISABLED" value="0" desc="Disable counter" />
@@ -292,11 +400,12 @@
   </block>
   <block name="ISR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Clock_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Button" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="cy_constant_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Centr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_constant_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Centr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="EEPROM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="UART_RX_IT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_constant_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="i2c_scl" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_constant_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Button" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

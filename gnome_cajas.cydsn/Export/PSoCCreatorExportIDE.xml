@@ -84,21 +84,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LED_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LED.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LED.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_Ctrl.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_Ctrl.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_Ctrl_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_Stat.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_Stat.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P0_ctrl.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P0_ctrl.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P0_ctrl_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P0_stat.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P0_stat.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P1_ctrl.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P1_ctrl.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P1_ctrl_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P1_stat.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_P1_stat.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cycodeshareimport.scat</File>
@@ -136,9 +121,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_BOOT.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_IntClock.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_IntClock.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_gnome_clk.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_gnome_clk.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_gnome_clk_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\I2C.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\I2C.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\I2C_BOOT.c</File>
@@ -157,9 +139,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_gnome_A_reg.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_gnome_B_reg.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_gnome_B_reg.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_gnome_res.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_gnome_res.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits_gnome_res_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Clock_3.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Clock_3.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Rx_1_aliases.h</File>
@@ -167,6 +146,50 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Rx_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_RX_IT.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_RX_IT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_Ctrl.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_Ctrl.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_Ctrl_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_Stat.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_Stat.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P0_ctrl.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P0_ctrl.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P0_ctrl_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P0_stat.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P0_stat.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P1_ctrl.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P1_ctrl.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P1_ctrl_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P1_stat.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_P1_stat.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_gnome_clk.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_gnome_clk.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_gnome_clk_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_gnome_res.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_gnome_res.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits1_gnome_res_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Clock_5.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Clock_5.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_Ctrl.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_Ctrl.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_Ctrl_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_Stat.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_Stat.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P0_ctrl.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P0_ctrl.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P0_ctrl_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P0_stat.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P0_stat.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P1_ctrl.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P1_ctrl.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P1_ctrl_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P1_stat.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_P1_stat.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_gnome_clk.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_gnome_clk.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_gnome_clk_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_gnome_res.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_gnome_res.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\via8bits2_gnome_res_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\Export\ARM_GCC_Generic">

@@ -20,20 +20,35 @@
 #include "gnome_it.h"
 
 void gnome_switch_clk() {
-    #ifndef GNOME_VIA_GNOME_CLK_OPT_OUT 
+    #ifndef GNOME_VIA1_GNOME_CLK_OPT_OUT 
         // Set CLK pointer
-        reg8 *clk = GNOME_VIA_GNOME_CLK_ADDR;
+        reg8 *clk = GNOME_VIA1_GNOME_CLK_ADDR;
         *clk = !*clk;
+    #endif
+    #ifndef GNOME_VIA2_GNOME_CLK_OPT_OUT 
+        #if GNOME_VIA2_ACTIVE
+        // Set CLK pointer
+        reg8 *clk = GNOME_VIA2_GNOME_CLK_ADDR;
+        *clk = !*clk;
+        #endif
     #endif
 }
 
 void gnome_assert_reset() {
-    #ifndef GNOME_VIA_GNOME_RES_OPT_OUT 
+    #ifndef GNOME_VIA1_GNOME_RES_OPT_OUT 
         // Set CLK pointer
-        reg8 *res = GNOME_VIA_GNOME_RES_ADDR;
-        *res = 1;
+        *((reg8*)GNOME_VIA1_GNOME_RES_ADDR) = 1;
         CyDelay(1);
-        *res = 0;
+        *((reg8*)GNOME_VIA1_GNOME_RES_ADDR) = 0;
+    #endif
+    
+    #ifndef GNOME_VIA2_GNOME_RES_OPT_OUT 
+        #if GNOME_VIA2_ACTIVE
+        // Set CLK pointer
+        *((reg8*)GNOME_VIA2_GNOME_RES_ADDR) = 1;
+        CyDelay(1);
+        *((reg8*)GNOME_VIA2_GNOME_RES_ADDR) = 0;
+        #endif
     #endif
 }
 

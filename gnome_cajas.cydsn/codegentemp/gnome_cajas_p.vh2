@@ -1,5 +1,5 @@
 -- Project:   gnome_cajas
--- Generated: 07/15/2016 02:35:59
+-- Generated: 08/17/2016 00:23:42
 -- PSoC Creator  3.3 SP1
 
 ENTITY gnome_cajas IS
@@ -84,6 +84,25 @@ ARCHITECTURE __DEFAULT__ OF gnome_cajas IS
     SIGNAL Net_941 : bit;
     SIGNAL Net_943 : bit;
     SIGNAL Net_952 : bit;
+    SIGNAL Net_975_0 : bit;
+    SIGNAL Net_975_1 : bit;
+    SIGNAL Net_975_2 : bit;
+    SIGNAL Net_975_3 : bit;
+    SIGNAL Net_975_4 : bit;
+    SIGNAL Net_975_5 : bit;
+    SIGNAL Net_975_6 : bit;
+    SIGNAL Net_975_7 : bit;
+    SIGNAL Net_976_0 : bit;
+    SIGNAL Net_976_1 : bit;
+    SIGNAL Net_976_2 : bit;
+    SIGNAL Net_976_3 : bit;
+    SIGNAL Net_976_4 : bit;
+    SIGNAL Net_976_5 : bit;
+    SIGNAL Net_976_6 : bit;
+    SIGNAL Net_976_7 : bit;
+    SIGNAL Net_992 : bit;
+    ATTRIBUTE global_signal OF Net_992 : SIGNAL IS true;
+    SIGNAL Net_992_local : bit;
     SIGNAL P1_signal_0 : bit;
     SIGNAL P1_signal_1 : bit;
     SIGNAL P1_signal_2 : bit;
@@ -155,35 +174,59 @@ ARCHITECTURE __DEFAULT__ OF gnome_cajas IS
     ATTRIBUTE udbclken_assigned OF \UART:Net_9\ : SIGNAL IS "True";
     ATTRIBUTE global_signal OF \UART:Net_9\ : SIGNAL IS true;
     SIGNAL \UART:Net_9_local\ : bit;
-    SIGNAL \via8bits:Ctrl:control_4\ : bit;
-    SIGNAL \via8bits:Ctrl:control_5\ : bit;
-    SIGNAL \via8bits:Ctrl:control_6\ : bit;
-    SIGNAL \via8bits:Ctrl:control_7\ : bit;
-    SIGNAL \via8bits:Net_489_0\ : bit;
-    SIGNAL \via8bits:Net_489_1\ : bit;
-    SIGNAL \via8bits:Net_489_2\ : bit;
-    SIGNAL \via8bits:Net_489_3\ : bit;
-    SIGNAL \via8bits:Net_489_4\ : bit;
-    SIGNAL \via8bits:Net_489_5\ : bit;
-    SIGNAL \via8bits:Net_489_6\ : bit;
-    SIGNAL \via8bits:Net_489_7\ : bit;
-    SIGNAL \via8bits:Net_495_0\ : bit;
-    SIGNAL \via8bits:Net_495_1\ : bit;
-    SIGNAL \via8bits:Net_495_2\ : bit;
-    SIGNAL \via8bits:Net_495_3\ : bit;
-    SIGNAL \via8bits:Net_495_4\ : bit;
-    SIGNAL \via8bits:Net_495_5\ : bit;
-    SIGNAL \via8bits:Net_495_6\ : bit;
-    SIGNAL \via8bits:Net_495_7\ : bit;
-    SIGNAL \via8bits:P0_io\ : bit;
-    SIGNAL \via8bits:P1_io\ : bit;
-    SIGNAL \via8bits:gnome_res:control_1\ : bit;
-    SIGNAL \via8bits:gnome_res:control_2\ : bit;
-    SIGNAL \via8bits:gnome_res:control_3\ : bit;
-    SIGNAL \via8bits:gnome_res:control_4\ : bit;
-    SIGNAL \via8bits:gnome_res:control_5\ : bit;
-    SIGNAL \via8bits:gnome_res:control_6\ : bit;
-    SIGNAL \via8bits:gnome_res:control_7\ : bit;
+    SIGNAL \via8bits1:Ctrl:control_4\ : bit;
+    SIGNAL \via8bits1:Ctrl:control_5\ : bit;
+    SIGNAL \via8bits1:Ctrl:control_6\ : bit;
+    SIGNAL \via8bits1:Ctrl:control_7\ : bit;
+    SIGNAL \via8bits1:Net_489_0\ : bit;
+    SIGNAL \via8bits1:Net_489_1\ : bit;
+    SIGNAL \via8bits1:Net_489_2\ : bit;
+    SIGNAL \via8bits1:Net_489_3\ : bit;
+    SIGNAL \via8bits1:Net_489_4\ : bit;
+    SIGNAL \via8bits1:Net_489_5\ : bit;
+    SIGNAL \via8bits1:Net_489_6\ : bit;
+    SIGNAL \via8bits1:Net_489_7\ : bit;
+    SIGNAL \via8bits1:Net_495_0\ : bit;
+    SIGNAL \via8bits1:Net_495_1\ : bit;
+    SIGNAL \via8bits1:Net_495_2\ : bit;
+    SIGNAL \via8bits1:Net_495_3\ : bit;
+    SIGNAL \via8bits1:Net_495_4\ : bit;
+    SIGNAL \via8bits1:Net_495_5\ : bit;
+    SIGNAL \via8bits1:Net_495_6\ : bit;
+    SIGNAL \via8bits1:Net_495_7\ : bit;
+    SIGNAL \via8bits1:P0_io\ : bit;
+    SIGNAL \via8bits1:P1_io\ : bit;
+    SIGNAL \via8bits1:gnome_res:control_1\ : bit;
+    SIGNAL \via8bits1:gnome_res:control_2\ : bit;
+    SIGNAL \via8bits1:gnome_res:control_3\ : bit;
+    SIGNAL \via8bits1:gnome_res:control_4\ : bit;
+    SIGNAL \via8bits1:gnome_res:control_5\ : bit;
+    SIGNAL \via8bits1:gnome_res:control_6\ : bit;
+    SIGNAL \via8bits1:gnome_res:control_7\ : bit;
+    SIGNAL \via8bits2:Ctrl:control_0\ : bit;
+    SIGNAL \via8bits2:Ctrl:control_2\ : bit;
+    SIGNAL \via8bits2:Ctrl:control_4\ : bit;
+    SIGNAL \via8bits2:Ctrl:control_5\ : bit;
+    SIGNAL \via8bits2:Ctrl:control_6\ : bit;
+    SIGNAL \via8bits2:Ctrl:control_7\ : bit;
+    SIGNAL \via8bits2:Net_489_0\ : bit;
+    SIGNAL \via8bits2:Net_489_1\ : bit;
+    SIGNAL \via8bits2:Net_489_2\ : bit;
+    SIGNAL \via8bits2:Net_489_3\ : bit;
+    SIGNAL \via8bits2:Net_489_4\ : bit;
+    SIGNAL \via8bits2:Net_489_5\ : bit;
+    SIGNAL \via8bits2:Net_489_6\ : bit;
+    SIGNAL \via8bits2:Net_489_7\ : bit;
+    SIGNAL \via8bits2:Net_495_0\ : bit;
+    SIGNAL \via8bits2:Net_495_1\ : bit;
+    SIGNAL \via8bits2:Net_495_2\ : bit;
+    SIGNAL \via8bits2:Net_495_3\ : bit;
+    SIGNAL \via8bits2:Net_495_4\ : bit;
+    SIGNAL \via8bits2:Net_495_5\ : bit;
+    SIGNAL \via8bits2:Net_495_6\ : bit;
+    SIGNAL \via8bits2:Net_495_7\ : bit;
+    SIGNAL \via8bits2:P0_io\ : bit;
+    SIGNAL \via8bits2:P1_io\ : bit;
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
@@ -231,19 +274,35 @@ ARCHITECTURE __DEFAULT__ OF gnome_cajas IS
     ATTRIBUTE lib_model OF \UART:BUART:rx_postpoll\ : LABEL IS "macrocell24";
     ATTRIBUTE lib_model OF \UART:BUART:rx_status_4\ : LABEL IS "macrocell25";
     ATTRIBUTE lib_model OF \UART:BUART:rx_status_5\ : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:lt_7\ : LABEL IS "macrocell27";
-    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:gt_5\ : LABEL IS "macrocell28";
-    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:lt_2\ : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:gt_2\ : LABEL IS "macrocell30";
-    ATTRIBUTE lib_model OF \MODULE_10:g1:a0:gx:u0:lt_5\ : LABEL IS "macrocell31";
-    ATTRIBUTE lib_model OF \MODULE_10:g1:a0:gx:u0:gt_5\ : LABEL IS "macrocell32";
-    ATTRIBUTE lib_model OF \via8bits:Ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell1";
-    ATTRIBUTE lib_model OF \via8bits:Stat:sts:sts_reg\ : LABEL IS "statuscell1";
-    ATTRIBUTE lib_model OF \via8bits:P0_ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell2";
-    ATTRIBUTE lib_model OF \via8bits:P0_stat:sts:sts_reg\ : LABEL IS "statuscell2";
-    ATTRIBUTE lib_model OF \via8bits:P1_ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell3";
-    ATTRIBUTE lib_model OF \via8bits:P1_stat:sts:sts_reg\ : LABEL IS "statuscell3";
-    ATTRIBUTE lib_model OF \via8bits:gnome_res:Sync:ctrl_reg\ : LABEL IS "controlcell4";
+    ATTRIBUTE lib_model OF Net_975_7 : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF Net_975_6 : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF Net_975_5 : LABEL IS "macrocell29";
+    ATTRIBUTE lib_model OF Net_975_4 : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF Net_975_3 : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF Net_975_2 : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF Net_975_1 : LABEL IS "macrocell33";
+    ATTRIBUTE lib_model OF Net_975_0 : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF Net_976_7 : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF Net_976_6 : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF Net_976_5 : LABEL IS "macrocell37";
+    ATTRIBUTE lib_model OF Net_976_4 : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF Net_976_3 : LABEL IS "macrocell39";
+    ATTRIBUTE lib_model OF Net_976_2 : LABEL IS "macrocell40";
+    ATTRIBUTE lib_model OF Net_976_1 : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF Net_976_0 : LABEL IS "macrocell42";
+    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:lt_7\ : LABEL IS "macrocell43";
+    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:gt_5\ : LABEL IS "macrocell44";
+    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:lt_2\ : LABEL IS "macrocell45";
+    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:gt_2\ : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF \MODULE_10:g1:a0:gx:u0:lt_5\ : LABEL IS "macrocell47";
+    ATTRIBUTE lib_model OF \MODULE_10:g1:a0:gx:u0:gt_5\ : LABEL IS "macrocell48";
+    ATTRIBUTE lib_model OF \via8bits1:Ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell1";
+    ATTRIBUTE lib_model OF \via8bits1:Stat:sts:sts_reg\ : LABEL IS "statuscell1";
+    ATTRIBUTE lib_model OF \via8bits1:P0_ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell2";
+    ATTRIBUTE lib_model OF \via8bits1:P0_stat:sts:sts_reg\ : LABEL IS "statuscell2";
+    ATTRIBUTE lib_model OF \via8bits1:P1_ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell3";
+    ATTRIBUTE lib_model OF \via8bits1:P1_stat:sts:sts_reg\ : LABEL IS "statuscell3";
+    ATTRIBUTE lib_model OF \via8bits1:gnome_res:Sync:ctrl_reg\ : LABEL IS "controlcell4";
     ATTRIBUTE lib_model OF \LCD_gnome:A_reg:sts:sts_reg\ : LABEL IS "statuscell4";
     ATTRIBUTE lib_model OF \LCD_gnome:B_reg:sts:sts_reg\ : LABEL IS "statuscell5";
     ATTRIBUTE lib_model OF \UART:BUART:sTX:TxShifter:u0\ : LABEL IS "datapathcell1";
@@ -251,55 +310,61 @@ ARCHITECTURE __DEFAULT__ OF gnome_cajas IS
     ATTRIBUTE lib_model OF \UART:BUART:sTX:TxSts\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \UART:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell3";
     ATTRIBUTE lib_model OF \UART:BUART:sRX:RxSts\ : LABEL IS "statusicell2";
-    ATTRIBUTE lib_model OF Net_659 : LABEL IS "macrocell33";
-    ATTRIBUTE lib_model OF \Centr:v_1\ : LABEL IS "macrocell34";
-    ATTRIBUTE lib_model OF \Centr:v_0\ : LABEL IS "macrocell35";
-    ATTRIBUTE lib_model OF \Centr:resetemp\ : LABEL IS "macrocell36";
-    ATTRIBUTE lib_model OF \Centr:parocuenta\ : LABEL IS "macrocell37";
-    ATTRIBUTE lib_model OF P1_signal_7 : LABEL IS "macrocell38";
-    ATTRIBUTE lib_model OF P1_signal_6 : LABEL IS "macrocell39";
-    ATTRIBUTE lib_model OF P1_signal_5 : LABEL IS "macrocell40";
-    ATTRIBUTE lib_model OF P1_signal_4 : LABEL IS "macrocell41";
-    ATTRIBUTE lib_model OF P1_signal_3 : LABEL IS "macrocell42";
-    ATTRIBUTE lib_model OF P1_signal_2 : LABEL IS "macrocell43";
-    ATTRIBUTE lib_model OF P1_signal_1 : LABEL IS "macrocell44";
-    ATTRIBUTE lib_model OF P1_signal_0 : LABEL IS "macrocell45";
-    ATTRIBUTE lib_model OF \Centr:state_1\ : LABEL IS "macrocell46";
-    ATTRIBUTE lib_model OF \Centr:state_0\ : LABEL IS "macrocell47";
-    ATTRIBUTE lib_model OF Net_784_7 : LABEL IS "macrocell48";
-    ATTRIBUTE lib_model OF \Centr:c\ : LABEL IS "macrocell49";
-    ATTRIBUTE lib_model OF Net_784_6 : LABEL IS "macrocell50";
-    ATTRIBUTE lib_model OF Net_784_5 : LABEL IS "macrocell51";
-    ATTRIBUTE lib_model OF Net_784_4 : LABEL IS "macrocell52";
-    ATTRIBUTE lib_model OF Net_784_3 : LABEL IS "macrocell53";
-    ATTRIBUTE lib_model OF Net_784_2 : LABEL IS "macrocell54";
-    ATTRIBUTE lib_model OF Net_784_1 : LABEL IS "macrocell55";
-    ATTRIBUTE lib_model OF Net_784_0 : LABEL IS "macrocell56";
-    ATTRIBUTE lib_model OF Net_597_7 : LABEL IS "macrocell57";
-    ATTRIBUTE lib_model OF \Centr:d\ : LABEL IS "macrocell58";
-    ATTRIBUTE lib_model OF Net_597_6 : LABEL IS "macrocell59";
-    ATTRIBUTE lib_model OF Net_597_5 : LABEL IS "macrocell60";
-    ATTRIBUTE lib_model OF Net_597_4 : LABEL IS "macrocell61";
-    ATTRIBUTE lib_model OF Net_597_3 : LABEL IS "macrocell62";
-    ATTRIBUTE lib_model OF Net_597_2 : LABEL IS "macrocell63";
-    ATTRIBUTE lib_model OF Net_597_1 : LABEL IS "macrocell64";
-    ATTRIBUTE lib_model OF Net_597_0 : LABEL IS "macrocell65";
-    ATTRIBUTE lib_model OF \UART:BUART:txn\ : LABEL IS "macrocell66";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_state_1\ : LABEL IS "macrocell67";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_state_0\ : LABEL IS "macrocell68";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_state_2\ : LABEL IS "macrocell69";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_bitclk\ : LABEL IS "macrocell70";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell71";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_0\ : LABEL IS "macrocell72";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_load_fifo\ : LABEL IS "macrocell73";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_3\ : LABEL IS "macrocell74";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_2\ : LABEL IS "macrocell75";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "macrocell76";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell77";
-    ATTRIBUTE lib_model OF \UART:BUART:pollcount_1\ : LABEL IS "macrocell78";
-    ATTRIBUTE lib_model OF \UART:BUART:pollcount_0\ : LABEL IS "macrocell79";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_status_3\ : LABEL IS "macrocell80";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_last\ : LABEL IS "macrocell81";
+    ATTRIBUTE lib_model OF \via8bits2:Ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell5";
+    ATTRIBUTE lib_model OF \via8bits2:Stat:sts:sts_reg\ : LABEL IS "statuscell6";
+    ATTRIBUTE lib_model OF \via8bits2:P0_ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell6";
+    ATTRIBUTE lib_model OF \via8bits2:P0_stat:sts:sts_reg\ : LABEL IS "statuscell7";
+    ATTRIBUTE lib_model OF \via8bits2:P1_ctrl:Sync:ctrl_reg\ : LABEL IS "controlcell7";
+    ATTRIBUTE lib_model OF \via8bits2:P1_stat:sts:sts_reg\ : LABEL IS "statuscell8";
+    ATTRIBUTE lib_model OF Net_659 : LABEL IS "macrocell49";
+    ATTRIBUTE lib_model OF \Centr:v_1\ : LABEL IS "macrocell50";
+    ATTRIBUTE lib_model OF \Centr:v_0\ : LABEL IS "macrocell51";
+    ATTRIBUTE lib_model OF \Centr:resetemp\ : LABEL IS "macrocell52";
+    ATTRIBUTE lib_model OF \Centr:parocuenta\ : LABEL IS "macrocell53";
+    ATTRIBUTE lib_model OF P1_signal_7 : LABEL IS "macrocell54";
+    ATTRIBUTE lib_model OF P1_signal_6 : LABEL IS "macrocell55";
+    ATTRIBUTE lib_model OF P1_signal_5 : LABEL IS "macrocell56";
+    ATTRIBUTE lib_model OF P1_signal_4 : LABEL IS "macrocell57";
+    ATTRIBUTE lib_model OF P1_signal_3 : LABEL IS "macrocell58";
+    ATTRIBUTE lib_model OF P1_signal_2 : LABEL IS "macrocell59";
+    ATTRIBUTE lib_model OF P1_signal_1 : LABEL IS "macrocell60";
+    ATTRIBUTE lib_model OF P1_signal_0 : LABEL IS "macrocell61";
+    ATTRIBUTE lib_model OF \Centr:state_1\ : LABEL IS "macrocell62";
+    ATTRIBUTE lib_model OF \Centr:state_0\ : LABEL IS "macrocell63";
+    ATTRIBUTE lib_model OF Net_784_7 : LABEL IS "macrocell64";
+    ATTRIBUTE lib_model OF \Centr:c\ : LABEL IS "macrocell65";
+    ATTRIBUTE lib_model OF Net_784_6 : LABEL IS "macrocell66";
+    ATTRIBUTE lib_model OF Net_784_5 : LABEL IS "macrocell67";
+    ATTRIBUTE lib_model OF Net_784_4 : LABEL IS "macrocell68";
+    ATTRIBUTE lib_model OF Net_784_3 : LABEL IS "macrocell69";
+    ATTRIBUTE lib_model OF Net_784_2 : LABEL IS "macrocell70";
+    ATTRIBUTE lib_model OF Net_784_1 : LABEL IS "macrocell71";
+    ATTRIBUTE lib_model OF Net_784_0 : LABEL IS "macrocell72";
+    ATTRIBUTE lib_model OF Net_597_7 : LABEL IS "macrocell73";
+    ATTRIBUTE lib_model OF \Centr:d\ : LABEL IS "macrocell74";
+    ATTRIBUTE lib_model OF Net_597_6 : LABEL IS "macrocell75";
+    ATTRIBUTE lib_model OF Net_597_5 : LABEL IS "macrocell76";
+    ATTRIBUTE lib_model OF Net_597_4 : LABEL IS "macrocell77";
+    ATTRIBUTE lib_model OF Net_597_3 : LABEL IS "macrocell78";
+    ATTRIBUTE lib_model OF Net_597_2 : LABEL IS "macrocell79";
+    ATTRIBUTE lib_model OF Net_597_1 : LABEL IS "macrocell80";
+    ATTRIBUTE lib_model OF Net_597_0 : LABEL IS "macrocell81";
+    ATTRIBUTE lib_model OF \UART:BUART:txn\ : LABEL IS "macrocell82";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_state_1\ : LABEL IS "macrocell83";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_state_0\ : LABEL IS "macrocell84";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_state_2\ : LABEL IS "macrocell85";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_bitclk\ : LABEL IS "macrocell86";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell87";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_0\ : LABEL IS "macrocell88";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_load_fifo\ : LABEL IS "macrocell89";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_3\ : LABEL IS "macrocell90";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_2\ : LABEL IS "macrocell91";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "macrocell92";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell93";
+    ATTRIBUTE lib_model OF \UART:BUART:pollcount_1\ : LABEL IS "macrocell94";
+    ATTRIBUTE lib_model OF \UART:BUART:pollcount_0\ : LABEL IS "macrocell95";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_status_3\ : LABEL IS "macrocell96";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_last\ : LABEL IS "macrocell97";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -669,8 +734,10 @@ BEGIN
             dsi_glb_div => open,
             dclk_glb_0 => \UART:Net_9\,
             dclk_0 => \UART:Net_9_local\,
-            dclk_glb_1 => Net_811,
-            dclk_1 => Net_811_local,
+            dclk_glb_1 => Net_992,
+            dclk_1 => Net_992_local,
+            dclk_glb_2 => Net_811,
+            dclk_2 => Net_811_local,
             clk_bus_glb_ff => \ClockBlock.clk_bus_glb_ff__sig\);
 
     i2c_scl:logicalport
@@ -1232,8 +1299,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_870_7,
-            main_0 => \via8bits:P0_io\,
-            main_1 => \via8bits:Net_489_7\);
+            main_0 => \via8bits1:P0_io\,
+            main_1 => \via8bits1:Net_489_7\);
 
     Net_870_6:macrocell
         GENERIC MAP(
@@ -1241,8 +1308,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_870_6,
-            main_0 => \via8bits:P0_io\,
-            main_1 => \via8bits:Net_489_6\);
+            main_0 => \via8bits1:P0_io\,
+            main_1 => \via8bits1:Net_489_6\);
 
     Net_870_5:macrocell
         GENERIC MAP(
@@ -1250,8 +1317,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_870_5,
-            main_0 => \via8bits:P0_io\,
-            main_1 => \via8bits:Net_489_5\);
+            main_0 => \via8bits1:P0_io\,
+            main_1 => \via8bits1:Net_489_5\);
 
     Net_870_4:macrocell
         GENERIC MAP(
@@ -1259,8 +1326,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_870_4,
-            main_0 => \via8bits:P0_io\,
-            main_1 => \via8bits:Net_489_4\);
+            main_0 => \via8bits1:P0_io\,
+            main_1 => \via8bits1:Net_489_4\);
 
     Net_870_3:macrocell
         GENERIC MAP(
@@ -1268,8 +1335,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_870_3,
-            main_0 => \via8bits:P0_io\,
-            main_1 => \via8bits:Net_489_3\);
+            main_0 => \via8bits1:P0_io\,
+            main_1 => \via8bits1:Net_489_3\);
 
     Net_870_2:macrocell
         GENERIC MAP(
@@ -1277,8 +1344,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_870_2,
-            main_0 => \via8bits:P0_io\,
-            main_1 => \via8bits:Net_489_2\);
+            main_0 => \via8bits1:P0_io\,
+            main_1 => \via8bits1:Net_489_2\);
 
     Net_870_1:macrocell
         GENERIC MAP(
@@ -1286,8 +1353,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_870_1,
-            main_0 => \via8bits:P0_io\,
-            main_1 => \via8bits:Net_489_1\);
+            main_0 => \via8bits1:P0_io\,
+            main_1 => \via8bits1:Net_489_1\);
 
     Net_870_0:macrocell
         GENERIC MAP(
@@ -1296,8 +1363,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_870_0,
-            main_0 => \via8bits:P0_io\,
-            main_1 => \via8bits:Net_489_0\);
+            main_0 => \via8bits1:P0_io\,
+            main_1 => \via8bits1:Net_489_0\);
 
     Net_796_7:macrocell
         GENERIC MAP(
@@ -1305,8 +1372,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_796_7,
-            main_0 => \via8bits:P1_io\,
-            main_1 => \via8bits:Net_495_7\,
+            main_0 => \via8bits1:P1_io\,
+            main_1 => \via8bits1:Net_495_7\,
             main_2 => P1_signal_7);
 
     Net_796_6:macrocell
@@ -1315,8 +1382,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_796_6,
-            main_0 => \via8bits:P1_io\,
-            main_1 => \via8bits:Net_495_6\,
+            main_0 => \via8bits1:P1_io\,
+            main_1 => \via8bits1:Net_495_6\,
             main_2 => P1_signal_6);
 
     Net_796_5:macrocell
@@ -1325,8 +1392,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_796_5,
-            main_0 => \via8bits:P1_io\,
-            main_1 => \via8bits:Net_495_5\,
+            main_0 => \via8bits1:P1_io\,
+            main_1 => \via8bits1:Net_495_5\,
             main_2 => P1_signal_5);
 
     Net_796_4:macrocell
@@ -1335,8 +1402,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_796_4,
-            main_0 => \via8bits:P1_io\,
-            main_1 => \via8bits:Net_495_4\,
+            main_0 => \via8bits1:P1_io\,
+            main_1 => \via8bits1:Net_495_4\,
             main_2 => P1_signal_4);
 
     Net_796_3:macrocell
@@ -1345,8 +1412,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_796_3,
-            main_0 => \via8bits:P1_io\,
-            main_1 => \via8bits:Net_495_3\,
+            main_0 => \via8bits1:P1_io\,
+            main_1 => \via8bits1:Net_495_3\,
             main_2 => P1_signal_3);
 
     Net_796_2:macrocell
@@ -1355,8 +1422,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_796_2,
-            main_0 => \via8bits:P1_io\,
-            main_1 => \via8bits:Net_495_2\,
+            main_0 => \via8bits1:P1_io\,
+            main_1 => \via8bits1:Net_495_2\,
             main_2 => P1_signal_2);
 
     Net_796_1:macrocell
@@ -1365,8 +1432,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_796_1,
-            main_0 => \via8bits:P1_io\,
-            main_1 => \via8bits:Net_495_1\,
+            main_0 => \via8bits1:P1_io\,
+            main_1 => \via8bits1:Net_495_1\,
             main_2 => P1_signal_1);
 
     Net_796_0:macrocell
@@ -1375,8 +1442,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_796_0,
-            main_0 => \via8bits:P1_io\,
-            main_1 => \via8bits:Net_495_0\,
+            main_0 => \via8bits1:P1_io\,
+            main_1 => \via8bits1:Net_495_0\,
             main_2 => P1_signal_0);
 
     Net_660:macrocell
@@ -1480,6 +1547,150 @@ BEGIN
             main_0 => \UART:BUART:rx_fifonotempty\,
             main_1 => \UART:BUART:rx_state_stop1_reg\);
 
+    Net_975_7:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_975_7,
+            main_0 => \via8bits2:P0_io\,
+            main_1 => \via8bits2:Net_489_7\);
+
+    Net_975_6:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_975_6,
+            main_0 => \via8bits2:P0_io\,
+            main_1 => \via8bits2:Net_489_6\);
+
+    Net_975_5:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_975_5,
+            main_0 => \via8bits2:P0_io\,
+            main_1 => \via8bits2:Net_489_5\);
+
+    Net_975_4:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_975_4,
+            main_0 => \via8bits2:P0_io\,
+            main_1 => \via8bits2:Net_489_4\);
+
+    Net_975_3:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_975_3,
+            main_0 => \via8bits2:P0_io\,
+            main_1 => \via8bits2:Net_489_3\);
+
+    Net_975_2:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_975_2,
+            main_0 => \via8bits2:P0_io\,
+            main_1 => \via8bits2:Net_489_2\);
+
+    Net_975_1:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_975_1,
+            main_0 => \via8bits2:P0_io\,
+            main_1 => \via8bits2:Net_489_1\);
+
+    Net_975_0:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_975_0,
+            main_0 => \via8bits2:P0_io\,
+            main_1 => \via8bits2:Net_489_0\);
+
+    Net_976_7:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_976_7,
+            main_0 => \via8bits2:P1_io\,
+            main_1 => \via8bits2:Net_495_7\);
+
+    Net_976_6:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_976_6,
+            main_0 => \via8bits2:P1_io\,
+            main_1 => \via8bits2:Net_495_6\);
+
+    Net_976_5:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_976_5,
+            main_0 => \via8bits2:P1_io\,
+            main_1 => \via8bits2:Net_495_5\);
+
+    Net_976_4:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_976_4,
+            main_0 => \via8bits2:P1_io\,
+            main_1 => \via8bits2:Net_495_4\);
+
+    Net_976_3:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_976_3,
+            main_0 => \via8bits2:P1_io\,
+            main_1 => \via8bits2:Net_495_3\);
+
+    Net_976_2:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_976_2,
+            main_0 => \via8bits2:P1_io\,
+            main_1 => \via8bits2:Net_495_2\);
+
+    Net_976_1:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_976_1,
+            main_0 => \via8bits2:P1_io\,
+            main_1 => \via8bits2:Net_495_1\);
+
+    Net_976_0:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_976_0,
+            main_0 => \via8bits2:P1_io\,
+            main_1 => \via8bits2:Net_495_0\);
+
     \MODULE_9:g1:a0:gx:u0:lt_7\:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1)",
@@ -1537,7 +1748,7 @@ BEGIN
             main_0 => P1_signal_5,
             main_1 => P1_signal_4);
 
-    \via8bits:Ctrl:Sync:ctrl_reg\:controlcell
+    \via8bits1:Ctrl:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "00000000",
             cy_ctrl_mode_1 => "00000000",
@@ -1546,17 +1757,17 @@ BEGIN
             cy_init_value => "00000000",
             clken_mode => 1)
         PORT MAP(
-            control_7 => \via8bits:Ctrl:control_7\,
-            control_6 => \via8bits:Ctrl:control_6\,
-            control_5 => \via8bits:Ctrl:control_5\,
-            control_4 => \via8bits:Ctrl:control_4\,
-            control_3 => \via8bits:P0_io\,
+            control_7 => \via8bits1:Ctrl:control_7\,
+            control_6 => \via8bits1:Ctrl:control_6\,
+            control_5 => \via8bits1:Ctrl:control_5\,
+            control_4 => \via8bits1:Ctrl:control_4\,
+            control_3 => \via8bits1:P0_io\,
             control_2 => Net_19,
-            control_1 => \via8bits:P1_io\,
+            control_1 => \via8bits1:P1_io\,
             control_0 => Net_20,
             busclk => ClockBlock_BUS_CLK);
 
-    \via8bits:Stat:sts:sts_reg\:statuscell
+    \via8bits1:Stat:sts:sts_reg\:statuscell
         GENERIC MAP(
             cy_force_order => 1,
             cy_md_select => "00000000",
@@ -1572,7 +1783,7 @@ BEGIN
             status_1 => Net_660,
             status_0 => Net_660);
 
-    \via8bits:P0_ctrl:Sync:ctrl_reg\:controlcell
+    \via8bits1:P0_ctrl:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "00000000",
             cy_ctrl_mode_1 => "00000000",
@@ -1581,17 +1792,17 @@ BEGIN
             cy_init_value => "00000000",
             clken_mode => 1)
         PORT MAP(
-            control_7 => \via8bits:Net_489_7\,
-            control_6 => \via8bits:Net_489_6\,
-            control_5 => \via8bits:Net_489_5\,
-            control_4 => \via8bits:Net_489_4\,
-            control_3 => \via8bits:Net_489_3\,
-            control_2 => \via8bits:Net_489_2\,
-            control_1 => \via8bits:Net_489_1\,
-            control_0 => \via8bits:Net_489_0\,
+            control_7 => \via8bits1:Net_489_7\,
+            control_6 => \via8bits1:Net_489_6\,
+            control_5 => \via8bits1:Net_489_5\,
+            control_4 => \via8bits1:Net_489_4\,
+            control_3 => \via8bits1:Net_489_3\,
+            control_2 => \via8bits1:Net_489_2\,
+            control_1 => \via8bits1:Net_489_1\,
+            control_0 => \via8bits1:Net_489_0\,
             busclk => ClockBlock_BUS_CLK);
 
-    \via8bits:P0_stat:sts:sts_reg\:statuscell
+    \via8bits1:P0_stat:sts:sts_reg\:statuscell
         GENERIC MAP(
             cy_force_order => 1,
             cy_md_select => "00000000",
@@ -1607,7 +1818,7 @@ BEGIN
             status_1 => Net_870_1,
             status_0 => Net_870_0);
 
-    \via8bits:P1_ctrl:Sync:ctrl_reg\:controlcell
+    \via8bits1:P1_ctrl:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "00000000",
             cy_ctrl_mode_1 => "00000000",
@@ -1616,17 +1827,17 @@ BEGIN
             cy_init_value => "00000000",
             clken_mode => 1)
         PORT MAP(
-            control_7 => \via8bits:Net_495_7\,
-            control_6 => \via8bits:Net_495_6\,
-            control_5 => \via8bits:Net_495_5\,
-            control_4 => \via8bits:Net_495_4\,
-            control_3 => \via8bits:Net_495_3\,
-            control_2 => \via8bits:Net_495_2\,
-            control_1 => \via8bits:Net_495_1\,
-            control_0 => \via8bits:Net_495_0\,
+            control_7 => \via8bits1:Net_495_7\,
+            control_6 => \via8bits1:Net_495_6\,
+            control_5 => \via8bits1:Net_495_5\,
+            control_4 => \via8bits1:Net_495_4\,
+            control_3 => \via8bits1:Net_495_3\,
+            control_2 => \via8bits1:Net_495_2\,
+            control_1 => \via8bits1:Net_495_1\,
+            control_0 => \via8bits1:Net_495_0\,
             busclk => ClockBlock_BUS_CLK);
 
-    \via8bits:P1_stat:sts:sts_reg\:statuscell
+    \via8bits1:P1_stat:sts:sts_reg\:statuscell
         GENERIC MAP(
             cy_force_order => 1,
             cy_md_select => "00000000",
@@ -1642,7 +1853,7 @@ BEGIN
             status_1 => Net_796_1,
             status_0 => Net_796_0);
 
-    \via8bits:gnome_res:Sync:ctrl_reg\:controlcell
+    \via8bits1:gnome_res:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "00000000",
             cy_ctrl_mode_1 => "00000000",
@@ -1651,13 +1862,13 @@ BEGIN
             cy_init_value => "00000000",
             clken_mode => 1)
         PORT MAP(
-            control_7 => \via8bits:gnome_res:control_7\,
-            control_6 => \via8bits:gnome_res:control_6\,
-            control_5 => \via8bits:gnome_res:control_5\,
-            control_4 => \via8bits:gnome_res:control_4\,
-            control_3 => \via8bits:gnome_res:control_3\,
-            control_2 => \via8bits:gnome_res:control_2\,
-            control_1 => \via8bits:gnome_res:control_1\,
+            control_7 => \via8bits1:gnome_res:control_7\,
+            control_6 => \via8bits1:gnome_res:control_6\,
+            control_5 => \via8bits1:gnome_res:control_5\,
+            control_4 => \via8bits1:gnome_res:control_4\,
+            control_3 => \via8bits1:gnome_res:control_3\,
+            control_2 => \via8bits1:gnome_res:control_2\,
+            control_1 => \via8bits1:gnome_res:control_1\,
             control_0 => Net_726,
             busclk => ClockBlock_BUS_CLK);
 
@@ -1890,6 +2101,111 @@ BEGIN
             status_1 => open,
             status_0 => open,
             interrupt => Net_943);
+
+    \via8bits2:Ctrl:Sync:ctrl_reg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "00000000",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            control_7 => \via8bits2:Ctrl:control_7\,
+            control_6 => \via8bits2:Ctrl:control_6\,
+            control_5 => \via8bits2:Ctrl:control_5\,
+            control_4 => \via8bits2:Ctrl:control_4\,
+            control_3 => \via8bits2:P0_io\,
+            control_2 => \via8bits2:Ctrl:control_2\,
+            control_1 => \via8bits2:P1_io\,
+            control_0 => \via8bits2:Ctrl:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \via8bits2:Stat:sts:sts_reg\:statuscell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_md_select => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            clock => open,
+            status_7 => open,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => Net_992_local,
+            status_2 => Net_992_local,
+            status_1 => Net_992_local,
+            status_0 => Net_992_local);
+
+    \via8bits2:P0_ctrl:Sync:ctrl_reg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "00000000",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            control_7 => \via8bits2:Net_489_7\,
+            control_6 => \via8bits2:Net_489_6\,
+            control_5 => \via8bits2:Net_489_5\,
+            control_4 => \via8bits2:Net_489_4\,
+            control_3 => \via8bits2:Net_489_3\,
+            control_2 => \via8bits2:Net_489_2\,
+            control_1 => \via8bits2:Net_489_1\,
+            control_0 => \via8bits2:Net_489_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \via8bits2:P0_stat:sts:sts_reg\:statuscell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_md_select => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            clock => open,
+            status_7 => Net_975_7,
+            status_6 => Net_975_6,
+            status_5 => Net_975_5,
+            status_4 => Net_975_4,
+            status_3 => Net_975_3,
+            status_2 => Net_975_2,
+            status_1 => Net_975_1,
+            status_0 => Net_975_0);
+
+    \via8bits2:P1_ctrl:Sync:ctrl_reg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "00000000",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            control_7 => \via8bits2:Net_495_7\,
+            control_6 => \via8bits2:Net_495_6\,
+            control_5 => \via8bits2:Net_495_5\,
+            control_4 => \via8bits2:Net_495_4\,
+            control_3 => \via8bits2:Net_495_3\,
+            control_2 => \via8bits2:Net_495_2\,
+            control_1 => \via8bits2:Net_495_1\,
+            control_0 => \via8bits2:Net_495_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \via8bits2:P1_stat:sts:sts_reg\:statuscell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_md_select => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            clock => open,
+            status_7 => Net_976_7,
+            status_6 => Net_976_6,
+            status_5 => Net_976_5,
+            status_4 => Net_976_4,
+            status_3 => Net_976_3,
+            status_2 => Net_976_2,
+            status_1 => Net_976_1,
+            status_0 => Net_976_0);
 
     Net_659:macrocell
         GENERIC MAP(

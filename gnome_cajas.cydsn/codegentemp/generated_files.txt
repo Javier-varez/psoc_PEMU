@@ -56,33 +56,56 @@
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\UART_PM.c" value="ARM_C_FILE;UART" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\UART_INT.c" value="ARM_C_FILE;UART" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\UART_BOOT.c" value="ARM_C_FILE;UART" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_Ctrl.h" value="NONE;via8bits_Ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_Ctrl.c" value="ARM_C_FILE;via8bits_Ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_Ctrl_PM.c" value="ARM_C_FILE;via8bits_Ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_Stat.c" value="ARM_C_FILE;via8bits_Stat" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_Stat.h" value="NONE;via8bits_Stat" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P0_ctrl.h" value="NONE;via8bits_P0_ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P0_ctrl.c" value="ARM_C_FILE;via8bits_P0_ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P0_ctrl_PM.c" value="ARM_C_FILE;via8bits_P0_ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P0_stat.c" value="ARM_C_FILE;via8bits_P0_stat" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P0_stat.h" value="NONE;via8bits_P0_stat" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P1_ctrl.h" value="NONE;via8bits_P1_ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P1_ctrl.c" value="ARM_C_FILE;via8bits_P1_ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P1_ctrl_PM.c" value="ARM_C_FILE;via8bits_P1_ctrl" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P1_stat.c" value="ARM_C_FILE;via8bits_P1_stat" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_P1_stat.h" value="NONE;via8bits_P1_stat" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_gnome_clk.h" value="NONE;via8bits_gnome_clk" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_gnome_clk.c" value="ARM_C_FILE;via8bits_gnome_clk" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_gnome_clk_PM.c" value="ARM_C_FILE;via8bits_gnome_clk" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_gnome_res.h" value="NONE;via8bits_gnome_res" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_gnome_res.c" value="ARM_C_FILE;via8bits_gnome_res" />
-  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits_gnome_res_PM.c" value="ARM_C_FILE;via8bits_gnome_res" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\Clock_5.c" value="ARM_C_FILE;Clock_5" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\Clock_5.h" value="NONE;Clock_5" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_Ctrl.h" value="NONE;via8bits1_Ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_Ctrl.c" value="ARM_C_FILE;via8bits1_Ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_Ctrl_PM.c" value="ARM_C_FILE;via8bits1_Ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_Stat.c" value="ARM_C_FILE;via8bits1_Stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_Stat.h" value="NONE;via8bits1_Stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P0_ctrl.h" value="NONE;via8bits1_P0_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P0_ctrl.c" value="ARM_C_FILE;via8bits1_P0_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P0_ctrl_PM.c" value="ARM_C_FILE;via8bits1_P0_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P0_stat.c" value="ARM_C_FILE;via8bits1_P0_stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P0_stat.h" value="NONE;via8bits1_P0_stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P1_ctrl.h" value="NONE;via8bits1_P1_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P1_ctrl.c" value="ARM_C_FILE;via8bits1_P1_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P1_ctrl_PM.c" value="ARM_C_FILE;via8bits1_P1_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P1_stat.c" value="ARM_C_FILE;via8bits1_P1_stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_P1_stat.h" value="NONE;via8bits1_P1_stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_gnome_clk.h" value="NONE;via8bits1_gnome_clk" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_gnome_clk.c" value="ARM_C_FILE;via8bits1_gnome_clk" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_gnome_clk_PM.c" value="ARM_C_FILE;via8bits1_gnome_clk" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_gnome_res.h" value="NONE;via8bits1_gnome_res" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_gnome_res.c" value="ARM_C_FILE;via8bits1_gnome_res" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits1_gnome_res_PM.c" value="ARM_C_FILE;via8bits1_gnome_res" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\LCD_gnome_A_reg.c" value="ARM_C_FILE;LCD_gnome_A_reg" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\LCD_gnome_A_reg.h" value="NONE;LCD_gnome_A_reg" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\LCD_gnome_B_reg.c" value="ARM_C_FILE;LCD_gnome_B_reg" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\LCD_gnome_B_reg.h" value="NONE;LCD_gnome_B_reg" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\UART_IntClock.c" value="ARM_C_FILE;UART_IntClock" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\UART_IntClock.h" value="NONE;UART_IntClock" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_Ctrl.h" value="NONE;via8bits2_Ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_Ctrl.c" value="ARM_C_FILE;via8bits2_Ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_Ctrl_PM.c" value="ARM_C_FILE;via8bits2_Ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_Stat.c" value="ARM_C_FILE;via8bits2_Stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_Stat.h" value="NONE;via8bits2_Stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P0_ctrl.h" value="NONE;via8bits2_P0_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P0_ctrl.c" value="ARM_C_FILE;via8bits2_P0_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P0_ctrl_PM.c" value="ARM_C_FILE;via8bits2_P0_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P0_stat.c" value="ARM_C_FILE;via8bits2_P0_stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P0_stat.h" value="NONE;via8bits2_P0_stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P1_ctrl.h" value="NONE;via8bits2_P1_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P1_ctrl.c" value="ARM_C_FILE;via8bits2_P1_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P1_ctrl_PM.c" value="ARM_C_FILE;via8bits2_P1_ctrl" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P1_stat.c" value="ARM_C_FILE;via8bits2_P1_stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_P1_stat.h" value="NONE;via8bits2_P1_stat" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_gnome_clk.h" value="NONE;via8bits2_gnome_clk" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_gnome_clk.c" value="ARM_C_FILE;via8bits2_gnome_clk" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_gnome_clk_PM.c" value="ARM_C_FILE;via8bits2_gnome_clk" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_gnome_res.h" value="NONE;via8bits2_gnome_res" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_gnome_res.c" value="ARM_C_FILE;via8bits2_gnome_res" />
+  <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\via8bits2_gnome_res_PM.c" value="ARM_C_FILE;via8bits2_gnome_res" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\cycodeshareimport.ld" value="NONE;" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\cycodeshareexport.ld" value="NONE;" />
   <file name="C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_cajas.cydsn\codegentemp\cycodeshareimport.scat" value="NONE;" />
