@@ -1,0 +1,875 @@
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"gnome_it.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.gnome_it_init,"ax",%progbits
+  19              		.align	2
+  20              		.global	gnome_it_init
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	gnome_it_init, %function
+  24              	gnome_it_init:
+  25              	.LFB63:
+  26              		.file 1 ".\\gnome_it.c"
+   1:.\gnome_it.c  **** /* ========================================
+   2:.\gnome_it.c  ****  *
+   3:.\gnome_it.c  ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\gnome_it.c  ****  * All Rights Reserved
+   5:.\gnome_it.c  ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\gnome_it.c  ****  *
+   7:.\gnome_it.c  ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\gnome_it.c  ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\gnome_it.c  ****  *
+  10:.\gnome_it.c  ****  * ========================================
+  11:.\gnome_it.c  **** */
+  12:.\gnome_it.c  **** 
+  13:.\gnome_it.c  **** #include "gnome.h"
+  14:.\gnome_it.c  **** #include "gnome_it.h"
+  15:.\gnome_it.c  **** 
+  16:.\gnome_it.c  **** CY_ISR_PROTO(gnome_process_it);
+  17:.\gnome_it.c  **** 
+  18:.\gnome_it.c  **** void gnome_it_init() {
+  27              		.loc 1 18 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 7047     		bx	lr
+  33              		.cfi_endproc
+  34              	.LFE63:
+  35              		.size	gnome_it_init, .-gnome_it_init
+  36 0002 00BF     		.section	.text.gnome_process_it,"ax",%progbits
+  37              		.align	2
+  38              		.global	gnome_process_it
+  39              		.thumb
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 2
+
+
+  40              		.thumb_func
+  41              		.type	gnome_process_it, %function
+  42              	gnome_process_it:
+  43              	.LFB64:
+  19:.\gnome_it.c  ****     
+  20:.\gnome_it.c  ****     #ifndef GNOME_ISR_OPT_OUT
+  21:.\gnome_it.c  ****         ISR_StartEx(gnome_process_it);
+  22:.\gnome_it.c  ****     #endif
+  23:.\gnome_it.c  ****     
+  24:.\gnome_it.c  **** }
+  25:.\gnome_it.c  **** 
+  26:.\gnome_it.c  **** CY_ISR(gnome_process_it){
+  44              		.loc 1 26 0
+  45              		.cfi_startproc
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  27:.\gnome_it.c  ****     if (current_context != &it_context) {
+  49              		.loc 1 27 0
+  50 0000 044B     		ldr	r3, .L4
+  51 0002 1A68     		ldr	r2, [r3]
+  52 0004 044B     		ldr	r3, .L4+4
+  53 0006 9A42     		cmp	r2, r3
+  54 0008 03D0     		beq	.L2
+  28:.\gnome_it.c  ****         current_context = &it_context;
+  55              		.loc 1 28 0
+  56 000a 024A     		ldr	r2, .L4
+  57 000c 1360     		str	r3, [r2]
+  29:.\gnome_it.c  ****         
+  30:.\gnome_it.c  ****         // Configuracion del vector de interrupcion.
+  31:.\gnome_it.c  ****         current_context->PC = GNOME_IT_VECTOR;
+  58              		.loc 1 31 0
+  59 000e E022     		movs	r2, #224
+  60 0010 DA70     		strb	r2, [r3, #3]
+  61              	.L2:
+  62 0012 7047     		bx	lr
+  63              	.L5:
+  64              		.align	2
+  65              	.L4:
+  66 0014 00000000 		.word	current_context
+  67 0018 00000000 		.word	it_context
+  68              		.cfi_endproc
+  69              	.LFE64:
+  70              		.size	gnome_process_it, .-gnome_process_it
+  71              		.comm	rom,256,4
+  72              		.comm	registers,16,4
+  73              		.comm	current_context,4,4
+  74              		.comm	it_context,11,4
+  75              		.comm	normal_context,11,4
+  76              		.text
+  77              	.Letext0:
+  78              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  79              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  80              		.file 4 ".\\gnome_registers.h"
+  81              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+  82              		.section	.debug_info,"",%progbits
+  83              	.Ldebug_info0:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 3
+
+
+  84 0000 3D020000 		.4byte	0x23d
+  85 0004 0400     		.2byte	0x4
+  86 0006 00000000 		.4byte	.Ldebug_abbrev0
+  87 000a 04       		.byte	0x4
+  88 000b 01       		.uleb128 0x1
+  89 000c AC000000 		.4byte	.LASF31
+  90 0010 01       		.byte	0x1
+  91 0011 C8010000 		.4byte	.LASF32
+  92 0015 E8010000 		.4byte	.LASF33
+  93 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  94 001d 00000000 		.4byte	0
+  95 0021 00000000 		.4byte	.Ldebug_line0
+  96 0025 02       		.uleb128 0x2
+  97 0026 01       		.byte	0x1
+  98 0027 06       		.byte	0x6
+  99 0028 34020000 		.4byte	.LASF0
+ 100 002c 03       		.uleb128 0x3
+ 101 002d 0F000000 		.4byte	.LASF4
+ 102 0031 02       		.byte	0x2
+ 103 0032 1D       		.byte	0x1d
+ 104 0033 37000000 		.4byte	0x37
+ 105 0037 02       		.uleb128 0x2
+ 106 0038 01       		.byte	0x1
+ 107 0039 08       		.byte	0x8
+ 108 003a 4B000000 		.4byte	.LASF1
+ 109 003e 02       		.uleb128 0x2
+ 110 003f 02       		.byte	0x2
+ 111 0040 05       		.byte	0x5
+ 112 0041 B6010000 		.4byte	.LASF2
+ 113 0045 02       		.uleb128 0x2
+ 114 0046 02       		.byte	0x2
+ 115 0047 07       		.byte	0x7
+ 116 0048 40020000 		.4byte	.LASF3
+ 117 004c 03       		.uleb128 0x3
+ 118 004d 25000000 		.4byte	.LASF5
+ 119 0051 02       		.byte	0x2
+ 120 0052 3F       		.byte	0x3f
+ 121 0053 57000000 		.4byte	0x57
+ 122 0057 02       		.uleb128 0x2
+ 123 0058 04       		.byte	0x4
+ 124 0059 05       		.byte	0x5
+ 125 005a DF010000 		.4byte	.LASF6
+ 126 005e 02       		.uleb128 0x2
+ 127 005f 04       		.byte	0x4
+ 128 0060 07       		.byte	0x7
+ 129 0061 59000000 		.4byte	.LASF7
+ 130 0065 02       		.uleb128 0x2
+ 131 0066 08       		.byte	0x8
+ 132 0067 05       		.byte	0x5
+ 133 0068 8D010000 		.4byte	.LASF8
+ 134 006c 02       		.uleb128 0x2
+ 135 006d 08       		.byte	0x8
+ 136 006e 07       		.byte	0x7
+ 137 006f 5D010000 		.4byte	.LASF9
+ 138 0073 04       		.uleb128 0x4
+ 139 0074 04       		.byte	0x4
+ 140 0075 05       		.byte	0x5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 4
+
+
+ 141 0076 696E7400 		.ascii	"int\000"
+ 142 007a 02       		.uleb128 0x2
+ 143 007b 04       		.byte	0x4
+ 144 007c 07       		.byte	0x7
+ 145 007d 4A010000 		.4byte	.LASF10
+ 146 0081 03       		.uleb128 0x3
+ 147 0082 74010000 		.4byte	.LASF11
+ 148 0086 03       		.byte	0x3
+ 149 0087 15       		.byte	0x15
+ 150 0088 2C000000 		.4byte	0x2c
+ 151 008c 03       		.uleb128 0x3
+ 152 008d 7C010000 		.4byte	.LASF12
+ 153 0091 03       		.byte	0x3
+ 154 0092 2C       		.byte	0x2c
+ 155 0093 4C000000 		.4byte	0x4c
+ 156 0097 02       		.uleb128 0x2
+ 157 0098 04       		.byte	0x4
+ 158 0099 04       		.byte	0x4
+ 159 009a 35000000 		.4byte	.LASF13
+ 160 009e 02       		.uleb128 0x2
+ 161 009f 08       		.byte	0x8
+ 162 00a0 04       		.byte	0x4
+ 163 00a1 94000000 		.4byte	.LASF14
+ 164 00a5 02       		.uleb128 0x2
+ 165 00a6 01       		.byte	0x1
+ 166 00a7 08       		.byte	0x8
+ 167 00a8 A9010000 		.4byte	.LASF15
+ 168 00ac 02       		.uleb128 0x2
+ 169 00ad 04       		.byte	0x4
+ 170 00ae 07       		.byte	0x7
+ 171 00af 84010000 		.4byte	.LASF16
+ 172 00b3 05       		.uleb128 0x5
+ 173 00b4 02       		.byte	0x2
+ 174 00b5 04       		.byte	0x4
+ 175 00b6 19       		.byte	0x19
+ 176 00b7 D0000000 		.4byte	0xd0
+ 177 00bb 06       		.uleb128 0x6
+ 178 00bc 4300     		.ascii	"C\000"
+ 179 00be 04       		.byte	0x4
+ 180 00bf 1A       		.byte	0x1a
+ 181 00c0 81000000 		.4byte	0x81
+ 182 00c4 00       		.byte	0
+ 183 00c5 06       		.uleb128 0x6
+ 184 00c6 5A00     		.ascii	"Z\000"
+ 185 00c8 04       		.byte	0x4
+ 186 00c9 1B       		.byte	0x1b
+ 187 00ca 81000000 		.4byte	0x81
+ 188 00ce 01       		.byte	0x1
+ 189 00cf 00       		.byte	0
+ 190 00d0 03       		.uleb128 0x3
+ 191 00d1 AE010000 		.4byte	.LASF17
+ 192 00d5 04       		.byte	0x4
+ 193 00d6 1C       		.byte	0x1c
+ 194 00d7 B3000000 		.4byte	0xb3
+ 195 00db 05       		.uleb128 0x5
+ 196 00dc 05       		.byte	0x5
+ 197 00dd 04       		.byte	0x4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 5
+
+
+ 198 00de 20       		.byte	0x20
+ 199 00df FC000000 		.4byte	0xfc
+ 200 00e3 07       		.uleb128 0x7
+ 201 00e4 3B000000 		.4byte	.LASF18
+ 202 00e8 04       		.byte	0x4
+ 203 00e9 21       		.byte	0x21
+ 204 00ea FC000000 		.4byte	0xfc
+ 205 00ee 00       		.byte	0
+ 206 00ef 06       		.uleb128 0x6
+ 207 00f0 70747200 		.ascii	"ptr\000"
+ 208 00f4 04       		.byte	0x4
+ 209 00f5 22       		.byte	0x22
+ 210 00f6 81000000 		.4byte	0x81
+ 211 00fa 04       		.byte	0x4
+ 212 00fb 00       		.byte	0
+ 213 00fc 08       		.uleb128 0x8
+ 214 00fd 81000000 		.4byte	0x81
+ 215 0101 0C010000 		.4byte	0x10c
+ 216 0105 09       		.uleb128 0x9
+ 217 0106 AC000000 		.4byte	0xac
+ 218 010a 03       		.byte	0x3
+ 219 010b 00       		.byte	0
+ 220 010c 03       		.uleb128 0x3
+ 221 010d C0010000 		.4byte	.LASF19
+ 222 0111 04       		.byte	0x4
+ 223 0112 23       		.byte	0x23
+ 224 0113 DB000000 		.4byte	0xdb
+ 225 0117 05       		.uleb128 0x5
+ 226 0118 02       		.byte	0x2
+ 227 0119 04       		.byte	0x4
+ 228 011a 25       		.byte	0x25
+ 229 011b 38010000 		.4byte	0x138
+ 230 011f 07       		.uleb128 0x7
+ 231 0120 3B000000 		.4byte	.LASF18
+ 232 0124 04       		.byte	0x4
+ 233 0125 26       		.byte	0x26
+ 234 0126 81000000 		.4byte	0x81
+ 235 012a 00       		.byte	0
+ 236 012b 06       		.uleb128 0x6
+ 237 012c 70747200 		.ascii	"ptr\000"
+ 238 0130 04       		.byte	0x4
+ 239 0131 27       		.byte	0x27
+ 240 0132 81000000 		.4byte	0x81
+ 241 0136 01       		.byte	0x1
+ 242 0137 00       		.byte	0
+ 243 0138 03       		.uleb128 0x3
+ 244 0139 6B000000 		.4byte	.LASF20
+ 245 013d 04       		.byte	0x4
+ 246 013e 28       		.byte	0x28
+ 247 013f 17010000 		.4byte	0x117
+ 248 0143 05       		.uleb128 0x5
+ 249 0144 0B       		.byte	0xb
+ 250 0145 04       		.byte	0x4
+ 251 0146 45       		.byte	0x45
+ 252 0147 87010000 		.4byte	0x187
+ 253 014b 07       		.uleb128 0x7
+ 254 014c 19000000 		.4byte	.LASF21
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 6
+
+
+ 255 0150 04       		.byte	0x4
+ 256 0151 46       		.byte	0x46
+ 257 0152 81000000 		.4byte	0x81
+ 258 0156 00       		.byte	0
+ 259 0157 07       		.uleb128 0x7
+ 260 0158 57010000 		.4byte	.LASF22
+ 261 015c 04       		.byte	0x4
+ 262 015d 47       		.byte	0x47
+ 263 015e D0000000 		.4byte	0xd0
+ 264 0162 01       		.byte	0x1
+ 265 0163 06       		.uleb128 0x6
+ 266 0164 504300   		.ascii	"PC\000"
+ 267 0167 04       		.byte	0x4
+ 268 0168 48       		.byte	0x48
+ 269 0169 81000000 		.4byte	0x81
+ 270 016d 03       		.byte	0x3
+ 271 016e 07       		.uleb128 0x7
+ 272 016f 2F000000 		.4byte	.LASF23
+ 273 0173 04       		.byte	0x4
+ 274 0174 49       		.byte	0x49
+ 275 0175 0C010000 		.4byte	0x10c
+ 276 0179 04       		.byte	0x4
+ 277 017a 07       		.uleb128 0x7
+ 278 017b 7A000000 		.4byte	.LASF24
+ 279 017f 04       		.byte	0x4
+ 280 0180 4A       		.byte	0x4a
+ 281 0181 38010000 		.4byte	0x138
+ 282 0185 09       		.byte	0x9
+ 283 0186 00       		.byte	0
+ 284 0187 03       		.uleb128 0x3
+ 285 0188 D5010000 		.4byte	.LASF25
+ 286 018c 04       		.byte	0x4
+ 287 018d 4B       		.byte	0x4b
+ 288 018e 43010000 		.4byte	0x143
+ 289 0192 0A       		.uleb128 0xa
+ 290 0193 9B010000 		.4byte	.LASF34
+ 291 0197 01       		.byte	0x1
+ 292 0198 12       		.byte	0x12
+ 293 0199 00000000 		.4byte	.LFB63
+ 294 019d 02000000 		.4byte	.LFE63-.LFB63
+ 295 01a1 01       		.uleb128 0x1
+ 296 01a2 9C       		.byte	0x9c
+ 297 01a3 0B       		.uleb128 0xb
+ 298 01a4 9B000000 		.4byte	.LASF35
+ 299 01a8 01       		.byte	0x1
+ 300 01a9 1A       		.byte	0x1a
+ 301 01aa 00000000 		.4byte	.LFB64
+ 302 01ae 1C000000 		.4byte	.LFE64-.LFB64
+ 303 01b2 01       		.uleb128 0x1
+ 304 01b3 9C       		.byte	0x9c
+ 305 01b4 0C       		.uleb128 0xc
+ 306 01b5 87000000 		.4byte	.LASF26
+ 307 01b9 05       		.byte	0x5
+ 308 01ba 5506     		.2byte	0x655
+ 309 01bc C0010000 		.4byte	0x1c0
+ 310 01c0 0D       		.uleb128 0xd
+ 311 01c1 8C000000 		.4byte	0x8c
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 7
+
+
+ 312 01c5 0E       		.uleb128 0xe
+ 313 01c6 00000000 		.4byte	.LASF27
+ 314 01ca 04       		.byte	0x4
+ 315 01cb 51       		.byte	0x51
+ 316 01cc 87010000 		.4byte	0x187
+ 317 01d0 05       		.uleb128 0x5
+ 318 01d1 03       		.byte	0x3
+ 319 01d2 00000000 		.4byte	normal_context
+ 320 01d6 0E       		.uleb128 0xe
+ 321 01d7 40000000 		.4byte	.LASF28
+ 322 01db 04       		.byte	0x4
+ 323 01dc 52       		.byte	0x52
+ 324 01dd 87010000 		.4byte	0x187
+ 325 01e1 05       		.uleb128 0x5
+ 326 01e2 03       		.byte	0x3
+ 327 01e3 00000000 		.4byte	it_context
+ 328 01e7 0E       		.uleb128 0xe
+ 329 01e8 3A010000 		.4byte	.LASF29
+ 330 01ec 04       		.byte	0x4
+ 331 01ed 54       		.byte	0x54
+ 332 01ee F8010000 		.4byte	0x1f8
+ 333 01f2 05       		.uleb128 0x5
+ 334 01f3 03       		.byte	0x3
+ 335 01f4 00000000 		.4byte	current_context
+ 336 01f8 0F       		.uleb128 0xf
+ 337 01f9 04       		.byte	0x4
+ 338 01fa 87010000 		.4byte	0x187
+ 339 01fe 08       		.uleb128 0x8
+ 340 01ff 81000000 		.4byte	0x81
+ 341 0203 0E020000 		.4byte	0x20e
+ 342 0207 09       		.uleb128 0x9
+ 343 0208 AC000000 		.4byte	0xac
+ 344 020c 0F       		.byte	0xf
+ 345 020d 00       		.byte	0
+ 346 020e 0E       		.uleb128 0xe
+ 347 020f 53020000 		.4byte	.LASF30
+ 348 0213 04       		.byte	0x4
+ 349 0214 56       		.byte	0x56
+ 350 0215 FE010000 		.4byte	0x1fe
+ 351 0219 05       		.uleb128 0x5
+ 352 021a 03       		.byte	0x3
+ 353 021b 00000000 		.4byte	registers
+ 354 021f 08       		.uleb128 0x8
+ 355 0220 81000000 		.4byte	0x81
+ 356 0224 2F020000 		.4byte	0x22f
+ 357 0228 09       		.uleb128 0x9
+ 358 0229 AC000000 		.4byte	0xac
+ 359 022d FF       		.byte	0xff
+ 360 022e 00       		.byte	0
+ 361 022f 10       		.uleb128 0x10
+ 362 0230 726F6D00 		.ascii	"rom\000"
+ 363 0234 04       		.byte	0x4
+ 364 0235 59       		.byte	0x59
+ 365 0236 1F020000 		.4byte	0x21f
+ 366 023a 05       		.uleb128 0x5
+ 367 023b 03       		.byte	0x3
+ 368 023c 00000000 		.4byte	rom
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 8
+
+
+ 369 0240 00       		.byte	0
+ 370              		.section	.debug_abbrev,"",%progbits
+ 371              	.Ldebug_abbrev0:
+ 372 0000 01       		.uleb128 0x1
+ 373 0001 11       		.uleb128 0x11
+ 374 0002 01       		.byte	0x1
+ 375 0003 25       		.uleb128 0x25
+ 376 0004 0E       		.uleb128 0xe
+ 377 0005 13       		.uleb128 0x13
+ 378 0006 0B       		.uleb128 0xb
+ 379 0007 03       		.uleb128 0x3
+ 380 0008 0E       		.uleb128 0xe
+ 381 0009 1B       		.uleb128 0x1b
+ 382 000a 0E       		.uleb128 0xe
+ 383 000b 55       		.uleb128 0x55
+ 384 000c 17       		.uleb128 0x17
+ 385 000d 11       		.uleb128 0x11
+ 386 000e 01       		.uleb128 0x1
+ 387 000f 10       		.uleb128 0x10
+ 388 0010 17       		.uleb128 0x17
+ 389 0011 00       		.byte	0
+ 390 0012 00       		.byte	0
+ 391 0013 02       		.uleb128 0x2
+ 392 0014 24       		.uleb128 0x24
+ 393 0015 00       		.byte	0
+ 394 0016 0B       		.uleb128 0xb
+ 395 0017 0B       		.uleb128 0xb
+ 396 0018 3E       		.uleb128 0x3e
+ 397 0019 0B       		.uleb128 0xb
+ 398 001a 03       		.uleb128 0x3
+ 399 001b 0E       		.uleb128 0xe
+ 400 001c 00       		.byte	0
+ 401 001d 00       		.byte	0
+ 402 001e 03       		.uleb128 0x3
+ 403 001f 16       		.uleb128 0x16
+ 404 0020 00       		.byte	0
+ 405 0021 03       		.uleb128 0x3
+ 406 0022 0E       		.uleb128 0xe
+ 407 0023 3A       		.uleb128 0x3a
+ 408 0024 0B       		.uleb128 0xb
+ 409 0025 3B       		.uleb128 0x3b
+ 410 0026 0B       		.uleb128 0xb
+ 411 0027 49       		.uleb128 0x49
+ 412 0028 13       		.uleb128 0x13
+ 413 0029 00       		.byte	0
+ 414 002a 00       		.byte	0
+ 415 002b 04       		.uleb128 0x4
+ 416 002c 24       		.uleb128 0x24
+ 417 002d 00       		.byte	0
+ 418 002e 0B       		.uleb128 0xb
+ 419 002f 0B       		.uleb128 0xb
+ 420 0030 3E       		.uleb128 0x3e
+ 421 0031 0B       		.uleb128 0xb
+ 422 0032 03       		.uleb128 0x3
+ 423 0033 08       		.uleb128 0x8
+ 424 0034 00       		.byte	0
+ 425 0035 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 9
+
+
+ 426 0036 05       		.uleb128 0x5
+ 427 0037 13       		.uleb128 0x13
+ 428 0038 01       		.byte	0x1
+ 429 0039 0B       		.uleb128 0xb
+ 430 003a 0B       		.uleb128 0xb
+ 431 003b 3A       		.uleb128 0x3a
+ 432 003c 0B       		.uleb128 0xb
+ 433 003d 3B       		.uleb128 0x3b
+ 434 003e 0B       		.uleb128 0xb
+ 435 003f 01       		.uleb128 0x1
+ 436 0040 13       		.uleb128 0x13
+ 437 0041 00       		.byte	0
+ 438 0042 00       		.byte	0
+ 439 0043 06       		.uleb128 0x6
+ 440 0044 0D       		.uleb128 0xd
+ 441 0045 00       		.byte	0
+ 442 0046 03       		.uleb128 0x3
+ 443 0047 08       		.uleb128 0x8
+ 444 0048 3A       		.uleb128 0x3a
+ 445 0049 0B       		.uleb128 0xb
+ 446 004a 3B       		.uleb128 0x3b
+ 447 004b 0B       		.uleb128 0xb
+ 448 004c 49       		.uleb128 0x49
+ 449 004d 13       		.uleb128 0x13
+ 450 004e 38       		.uleb128 0x38
+ 451 004f 0B       		.uleb128 0xb
+ 452 0050 00       		.byte	0
+ 453 0051 00       		.byte	0
+ 454 0052 07       		.uleb128 0x7
+ 455 0053 0D       		.uleb128 0xd
+ 456 0054 00       		.byte	0
+ 457 0055 03       		.uleb128 0x3
+ 458 0056 0E       		.uleb128 0xe
+ 459 0057 3A       		.uleb128 0x3a
+ 460 0058 0B       		.uleb128 0xb
+ 461 0059 3B       		.uleb128 0x3b
+ 462 005a 0B       		.uleb128 0xb
+ 463 005b 49       		.uleb128 0x49
+ 464 005c 13       		.uleb128 0x13
+ 465 005d 38       		.uleb128 0x38
+ 466 005e 0B       		.uleb128 0xb
+ 467 005f 00       		.byte	0
+ 468 0060 00       		.byte	0
+ 469 0061 08       		.uleb128 0x8
+ 470 0062 01       		.uleb128 0x1
+ 471 0063 01       		.byte	0x1
+ 472 0064 49       		.uleb128 0x49
+ 473 0065 13       		.uleb128 0x13
+ 474 0066 01       		.uleb128 0x1
+ 475 0067 13       		.uleb128 0x13
+ 476 0068 00       		.byte	0
+ 477 0069 00       		.byte	0
+ 478 006a 09       		.uleb128 0x9
+ 479 006b 21       		.uleb128 0x21
+ 480 006c 00       		.byte	0
+ 481 006d 49       		.uleb128 0x49
+ 482 006e 13       		.uleb128 0x13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 10
+
+
+ 483 006f 2F       		.uleb128 0x2f
+ 484 0070 0B       		.uleb128 0xb
+ 485 0071 00       		.byte	0
+ 486 0072 00       		.byte	0
+ 487 0073 0A       		.uleb128 0xa
+ 488 0074 2E       		.uleb128 0x2e
+ 489 0075 00       		.byte	0
+ 490 0076 3F       		.uleb128 0x3f
+ 491 0077 19       		.uleb128 0x19
+ 492 0078 03       		.uleb128 0x3
+ 493 0079 0E       		.uleb128 0xe
+ 494 007a 3A       		.uleb128 0x3a
+ 495 007b 0B       		.uleb128 0xb
+ 496 007c 3B       		.uleb128 0x3b
+ 497 007d 0B       		.uleb128 0xb
+ 498 007e 11       		.uleb128 0x11
+ 499 007f 01       		.uleb128 0x1
+ 500 0080 12       		.uleb128 0x12
+ 501 0081 06       		.uleb128 0x6
+ 502 0082 40       		.uleb128 0x40
+ 503 0083 18       		.uleb128 0x18
+ 504 0084 9742     		.uleb128 0x2117
+ 505 0086 19       		.uleb128 0x19
+ 506 0087 00       		.byte	0
+ 507 0088 00       		.byte	0
+ 508 0089 0B       		.uleb128 0xb
+ 509 008a 2E       		.uleb128 0x2e
+ 510 008b 00       		.byte	0
+ 511 008c 3F       		.uleb128 0x3f
+ 512 008d 19       		.uleb128 0x19
+ 513 008e 03       		.uleb128 0x3
+ 514 008f 0E       		.uleb128 0xe
+ 515 0090 3A       		.uleb128 0x3a
+ 516 0091 0B       		.uleb128 0xb
+ 517 0092 3B       		.uleb128 0x3b
+ 518 0093 0B       		.uleb128 0xb
+ 519 0094 27       		.uleb128 0x27
+ 520 0095 19       		.uleb128 0x19
+ 521 0096 11       		.uleb128 0x11
+ 522 0097 01       		.uleb128 0x1
+ 523 0098 12       		.uleb128 0x12
+ 524 0099 06       		.uleb128 0x6
+ 525 009a 40       		.uleb128 0x40
+ 526 009b 18       		.uleb128 0x18
+ 527 009c 9742     		.uleb128 0x2117
+ 528 009e 19       		.uleb128 0x19
+ 529 009f 00       		.byte	0
+ 530 00a0 00       		.byte	0
+ 531 00a1 0C       		.uleb128 0xc
+ 532 00a2 34       		.uleb128 0x34
+ 533 00a3 00       		.byte	0
+ 534 00a4 03       		.uleb128 0x3
+ 535 00a5 0E       		.uleb128 0xe
+ 536 00a6 3A       		.uleb128 0x3a
+ 537 00a7 0B       		.uleb128 0xb
+ 538 00a8 3B       		.uleb128 0x3b
+ 539 00a9 05       		.uleb128 0x5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 11
+
+
+ 540 00aa 49       		.uleb128 0x49
+ 541 00ab 13       		.uleb128 0x13
+ 542 00ac 3F       		.uleb128 0x3f
+ 543 00ad 19       		.uleb128 0x19
+ 544 00ae 3C       		.uleb128 0x3c
+ 545 00af 19       		.uleb128 0x19
+ 546 00b0 00       		.byte	0
+ 547 00b1 00       		.byte	0
+ 548 00b2 0D       		.uleb128 0xd
+ 549 00b3 35       		.uleb128 0x35
+ 550 00b4 00       		.byte	0
+ 551 00b5 49       		.uleb128 0x49
+ 552 00b6 13       		.uleb128 0x13
+ 553 00b7 00       		.byte	0
+ 554 00b8 00       		.byte	0
+ 555 00b9 0E       		.uleb128 0xe
+ 556 00ba 34       		.uleb128 0x34
+ 557 00bb 00       		.byte	0
+ 558 00bc 03       		.uleb128 0x3
+ 559 00bd 0E       		.uleb128 0xe
+ 560 00be 3A       		.uleb128 0x3a
+ 561 00bf 0B       		.uleb128 0xb
+ 562 00c0 3B       		.uleb128 0x3b
+ 563 00c1 0B       		.uleb128 0xb
+ 564 00c2 49       		.uleb128 0x49
+ 565 00c3 13       		.uleb128 0x13
+ 566 00c4 3F       		.uleb128 0x3f
+ 567 00c5 19       		.uleb128 0x19
+ 568 00c6 02       		.uleb128 0x2
+ 569 00c7 18       		.uleb128 0x18
+ 570 00c8 00       		.byte	0
+ 571 00c9 00       		.byte	0
+ 572 00ca 0F       		.uleb128 0xf
+ 573 00cb 0F       		.uleb128 0xf
+ 574 00cc 00       		.byte	0
+ 575 00cd 0B       		.uleb128 0xb
+ 576 00ce 0B       		.uleb128 0xb
+ 577 00cf 49       		.uleb128 0x49
+ 578 00d0 13       		.uleb128 0x13
+ 579 00d1 00       		.byte	0
+ 580 00d2 00       		.byte	0
+ 581 00d3 10       		.uleb128 0x10
+ 582 00d4 34       		.uleb128 0x34
+ 583 00d5 00       		.byte	0
+ 584 00d6 03       		.uleb128 0x3
+ 585 00d7 08       		.uleb128 0x8
+ 586 00d8 3A       		.uleb128 0x3a
+ 587 00d9 0B       		.uleb128 0xb
+ 588 00da 3B       		.uleb128 0x3b
+ 589 00db 0B       		.uleb128 0xb
+ 590 00dc 49       		.uleb128 0x49
+ 591 00dd 13       		.uleb128 0x13
+ 592 00de 3F       		.uleb128 0x3f
+ 593 00df 19       		.uleb128 0x19
+ 594 00e0 02       		.uleb128 0x2
+ 595 00e1 18       		.uleb128 0x18
+ 596 00e2 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 12
+
+
+ 597 00e3 00       		.byte	0
+ 598 00e4 00       		.byte	0
+ 599              		.section	.debug_aranges,"",%progbits
+ 600 0000 24000000 		.4byte	0x24
+ 601 0004 0200     		.2byte	0x2
+ 602 0006 00000000 		.4byte	.Ldebug_info0
+ 603 000a 04       		.byte	0x4
+ 604 000b 00       		.byte	0
+ 605 000c 0000     		.2byte	0
+ 606 000e 0000     		.2byte	0
+ 607 0010 00000000 		.4byte	.LFB63
+ 608 0014 02000000 		.4byte	.LFE63-.LFB63
+ 609 0018 00000000 		.4byte	.LFB64
+ 610 001c 1C000000 		.4byte	.LFE64-.LFB64
+ 611 0020 00000000 		.4byte	0
+ 612 0024 00000000 		.4byte	0
+ 613              		.section	.debug_ranges,"",%progbits
+ 614              	.Ldebug_ranges0:
+ 615 0000 00000000 		.4byte	.LFB63
+ 616 0004 02000000 		.4byte	.LFE63
+ 617 0008 00000000 		.4byte	.LFB64
+ 618 000c 1C000000 		.4byte	.LFE64
+ 619 0010 00000000 		.4byte	0
+ 620 0014 00000000 		.4byte	0
+ 621              		.section	.debug_line,"",%progbits
+ 622              	.Ldebug_line0:
+ 623 0000 7E010000 		.section	.debug_str,"MS",%progbits,1
+ 623      02005701 
+ 623      00000201 
+ 623      FB0E0D00 
+ 623      01010101 
+ 624              	.LASF27:
+ 625 0000 6E6F726D 		.ascii	"normal_context\000"
+ 625      616C5F63 
+ 625      6F6E7465 
+ 625      787400
+ 626              	.LASF4:
+ 627 000f 5F5F7569 		.ascii	"__uint8_t\000"
+ 627      6E74385F 
+ 627      7400
+ 628              	.LASF21:
+ 629 0019 61636375 		.ascii	"accumulator\000"
+ 629      6D756C61 
+ 629      746F7200 
+ 630              	.LASF5:
+ 631 0025 5F5F696E 		.ascii	"__int32_t\000"
+ 631      7433325F 
+ 631      7400
+ 632              	.LASF23:
+ 633 002f 73746163 		.ascii	"stack\000"
+ 633      6B00
+ 634              	.LASF13:
+ 635 0035 666C6F61 		.ascii	"float\000"
+ 635      7400
+ 636              	.LASF18:
+ 637 003b 64617461 		.ascii	"data\000"
+ 637      00
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 13
+
+
+ 638              	.LASF28:
+ 639 0040 69745F63 		.ascii	"it_context\000"
+ 639      6F6E7465 
+ 639      787400
+ 640              	.LASF1:
+ 641 004b 756E7369 		.ascii	"unsigned char\000"
+ 641      676E6564 
+ 641      20636861 
+ 641      7200
+ 642              	.LASF7:
+ 643 0059 6C6F6E67 		.ascii	"long unsigned int\000"
+ 643      20756E73 
+ 643      69676E65 
+ 643      6420696E 
+ 643      7400
+ 644              	.LASF20:
+ 645 006b 696E645F 		.ascii	"ind_addr_reg_t\000"
+ 645      61646472 
+ 645      5F726567 
+ 645      5F7400
+ 646              	.LASF24:
+ 647 007a 696E645F 		.ascii	"ind_addr_reg\000"
+ 647      61646472 
+ 647      5F726567 
+ 647      00
+ 648              	.LASF26:
+ 649 0087 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 649      52784275 
+ 649      66666572 
+ 649      00
+ 650              	.LASF14:
+ 651 0094 646F7562 		.ascii	"double\000"
+ 651      6C6500
+ 652              	.LASF35:
+ 653 009b 676E6F6D 		.ascii	"gnome_process_it\000"
+ 653      655F7072 
+ 653      6F636573 
+ 653      735F6974 
+ 653      00
+ 654              	.LASF31:
+ 655 00ac 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 655      4320342E 
+ 655      392E3320 
+ 655      32303135 
+ 655      30333033 
+ 656 00df 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 656      20726576 
+ 656      6973696F 
+ 656      6E203232 
+ 656      31323230 
+ 657 0112 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 657      66756E63 
+ 657      74696F6E 
+ 657      2D736563 
+ 657      74696F6E 
+ 658              	.LASF29:
+ 659 013a 63757272 		.ascii	"current_context\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 14
+
+
+ 659      656E745F 
+ 659      636F6E74 
+ 659      65787400 
+ 660              	.LASF10:
+ 661 014a 756E7369 		.ascii	"unsigned int\000"
+ 661      676E6564 
+ 661      20696E74 
+ 661      00
+ 662              	.LASF22:
+ 663 0157 666C6167 		.ascii	"flags\000"
+ 663      7300
+ 664              	.LASF9:
+ 665 015d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 665      206C6F6E 
+ 665      6720756E 
+ 665      7369676E 
+ 665      65642069 
+ 666              	.LASF11:
+ 667 0174 75696E74 		.ascii	"uint8_t\000"
+ 667      385F7400 
+ 668              	.LASF12:
+ 669 017c 696E7433 		.ascii	"int32_t\000"
+ 669      325F7400 
+ 670              	.LASF16:
+ 671 0184 73697A65 		.ascii	"sizetype\000"
+ 671      74797065 
+ 671      00
+ 672              	.LASF8:
+ 673 018d 6C6F6E67 		.ascii	"long long int\000"
+ 673      206C6F6E 
+ 673      6720696E 
+ 673      7400
+ 674              	.LASF34:
+ 675 019b 676E6F6D 		.ascii	"gnome_it_init\000"
+ 675      655F6974 
+ 675      5F696E69 
+ 675      7400
+ 676              	.LASF15:
+ 677 01a9 63686172 		.ascii	"char\000"
+ 677      00
+ 678              	.LASF17:
+ 679 01ae 666C6167 		.ascii	"flags_t\000"
+ 679      735F7400 
+ 680              	.LASF2:
+ 681 01b6 73686F72 		.ascii	"short int\000"
+ 681      7420696E 
+ 681      7400
+ 682              	.LASF19:
+ 683 01c0 73746163 		.ascii	"stack_t\000"
+ 683      6B5F7400 
+ 684              	.LASF32:
+ 685 01c8 2E5C676E 		.ascii	".\\gnome_it.c\000"
+ 685      6F6D655F 
+ 685      69742E63 
+ 685      00
+ 686              	.LASF25:
+ 687 01d5 636F6E74 		.ascii	"context_t\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccLT746g.s 			page 15
+
+
+ 687      6578745F 
+ 687      7400
+ 688              	.LASF6:
+ 689 01df 6C6F6E67 		.ascii	"long int\000"
+ 689      20696E74 
+ 689      00
+ 690              	.LASF33:
+ 691 01e8 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 691      73657273 
+ 691      5C4A6176 
+ 691      6965725C 
+ 691      446F6375 
+ 692 0216 6F726B73 		.ascii	"orkspace\\gnome_template.cydsn\000"
+ 692      70616365 
+ 692      5C676E6F 
+ 692      6D655F74 
+ 692      656D706C 
+ 693              	.LASF0:
+ 694 0234 7369676E 		.ascii	"signed char\000"
+ 694      65642063 
+ 694      68617200 
+ 695              	.LASF3:
+ 696 0240 73686F72 		.ascii	"short unsigned int\000"
+ 696      7420756E 
+ 696      7369676E 
+ 696      65642069 
+ 696      6E7400
+ 697              	.LASF30:
+ 698 0253 72656769 		.ascii	"registers\000"
+ 698      73746572 
+ 698      7300
+ 699              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

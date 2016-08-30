@@ -1,0 +1,54 @@
+# gnome_template
+# 2016-08-30 15:16:30Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "Net_870_7" 0 4 1 3
+set_location "Net_870_6" 0 4 1 2
+set_location "Net_870_5" 0 4 1 1
+set_location "Net_870_4" 0 4 1 0
+set_location "Net_870_3" 0 4 0 3
+set_location "Net_870_2" 0 4 0 0
+set_location "Net_870_1" 0 4 0 2
+set_location "Net_870_0" 0 4 0 1
+set_location "Net_796_7" 1 3 1 3
+set_location "Net_796_6" 1 3 1 2
+set_location "Net_796_5" 1 3 1 1
+set_location "Net_796_4" 1 3 0 0
+set_location "Net_796_3" 1 3 1 0
+set_location "Net_796_2" 1 3 0 3
+set_location "Net_796_1" 1 3 0 2
+set_location "Net_796_0" 1 3 0 1
+set_location "Net_975_7" 1 5 1 3
+set_location "Net_975_6" 1 5 1 2
+set_location "Net_975_5" 1 5 1 1
+set_location "Net_975_4" 1 5 1 0
+set_location "Net_975_3" 1 5 0 3
+set_location "Net_975_2" 1 5 0 0
+set_location "Net_975_1" 1 5 0 2
+set_location "Net_975_0" 1 5 0 1
+set_location "Net_976_7" 0 3 1 3
+set_location "Net_976_6" 0 3 1 2
+set_location "Net_976_5" 0 3 1 1
+set_location "Net_976_4" 0 3 0 0
+set_location "Net_976_3" 0 3 1 0
+set_location "Net_976_2" 0 3 0 3
+set_location "Net_976_1" 0 3 0 2
+set_location "Net_976_0" 0 3 0 1
+set_location "\via8bits1:Ctrl:Sync:ctrl_reg\" 1 4 6
+set_location "\via8bits1:Stat:sts:sts_reg\" 1 4 3
+set_location "\via8bits1:P0_ctrl:Sync:ctrl_reg\" 0 4 6
+set_location "\via8bits1:P0_stat:sts:sts_reg\" 0 4 3
+set_location "\via8bits1:P1_ctrl:Sync:ctrl_reg\" 1 3 6
+set_location "\via8bits1:P1_stat:sts:sts_reg\" 1 3 3
+set_location "\via8bits2:Ctrl:Sync:ctrl_reg\" 0 5 6
+set_location "\via8bits2:Stat:sts:sts_reg\" 0 5 3
+set_location "\via8bits2:P0_ctrl:Sync:ctrl_reg\" 1 5 6
+set_location "\via8bits2:P0_stat:sts:sts_reg\" 1 5 3
+set_location "\via8bits2:P1_ctrl:Sync:ctrl_reg\" 0 3 6
+set_location "\via8bits2:P1_stat:sts:sts_reg\" 0 3 3

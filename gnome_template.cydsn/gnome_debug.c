@@ -41,9 +41,6 @@ void gnome_debug_init() {
         
         gnome_console.ptr = 0;
         
-        gnome_debug_state.breakpoints[0].active = 1;
-        gnome_debug_state.breakpoints[0].pc = 0x77;
-        
         #ifndef GNOME_UART_RX_IT_OPT_OUT
             UART_RX_IT_StartEx(gnome_tx_uart_it);
         #endif

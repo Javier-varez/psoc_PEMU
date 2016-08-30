@@ -1,0 +1,1346 @@
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"gnome_debug.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.gnome_debug_init,"ax",%progbits
+  19              		.align	2
+  20              		.global	gnome_debug_init
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	gnome_debug_init, %function
+  24              	gnome_debug_init:
+  25              	.LFB63:
+  26              		.file 1 ".\\gnome_debug.c"
+   1:.\gnome_debug.c **** /* ========================================
+   2:.\gnome_debug.c ****  *
+   3:.\gnome_debug.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\gnome_debug.c ****  * All Rights Reserved
+   5:.\gnome_debug.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\gnome_debug.c ****  *
+   7:.\gnome_debug.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\gnome_debug.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\gnome_debug.c ****  *
+  10:.\gnome_debug.c ****  * ========================================
+  11:.\gnome_debug.c **** */
+  12:.\gnome_debug.c **** 
+  13:.\gnome_debug.c **** #include "gnome.h"
+  14:.\gnome_debug.c **** #include "gnome_config.h"
+  15:.\gnome_debug.c **** #include "gnome_debug.h"
+  16:.\gnome_debug.c **** #include "gnome_memory.h"
+  17:.\gnome_debug.c **** 
+  18:.\gnome_debug.c **** #if GNOME_DEBUGGING_ON
+  19:.\gnome_debug.c ****     #include "UART_RX_IT.h"
+  20:.\gnome_debug.c ****     #include <string.h>
+  21:.\gnome_debug.c ****     #include <stdlib.h>
+  22:.\gnome_debug.c **** #endif
+  23:.\gnome_debug.c **** 
+  24:.\gnome_debug.c **** #include <stdio.h>
+  25:.\gnome_debug.c **** 
+  26:.\gnome_debug.c **** CY_ISR_PROTO(gnome_tx_uart_it);
+  27:.\gnome_debug.c **** 
+  28:.\gnome_debug.c **** void gnome_debug_init() {
+  27              		.loc 1 28 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 2
+
+
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 7047     		bx	lr
+  33              		.cfi_endproc
+  34              	.LFE63:
+  35              		.size	gnome_debug_init, .-gnome_debug_init
+  36 0002 00BF     		.section	.text.gnome_debug_loop,"ax",%progbits
+  37              		.align	2
+  38              		.global	gnome_debug_loop
+  39              		.thumb
+  40              		.thumb_func
+  41              		.type	gnome_debug_loop, %function
+  42              	gnome_debug_loop:
+  43              	.LFB64:
+  29:.\gnome_debug.c ****     #if (GNOME_DEBUGGING_ON == 1) 
+  30:.\gnome_debug.c ****         UART_Start();
+  31:.\gnome_debug.c ****         UART_PutString("//////////////////////////////////////\r\n");
+  32:.\gnome_debug.c ****         UART_PutString("//---- GNOME DEBUGGING TERMINAL ----//\r\n");
+  33:.\gnome_debug.c ****         UART_PutString("//////////////////////////////////////\r\n");
+  34:.\gnome_debug.c ****         
+  35:.\gnome_debug.c ****         gnome_debug_state.active = 0x01;
+  36:.\gnome_debug.c ****         uint8_t i;
+  37:.\gnome_debug.c ****         for (i = 0; i < GNOME_DEBUGGING_MAX_BREAKPOINTS; i++) {
+  38:.\gnome_debug.c ****             gnome_debug_state.breakpoints[i].active = 0x00;
+  39:.\gnome_debug.c ****             gnome_debug_state.breakpoints[i].pc = GNOME_RESET_VECTOR;
+  40:.\gnome_debug.c ****         }
+  41:.\gnome_debug.c ****         
+  42:.\gnome_debug.c ****         gnome_console.ptr = 0;
+  43:.\gnome_debug.c ****         
+  44:.\gnome_debug.c ****         #ifndef GNOME_UART_RX_IT_OPT_OUT
+  45:.\gnome_debug.c ****             UART_RX_IT_StartEx(gnome_tx_uart_it);
+  46:.\gnome_debug.c ****         #endif
+  47:.\gnome_debug.c ****         
+  48:.\gnome_debug.c ****     #endif
+  49:.\gnome_debug.c **** }
+  50:.\gnome_debug.c **** 
+  51:.\gnome_debug.c **** void gnome_debug_loop(uint8_t code) {
+  44              		.loc 1 51 0
+  45              		.cfi_startproc
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  49              	.LVL0:
+  50 0000 7047     		bx	lr
+  51              		.cfi_endproc
+  52              	.LFE64:
+  53              		.size	gnome_debug_loop, .-gnome_debug_loop
+  54 0002 00BF     		.section	.text.gnome_debug_print_state,"ax",%progbits
+  55              		.align	2
+  56              		.global	gnome_debug_print_state
+  57              		.thumb
+  58              		.thumb_func
+  59              		.type	gnome_debug_print_state, %function
+  60              	gnome_debug_print_state:
+  61              	.LFB65:
+  52:.\gnome_debug.c ****     #if(GNOME_DEBUGGING_ON==1) 
+  53:.\gnome_debug.c ****         CyGlobalIntDisable;      
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 3
+
+
+  54:.\gnome_debug.c ****         // Check if debugger should activate (by reaching a new breakpoint)
+  55:.\gnome_debug.c ****         uint8_t i;
+  56:.\gnome_debug.c ****         for (i = 0; i < GNOME_DEBUGGING_MAX_BREAKPOINTS; i++) {
+  57:.\gnome_debug.c ****             if ((current_context->PC == gnome_debug_state.breakpoints[i].pc) && gnome_debug_state.b
+  58:.\gnome_debug.c ****                 gnome_debug_state.active = 0x01;
+  59:.\gnome_debug.c ****                 char str[40];
+  60:.\gnome_debug.c ****                 sprintf(str, "Reached breakpoint at PC = 0x%02x\r\n", current_context->PC);
+  61:.\gnome_debug.c ****                 UART_PutString(str);
+  62:.\gnome_debug.c ****                 break;
+  63:.\gnome_debug.c ****             }
+  64:.\gnome_debug.c ****         }
+  65:.\gnome_debug.c ****         
+  66:.\gnome_debug.c ****         
+  67:.\gnome_debug.c ****         // If debugger is active, print state and wait for user action
+  68:.\gnome_debug.c ****         if (gnome_debug_state.active) {
+  69:.\gnome_debug.c ****             // Print state
+  70:.\gnome_debug.c ****             gnome_debug_print_state(code);
+  71:.\gnome_debug.c ****             
+  72:.\gnome_debug.c ****             // Wait for user to resume execution or step
+  73:.\gnome_debug.c ****             CyGlobalIntDisable;
+  74:.\gnome_debug.c ****             gnome_debug_state.stop = 0x01;
+  75:.\gnome_debug.c ****             CyGlobalIntEnable;
+  76:.\gnome_debug.c ****             while(gnome_debug_state.stop);
+  77:.\gnome_debug.c ****         }
+  78:.\gnome_debug.c ****         
+  79:.\gnome_debug.c ****         CyGlobalIntEnable;
+  80:.\gnome_debug.c ****     #endif
+  81:.\gnome_debug.c **** }
+  82:.\gnome_debug.c **** 
+  83:.\gnome_debug.c **** 
+  84:.\gnome_debug.c **** void gnome_debug_print_state(uint8_t code) {
+  62              		.loc 1 84 0
+  63              		.cfi_startproc
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              		@ link register save eliminated.
+  67              	.LVL1:
+  68 0000 7047     		bx	lr
+  69              		.cfi_endproc
+  70              	.LFE65:
+  71              		.size	gnome_debug_print_state, .-gnome_debug_print_state
+  72 0002 00BF     		.section	.text.gnome_tx_uart_it,"ax",%progbits
+  73              		.align	2
+  74              		.global	gnome_tx_uart_it
+  75              		.thumb
+  76              		.thumb_func
+  77              		.type	gnome_tx_uart_it, %function
+  78              	gnome_tx_uart_it:
+  79              	.LFB66:
+  85:.\gnome_debug.c ****     #if(GNOME_DEBUGGING_ON==1) 
+  86:.\gnome_debug.c ****         char str[40];
+  87:.\gnome_debug.c ****         if (current_context == &normal_context) 
+  88:.\gnome_debug.c ****             UART_PutString("\tNormal Context\r\n");
+  89:.\gnome_debug.c ****         else
+  90:.\gnome_debug.c ****             UART_PutString("\tIT Context\r\n");
+  91:.\gnome_debug.c ****             
+  92:.\gnome_debug.c ****         sprintf(str, "\tPC = 0x%02x\r\n", current_context->PC);
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 4
+
+
+  93:.\gnome_debug.c ****         UART_PutString(str);
+  94:.\gnome_debug.c ****         sprintf(str, "\tInstruccion = 0x%02x\r\n", code);
+  95:.\gnome_debug.c ****         UART_PutString(str);
+  96:.\gnome_debug.c ****         sprintf(str, "\tAcumulador = 0x%02x\r\n", current_context->accumulator);
+  97:.\gnome_debug.c ****         UART_PutString(str);
+  98:.\gnome_debug.c ****         sprintf(str, "\tC, Z = %d, %d\r\n", current_context->flags.C, current_context->flags.Z);
+  99:.\gnome_debug.c ****         UART_PutString(str);
+ 100:.\gnome_debug.c ****         sprintf(str, "\tREG_DIR_INDIRECTO =  0x%02x\r\n", current_context->ind_addr_reg.data);
+ 101:.\gnome_debug.c ****         UART_PutString(str);
+ 102:.\gnome_debug.c ****         
+ 103:.\gnome_debug.c ****         int i = 0;
+ 104:.\gnome_debug.c ****         for (i = 0; i < 16; i++) {
+ 105:.\gnome_debug.c ****             sprintf(str, "\tREG[%d] = 0x%02x\r\n", i, gnome_debug_load_reg(i));
+ 106:.\gnome_debug.c ****             UART_PutString(str);
+ 107:.\gnome_debug.c ****         }
+ 108:.\gnome_debug.c ****         UART_PutString("\r\n");
+ 109:.\gnome_debug.c ****         for (i = 0; i < GNOME_STACK_SIZE; i++) {
+ 110:.\gnome_debug.c ****             uint8_t addr = current_context->stack.ptr - i;
+ 111:.\gnome_debug.c ****             if (addr >= GNOME_STACK_SIZE) addr -= GNOME_STACK_SIZE;
+ 112:.\gnome_debug.c ****             sprintf(str, "\tSTACK[%d] = 0x%02x\r\n", i, current_context->stack.data[addr]);
+ 113:.\gnome_debug.c ****             UART_PutString(str);
+ 114:.\gnome_debug.c ****         }
+ 115:.\gnome_debug.c ****         sprintf(str, "\tSTACK_PTR = 0x%02x\r\n", current_context->stack.ptr);
+ 116:.\gnome_debug.c ****         UART_PutString(str);
+ 117:.\gnome_debug.c ****         
+ 118:.\gnome_debug.c ****         UART_PutString("\r\n\r\n");
+ 119:.\gnome_debug.c ****     #endif
+ 120:.\gnome_debug.c **** }
+ 121:.\gnome_debug.c **** 
+ 122:.\gnome_debug.c **** #if GNOME_DEBUGGING_ON
+ 123:.\gnome_debug.c **** uint8_t gnome_debug_toggle_breakpoint(uint8_t PC) {
+ 124:.\gnome_debug.c ****     uint8_t i = 0, found = 0;
+ 125:.\gnome_debug.c ****     
+ 126:.\gnome_debug.c ****     // Toggle if it exists on the list
+ 127:.\gnome_debug.c ****     for (i = 0; i < GNOME_DEBUGGING_MAX_BREAKPOINTS; i++) {
+ 128:.\gnome_debug.c ****         if (gnome_debug_state.breakpoints[i].pc == PC) {
+ 129:.\gnome_debug.c ****             gnome_debug_state.breakpoints[i].active = !gnome_debug_state.breakpoints[i].active;
+ 130:.\gnome_debug.c ****             found = 1 | (gnome_debug_state.breakpoints[i].active << 1);
+ 131:.\gnome_debug.c ****             break;
+ 132:.\gnome_debug.c ****         }
+ 133:.\gnome_debug.c ****     }
+ 134:.\gnome_debug.c ****     
+ 135:.\gnome_debug.c ****     // Add to the list
+ 136:.\gnome_debug.c ****     if (found == 0) {
+ 137:.\gnome_debug.c ****         for (i = 0; i < GNOME_DEBUGGING_MAX_BREAKPOINTS; i++) {
+ 138:.\gnome_debug.c ****             if (!gnome_debug_state.breakpoints[i].active) {
+ 139:.\gnome_debug.c ****                 gnome_debug_state.breakpoints[i].pc = PC;
+ 140:.\gnome_debug.c ****                 gnome_debug_state.breakpoints[i].active = 1;
+ 141:.\gnome_debug.c ****                 found = 0x03;
+ 142:.\gnome_debug.c ****                 break;
+ 143:.\gnome_debug.c ****             }
+ 144:.\gnome_debug.c ****         }
+ 145:.\gnome_debug.c ****     }
+ 146:.\gnome_debug.c ****     
+ 147:.\gnome_debug.c ****     return found;
+ 148:.\gnome_debug.c **** }
+ 149:.\gnome_debug.c **** #endif
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 5
+
+
+ 150:.\gnome_debug.c **** 
+ 151:.\gnome_debug.c **** CY_ISR(gnome_tx_uart_it) {
+  80              		.loc 1 151 0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84              		@ link register save eliminated.
+  85 0000 7047     		bx	lr
+  86              		.cfi_endproc
+  87              	.LFE66:
+  88              		.size	gnome_tx_uart_it, .-gnome_tx_uart_it
+  89              		.comm	via_state,3,4
+  90              		.comm	gnome_console,16,4
+  91              		.comm	gnome_debug_state,18,4
+  92              		.comm	rom,256,4
+  93              		.comm	registers,16,4
+  94              		.comm	current_context,4,4
+  95              		.comm	it_context,11,4
+  96              		.comm	normal_context,11,4
+  97 0002 00BF     		.text
+  98              	.Letext0:
+  99              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 100              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 101              		.file 4 ".\\gnome_registers.h"
+ 102              		.file 5 ".\\gnome_debug.h"
+ 103              		.file 6 ".\\gnome_memory.h"
+ 104              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 105              		.section	.debug_info,"",%progbits
+ 106              	.Ldebug_info0:
+ 107 0000 A2030000 		.4byte	0x3a2
+ 108 0004 0400     		.2byte	0x4
+ 109 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 110 000a 04       		.byte	0x4
+ 111 000b 01       		.uleb128 0x1
+ 112 000c 9E010000 		.4byte	.LASF48
+ 113 0010 01       		.byte	0x1
+ 114 0011 6D020000 		.4byte	.LASF49
+ 115 0015 BD020000 		.4byte	.LASF50
+ 116 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 117 001d 00000000 		.4byte	0
+ 118 0021 00000000 		.4byte	.Ldebug_line0
+ 119 0025 02       		.uleb128 0x2
+ 120 0026 01       		.byte	0x1
+ 121 0027 06       		.byte	0x6
+ 122 0028 B0000000 		.4byte	.LASF0
+ 123 002c 03       		.uleb128 0x3
+ 124 002d 75000000 		.4byte	.LASF4
+ 125 0031 02       		.byte	0x2
+ 126 0032 1D       		.byte	0x1d
+ 127 0033 37000000 		.4byte	0x37
+ 128 0037 02       		.uleb128 0x2
+ 129 0038 01       		.byte	0x1
+ 130 0039 08       		.byte	0x8
+ 131 003a BC000000 		.4byte	.LASF1
+ 132 003e 02       		.uleb128 0x2
+ 133 003f 02       		.byte	0x2
+ 134 0040 05       		.byte	0x5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 6
+
+
+ 135 0041 7D020000 		.4byte	.LASF2
+ 136 0045 02       		.uleb128 0x2
+ 137 0046 02       		.byte	0x2
+ 138 0047 07       		.byte	0x7
+ 139 0048 13030000 		.4byte	.LASF3
+ 140 004c 03       		.uleb128 0x3
+ 141 004d 7F000000 		.4byte	.LASF5
+ 142 0051 02       		.byte	0x2
+ 143 0052 3F       		.byte	0x3f
+ 144 0053 57000000 		.4byte	0x57
+ 145 0057 02       		.uleb128 0x2
+ 146 0058 04       		.byte	0x4
+ 147 0059 05       		.byte	0x5
+ 148 005a B4020000 		.4byte	.LASF6
+ 149 005e 02       		.uleb128 0x2
+ 150 005f 04       		.byte	0x4
+ 151 0060 07       		.byte	0x7
+ 152 0061 CA000000 		.4byte	.LASF7
+ 153 0065 02       		.uleb128 0x2
+ 154 0066 08       		.byte	0x8
+ 155 0067 05       		.byte	0x5
+ 156 0068 5A020000 		.4byte	.LASF8
+ 157 006c 02       		.uleb128 0x2
+ 158 006d 08       		.byte	0x8
+ 159 006e 07       		.byte	0x7
+ 160 006f 76010000 		.4byte	.LASF9
+ 161 0073 04       		.uleb128 0x4
+ 162 0074 04       		.byte	0x4
+ 163 0075 05       		.byte	0x5
+ 164 0076 696E7400 		.ascii	"int\000"
+ 165 007a 02       		.uleb128 0x2
+ 166 007b 04       		.byte	0x4
+ 167 007c 07       		.byte	0x7
+ 168 007d 5B010000 		.4byte	.LASF10
+ 169 0081 03       		.uleb128 0x3
+ 170 0082 8F000000 		.4byte	.LASF11
+ 171 0086 03       		.byte	0x3
+ 172 0087 15       		.byte	0x15
+ 173 0088 2C000000 		.4byte	0x2c
+ 174 008c 03       		.uleb128 0x3
+ 175 008d 49020000 		.4byte	.LASF12
+ 176 0091 03       		.byte	0x3
+ 177 0092 2C       		.byte	0x2c
+ 178 0093 4C000000 		.4byte	0x4c
+ 179 0097 02       		.uleb128 0x2
+ 180 0098 04       		.byte	0x4
+ 181 0099 04       		.byte	0x4
+ 182 009a A5000000 		.4byte	.LASF13
+ 183 009e 02       		.uleb128 0x2
+ 184 009f 08       		.byte	0x8
+ 185 00a0 04       		.byte	0x4
+ 186 00a1 1A010000 		.4byte	.LASF14
+ 187 00a5 02       		.uleb128 0x2
+ 188 00a6 01       		.byte	0x1
+ 189 00a7 08       		.byte	0x8
+ 190 00a8 68020000 		.4byte	.LASF15
+ 191 00ac 02       		.uleb128 0x2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 7
+
+
+ 192 00ad 04       		.byte	0x4
+ 193 00ae 07       		.byte	0x7
+ 194 00af 51020000 		.4byte	.LASF16
+ 195 00b3 05       		.uleb128 0x5
+ 196 00b4 81000000 		.4byte	0x81
+ 197 00b8 06       		.uleb128 0x6
+ 198 00b9 02       		.byte	0x2
+ 199 00ba 04       		.byte	0x4
+ 200 00bb 19       		.byte	0x19
+ 201 00bc D5000000 		.4byte	0xd5
+ 202 00c0 07       		.uleb128 0x7
+ 203 00c1 4300     		.ascii	"C\000"
+ 204 00c3 04       		.byte	0x4
+ 205 00c4 1A       		.byte	0x1a
+ 206 00c5 81000000 		.4byte	0x81
+ 207 00c9 00       		.byte	0
+ 208 00ca 07       		.uleb128 0x7
+ 209 00cb 5A00     		.ascii	"Z\000"
+ 210 00cd 04       		.byte	0x4
+ 211 00ce 1B       		.byte	0x1b
+ 212 00cf 81000000 		.4byte	0x81
+ 213 00d3 01       		.byte	0x1
+ 214 00d4 00       		.byte	0
+ 215 00d5 03       		.uleb128 0x3
+ 216 00d6 F5000000 		.4byte	.LASF17
+ 217 00da 04       		.byte	0x4
+ 218 00db 1C       		.byte	0x1c
+ 219 00dc B8000000 		.4byte	0xb8
+ 220 00e0 06       		.uleb128 0x6
+ 221 00e1 05       		.byte	0x5
+ 222 00e2 04       		.byte	0x4
+ 223 00e3 20       		.byte	0x20
+ 224 00e4 01010000 		.4byte	0x101
+ 225 00e8 08       		.uleb128 0x8
+ 226 00e9 AB000000 		.4byte	.LASF18
+ 227 00ed 04       		.byte	0x4
+ 228 00ee 21       		.byte	0x21
+ 229 00ef 01010000 		.4byte	0x101
+ 230 00f3 00       		.byte	0
+ 231 00f4 07       		.uleb128 0x7
+ 232 00f5 70747200 		.ascii	"ptr\000"
+ 233 00f9 04       		.byte	0x4
+ 234 00fa 22       		.byte	0x22
+ 235 00fb 81000000 		.4byte	0x81
+ 236 00ff 04       		.byte	0x4
+ 237 0100 00       		.byte	0
+ 238 0101 09       		.uleb128 0x9
+ 239 0102 81000000 		.4byte	0x81
+ 240 0106 11010000 		.4byte	0x111
+ 241 010a 0A       		.uleb128 0xa
+ 242 010b AC000000 		.4byte	0xac
+ 243 010f 03       		.byte	0x3
+ 244 0110 00       		.byte	0
+ 245 0111 03       		.uleb128 0x3
+ 246 0112 6E010000 		.4byte	.LASF19
+ 247 0116 04       		.byte	0x4
+ 248 0117 23       		.byte	0x23
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 8
+
+
+ 249 0118 E0000000 		.4byte	0xe0
+ 250 011c 06       		.uleb128 0x6
+ 251 011d 02       		.byte	0x2
+ 252 011e 04       		.byte	0x4
+ 253 011f 25       		.byte	0x25
+ 254 0120 3D010000 		.4byte	0x13d
+ 255 0124 08       		.uleb128 0x8
+ 256 0125 AB000000 		.4byte	.LASF18
+ 257 0129 04       		.byte	0x4
+ 258 012a 26       		.byte	0x26
+ 259 012b 81000000 		.4byte	0x81
+ 260 012f 00       		.byte	0
+ 261 0130 07       		.uleb128 0x7
+ 262 0131 70747200 		.ascii	"ptr\000"
+ 263 0135 04       		.byte	0x4
+ 264 0136 27       		.byte	0x27
+ 265 0137 81000000 		.4byte	0x81
+ 266 013b 01       		.byte	0x1
+ 267 013c 00       		.byte	0
+ 268 013d 03       		.uleb128 0x3
+ 269 013e DC000000 		.4byte	.LASF20
+ 270 0142 04       		.byte	0x4
+ 271 0143 28       		.byte	0x28
+ 272 0144 1C010000 		.4byte	0x11c
+ 273 0148 06       		.uleb128 0x6
+ 274 0149 0B       		.byte	0xb
+ 275 014a 04       		.byte	0x4
+ 276 014b 45       		.byte	0x45
+ 277 014c 8C010000 		.4byte	0x18c
+ 278 0150 08       		.uleb128 0x8
+ 279 0151 32010000 		.4byte	.LASF21
+ 280 0155 04       		.byte	0x4
+ 281 0156 46       		.byte	0x46
+ 282 0157 81000000 		.4byte	0x81
+ 283 015b 00       		.byte	0
+ 284 015c 08       		.uleb128 0x8
+ 285 015d 68010000 		.4byte	.LASF22
+ 286 0161 04       		.byte	0x4
+ 287 0162 47       		.byte	0x47
+ 288 0163 D5000000 		.4byte	0xd5
+ 289 0167 01       		.byte	0x1
+ 290 0168 07       		.uleb128 0x7
+ 291 0169 504300   		.ascii	"PC\000"
+ 292 016c 04       		.byte	0x4
+ 293 016d 48       		.byte	0x48
+ 294 016e 81000000 		.4byte	0x81
+ 295 0172 03       		.byte	0x3
+ 296 0173 08       		.uleb128 0x8
+ 297 0174 89000000 		.4byte	.LASF23
+ 298 0178 04       		.byte	0x4
+ 299 0179 49       		.byte	0x49
+ 300 017a 11010000 		.4byte	0x111
+ 301 017e 04       		.byte	0x4
+ 302 017f 08       		.uleb128 0x8
+ 303 0180 3E010000 		.4byte	.LASF24
+ 304 0184 04       		.byte	0x4
+ 305 0185 4A       		.byte	0x4a
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 9
+
+
+ 306 0186 3D010000 		.4byte	0x13d
+ 307 018a 09       		.byte	0x9
+ 308 018b 00       		.byte	0
+ 309 018c 03       		.uleb128 0x3
+ 310 018d AA020000 		.4byte	.LASF25
+ 311 0191 04       		.byte	0x4
+ 312 0192 4B       		.byte	0x4b
+ 313 0193 48010000 		.4byte	0x148
+ 314 0197 06       		.uleb128 0x6
+ 315 0198 02       		.byte	0x2
+ 316 0199 05       		.byte	0x5
+ 317 019a 13       		.byte	0x13
+ 318 019b B7010000 		.4byte	0x1b7
+ 319 019f 07       		.uleb128 0x7
+ 320 01a0 706300   		.ascii	"pc\000"
+ 321 01a3 05       		.byte	0x5
+ 322 01a4 14       		.byte	0x14
+ 323 01a5 81000000 		.4byte	0x81
+ 324 01a9 00       		.byte	0
+ 325 01aa 08       		.uleb128 0x8
+ 326 01ab 5A000000 		.4byte	.LASF26
+ 327 01af 05       		.byte	0x5
+ 328 01b0 15       		.byte	0x15
+ 329 01b1 81000000 		.4byte	0x81
+ 330 01b5 01       		.byte	0x1
+ 331 01b6 00       		.byte	0
+ 332 01b7 03       		.uleb128 0x3
+ 333 01b8 36020000 		.4byte	.LASF27
+ 334 01bc 05       		.byte	0x5
+ 335 01bd 16       		.byte	0x16
+ 336 01be 97010000 		.4byte	0x197
+ 337 01c2 06       		.uleb128 0x6
+ 338 01c3 12       		.byte	0x12
+ 339 01c4 05       		.byte	0x5
+ 340 01c5 18       		.byte	0x18
+ 341 01c6 EF010000 		.4byte	0x1ef
+ 342 01ca 08       		.uleb128 0x8
+ 343 01cb 5A000000 		.4byte	.LASF26
+ 344 01cf 05       		.byte	0x5
+ 345 01d0 19       		.byte	0x19
+ 346 01d1 81000000 		.4byte	0x81
+ 347 01d5 00       		.byte	0
+ 348 01d6 08       		.uleb128 0x8
+ 349 01d7 08010000 		.4byte	.LASF28
+ 350 01db 05       		.byte	0x5
+ 351 01dc 1A       		.byte	0x1a
+ 352 01dd B3000000 		.4byte	0xb3
+ 353 01e1 01       		.byte	0x1
+ 354 01e2 08       		.uleb128 0x8
+ 355 01e3 21010000 		.4byte	.LASF29
+ 356 01e7 05       		.byte	0x5
+ 357 01e8 1B       		.byte	0x1b
+ 358 01e9 EF010000 		.4byte	0x1ef
+ 359 01ed 02       		.byte	0x2
+ 360 01ee 00       		.byte	0
+ 361 01ef 09       		.uleb128 0x9
+ 362 01f0 B7010000 		.4byte	0x1b7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 10
+
+
+ 363 01f4 FF010000 		.4byte	0x1ff
+ 364 01f8 0A       		.uleb128 0xa
+ 365 01f9 AC000000 		.4byte	0xac
+ 366 01fd 07       		.byte	0x7
+ 367 01fe 00       		.byte	0
+ 368 01ff 03       		.uleb128 0x3
+ 369 0200 61000000 		.4byte	.LASF30
+ 370 0204 05       		.byte	0x5
+ 371 0205 1C       		.byte	0x1c
+ 372 0206 C2010000 		.4byte	0x1c2
+ 373 020a 06       		.uleb128 0x6
+ 374 020b 10       		.byte	0x10
+ 375 020c 05       		.byte	0x5
+ 376 020d 20       		.byte	0x20
+ 377 020e 2B020000 		.4byte	0x22b
+ 378 0212 08       		.uleb128 0x8
+ 379 0213 87020000 		.4byte	.LASF31
+ 380 0217 05       		.byte	0x5
+ 381 0218 21       		.byte	0x21
+ 382 0219 2B020000 		.4byte	0x22b
+ 383 021d 00       		.byte	0
+ 384 021e 07       		.uleb128 0x7
+ 385 021f 70747200 		.ascii	"ptr\000"
+ 386 0223 05       		.byte	0x5
+ 387 0224 22       		.byte	0x22
+ 388 0225 81000000 		.4byte	0x81
+ 389 0229 0F       		.byte	0xf
+ 390 022a 00       		.byte	0
+ 391 022b 09       		.uleb128 0x9
+ 392 022c A5000000 		.4byte	0xa5
+ 393 0230 3B020000 		.4byte	0x23b
+ 394 0234 0A       		.uleb128 0xa
+ 395 0235 AC000000 		.4byte	0xac
+ 396 0239 0E       		.byte	0xe
+ 397 023a 00       		.byte	0
+ 398 023b 03       		.uleb128 0x3
+ 399 023c 44000000 		.4byte	.LASF32
+ 400 0240 05       		.byte	0x5
+ 401 0241 23       		.byte	0x23
+ 402 0242 0A020000 		.4byte	0x20a
+ 403 0246 06       		.uleb128 0x6
+ 404 0247 03       		.byte	0x3
+ 405 0248 06       		.byte	0x6
+ 406 0249 13       		.byte	0x13
+ 407 024a 73020000 		.4byte	0x273
+ 408 024e 08       		.uleb128 0x8
+ 409 024f 26030000 		.4byte	.LASF33
+ 410 0253 06       		.byte	0x6
+ 411 0254 14       		.byte	0x14
+ 412 0255 81000000 		.4byte	0x81
+ 413 0259 00       		.byte	0
+ 414 025a 08       		.uleb128 0x8
+ 415 025b 2C020000 		.4byte	.LASF34
+ 416 025f 06       		.byte	0x6
+ 417 0260 15       		.byte	0x15
+ 418 0261 81000000 		.4byte	0x81
+ 419 0265 01       		.byte	0x1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 11
+
+
+ 420 0266 08       		.uleb128 0x8
+ 421 0267 09030000 		.4byte	.LASF35
+ 422 026b 06       		.byte	0x6
+ 423 026c 16       		.byte	0x16
+ 424 026d 81000000 		.4byte	0x81
+ 425 0271 02       		.byte	0x2
+ 426 0272 00       		.byte	0
+ 427 0273 03       		.uleb128 0x3
+ 428 0274 0F000000 		.4byte	.LASF36
+ 429 0278 06       		.byte	0x6
+ 430 0279 17       		.byte	0x17
+ 431 027a 46020000 		.4byte	0x246
+ 432 027e 0B       		.uleb128 0xb
+ 433 027f 32030000 		.4byte	.LASF51
+ 434 0283 01       		.byte	0x1
+ 435 0284 1C       		.byte	0x1c
+ 436 0285 00000000 		.4byte	.LFB63
+ 437 0289 02000000 		.4byte	.LFE63-.LFB63
+ 438 028d 01       		.uleb128 0x1
+ 439 028e 9C       		.byte	0x9c
+ 440 028f 0C       		.uleb128 0xc
+ 441 0290 33000000 		.4byte	.LASF37
+ 442 0294 01       		.byte	0x1
+ 443 0295 33       		.byte	0x33
+ 444 0296 00000000 		.4byte	.LFB64
+ 445 029a 02000000 		.4byte	.LFE64-.LFB64
+ 446 029e 01       		.uleb128 0x1
+ 447 029f 9C       		.byte	0x9c
+ 448 02a0 B2020000 		.4byte	0x2b2
+ 449 02a4 0D       		.uleb128 0xd
+ 450 02a5 2D010000 		.4byte	.LASF39
+ 451 02a9 01       		.byte	0x1
+ 452 02aa 33       		.byte	0x33
+ 453 02ab 81000000 		.4byte	0x81
+ 454 02af 01       		.uleb128 0x1
+ 455 02b0 50       		.byte	0x50
+ 456 02b1 00       		.byte	0
+ 457 02b2 0C       		.uleb128 0xc
+ 458 02b3 1B000000 		.4byte	.LASF38
+ 459 02b7 01       		.byte	0x1
+ 460 02b8 54       		.byte	0x54
+ 461 02b9 00000000 		.4byte	.LFB65
+ 462 02bd 02000000 		.4byte	.LFE65-.LFB65
+ 463 02c1 01       		.uleb128 0x1
+ 464 02c2 9C       		.byte	0x9c
+ 465 02c3 D5020000 		.4byte	0x2d5
+ 466 02c7 0D       		.uleb128 0xd
+ 467 02c8 2D010000 		.4byte	.LASF39
+ 468 02cc 01       		.byte	0x1
+ 469 02cd 54       		.byte	0x54
+ 470 02ce 81000000 		.4byte	0x81
+ 471 02d2 01       		.uleb128 0x1
+ 472 02d3 50       		.byte	0x50
+ 473 02d4 00       		.byte	0
+ 474 02d5 0E       		.uleb128 0xe
+ 475 02d6 8D010000 		.4byte	.LASF52
+ 476 02da 01       		.byte	0x1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 12
+
+
+ 477 02db 97       		.byte	0x97
+ 478 02dc 00000000 		.4byte	.LFB66
+ 479 02e0 02000000 		.4byte	.LFE66-.LFB66
+ 480 02e4 01       		.uleb128 0x1
+ 481 02e5 9C       		.byte	0x9c
+ 482 02e6 0F       		.uleb128 0xf
+ 483 02e7 0D010000 		.4byte	.LASF40
+ 484 02eb 07       		.byte	0x7
+ 485 02ec 5506     		.2byte	0x655
+ 486 02ee F2020000 		.4byte	0x2f2
+ 487 02f2 05       		.uleb128 0x5
+ 488 02f3 8C000000 		.4byte	0x8c
+ 489 02f7 10       		.uleb128 0x10
+ 490 02f8 00000000 		.4byte	.LASF41
+ 491 02fc 04       		.byte	0x4
+ 492 02fd 51       		.byte	0x51
+ 493 02fe 8C010000 		.4byte	0x18c
+ 494 0302 05       		.uleb128 0x5
+ 495 0303 03       		.byte	0x3
+ 496 0304 00000000 		.4byte	normal_context
+ 497 0308 10       		.uleb128 0x10
+ 498 0309 FD000000 		.4byte	.LASF42
+ 499 030d 04       		.byte	0x4
+ 500 030e 52       		.byte	0x52
+ 501 030f 8C010000 		.4byte	0x18c
+ 502 0313 05       		.uleb128 0x5
+ 503 0314 03       		.byte	0x3
+ 504 0315 00000000 		.4byte	it_context
+ 505 0319 10       		.uleb128 0x10
+ 506 031a 4B010000 		.4byte	.LASF43
+ 507 031e 04       		.byte	0x4
+ 508 031f 54       		.byte	0x54
+ 509 0320 2A030000 		.4byte	0x32a
+ 510 0324 05       		.uleb128 0x5
+ 511 0325 03       		.byte	0x3
+ 512 0326 00000000 		.4byte	current_context
+ 513 032a 11       		.uleb128 0x11
+ 514 032b 04       		.byte	0x4
+ 515 032c 8C010000 		.4byte	0x18c
+ 516 0330 09       		.uleb128 0x9
+ 517 0331 81000000 		.4byte	0x81
+ 518 0335 40030000 		.4byte	0x340
+ 519 0339 0A       		.uleb128 0xa
+ 520 033a AC000000 		.4byte	0xac
+ 521 033e 0F       		.byte	0xf
+ 522 033f 00       		.byte	0
+ 523 0340 10       		.uleb128 0x10
+ 524 0341 8E020000 		.4byte	.LASF44
+ 525 0345 04       		.byte	0x4
+ 526 0346 56       		.byte	0x56
+ 527 0347 30030000 		.4byte	0x330
+ 528 034b 05       		.uleb128 0x5
+ 529 034c 03       		.byte	0x3
+ 530 034d 00000000 		.4byte	registers
+ 531 0351 09       		.uleb128 0x9
+ 532 0352 81000000 		.4byte	0x81
+ 533 0356 61030000 		.4byte	0x361
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 13
+
+
+ 534 035a 0A       		.uleb128 0xa
+ 535 035b AC000000 		.4byte	0xac
+ 536 035f FF       		.byte	0xff
+ 537 0360 00       		.byte	0
+ 538 0361 12       		.uleb128 0x12
+ 539 0362 726F6D00 		.ascii	"rom\000"
+ 540 0366 04       		.byte	0x4
+ 541 0367 59       		.byte	0x59
+ 542 0368 51030000 		.4byte	0x351
+ 543 036c 05       		.uleb128 0x5
+ 544 036d 03       		.byte	0x3
+ 545 036e 00000000 		.4byte	rom
+ 546 0372 10       		.uleb128 0x10
+ 547 0373 98020000 		.4byte	.LASF45
+ 548 0377 05       		.byte	0x5
+ 549 0378 1E       		.byte	0x1e
+ 550 0379 FF010000 		.4byte	0x1ff
+ 551 037d 05       		.uleb128 0x5
+ 552 037e 03       		.byte	0x3
+ 553 037f 00000000 		.4byte	gnome_debug_state
+ 554 0383 10       		.uleb128 0x10
+ 555 0384 97000000 		.4byte	.LASF46
+ 556 0388 05       		.byte	0x5
+ 557 0389 25       		.byte	0x25
+ 558 038a 3B020000 		.4byte	0x23b
+ 559 038e 05       		.uleb128 0x5
+ 560 038f 03       		.byte	0x3
+ 561 0390 00000000 		.4byte	gnome_console
+ 562 0394 10       		.uleb128 0x10
+ 563 0395 EB000000 		.4byte	.LASF47
+ 564 0399 06       		.byte	0x6
+ 565 039a 19       		.byte	0x19
+ 566 039b 73020000 		.4byte	0x273
+ 567 039f 05       		.uleb128 0x5
+ 568 03a0 03       		.byte	0x3
+ 569 03a1 00000000 		.4byte	via_state
+ 570 03a5 00       		.byte	0
+ 571              		.section	.debug_abbrev,"",%progbits
+ 572              	.Ldebug_abbrev0:
+ 573 0000 01       		.uleb128 0x1
+ 574 0001 11       		.uleb128 0x11
+ 575 0002 01       		.byte	0x1
+ 576 0003 25       		.uleb128 0x25
+ 577 0004 0E       		.uleb128 0xe
+ 578 0005 13       		.uleb128 0x13
+ 579 0006 0B       		.uleb128 0xb
+ 580 0007 03       		.uleb128 0x3
+ 581 0008 0E       		.uleb128 0xe
+ 582 0009 1B       		.uleb128 0x1b
+ 583 000a 0E       		.uleb128 0xe
+ 584 000b 55       		.uleb128 0x55
+ 585 000c 17       		.uleb128 0x17
+ 586 000d 11       		.uleb128 0x11
+ 587 000e 01       		.uleb128 0x1
+ 588 000f 10       		.uleb128 0x10
+ 589 0010 17       		.uleb128 0x17
+ 590 0011 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 14
+
+
+ 591 0012 00       		.byte	0
+ 592 0013 02       		.uleb128 0x2
+ 593 0014 24       		.uleb128 0x24
+ 594 0015 00       		.byte	0
+ 595 0016 0B       		.uleb128 0xb
+ 596 0017 0B       		.uleb128 0xb
+ 597 0018 3E       		.uleb128 0x3e
+ 598 0019 0B       		.uleb128 0xb
+ 599 001a 03       		.uleb128 0x3
+ 600 001b 0E       		.uleb128 0xe
+ 601 001c 00       		.byte	0
+ 602 001d 00       		.byte	0
+ 603 001e 03       		.uleb128 0x3
+ 604 001f 16       		.uleb128 0x16
+ 605 0020 00       		.byte	0
+ 606 0021 03       		.uleb128 0x3
+ 607 0022 0E       		.uleb128 0xe
+ 608 0023 3A       		.uleb128 0x3a
+ 609 0024 0B       		.uleb128 0xb
+ 610 0025 3B       		.uleb128 0x3b
+ 611 0026 0B       		.uleb128 0xb
+ 612 0027 49       		.uleb128 0x49
+ 613 0028 13       		.uleb128 0x13
+ 614 0029 00       		.byte	0
+ 615 002a 00       		.byte	0
+ 616 002b 04       		.uleb128 0x4
+ 617 002c 24       		.uleb128 0x24
+ 618 002d 00       		.byte	0
+ 619 002e 0B       		.uleb128 0xb
+ 620 002f 0B       		.uleb128 0xb
+ 621 0030 3E       		.uleb128 0x3e
+ 622 0031 0B       		.uleb128 0xb
+ 623 0032 03       		.uleb128 0x3
+ 624 0033 08       		.uleb128 0x8
+ 625 0034 00       		.byte	0
+ 626 0035 00       		.byte	0
+ 627 0036 05       		.uleb128 0x5
+ 628 0037 35       		.uleb128 0x35
+ 629 0038 00       		.byte	0
+ 630 0039 49       		.uleb128 0x49
+ 631 003a 13       		.uleb128 0x13
+ 632 003b 00       		.byte	0
+ 633 003c 00       		.byte	0
+ 634 003d 06       		.uleb128 0x6
+ 635 003e 13       		.uleb128 0x13
+ 636 003f 01       		.byte	0x1
+ 637 0040 0B       		.uleb128 0xb
+ 638 0041 0B       		.uleb128 0xb
+ 639 0042 3A       		.uleb128 0x3a
+ 640 0043 0B       		.uleb128 0xb
+ 641 0044 3B       		.uleb128 0x3b
+ 642 0045 0B       		.uleb128 0xb
+ 643 0046 01       		.uleb128 0x1
+ 644 0047 13       		.uleb128 0x13
+ 645 0048 00       		.byte	0
+ 646 0049 00       		.byte	0
+ 647 004a 07       		.uleb128 0x7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 15
+
+
+ 648 004b 0D       		.uleb128 0xd
+ 649 004c 00       		.byte	0
+ 650 004d 03       		.uleb128 0x3
+ 651 004e 08       		.uleb128 0x8
+ 652 004f 3A       		.uleb128 0x3a
+ 653 0050 0B       		.uleb128 0xb
+ 654 0051 3B       		.uleb128 0x3b
+ 655 0052 0B       		.uleb128 0xb
+ 656 0053 49       		.uleb128 0x49
+ 657 0054 13       		.uleb128 0x13
+ 658 0055 38       		.uleb128 0x38
+ 659 0056 0B       		.uleb128 0xb
+ 660 0057 00       		.byte	0
+ 661 0058 00       		.byte	0
+ 662 0059 08       		.uleb128 0x8
+ 663 005a 0D       		.uleb128 0xd
+ 664 005b 00       		.byte	0
+ 665 005c 03       		.uleb128 0x3
+ 666 005d 0E       		.uleb128 0xe
+ 667 005e 3A       		.uleb128 0x3a
+ 668 005f 0B       		.uleb128 0xb
+ 669 0060 3B       		.uleb128 0x3b
+ 670 0061 0B       		.uleb128 0xb
+ 671 0062 49       		.uleb128 0x49
+ 672 0063 13       		.uleb128 0x13
+ 673 0064 38       		.uleb128 0x38
+ 674 0065 0B       		.uleb128 0xb
+ 675 0066 00       		.byte	0
+ 676 0067 00       		.byte	0
+ 677 0068 09       		.uleb128 0x9
+ 678 0069 01       		.uleb128 0x1
+ 679 006a 01       		.byte	0x1
+ 680 006b 49       		.uleb128 0x49
+ 681 006c 13       		.uleb128 0x13
+ 682 006d 01       		.uleb128 0x1
+ 683 006e 13       		.uleb128 0x13
+ 684 006f 00       		.byte	0
+ 685 0070 00       		.byte	0
+ 686 0071 0A       		.uleb128 0xa
+ 687 0072 21       		.uleb128 0x21
+ 688 0073 00       		.byte	0
+ 689 0074 49       		.uleb128 0x49
+ 690 0075 13       		.uleb128 0x13
+ 691 0076 2F       		.uleb128 0x2f
+ 692 0077 0B       		.uleb128 0xb
+ 693 0078 00       		.byte	0
+ 694 0079 00       		.byte	0
+ 695 007a 0B       		.uleb128 0xb
+ 696 007b 2E       		.uleb128 0x2e
+ 697 007c 00       		.byte	0
+ 698 007d 3F       		.uleb128 0x3f
+ 699 007e 19       		.uleb128 0x19
+ 700 007f 03       		.uleb128 0x3
+ 701 0080 0E       		.uleb128 0xe
+ 702 0081 3A       		.uleb128 0x3a
+ 703 0082 0B       		.uleb128 0xb
+ 704 0083 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 16
+
+
+ 705 0084 0B       		.uleb128 0xb
+ 706 0085 11       		.uleb128 0x11
+ 707 0086 01       		.uleb128 0x1
+ 708 0087 12       		.uleb128 0x12
+ 709 0088 06       		.uleb128 0x6
+ 710 0089 40       		.uleb128 0x40
+ 711 008a 18       		.uleb128 0x18
+ 712 008b 9742     		.uleb128 0x2117
+ 713 008d 19       		.uleb128 0x19
+ 714 008e 00       		.byte	0
+ 715 008f 00       		.byte	0
+ 716 0090 0C       		.uleb128 0xc
+ 717 0091 2E       		.uleb128 0x2e
+ 718 0092 01       		.byte	0x1
+ 719 0093 3F       		.uleb128 0x3f
+ 720 0094 19       		.uleb128 0x19
+ 721 0095 03       		.uleb128 0x3
+ 722 0096 0E       		.uleb128 0xe
+ 723 0097 3A       		.uleb128 0x3a
+ 724 0098 0B       		.uleb128 0xb
+ 725 0099 3B       		.uleb128 0x3b
+ 726 009a 0B       		.uleb128 0xb
+ 727 009b 27       		.uleb128 0x27
+ 728 009c 19       		.uleb128 0x19
+ 729 009d 11       		.uleb128 0x11
+ 730 009e 01       		.uleb128 0x1
+ 731 009f 12       		.uleb128 0x12
+ 732 00a0 06       		.uleb128 0x6
+ 733 00a1 40       		.uleb128 0x40
+ 734 00a2 18       		.uleb128 0x18
+ 735 00a3 9742     		.uleb128 0x2117
+ 736 00a5 19       		.uleb128 0x19
+ 737 00a6 01       		.uleb128 0x1
+ 738 00a7 13       		.uleb128 0x13
+ 739 00a8 00       		.byte	0
+ 740 00a9 00       		.byte	0
+ 741 00aa 0D       		.uleb128 0xd
+ 742 00ab 05       		.uleb128 0x5
+ 743 00ac 00       		.byte	0
+ 744 00ad 03       		.uleb128 0x3
+ 745 00ae 0E       		.uleb128 0xe
+ 746 00af 3A       		.uleb128 0x3a
+ 747 00b0 0B       		.uleb128 0xb
+ 748 00b1 3B       		.uleb128 0x3b
+ 749 00b2 0B       		.uleb128 0xb
+ 750 00b3 49       		.uleb128 0x49
+ 751 00b4 13       		.uleb128 0x13
+ 752 00b5 02       		.uleb128 0x2
+ 753 00b6 18       		.uleb128 0x18
+ 754 00b7 00       		.byte	0
+ 755 00b8 00       		.byte	0
+ 756 00b9 0E       		.uleb128 0xe
+ 757 00ba 2E       		.uleb128 0x2e
+ 758 00bb 00       		.byte	0
+ 759 00bc 3F       		.uleb128 0x3f
+ 760 00bd 19       		.uleb128 0x19
+ 761 00be 03       		.uleb128 0x3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 17
+
+
+ 762 00bf 0E       		.uleb128 0xe
+ 763 00c0 3A       		.uleb128 0x3a
+ 764 00c1 0B       		.uleb128 0xb
+ 765 00c2 3B       		.uleb128 0x3b
+ 766 00c3 0B       		.uleb128 0xb
+ 767 00c4 27       		.uleb128 0x27
+ 768 00c5 19       		.uleb128 0x19
+ 769 00c6 11       		.uleb128 0x11
+ 770 00c7 01       		.uleb128 0x1
+ 771 00c8 12       		.uleb128 0x12
+ 772 00c9 06       		.uleb128 0x6
+ 773 00ca 40       		.uleb128 0x40
+ 774 00cb 18       		.uleb128 0x18
+ 775 00cc 9742     		.uleb128 0x2117
+ 776 00ce 19       		.uleb128 0x19
+ 777 00cf 00       		.byte	0
+ 778 00d0 00       		.byte	0
+ 779 00d1 0F       		.uleb128 0xf
+ 780 00d2 34       		.uleb128 0x34
+ 781 00d3 00       		.byte	0
+ 782 00d4 03       		.uleb128 0x3
+ 783 00d5 0E       		.uleb128 0xe
+ 784 00d6 3A       		.uleb128 0x3a
+ 785 00d7 0B       		.uleb128 0xb
+ 786 00d8 3B       		.uleb128 0x3b
+ 787 00d9 05       		.uleb128 0x5
+ 788 00da 49       		.uleb128 0x49
+ 789 00db 13       		.uleb128 0x13
+ 790 00dc 3F       		.uleb128 0x3f
+ 791 00dd 19       		.uleb128 0x19
+ 792 00de 3C       		.uleb128 0x3c
+ 793 00df 19       		.uleb128 0x19
+ 794 00e0 00       		.byte	0
+ 795 00e1 00       		.byte	0
+ 796 00e2 10       		.uleb128 0x10
+ 797 00e3 34       		.uleb128 0x34
+ 798 00e4 00       		.byte	0
+ 799 00e5 03       		.uleb128 0x3
+ 800 00e6 0E       		.uleb128 0xe
+ 801 00e7 3A       		.uleb128 0x3a
+ 802 00e8 0B       		.uleb128 0xb
+ 803 00e9 3B       		.uleb128 0x3b
+ 804 00ea 0B       		.uleb128 0xb
+ 805 00eb 49       		.uleb128 0x49
+ 806 00ec 13       		.uleb128 0x13
+ 807 00ed 3F       		.uleb128 0x3f
+ 808 00ee 19       		.uleb128 0x19
+ 809 00ef 02       		.uleb128 0x2
+ 810 00f0 18       		.uleb128 0x18
+ 811 00f1 00       		.byte	0
+ 812 00f2 00       		.byte	0
+ 813 00f3 11       		.uleb128 0x11
+ 814 00f4 0F       		.uleb128 0xf
+ 815 00f5 00       		.byte	0
+ 816 00f6 0B       		.uleb128 0xb
+ 817 00f7 0B       		.uleb128 0xb
+ 818 00f8 49       		.uleb128 0x49
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 18
+
+
+ 819 00f9 13       		.uleb128 0x13
+ 820 00fa 00       		.byte	0
+ 821 00fb 00       		.byte	0
+ 822 00fc 12       		.uleb128 0x12
+ 823 00fd 34       		.uleb128 0x34
+ 824 00fe 00       		.byte	0
+ 825 00ff 03       		.uleb128 0x3
+ 826 0100 08       		.uleb128 0x8
+ 827 0101 3A       		.uleb128 0x3a
+ 828 0102 0B       		.uleb128 0xb
+ 829 0103 3B       		.uleb128 0x3b
+ 830 0104 0B       		.uleb128 0xb
+ 831 0105 49       		.uleb128 0x49
+ 832 0106 13       		.uleb128 0x13
+ 833 0107 3F       		.uleb128 0x3f
+ 834 0108 19       		.uleb128 0x19
+ 835 0109 02       		.uleb128 0x2
+ 836 010a 18       		.uleb128 0x18
+ 837 010b 00       		.byte	0
+ 838 010c 00       		.byte	0
+ 839 010d 00       		.byte	0
+ 840              		.section	.debug_aranges,"",%progbits
+ 841 0000 34000000 		.4byte	0x34
+ 842 0004 0200     		.2byte	0x2
+ 843 0006 00000000 		.4byte	.Ldebug_info0
+ 844 000a 04       		.byte	0x4
+ 845 000b 00       		.byte	0
+ 846 000c 0000     		.2byte	0
+ 847 000e 0000     		.2byte	0
+ 848 0010 00000000 		.4byte	.LFB63
+ 849 0014 02000000 		.4byte	.LFE63-.LFB63
+ 850 0018 00000000 		.4byte	.LFB64
+ 851 001c 02000000 		.4byte	.LFE64-.LFB64
+ 852 0020 00000000 		.4byte	.LFB65
+ 853 0024 02000000 		.4byte	.LFE65-.LFB65
+ 854 0028 00000000 		.4byte	.LFB66
+ 855 002c 02000000 		.4byte	.LFE66-.LFB66
+ 856 0030 00000000 		.4byte	0
+ 857 0034 00000000 		.4byte	0
+ 858              		.section	.debug_ranges,"",%progbits
+ 859              	.Ldebug_ranges0:
+ 860 0000 00000000 		.4byte	.LFB63
+ 861 0004 02000000 		.4byte	.LFE63
+ 862 0008 00000000 		.4byte	.LFB64
+ 863 000c 02000000 		.4byte	.LFE64
+ 864 0010 00000000 		.4byte	.LFB65
+ 865 0014 02000000 		.4byte	.LFE65
+ 866 0018 00000000 		.4byte	.LFB66
+ 867 001c 02000000 		.4byte	.LFE66
+ 868 0020 00000000 		.4byte	0
+ 869 0024 00000000 		.4byte	0
+ 870              		.section	.debug_line,"",%progbits
+ 871              	.Ldebug_line0:
+ 872 0000 C5010000 		.section	.debug_str,"MS",%progbits,1
+ 872      02008101 
+ 872      00000201 
+ 872      FB0E0D00 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 19
+
+
+ 872      01010101 
+ 873              	.LASF41:
+ 874 0000 6E6F726D 		.ascii	"normal_context\000"
+ 874      616C5F63 
+ 874      6F6E7465 
+ 874      787400
+ 875              	.LASF36:
+ 876 000f 7669615F 		.ascii	"via_state_t\000"
+ 876      73746174 
+ 876      655F7400 
+ 877              	.LASF38:
+ 878 001b 676E6F6D 		.ascii	"gnome_debug_print_state\000"
+ 878      655F6465 
+ 878      6275675F 
+ 878      7072696E 
+ 878      745F7374 
+ 879              	.LASF37:
+ 880 0033 676E6F6D 		.ascii	"gnome_debug_loop\000"
+ 880      655F6465 
+ 880      6275675F 
+ 880      6C6F6F70 
+ 880      00
+ 881              	.LASF32:
+ 882 0044 44656275 		.ascii	"Debug_console_typedef\000"
+ 882      675F636F 
+ 882      6E736F6C 
+ 882      655F7479 
+ 882      70656465 
+ 883              	.LASF26:
+ 884 005a 61637469 		.ascii	"active\000"
+ 884      766500
+ 885              	.LASF30:
+ 886 0061 44656275 		.ascii	"Debug_state_typedef\000"
+ 886      675F7374 
+ 886      6174655F 
+ 886      74797065 
+ 886      64656600 
+ 887              	.LASF4:
+ 888 0075 5F5F7569 		.ascii	"__uint8_t\000"
+ 888      6E74385F 
+ 888      7400
+ 889              	.LASF5:
+ 890 007f 5F5F696E 		.ascii	"__int32_t\000"
+ 890      7433325F 
+ 890      7400
+ 891              	.LASF23:
+ 892 0089 73746163 		.ascii	"stack\000"
+ 892      6B00
+ 893              	.LASF11:
+ 894 008f 75696E74 		.ascii	"uint8_t\000"
+ 894      385F7400 
+ 895              	.LASF46:
+ 896 0097 676E6F6D 		.ascii	"gnome_console\000"
+ 896      655F636F 
+ 896      6E736F6C 
+ 896      6500
+ 897              	.LASF13:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 20
+
+
+ 898 00a5 666C6F61 		.ascii	"float\000"
+ 898      7400
+ 899              	.LASF18:
+ 900 00ab 64617461 		.ascii	"data\000"
+ 900      00
+ 901              	.LASF0:
+ 902 00b0 7369676E 		.ascii	"signed char\000"
+ 902      65642063 
+ 902      68617200 
+ 903              	.LASF1:
+ 904 00bc 756E7369 		.ascii	"unsigned char\000"
+ 904      676E6564 
+ 904      20636861 
+ 904      7200
+ 905              	.LASF7:
+ 906 00ca 6C6F6E67 		.ascii	"long unsigned int\000"
+ 906      20756E73 
+ 906      69676E65 
+ 906      6420696E 
+ 906      7400
+ 907              	.LASF20:
+ 908 00dc 696E645F 		.ascii	"ind_addr_reg_t\000"
+ 908      61646472 
+ 908      5F726567 
+ 908      5F7400
+ 909              	.LASF47:
+ 910 00eb 7669615F 		.ascii	"via_state\000"
+ 910      73746174 
+ 910      6500
+ 911              	.LASF17:
+ 912 00f5 666C6167 		.ascii	"flags_t\000"
+ 912      735F7400 
+ 913              	.LASF42:
+ 914 00fd 69745F63 		.ascii	"it_context\000"
+ 914      6F6E7465 
+ 914      787400
+ 915              	.LASF28:
+ 916 0108 73746F70 		.ascii	"stop\000"
+ 916      00
+ 917              	.LASF40:
+ 918 010d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 918      52784275 
+ 918      66666572 
+ 918      00
+ 919              	.LASF14:
+ 920 011a 646F7562 		.ascii	"double\000"
+ 920      6C6500
+ 921              	.LASF29:
+ 922 0121 62726561 		.ascii	"breakpoints\000"
+ 922      6B706F69 
+ 922      6E747300 
+ 923              	.LASF39:
+ 924 012d 636F6465 		.ascii	"code\000"
+ 924      00
+ 925              	.LASF21:
+ 926 0132 61636375 		.ascii	"accumulator\000"
+ 926      6D756C61 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 21
+
+
+ 926      746F7200 
+ 927              	.LASF24:
+ 928 013e 696E645F 		.ascii	"ind_addr_reg\000"
+ 928      61646472 
+ 928      5F726567 
+ 928      00
+ 929              	.LASF43:
+ 930 014b 63757272 		.ascii	"current_context\000"
+ 930      656E745F 
+ 930      636F6E74 
+ 930      65787400 
+ 931              	.LASF10:
+ 932 015b 756E7369 		.ascii	"unsigned int\000"
+ 932      676E6564 
+ 932      20696E74 
+ 932      00
+ 933              	.LASF22:
+ 934 0168 666C6167 		.ascii	"flags\000"
+ 934      7300
+ 935              	.LASF19:
+ 936 016e 73746163 		.ascii	"stack_t\000"
+ 936      6B5F7400 
+ 937              	.LASF9:
+ 938 0176 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 938      206C6F6E 
+ 938      6720756E 
+ 938      7369676E 
+ 938      65642069 
+ 939              	.LASF52:
+ 940 018d 676E6F6D 		.ascii	"gnome_tx_uart_it\000"
+ 940      655F7478 
+ 940      5F756172 
+ 940      745F6974 
+ 940      00
+ 941              	.LASF48:
+ 942 019e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 942      4320342E 
+ 942      392E3320 
+ 942      32303135 
+ 942      30333033 
+ 943 01d1 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 943      20726576 
+ 943      6973696F 
+ 943      6E203232 
+ 943      31323230 
+ 944 0204 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 944      66756E63 
+ 944      74696F6E 
+ 944      2D736563 
+ 944      74696F6E 
+ 945              	.LASF34:
+ 946 022c 706F7274 		.ascii	"port0_ptr\000"
+ 946      305F7074 
+ 946      7200
+ 947              	.LASF27:
+ 948 0236 42726561 		.ascii	"Breakpoint_typedef\000"
+ 948      6B706F69 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 22
+
+
+ 948      6E745F74 
+ 948      79706564 
+ 948      656600
+ 949              	.LASF12:
+ 950 0249 696E7433 		.ascii	"int32_t\000"
+ 950      325F7400 
+ 951              	.LASF16:
+ 952 0251 73697A65 		.ascii	"sizetype\000"
+ 952      74797065 
+ 952      00
+ 953              	.LASF8:
+ 954 025a 6C6F6E67 		.ascii	"long long int\000"
+ 954      206C6F6E 
+ 954      6720696E 
+ 954      7400
+ 955              	.LASF15:
+ 956 0268 63686172 		.ascii	"char\000"
+ 956      00
+ 957              	.LASF49:
+ 958 026d 2E5C676E 		.ascii	".\\gnome_debug.c\000"
+ 958      6F6D655F 
+ 958      64656275 
+ 958      672E6300 
+ 959              	.LASF2:
+ 960 027d 73686F72 		.ascii	"short int\000"
+ 960      7420696E 
+ 960      7400
+ 961              	.LASF31:
+ 962 0287 62756666 		.ascii	"buffer\000"
+ 962      657200
+ 963              	.LASF44:
+ 964 028e 72656769 		.ascii	"registers\000"
+ 964      73746572 
+ 964      7300
+ 965              	.LASF45:
+ 966 0298 676E6F6D 		.ascii	"gnome_debug_state\000"
+ 966      655F6465 
+ 966      6275675F 
+ 966      73746174 
+ 966      6500
+ 967              	.LASF25:
+ 968 02aa 636F6E74 		.ascii	"context_t\000"
+ 968      6578745F 
+ 968      7400
+ 969              	.LASF6:
+ 970 02b4 6C6F6E67 		.ascii	"long int\000"
+ 970      20696E74 
+ 970      00
+ 971              	.LASF50:
+ 972 02bd 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 972      73657273 
+ 972      5C4A6176 
+ 972      6965725C 
+ 972      446F6375 
+ 973 02eb 6F726B73 		.ascii	"orkspace\\gnome_template.cydsn\000"
+ 973      70616365 
+ 973      5C676E6F 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccpuRbSa.s 			page 23
+
+
+ 973      6D655F74 
+ 973      656D706C 
+ 974              	.LASF35:
+ 975 0309 706F7274 		.ascii	"port1_ptr\000"
+ 975      315F7074 
+ 975      7200
+ 976              	.LASF3:
+ 977 0313 73686F72 		.ascii	"short unsigned int\000"
+ 977      7420756E 
+ 977      7369676E 
+ 977      65642069 
+ 977      6E7400
+ 978              	.LASF33:
+ 979 0326 636F6E66 		.ascii	"config_mask\000"
+ 979      69675F6D 
+ 979      61736B00 
+ 980              	.LASF51:
+ 981 0332 676E6F6D 		.ascii	"gnome_debug_init\000"
+ 981      655F6465 
+ 981      6275675F 
+ 981      696E6974 
+ 981      00
+ 982              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

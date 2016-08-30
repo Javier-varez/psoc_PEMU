@@ -1,0 +1,850 @@
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.main,"ax",%progbits
+  19              		.align	2
+  20              		.global	main
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	main, %function
+  24              	main:
+  25              	.LFB63:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\main.c      ****  * All Rights Reserved
+   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\main.c      ****  *
+   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\main.c      ****  *
+  10:.\main.c      ****  * ========================================
+  11:.\main.c      **** */
+  12:.\main.c      **** #include <project.h>
+  13:.\main.c      **** #include <gnome.h>
+  14:.\main.c      **** 
+  15:.\main.c      **** int main()
+  16:.\main.c      **** {
+  27              		.loc 1 16 0
+  28              		.cfi_startproc
+  29              		@ Volatile: function does not return.
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  17:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  36              		.loc 1 17 0
+  37              	@ 17 ".\main.c" 1
+  38 0002 62B6     		CPSIE   i
+  39              	@ 0 "" 2
+  18:.\main.c      **** 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 2
+
+
+  19:.\main.c      ****     gnome_start();
+  40              		.loc 1 19 0
+  41              		.thumb
+  42 0004 FFF7FEFF 		bl	gnome_start
+  43              	.LVL0:
+  44              	.L2:
+  20:.\main.c      ****     
+  21:.\main.c      ****     while(1);
+  45              		.loc 1 21 0 discriminator 1
+  46 0008 FEE7     		b	.L2
+  47              		.cfi_endproc
+  48              	.LFE63:
+  49              		.size	main, .-main
+  50              		.comm	rom,256,4
+  51              		.comm	registers,16,4
+  52              		.comm	current_context,4,4
+  53              		.comm	it_context,11,4
+  54              		.comm	normal_context,11,4
+  55 000a 00BF     		.text
+  56              	.Letext0:
+  57              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  58              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  59              		.file 4 "./gnome_registers.h"
+  60              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+  61              		.file 6 "./gnome.h"
+  62              		.section	.debug_info,"",%progbits
+  63              	.Ldebug_info0:
+  64 0000 47020000 		.4byte	0x247
+  65 0004 0400     		.2byte	0x4
+  66 0006 00000000 		.4byte	.Ldebug_abbrev0
+  67 000a 04       		.byte	0x4
+  68 000b 01       		.uleb128 0x1
+  69 000c A9000000 		.4byte	.LASF31
+  70 0010 01       		.byte	0x1
+  71 0011 59000000 		.4byte	.LASF32
+  72 0015 E7010000 		.4byte	.LASF33
+  73 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  74 001d 00000000 		.4byte	0
+  75 0021 00000000 		.4byte	.Ldebug_line0
+  76 0025 02       		.uleb128 0x2
+  77 0026 01       		.byte	0x1
+  78 0027 06       		.byte	0x6
+  79 0028 33020000 		.4byte	.LASF0
+  80 002c 03       		.uleb128 0x3
+  81 002d 0F000000 		.4byte	.LASF4
+  82 0031 02       		.byte	0x2
+  83 0032 1D       		.byte	0x1d
+  84 0033 37000000 		.4byte	0x37
+  85 0037 02       		.uleb128 0x2
+  86 0038 01       		.byte	0x1
+  87 0039 08       		.byte	0x8
+  88 003a 4B000000 		.4byte	.LASF1
+  89 003e 02       		.uleb128 0x2
+  90 003f 02       		.byte	0x2
+  91 0040 05       		.byte	0x5
+  92 0041 B8010000 		.4byte	.LASF2
+  93 0045 02       		.uleb128 0x2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 3
+
+
+  94 0046 02       		.byte	0x2
+  95 0047 07       		.byte	0x7
+  96 0048 8A010000 		.4byte	.LASF3
+  97 004c 03       		.uleb128 0x3
+  98 004d 25000000 		.4byte	.LASF5
+  99 0051 02       		.byte	0x2
+ 100 0052 3F       		.byte	0x3f
+ 101 0053 57000000 		.4byte	0x57
+ 102 0057 02       		.uleb128 0x2
+ 103 0058 04       		.byte	0x4
+ 104 0059 05       		.byte	0x5
+ 105 005a DE010000 		.4byte	.LASF6
+ 106 005e 02       		.uleb128 0x2
+ 107 005f 04       		.byte	0x4
+ 108 0060 07       		.byte	0x7
+ 109 0061 62000000 		.4byte	.LASF7
+ 110 0065 02       		.uleb128 0x2
+ 111 0066 08       		.byte	0x8
+ 112 0067 05       		.byte	0x5
+ 113 0068 9D010000 		.4byte	.LASF8
+ 114 006c 02       		.uleb128 0x2
+ 115 006d 08       		.byte	0x8
+ 116 006e 07       		.byte	0x7
+ 117 006f 5A010000 		.4byte	.LASF9
+ 118 0073 04       		.uleb128 0x4
+ 119 0074 04       		.byte	0x4
+ 120 0075 05       		.byte	0x5
+ 121 0076 696E7400 		.ascii	"int\000"
+ 122 007a 02       		.uleb128 0x2
+ 123 007b 04       		.byte	0x4
+ 124 007c 07       		.byte	0x7
+ 125 007d 47010000 		.4byte	.LASF10
+ 126 0081 03       		.uleb128 0x3
+ 127 0082 71010000 		.4byte	.LASF11
+ 128 0086 03       		.byte	0x3
+ 129 0087 15       		.byte	0x15
+ 130 0088 2C000000 		.4byte	0x2c
+ 131 008c 03       		.uleb128 0x3
+ 132 008d 79010000 		.4byte	.LASF12
+ 133 0091 03       		.byte	0x3
+ 134 0092 2C       		.byte	0x2c
+ 135 0093 4C000000 		.4byte	0x4c
+ 136 0097 02       		.uleb128 0x2
+ 137 0098 04       		.byte	0x4
+ 138 0099 04       		.byte	0x4
+ 139 009a 35000000 		.4byte	.LASF13
+ 140 009e 02       		.uleb128 0x2
+ 141 009f 08       		.byte	0x8
+ 142 00a0 04       		.byte	0x4
+ 143 00a1 9D000000 		.4byte	.LASF14
+ 144 00a5 02       		.uleb128 0x2
+ 145 00a6 01       		.byte	0x1
+ 146 00a7 08       		.byte	0x8
+ 147 00a8 AB010000 		.4byte	.LASF15
+ 148 00ac 02       		.uleb128 0x2
+ 149 00ad 04       		.byte	0x4
+ 150 00ae 07       		.byte	0x7
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 4
+
+
+ 151 00af 81010000 		.4byte	.LASF16
+ 152 00b3 05       		.uleb128 0x5
+ 153 00b4 02       		.byte	0x2
+ 154 00b5 04       		.byte	0x4
+ 155 00b6 19       		.byte	0x19
+ 156 00b7 D0000000 		.4byte	0xd0
+ 157 00bb 06       		.uleb128 0x6
+ 158 00bc 4300     		.ascii	"C\000"
+ 159 00be 04       		.byte	0x4
+ 160 00bf 1A       		.byte	0x1a
+ 161 00c0 81000000 		.4byte	0x81
+ 162 00c4 00       		.byte	0
+ 163 00c5 06       		.uleb128 0x6
+ 164 00c6 5A00     		.ascii	"Z\000"
+ 165 00c8 04       		.byte	0x4
+ 166 00c9 1B       		.byte	0x1b
+ 167 00ca 81000000 		.4byte	0x81
+ 168 00ce 01       		.byte	0x1
+ 169 00cf 00       		.byte	0
+ 170 00d0 03       		.uleb128 0x3
+ 171 00d1 B0010000 		.4byte	.LASF17
+ 172 00d5 04       		.byte	0x4
+ 173 00d6 1C       		.byte	0x1c
+ 174 00d7 B3000000 		.4byte	0xb3
+ 175 00db 05       		.uleb128 0x5
+ 176 00dc 05       		.byte	0x5
+ 177 00dd 04       		.byte	0x4
+ 178 00de 20       		.byte	0x20
+ 179 00df FC000000 		.4byte	0xfc
+ 180 00e3 07       		.uleb128 0x7
+ 181 00e4 3B000000 		.4byte	.LASF18
+ 182 00e8 04       		.byte	0x4
+ 183 00e9 21       		.byte	0x21
+ 184 00ea FC000000 		.4byte	0xfc
+ 185 00ee 00       		.byte	0
+ 186 00ef 06       		.uleb128 0x6
+ 187 00f0 70747200 		.ascii	"ptr\000"
+ 188 00f4 04       		.byte	0x4
+ 189 00f5 22       		.byte	0x22
+ 190 00f6 81000000 		.4byte	0x81
+ 191 00fa 04       		.byte	0x4
+ 192 00fb 00       		.byte	0
+ 193 00fc 08       		.uleb128 0x8
+ 194 00fd 81000000 		.4byte	0x81
+ 195 0101 0C010000 		.4byte	0x10c
+ 196 0105 09       		.uleb128 0x9
+ 197 0106 AC000000 		.4byte	0xac
+ 198 010a 03       		.byte	0x3
+ 199 010b 00       		.byte	0
+ 200 010c 03       		.uleb128 0x3
+ 201 010d C2010000 		.4byte	.LASF19
+ 202 0111 04       		.byte	0x4
+ 203 0112 23       		.byte	0x23
+ 204 0113 DB000000 		.4byte	0xdb
+ 205 0117 05       		.uleb128 0x5
+ 206 0118 02       		.byte	0x2
+ 207 0119 04       		.byte	0x4
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 5
+
+
+ 208 011a 25       		.byte	0x25
+ 209 011b 38010000 		.4byte	0x138
+ 210 011f 07       		.uleb128 0x7
+ 211 0120 3B000000 		.4byte	.LASF18
+ 212 0124 04       		.byte	0x4
+ 213 0125 26       		.byte	0x26
+ 214 0126 81000000 		.4byte	0x81
+ 215 012a 00       		.byte	0
+ 216 012b 06       		.uleb128 0x6
+ 217 012c 70747200 		.ascii	"ptr\000"
+ 218 0130 04       		.byte	0x4
+ 219 0131 27       		.byte	0x27
+ 220 0132 81000000 		.4byte	0x81
+ 221 0136 01       		.byte	0x1
+ 222 0137 00       		.byte	0
+ 223 0138 03       		.uleb128 0x3
+ 224 0139 74000000 		.4byte	.LASF20
+ 225 013d 04       		.byte	0x4
+ 226 013e 28       		.byte	0x28
+ 227 013f 17010000 		.4byte	0x117
+ 228 0143 05       		.uleb128 0x5
+ 229 0144 0B       		.byte	0xb
+ 230 0145 04       		.byte	0x4
+ 231 0146 45       		.byte	0x45
+ 232 0147 87010000 		.4byte	0x187
+ 233 014b 07       		.uleb128 0x7
+ 234 014c 19000000 		.4byte	.LASF21
+ 235 0150 04       		.byte	0x4
+ 236 0151 46       		.byte	0x46
+ 237 0152 81000000 		.4byte	0x81
+ 238 0156 00       		.byte	0
+ 239 0157 07       		.uleb128 0x7
+ 240 0158 54010000 		.4byte	.LASF22
+ 241 015c 04       		.byte	0x4
+ 242 015d 47       		.byte	0x47
+ 243 015e D0000000 		.4byte	0xd0
+ 244 0162 01       		.byte	0x1
+ 245 0163 06       		.uleb128 0x6
+ 246 0164 504300   		.ascii	"PC\000"
+ 247 0167 04       		.byte	0x4
+ 248 0168 48       		.byte	0x48
+ 249 0169 81000000 		.4byte	0x81
+ 250 016d 03       		.byte	0x3
+ 251 016e 07       		.uleb128 0x7
+ 252 016f 2F000000 		.4byte	.LASF23
+ 253 0173 04       		.byte	0x4
+ 254 0174 49       		.byte	0x49
+ 255 0175 0C010000 		.4byte	0x10c
+ 256 0179 04       		.byte	0x4
+ 257 017a 07       		.uleb128 0x7
+ 258 017b 83000000 		.4byte	.LASF24
+ 259 017f 04       		.byte	0x4
+ 260 0180 4A       		.byte	0x4a
+ 261 0181 38010000 		.4byte	0x138
+ 262 0185 09       		.byte	0x9
+ 263 0186 00       		.byte	0
+ 264 0187 03       		.uleb128 0x3
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 6
+
+
+ 265 0188 D4010000 		.4byte	.LASF25
+ 266 018c 04       		.byte	0x4
+ 267 018d 4B       		.byte	0x4b
+ 268 018e 43010000 		.4byte	0x143
+ 269 0192 0A       		.uleb128 0xa
+ 270 0193 A4000000 		.4byte	.LASF34
+ 271 0197 01       		.byte	0x1
+ 272 0198 0F       		.byte	0xf
+ 273 0199 73000000 		.4byte	0x73
+ 274 019d 00000000 		.4byte	.LFB63
+ 275 01a1 0A000000 		.4byte	.LFE63-.LFB63
+ 276 01a5 01       		.uleb128 0x1
+ 277 01a6 9C       		.byte	0x9c
+ 278 01a7 B5010000 		.4byte	0x1b5
+ 279 01ab 0B       		.uleb128 0xb
+ 280 01ac 08000000 		.4byte	.LVL0
+ 281 01b0 41020000 		.4byte	0x241
+ 282 01b4 00       		.byte	0
+ 283 01b5 0C       		.uleb128 0xc
+ 284 01b6 90000000 		.4byte	.LASF26
+ 285 01ba 05       		.byte	0x5
+ 286 01bb 5506     		.2byte	0x655
+ 287 01bd C1010000 		.4byte	0x1c1
+ 288 01c1 0D       		.uleb128 0xd
+ 289 01c2 8C000000 		.4byte	0x8c
+ 290 01c6 0E       		.uleb128 0xe
+ 291 01c7 00000000 		.4byte	.LASF27
+ 292 01cb 04       		.byte	0x4
+ 293 01cc 51       		.byte	0x51
+ 294 01cd 87010000 		.4byte	0x187
+ 295 01d1 05       		.uleb128 0x5
+ 296 01d2 03       		.byte	0x3
+ 297 01d3 00000000 		.4byte	normal_context
+ 298 01d7 0E       		.uleb128 0xe
+ 299 01d8 40000000 		.4byte	.LASF28
+ 300 01dc 04       		.byte	0x4
+ 301 01dd 52       		.byte	0x52
+ 302 01de 87010000 		.4byte	0x187
+ 303 01e2 05       		.uleb128 0x5
+ 304 01e3 03       		.byte	0x3
+ 305 01e4 00000000 		.4byte	it_context
+ 306 01e8 0E       		.uleb128 0xe
+ 307 01e9 37010000 		.4byte	.LASF29
+ 308 01ed 04       		.byte	0x4
+ 309 01ee 54       		.byte	0x54
+ 310 01ef F9010000 		.4byte	0x1f9
+ 311 01f3 05       		.uleb128 0x5
+ 312 01f4 03       		.byte	0x3
+ 313 01f5 00000000 		.4byte	current_context
+ 314 01f9 0F       		.uleb128 0xf
+ 315 01fa 04       		.byte	0x4
+ 316 01fb 87010000 		.4byte	0x187
+ 317 01ff 08       		.uleb128 0x8
+ 318 0200 81000000 		.4byte	0x81
+ 319 0204 0F020000 		.4byte	0x20f
+ 320 0208 09       		.uleb128 0x9
+ 321 0209 AC000000 		.4byte	0xac
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 7
+
+
+ 322 020d 0F       		.byte	0xf
+ 323 020e 00       		.byte	0
+ 324 020f 0E       		.uleb128 0xe
+ 325 0210 CA010000 		.4byte	.LASF30
+ 326 0214 04       		.byte	0x4
+ 327 0215 56       		.byte	0x56
+ 328 0216 FF010000 		.4byte	0x1ff
+ 329 021a 05       		.uleb128 0x5
+ 330 021b 03       		.byte	0x3
+ 331 021c 00000000 		.4byte	registers
+ 332 0220 08       		.uleb128 0x8
+ 333 0221 81000000 		.4byte	0x81
+ 334 0225 30020000 		.4byte	0x230
+ 335 0229 09       		.uleb128 0x9
+ 336 022a AC000000 		.4byte	0xac
+ 337 022e FF       		.byte	0xff
+ 338 022f 00       		.byte	0
+ 339 0230 10       		.uleb128 0x10
+ 340 0231 726F6D00 		.ascii	"rom\000"
+ 341 0235 04       		.byte	0x4
+ 342 0236 59       		.byte	0x59
+ 343 0237 20020000 		.4byte	0x220
+ 344 023b 05       		.uleb128 0x5
+ 345 023c 03       		.byte	0x3
+ 346 023d 00000000 		.4byte	rom
+ 347 0241 11       		.uleb128 0x11
+ 348 0242 3F020000 		.4byte	.LASF35
+ 349 0246 06       		.byte	0x6
+ 350 0247 13       		.byte	0x13
+ 351 0248 12       		.uleb128 0x12
+ 352 0249 00       		.byte	0
+ 353 024a 00       		.byte	0
+ 354              		.section	.debug_abbrev,"",%progbits
+ 355              	.Ldebug_abbrev0:
+ 356 0000 01       		.uleb128 0x1
+ 357 0001 11       		.uleb128 0x11
+ 358 0002 01       		.byte	0x1
+ 359 0003 25       		.uleb128 0x25
+ 360 0004 0E       		.uleb128 0xe
+ 361 0005 13       		.uleb128 0x13
+ 362 0006 0B       		.uleb128 0xb
+ 363 0007 03       		.uleb128 0x3
+ 364 0008 0E       		.uleb128 0xe
+ 365 0009 1B       		.uleb128 0x1b
+ 366 000a 0E       		.uleb128 0xe
+ 367 000b 55       		.uleb128 0x55
+ 368 000c 17       		.uleb128 0x17
+ 369 000d 11       		.uleb128 0x11
+ 370 000e 01       		.uleb128 0x1
+ 371 000f 10       		.uleb128 0x10
+ 372 0010 17       		.uleb128 0x17
+ 373 0011 00       		.byte	0
+ 374 0012 00       		.byte	0
+ 375 0013 02       		.uleb128 0x2
+ 376 0014 24       		.uleb128 0x24
+ 377 0015 00       		.byte	0
+ 378 0016 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 8
+
+
+ 379 0017 0B       		.uleb128 0xb
+ 380 0018 3E       		.uleb128 0x3e
+ 381 0019 0B       		.uleb128 0xb
+ 382 001a 03       		.uleb128 0x3
+ 383 001b 0E       		.uleb128 0xe
+ 384 001c 00       		.byte	0
+ 385 001d 00       		.byte	0
+ 386 001e 03       		.uleb128 0x3
+ 387 001f 16       		.uleb128 0x16
+ 388 0020 00       		.byte	0
+ 389 0021 03       		.uleb128 0x3
+ 390 0022 0E       		.uleb128 0xe
+ 391 0023 3A       		.uleb128 0x3a
+ 392 0024 0B       		.uleb128 0xb
+ 393 0025 3B       		.uleb128 0x3b
+ 394 0026 0B       		.uleb128 0xb
+ 395 0027 49       		.uleb128 0x49
+ 396 0028 13       		.uleb128 0x13
+ 397 0029 00       		.byte	0
+ 398 002a 00       		.byte	0
+ 399 002b 04       		.uleb128 0x4
+ 400 002c 24       		.uleb128 0x24
+ 401 002d 00       		.byte	0
+ 402 002e 0B       		.uleb128 0xb
+ 403 002f 0B       		.uleb128 0xb
+ 404 0030 3E       		.uleb128 0x3e
+ 405 0031 0B       		.uleb128 0xb
+ 406 0032 03       		.uleb128 0x3
+ 407 0033 08       		.uleb128 0x8
+ 408 0034 00       		.byte	0
+ 409 0035 00       		.byte	0
+ 410 0036 05       		.uleb128 0x5
+ 411 0037 13       		.uleb128 0x13
+ 412 0038 01       		.byte	0x1
+ 413 0039 0B       		.uleb128 0xb
+ 414 003a 0B       		.uleb128 0xb
+ 415 003b 3A       		.uleb128 0x3a
+ 416 003c 0B       		.uleb128 0xb
+ 417 003d 3B       		.uleb128 0x3b
+ 418 003e 0B       		.uleb128 0xb
+ 419 003f 01       		.uleb128 0x1
+ 420 0040 13       		.uleb128 0x13
+ 421 0041 00       		.byte	0
+ 422 0042 00       		.byte	0
+ 423 0043 06       		.uleb128 0x6
+ 424 0044 0D       		.uleb128 0xd
+ 425 0045 00       		.byte	0
+ 426 0046 03       		.uleb128 0x3
+ 427 0047 08       		.uleb128 0x8
+ 428 0048 3A       		.uleb128 0x3a
+ 429 0049 0B       		.uleb128 0xb
+ 430 004a 3B       		.uleb128 0x3b
+ 431 004b 0B       		.uleb128 0xb
+ 432 004c 49       		.uleb128 0x49
+ 433 004d 13       		.uleb128 0x13
+ 434 004e 38       		.uleb128 0x38
+ 435 004f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 9
+
+
+ 436 0050 00       		.byte	0
+ 437 0051 00       		.byte	0
+ 438 0052 07       		.uleb128 0x7
+ 439 0053 0D       		.uleb128 0xd
+ 440 0054 00       		.byte	0
+ 441 0055 03       		.uleb128 0x3
+ 442 0056 0E       		.uleb128 0xe
+ 443 0057 3A       		.uleb128 0x3a
+ 444 0058 0B       		.uleb128 0xb
+ 445 0059 3B       		.uleb128 0x3b
+ 446 005a 0B       		.uleb128 0xb
+ 447 005b 49       		.uleb128 0x49
+ 448 005c 13       		.uleb128 0x13
+ 449 005d 38       		.uleb128 0x38
+ 450 005e 0B       		.uleb128 0xb
+ 451 005f 00       		.byte	0
+ 452 0060 00       		.byte	0
+ 453 0061 08       		.uleb128 0x8
+ 454 0062 01       		.uleb128 0x1
+ 455 0063 01       		.byte	0x1
+ 456 0064 49       		.uleb128 0x49
+ 457 0065 13       		.uleb128 0x13
+ 458 0066 01       		.uleb128 0x1
+ 459 0067 13       		.uleb128 0x13
+ 460 0068 00       		.byte	0
+ 461 0069 00       		.byte	0
+ 462 006a 09       		.uleb128 0x9
+ 463 006b 21       		.uleb128 0x21
+ 464 006c 00       		.byte	0
+ 465 006d 49       		.uleb128 0x49
+ 466 006e 13       		.uleb128 0x13
+ 467 006f 2F       		.uleb128 0x2f
+ 468 0070 0B       		.uleb128 0xb
+ 469 0071 00       		.byte	0
+ 470 0072 00       		.byte	0
+ 471 0073 0A       		.uleb128 0xa
+ 472 0074 2E       		.uleb128 0x2e
+ 473 0075 01       		.byte	0x1
+ 474 0076 3F       		.uleb128 0x3f
+ 475 0077 19       		.uleb128 0x19
+ 476 0078 03       		.uleb128 0x3
+ 477 0079 0E       		.uleb128 0xe
+ 478 007a 3A       		.uleb128 0x3a
+ 479 007b 0B       		.uleb128 0xb
+ 480 007c 3B       		.uleb128 0x3b
+ 481 007d 0B       		.uleb128 0xb
+ 482 007e 49       		.uleb128 0x49
+ 483 007f 13       		.uleb128 0x13
+ 484 0080 11       		.uleb128 0x11
+ 485 0081 01       		.uleb128 0x1
+ 486 0082 12       		.uleb128 0x12
+ 487 0083 06       		.uleb128 0x6
+ 488 0084 40       		.uleb128 0x40
+ 489 0085 18       		.uleb128 0x18
+ 490 0086 9742     		.uleb128 0x2117
+ 491 0088 19       		.uleb128 0x19
+ 492 0089 01       		.uleb128 0x1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 10
+
+
+ 493 008a 13       		.uleb128 0x13
+ 494 008b 00       		.byte	0
+ 495 008c 00       		.byte	0
+ 496 008d 0B       		.uleb128 0xb
+ 497 008e 898201   		.uleb128 0x4109
+ 498 0091 00       		.byte	0
+ 499 0092 11       		.uleb128 0x11
+ 500 0093 01       		.uleb128 0x1
+ 501 0094 31       		.uleb128 0x31
+ 502 0095 13       		.uleb128 0x13
+ 503 0096 00       		.byte	0
+ 504 0097 00       		.byte	0
+ 505 0098 0C       		.uleb128 0xc
+ 506 0099 34       		.uleb128 0x34
+ 507 009a 00       		.byte	0
+ 508 009b 03       		.uleb128 0x3
+ 509 009c 0E       		.uleb128 0xe
+ 510 009d 3A       		.uleb128 0x3a
+ 511 009e 0B       		.uleb128 0xb
+ 512 009f 3B       		.uleb128 0x3b
+ 513 00a0 05       		.uleb128 0x5
+ 514 00a1 49       		.uleb128 0x49
+ 515 00a2 13       		.uleb128 0x13
+ 516 00a3 3F       		.uleb128 0x3f
+ 517 00a4 19       		.uleb128 0x19
+ 518 00a5 3C       		.uleb128 0x3c
+ 519 00a6 19       		.uleb128 0x19
+ 520 00a7 00       		.byte	0
+ 521 00a8 00       		.byte	0
+ 522 00a9 0D       		.uleb128 0xd
+ 523 00aa 35       		.uleb128 0x35
+ 524 00ab 00       		.byte	0
+ 525 00ac 49       		.uleb128 0x49
+ 526 00ad 13       		.uleb128 0x13
+ 527 00ae 00       		.byte	0
+ 528 00af 00       		.byte	0
+ 529 00b0 0E       		.uleb128 0xe
+ 530 00b1 34       		.uleb128 0x34
+ 531 00b2 00       		.byte	0
+ 532 00b3 03       		.uleb128 0x3
+ 533 00b4 0E       		.uleb128 0xe
+ 534 00b5 3A       		.uleb128 0x3a
+ 535 00b6 0B       		.uleb128 0xb
+ 536 00b7 3B       		.uleb128 0x3b
+ 537 00b8 0B       		.uleb128 0xb
+ 538 00b9 49       		.uleb128 0x49
+ 539 00ba 13       		.uleb128 0x13
+ 540 00bb 3F       		.uleb128 0x3f
+ 541 00bc 19       		.uleb128 0x19
+ 542 00bd 02       		.uleb128 0x2
+ 543 00be 18       		.uleb128 0x18
+ 544 00bf 00       		.byte	0
+ 545 00c0 00       		.byte	0
+ 546 00c1 0F       		.uleb128 0xf
+ 547 00c2 0F       		.uleb128 0xf
+ 548 00c3 00       		.byte	0
+ 549 00c4 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 11
+
+
+ 550 00c5 0B       		.uleb128 0xb
+ 551 00c6 49       		.uleb128 0x49
+ 552 00c7 13       		.uleb128 0x13
+ 553 00c8 00       		.byte	0
+ 554 00c9 00       		.byte	0
+ 555 00ca 10       		.uleb128 0x10
+ 556 00cb 34       		.uleb128 0x34
+ 557 00cc 00       		.byte	0
+ 558 00cd 03       		.uleb128 0x3
+ 559 00ce 08       		.uleb128 0x8
+ 560 00cf 3A       		.uleb128 0x3a
+ 561 00d0 0B       		.uleb128 0xb
+ 562 00d1 3B       		.uleb128 0x3b
+ 563 00d2 0B       		.uleb128 0xb
+ 564 00d3 49       		.uleb128 0x49
+ 565 00d4 13       		.uleb128 0x13
+ 566 00d5 3F       		.uleb128 0x3f
+ 567 00d6 19       		.uleb128 0x19
+ 568 00d7 02       		.uleb128 0x2
+ 569 00d8 18       		.uleb128 0x18
+ 570 00d9 00       		.byte	0
+ 571 00da 00       		.byte	0
+ 572 00db 11       		.uleb128 0x11
+ 573 00dc 2E       		.uleb128 0x2e
+ 574 00dd 01       		.byte	0x1
+ 575 00de 3F       		.uleb128 0x3f
+ 576 00df 19       		.uleb128 0x19
+ 577 00e0 03       		.uleb128 0x3
+ 578 00e1 0E       		.uleb128 0xe
+ 579 00e2 3A       		.uleb128 0x3a
+ 580 00e3 0B       		.uleb128 0xb
+ 581 00e4 3B       		.uleb128 0x3b
+ 582 00e5 0B       		.uleb128 0xb
+ 583 00e6 3C       		.uleb128 0x3c
+ 584 00e7 19       		.uleb128 0x19
+ 585 00e8 00       		.byte	0
+ 586 00e9 00       		.byte	0
+ 587 00ea 12       		.uleb128 0x12
+ 588 00eb 18       		.uleb128 0x18
+ 589 00ec 00       		.byte	0
+ 590 00ed 00       		.byte	0
+ 591 00ee 00       		.byte	0
+ 592 00ef 00       		.byte	0
+ 593              		.section	.debug_aranges,"",%progbits
+ 594 0000 1C000000 		.4byte	0x1c
+ 595 0004 0200     		.2byte	0x2
+ 596 0006 00000000 		.4byte	.Ldebug_info0
+ 597 000a 04       		.byte	0x4
+ 598 000b 00       		.byte	0
+ 599 000c 0000     		.2byte	0
+ 600 000e 0000     		.2byte	0
+ 601 0010 00000000 		.4byte	.LFB63
+ 602 0014 0A000000 		.4byte	.LFE63-.LFB63
+ 603 0018 00000000 		.4byte	0
+ 604 001c 00000000 		.4byte	0
+ 605              		.section	.debug_ranges,"",%progbits
+ 606              	.Ldebug_ranges0:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 12
+
+
+ 607 0000 00000000 		.4byte	.LFB63
+ 608 0004 0A000000 		.4byte	.LFE63
+ 609 0008 00000000 		.4byte	0
+ 610 000c 00000000 		.4byte	0
+ 611              		.section	.debug_line,"",%progbits
+ 612              	.Ldebug_line0:
+ 613 0000 7C010000 		.section	.debug_str,"MS",%progbits,1
+ 613      02006001 
+ 613      00000201 
+ 613      FB0E0D00 
+ 613      01010101 
+ 614              	.LASF27:
+ 615 0000 6E6F726D 		.ascii	"normal_context\000"
+ 615      616C5F63 
+ 615      6F6E7465 
+ 615      787400
+ 616              	.LASF4:
+ 617 000f 5F5F7569 		.ascii	"__uint8_t\000"
+ 617      6E74385F 
+ 617      7400
+ 618              	.LASF21:
+ 619 0019 61636375 		.ascii	"accumulator\000"
+ 619      6D756C61 
+ 619      746F7200 
+ 620              	.LASF5:
+ 621 0025 5F5F696E 		.ascii	"__int32_t\000"
+ 621      7433325F 
+ 621      7400
+ 622              	.LASF23:
+ 623 002f 73746163 		.ascii	"stack\000"
+ 623      6B00
+ 624              	.LASF13:
+ 625 0035 666C6F61 		.ascii	"float\000"
+ 625      7400
+ 626              	.LASF18:
+ 627 003b 64617461 		.ascii	"data\000"
+ 627      00
+ 628              	.LASF28:
+ 629 0040 69745F63 		.ascii	"it_context\000"
+ 629      6F6E7465 
+ 629      787400
+ 630              	.LASF1:
+ 631 004b 756E7369 		.ascii	"unsigned char\000"
+ 631      676E6564 
+ 631      20636861 
+ 631      7200
+ 632              	.LASF32:
+ 633 0059 2E5C6D61 		.ascii	".\\main.c\000"
+ 633      696E2E63 
+ 633      00
+ 634              	.LASF7:
+ 635 0062 6C6F6E67 		.ascii	"long unsigned int\000"
+ 635      20756E73 
+ 635      69676E65 
+ 635      6420696E 
+ 635      7400
+ 636              	.LASF20:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 13
+
+
+ 637 0074 696E645F 		.ascii	"ind_addr_reg_t\000"
+ 637      61646472 
+ 637      5F726567 
+ 637      5F7400
+ 638              	.LASF24:
+ 639 0083 696E645F 		.ascii	"ind_addr_reg\000"
+ 639      61646472 
+ 639      5F726567 
+ 639      00
+ 640              	.LASF26:
+ 641 0090 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 641      52784275 
+ 641      66666572 
+ 641      00
+ 642              	.LASF14:
+ 643 009d 646F7562 		.ascii	"double\000"
+ 643      6C6500
+ 644              	.LASF34:
+ 645 00a4 6D61696E 		.ascii	"main\000"
+ 645      00
+ 646              	.LASF31:
+ 647 00a9 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 647      4320342E 
+ 647      392E3320 
+ 647      32303135 
+ 647      30333033 
+ 648 00dc 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 648      20726576 
+ 648      6973696F 
+ 648      6E203232 
+ 648      31323230 
+ 649 010f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 649      66756E63 
+ 649      74696F6E 
+ 649      2D736563 
+ 649      74696F6E 
+ 650              	.LASF29:
+ 651 0137 63757272 		.ascii	"current_context\000"
+ 651      656E745F 
+ 651      636F6E74 
+ 651      65787400 
+ 652              	.LASF10:
+ 653 0147 756E7369 		.ascii	"unsigned int\000"
+ 653      676E6564 
+ 653      20696E74 
+ 653      00
+ 654              	.LASF22:
+ 655 0154 666C6167 		.ascii	"flags\000"
+ 655      7300
+ 656              	.LASF9:
+ 657 015a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 657      206C6F6E 
+ 657      6720756E 
+ 657      7369676E 
+ 657      65642069 
+ 658              	.LASF11:
+ 659 0171 75696E74 		.ascii	"uint8_t\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 14
+
+
+ 659      385F7400 
+ 660              	.LASF12:
+ 661 0179 696E7433 		.ascii	"int32_t\000"
+ 661      325F7400 
+ 662              	.LASF16:
+ 663 0181 73697A65 		.ascii	"sizetype\000"
+ 663      74797065 
+ 663      00
+ 664              	.LASF3:
+ 665 018a 73686F72 		.ascii	"short unsigned int\000"
+ 665      7420756E 
+ 665      7369676E 
+ 665      65642069 
+ 665      6E7400
+ 666              	.LASF8:
+ 667 019d 6C6F6E67 		.ascii	"long long int\000"
+ 667      206C6F6E 
+ 667      6720696E 
+ 667      7400
+ 668              	.LASF15:
+ 669 01ab 63686172 		.ascii	"char\000"
+ 669      00
+ 670              	.LASF17:
+ 671 01b0 666C6167 		.ascii	"flags_t\000"
+ 671      735F7400 
+ 672              	.LASF2:
+ 673 01b8 73686F72 		.ascii	"short int\000"
+ 673      7420696E 
+ 673      7400
+ 674              	.LASF19:
+ 675 01c2 73746163 		.ascii	"stack_t\000"
+ 675      6B5F7400 
+ 676              	.LASF30:
+ 677 01ca 72656769 		.ascii	"registers\000"
+ 677      73746572 
+ 677      7300
+ 678              	.LASF25:
+ 679 01d4 636F6E74 		.ascii	"context_t\000"
+ 679      6578745F 
+ 679      7400
+ 680              	.LASF6:
+ 681 01de 6C6F6E67 		.ascii	"long int\000"
+ 681      20696E74 
+ 681      00
+ 682              	.LASF33:
+ 683 01e7 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 683      73657273 
+ 683      5C4A6176 
+ 683      6965725C 
+ 683      446F6375 
+ 684 0215 6F726B73 		.ascii	"orkspace\\gnome_template.cydsn\000"
+ 684      70616365 
+ 684      5C676E6F 
+ 684      6D655F74 
+ 684      656D706C 
+ 685              	.LASF0:
+ 686 0233 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc2UM5Fk.s 			page 15
+
+
+ 686      65642063 
+ 686      68617200 
+ 687              	.LASF35:
+ 688 023f 676E6F6D 		.ascii	"gnome_start\000"
+ 688      655F7374 
+ 688      61727400 
+ 689              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

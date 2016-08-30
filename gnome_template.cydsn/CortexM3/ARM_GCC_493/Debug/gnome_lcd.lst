@@ -1,0 +1,855 @@
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"gnome_lcd.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.setup_lcd,"ax",%progbits
+  19              		.align	2
+  20              		.global	setup_lcd
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	setup_lcd, %function
+  24              	setup_lcd:
+  25              	.LFB63:
+  26              		.file 1 ".\\gnome_lcd.c"
+   1:.\gnome_lcd.c **** /* ========================================
+   2:.\gnome_lcd.c ****  *
+   3:.\gnome_lcd.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\gnome_lcd.c ****  * All Rights Reserved
+   5:.\gnome_lcd.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\gnome_lcd.c ****  *
+   7:.\gnome_lcd.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\gnome_lcd.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\gnome_lcd.c ****  *
+  10:.\gnome_lcd.c ****  * ========================================
+  11:.\gnome_lcd.c **** */
+  12:.\gnome_lcd.c **** 
+  13:.\gnome_lcd.c **** #include "gnome_lcd.h"
+  14:.\gnome_lcd.c **** 
+  15:.\gnome_lcd.c **** void update_lcd_it();
+  16:.\gnome_lcd.c **** 
+  17:.\gnome_lcd.c **** void setup_lcd() {
+  27              		.loc 1 17 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 7047     		bx	lr
+  33              		.cfi_endproc
+  34              	.LFE63:
+  35              		.size	setup_lcd, .-setup_lcd
+  36 0002 00BF     		.section	.text.update_lcd_it,"ax",%progbits
+  37              		.align	2
+  38              		.global	update_lcd_it
+  39              		.thumb
+  40              		.thumb_func
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 2
+
+
+  41              		.type	update_lcd_it, %function
+  42              	update_lcd_it:
+  43              	.LFB64:
+  18:.\gnome_lcd.c ****     #if (GNOME_LCD_MODULE_ACTIVE)
+  19:.\gnome_lcd.c ****         I2C_Start();
+  20:.\gnome_lcd.c ****         
+  21:.\gnome_lcd.c ****         i2cLCD_Init(&lcd, GNOME_LCD_MODULE_I2C_ADDR, LCD_BACKLIGHTON);
+  22:.\gnome_lcd.c ****         i2cLCD_SetPosition(&lcd, 0, 0);
+  23:.\gnome_lcd.c ****         i2cLCD_Print(&lcd, GNOME_LCD_MODULE_MSG1);
+  24:.\gnome_lcd.c ****         i2cLCD_SetPosition(&lcd, 1, 0);
+  25:.\gnome_lcd.c ****         i2cLCD_Print(&lcd, GNOME_LCD_MODULE_MSG2);
+  26:.\gnome_lcd.c ****         i2cLCD_SetBlink(&lcd,LCD_BLINKON);
+  27:.\gnome_lcd.c ****         
+  28:.\gnome_lcd.c ****         CySysTickStart();
+  29:.\gnome_lcd.c ****         CySysTickSetCallback(4,(void*)update_lcd_it);
+  30:.\gnome_lcd.c ****         lcd_update = 1;
+  31:.\gnome_lcd.c **** 
+  32:.\gnome_lcd.c ****     #endif
+  33:.\gnome_lcd.c **** }
+  34:.\gnome_lcd.c **** 
+  35:.\gnome_lcd.c **** void update_lcd_it() {
+  44              		.loc 1 35 0
+  45              		.cfi_startproc
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		.loc 1 35 0
+  49 0000 08B5     		push	{r3, lr}
+  50              		.cfi_def_cfa_offset 8
+  51              		.cfi_offset 3, -8
+  52              		.cfi_offset 14, -4
+  36:.\gnome_lcd.c ****     if ((CySysTickGetValue() & 0x3F) == 0x3F) {
+  53              		.loc 1 36 0
+  54 0002 FFF7FEFF 		bl	CySysTickGetValue
+  55              	.LVL0:
+  56 0006 00F03F00 		and	r0, r0, #63
+  57 000a 3F28     		cmp	r0, #63
+  58 000c 02D1     		bne	.L2
+  37:.\gnome_lcd.c ****         lcd_update = 1;
+  59              		.loc 1 37 0
+  60 000e 0122     		movs	r2, #1
+  61 0010 014B     		ldr	r3, .L5
+  62 0012 1A70     		strb	r2, [r3]
+  63              	.L2:
+  64 0014 08BD     		pop	{r3, pc}
+  65              	.L6:
+  66 0016 00BF     		.align	2
+  67              	.L5:
+  68 0018 00000000 		.word	lcd_update
+  69              		.cfi_endproc
+  70              	.LFE64:
+  71              		.size	update_lcd_it, .-update_lcd_it
+  72              		.section	.text.update_lcd,"ax",%progbits
+  73              		.align	2
+  74              		.global	update_lcd
+  75              		.thumb
+  76              		.thumb_func
+  77              		.type	update_lcd, %function
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 3
+
+
+  78              	update_lcd:
+  79              	.LFB65:
+  38:.\gnome_lcd.c ****     }
+  39:.\gnome_lcd.c **** }
+  40:.\gnome_lcd.c **** 
+  41:.\gnome_lcd.c **** void update_lcd() {
+  80              		.loc 1 41 0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84              		@ link register save eliminated.
+  85 0000 7047     		bx	lr
+  86              		.cfi_endproc
+  87              	.LFE65:
+  88              		.size	update_lcd, .-update_lcd
+  89              		.comm	lcd_update,1,1
+  90              		.comm	lcd,134,4
+  91 0002 00BF     		.text
+  92              	.Letext0:
+  93              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  94              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  95              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+  96              		.file 5 ".\\i2cLCD.h"
+  97              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+  98              		.file 7 ".\\gnome_lcd.h"
+  99              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 100              		.section	.debug_info,"",%progbits
+ 101              	.Ldebug_info0:
+ 102 0000 BE010000 		.4byte	0x1be
+ 103 0004 0400     		.2byte	0x4
+ 104 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 105 000a 04       		.byte	0x4
+ 106 000b 01       		.uleb128 0x1
+ 107 000c E2000000 		.4byte	.LASF30
+ 108 0010 01       		.byte	0x1
+ 109 0011 FF010000 		.4byte	.LASF31
+ 110 0015 16020000 		.4byte	.LASF32
+ 111 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 112 001d 00000000 		.4byte	0
+ 113 0021 00000000 		.4byte	.Ldebug_line0
+ 114 0025 02       		.uleb128 0x2
+ 115 0026 01       		.byte	0x1
+ 116 0027 06       		.byte	0x6
+ 117 0028 62020000 		.4byte	.LASF0
+ 118 002c 03       		.uleb128 0x3
+ 119 002d 0B000000 		.4byte	.LASF4
+ 120 0031 02       		.byte	0x2
+ 121 0032 1D       		.byte	0x1d
+ 122 0033 37000000 		.4byte	0x37
+ 123 0037 02       		.uleb128 0x2
+ 124 0038 01       		.byte	0x1
+ 125 0039 08       		.byte	0x8
+ 126 003a B1000000 		.4byte	.LASF1
+ 127 003e 02       		.uleb128 0x2
+ 128 003f 02       		.byte	0x2
+ 129 0040 05       		.byte	0x5
+ 130 0041 F5010000 		.4byte	.LASF2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 4
+
+
+ 131 0045 02       		.uleb128 0x2
+ 132 0046 02       		.byte	0x2
+ 133 0047 07       		.byte	0x7
+ 134 0048 6A000000 		.4byte	.LASF3
+ 135 004c 03       		.uleb128 0x3
+ 136 004d 2A000000 		.4byte	.LASF5
+ 137 0051 02       		.byte	0x2
+ 138 0052 3F       		.byte	0x3f
+ 139 0053 57000000 		.4byte	0x57
+ 140 0057 02       		.uleb128 0x2
+ 141 0058 04       		.byte	0x4
+ 142 0059 05       		.byte	0x5
+ 143 005a 0D020000 		.4byte	.LASF6
+ 144 005e 02       		.uleb128 0x2
+ 145 005f 04       		.byte	0x4
+ 146 0060 07       		.byte	0x7
+ 147 0061 58000000 		.4byte	.LASF7
+ 148 0065 02       		.uleb128 0x2
+ 149 0066 08       		.byte	0x8
+ 150 0067 05       		.byte	0x5
+ 151 0068 CE010000 		.4byte	.LASF8
+ 152 006c 02       		.uleb128 0x2
+ 153 006d 08       		.byte	0x8
+ 154 006e 07       		.byte	0x7
+ 155 006f 7D010000 		.4byte	.LASF9
+ 156 0073 04       		.uleb128 0x4
+ 157 0074 04       		.byte	0x4
+ 158 0075 05       		.byte	0x5
+ 159 0076 696E7400 		.ascii	"int\000"
+ 160 007a 02       		.uleb128 0x2
+ 161 007b 04       		.byte	0x4
+ 162 007c 07       		.byte	0x7
+ 163 007d 70010000 		.4byte	.LASF10
+ 164 0081 02       		.uleb128 0x2
+ 165 0082 04       		.byte	0x4
+ 166 0083 07       		.byte	0x7
+ 167 0084 C5010000 		.4byte	.LASF11
+ 168 0088 02       		.uleb128 0x2
+ 169 0089 01       		.byte	0x1
+ 170 008a 08       		.byte	0x8
+ 171 008b DC010000 		.4byte	.LASF12
+ 172 008f 03       		.uleb128 0x3
+ 173 0090 34000000 		.4byte	.LASF13
+ 174 0094 03       		.byte	0x3
+ 175 0095 15       		.byte	0x15
+ 176 0096 2C000000 		.4byte	0x2c
+ 177 009a 03       		.uleb128 0x3
+ 178 009b BD010000 		.4byte	.LASF14
+ 179 009f 03       		.byte	0x3
+ 180 00a0 2C       		.byte	0x2c
+ 181 00a1 4C000000 		.4byte	0x4c
+ 182 00a5 05       		.uleb128 0x5
+ 183 00a6 DB000000 		.4byte	.LASF15
+ 184 00aa 04       		.byte	0x4
+ 185 00ab 3A01     		.2byte	0x13a
+ 186 00ad 5E000000 		.4byte	0x5e
+ 187 00b1 02       		.uleb128 0x2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 5
+
+
+ 188 00b2 04       		.byte	0x4
+ 189 00b3 04       		.byte	0x4
+ 190 00b4 4A000000 		.4byte	.LASF16
+ 191 00b8 02       		.uleb128 0x2
+ 192 00b9 08       		.byte	0x8
+ 193 00ba 04       		.byte	0x4
+ 194 00bb BF000000 		.4byte	.LASF17
+ 195 00bf 06       		.uleb128 0x6
+ 196 00c0 8F000000 		.4byte	0x8f
+ 197 00c4 07       		.uleb128 0x7
+ 198 00c5 86       		.byte	0x86
+ 199 00c6 05       		.byte	0x5
+ 200 00c7 3F       		.byte	0x3f
+ 201 00c8 21010000 		.4byte	0x121
+ 202 00cc 08       		.uleb128 0x8
+ 203 00cd 00000000 		.4byte	.LASF18
+ 204 00d1 05       		.byte	0x5
+ 205 00d2 40       		.byte	0x40
+ 206 00d3 8F000000 		.4byte	0x8f
+ 207 00d7 00       		.byte	0
+ 208 00d8 08       		.uleb128 0x8
+ 209 00d9 15000000 		.4byte	.LASF19
+ 210 00dd 05       		.byte	0x5
+ 211 00de 41       		.byte	0x41
+ 212 00df 8F000000 		.4byte	0x8f
+ 213 00e3 01       		.byte	0x1
+ 214 00e4 08       		.uleb128 0x8
+ 215 00e5 94010000 		.4byte	.LASF20
+ 216 00e9 05       		.byte	0x5
+ 217 00ea 42       		.byte	0x42
+ 218 00eb 8F000000 		.4byte	0x8f
+ 219 00ef 02       		.byte	0x2
+ 220 00f0 08       		.uleb128 0x8
+ 221 00f1 88000000 		.4byte	.LASF21
+ 222 00f5 05       		.byte	0x5
+ 223 00f6 43       		.byte	0x43
+ 224 00f7 8F000000 		.4byte	0x8f
+ 225 00fb 03       		.byte	0x3
+ 226 00fc 08       		.uleb128 0x8
+ 227 00fd 50000000 		.4byte	.LASF22
+ 228 0101 05       		.byte	0x5
+ 229 0102 44       		.byte	0x44
+ 230 0103 8F000000 		.4byte	0x8f
+ 231 0107 04       		.byte	0x4
+ 232 0108 08       		.uleb128 0x8
+ 233 0109 E1010000 		.4byte	.LASF23
+ 234 010d 05       		.byte	0x5
+ 235 010e 45       		.byte	0x45
+ 236 010f 8F000000 		.4byte	0x8f
+ 237 0113 05       		.byte	0x5
+ 238 0114 08       		.uleb128 0x8
+ 239 0115 A7010000 		.4byte	.LASF24
+ 240 0119 05       		.byte	0x5
+ 241 011a 46       		.byte	0x46
+ 242 011b 21010000 		.4byte	0x121
+ 243 011f 06       		.byte	0x6
+ 244 0120 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 6
+
+
+ 245 0121 09       		.uleb128 0x9
+ 246 0122 88000000 		.4byte	0x88
+ 247 0126 37010000 		.4byte	0x137
+ 248 012a 0A       		.uleb128 0xa
+ 249 012b 81000000 		.4byte	0x81
+ 250 012f 07       		.byte	0x7
+ 251 0130 0A       		.uleb128 0xa
+ 252 0131 81000000 		.4byte	0x81
+ 253 0135 0F       		.byte	0xf
+ 254 0136 00       		.byte	0
+ 255 0137 03       		.uleb128 0x3
+ 256 0138 C6000000 		.4byte	.LASF25
+ 257 013c 05       		.byte	0x5
+ 258 013d 47       		.byte	0x47
+ 259 013e C4000000 		.4byte	0xc4
+ 260 0142 0B       		.uleb128 0xb
+ 261 0143 9D010000 		.4byte	.LASF26
+ 262 0147 01       		.byte	0x1
+ 263 0148 11       		.byte	0x11
+ 264 0149 00000000 		.4byte	.LFB63
+ 265 014d 02000000 		.4byte	.LFE63-.LFB63
+ 266 0151 01       		.uleb128 0x1
+ 267 0152 9C       		.byte	0x9c
+ 268 0153 0C       		.uleb128 0xc
+ 269 0154 3C000000 		.4byte	.LASF33
+ 270 0158 01       		.byte	0x1
+ 271 0159 23       		.byte	0x23
+ 272 015a 00000000 		.4byte	.LFB64
+ 273 015e 1C000000 		.4byte	.LFE64-.LFB64
+ 274 0162 01       		.uleb128 0x1
+ 275 0163 9C       		.byte	0x9c
+ 276 0164 72010000 		.4byte	0x172
+ 277 0168 0D       		.uleb128 0xd
+ 278 0169 06000000 		.4byte	.LVL0
+ 279 016d B6010000 		.4byte	0x1b6
+ 280 0171 00       		.byte	0
+ 281 0172 0B       		.uleb128 0xb
+ 282 0173 1F000000 		.4byte	.LASF27
+ 283 0177 01       		.byte	0x1
+ 284 0178 29       		.byte	0x29
+ 285 0179 00000000 		.4byte	.LFB65
+ 286 017d 02000000 		.4byte	.LFE65-.LFB65
+ 287 0181 01       		.uleb128 0x1
+ 288 0182 9C       		.byte	0x9c
+ 289 0183 0E       		.uleb128 0xe
+ 290 0184 A4000000 		.4byte	.LASF28
+ 291 0188 06       		.byte	0x6
+ 292 0189 5506     		.2byte	0x655
+ 293 018b 8F010000 		.4byte	0x18f
+ 294 018f 06       		.uleb128 0x6
+ 295 0190 9A000000 		.4byte	0x9a
+ 296 0194 0F       		.uleb128 0xf
+ 297 0195 6C636400 		.ascii	"lcd\000"
+ 298 0199 07       		.byte	0x7
+ 299 019a 12       		.byte	0x12
+ 300 019b 37010000 		.4byte	0x137
+ 301 019f 05       		.uleb128 0x5
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 7
+
+
+ 302 01a0 03       		.byte	0x3
+ 303 01a1 00000000 		.4byte	lcd
+ 304 01a5 10       		.uleb128 0x10
+ 305 01a6 7D000000 		.4byte	.LASF29
+ 306 01aa 07       		.byte	0x7
+ 307 01ab 14       		.byte	0x14
+ 308 01ac BF000000 		.4byte	0xbf
+ 309 01b0 05       		.uleb128 0x5
+ 310 01b1 03       		.byte	0x3
+ 311 01b2 00000000 		.4byte	lcd_update
+ 312 01b6 11       		.uleb128 0x11
+ 313 01b7 92000000 		.4byte	.LASF34
+ 314 01bb 08       		.byte	0x8
+ 315 01bc B7       		.byte	0xb7
+ 316 01bd A5000000 		.4byte	0xa5
+ 317 01c1 00       		.byte	0
+ 318              		.section	.debug_abbrev,"",%progbits
+ 319              	.Ldebug_abbrev0:
+ 320 0000 01       		.uleb128 0x1
+ 321 0001 11       		.uleb128 0x11
+ 322 0002 01       		.byte	0x1
+ 323 0003 25       		.uleb128 0x25
+ 324 0004 0E       		.uleb128 0xe
+ 325 0005 13       		.uleb128 0x13
+ 326 0006 0B       		.uleb128 0xb
+ 327 0007 03       		.uleb128 0x3
+ 328 0008 0E       		.uleb128 0xe
+ 329 0009 1B       		.uleb128 0x1b
+ 330 000a 0E       		.uleb128 0xe
+ 331 000b 55       		.uleb128 0x55
+ 332 000c 17       		.uleb128 0x17
+ 333 000d 11       		.uleb128 0x11
+ 334 000e 01       		.uleb128 0x1
+ 335 000f 10       		.uleb128 0x10
+ 336 0010 17       		.uleb128 0x17
+ 337 0011 00       		.byte	0
+ 338 0012 00       		.byte	0
+ 339 0013 02       		.uleb128 0x2
+ 340 0014 24       		.uleb128 0x24
+ 341 0015 00       		.byte	0
+ 342 0016 0B       		.uleb128 0xb
+ 343 0017 0B       		.uleb128 0xb
+ 344 0018 3E       		.uleb128 0x3e
+ 345 0019 0B       		.uleb128 0xb
+ 346 001a 03       		.uleb128 0x3
+ 347 001b 0E       		.uleb128 0xe
+ 348 001c 00       		.byte	0
+ 349 001d 00       		.byte	0
+ 350 001e 03       		.uleb128 0x3
+ 351 001f 16       		.uleb128 0x16
+ 352 0020 00       		.byte	0
+ 353 0021 03       		.uleb128 0x3
+ 354 0022 0E       		.uleb128 0xe
+ 355 0023 3A       		.uleb128 0x3a
+ 356 0024 0B       		.uleb128 0xb
+ 357 0025 3B       		.uleb128 0x3b
+ 358 0026 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 8
+
+
+ 359 0027 49       		.uleb128 0x49
+ 360 0028 13       		.uleb128 0x13
+ 361 0029 00       		.byte	0
+ 362 002a 00       		.byte	0
+ 363 002b 04       		.uleb128 0x4
+ 364 002c 24       		.uleb128 0x24
+ 365 002d 00       		.byte	0
+ 366 002e 0B       		.uleb128 0xb
+ 367 002f 0B       		.uleb128 0xb
+ 368 0030 3E       		.uleb128 0x3e
+ 369 0031 0B       		.uleb128 0xb
+ 370 0032 03       		.uleb128 0x3
+ 371 0033 08       		.uleb128 0x8
+ 372 0034 00       		.byte	0
+ 373 0035 00       		.byte	0
+ 374 0036 05       		.uleb128 0x5
+ 375 0037 16       		.uleb128 0x16
+ 376 0038 00       		.byte	0
+ 377 0039 03       		.uleb128 0x3
+ 378 003a 0E       		.uleb128 0xe
+ 379 003b 3A       		.uleb128 0x3a
+ 380 003c 0B       		.uleb128 0xb
+ 381 003d 3B       		.uleb128 0x3b
+ 382 003e 05       		.uleb128 0x5
+ 383 003f 49       		.uleb128 0x49
+ 384 0040 13       		.uleb128 0x13
+ 385 0041 00       		.byte	0
+ 386 0042 00       		.byte	0
+ 387 0043 06       		.uleb128 0x6
+ 388 0044 35       		.uleb128 0x35
+ 389 0045 00       		.byte	0
+ 390 0046 49       		.uleb128 0x49
+ 391 0047 13       		.uleb128 0x13
+ 392 0048 00       		.byte	0
+ 393 0049 00       		.byte	0
+ 394 004a 07       		.uleb128 0x7
+ 395 004b 13       		.uleb128 0x13
+ 396 004c 01       		.byte	0x1
+ 397 004d 0B       		.uleb128 0xb
+ 398 004e 0B       		.uleb128 0xb
+ 399 004f 3A       		.uleb128 0x3a
+ 400 0050 0B       		.uleb128 0xb
+ 401 0051 3B       		.uleb128 0x3b
+ 402 0052 0B       		.uleb128 0xb
+ 403 0053 01       		.uleb128 0x1
+ 404 0054 13       		.uleb128 0x13
+ 405 0055 00       		.byte	0
+ 406 0056 00       		.byte	0
+ 407 0057 08       		.uleb128 0x8
+ 408 0058 0D       		.uleb128 0xd
+ 409 0059 00       		.byte	0
+ 410 005a 03       		.uleb128 0x3
+ 411 005b 0E       		.uleb128 0xe
+ 412 005c 3A       		.uleb128 0x3a
+ 413 005d 0B       		.uleb128 0xb
+ 414 005e 3B       		.uleb128 0x3b
+ 415 005f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 9
+
+
+ 416 0060 49       		.uleb128 0x49
+ 417 0061 13       		.uleb128 0x13
+ 418 0062 38       		.uleb128 0x38
+ 419 0063 0B       		.uleb128 0xb
+ 420 0064 00       		.byte	0
+ 421 0065 00       		.byte	0
+ 422 0066 09       		.uleb128 0x9
+ 423 0067 01       		.uleb128 0x1
+ 424 0068 01       		.byte	0x1
+ 425 0069 49       		.uleb128 0x49
+ 426 006a 13       		.uleb128 0x13
+ 427 006b 01       		.uleb128 0x1
+ 428 006c 13       		.uleb128 0x13
+ 429 006d 00       		.byte	0
+ 430 006e 00       		.byte	0
+ 431 006f 0A       		.uleb128 0xa
+ 432 0070 21       		.uleb128 0x21
+ 433 0071 00       		.byte	0
+ 434 0072 49       		.uleb128 0x49
+ 435 0073 13       		.uleb128 0x13
+ 436 0074 2F       		.uleb128 0x2f
+ 437 0075 0B       		.uleb128 0xb
+ 438 0076 00       		.byte	0
+ 439 0077 00       		.byte	0
+ 440 0078 0B       		.uleb128 0xb
+ 441 0079 2E       		.uleb128 0x2e
+ 442 007a 00       		.byte	0
+ 443 007b 3F       		.uleb128 0x3f
+ 444 007c 19       		.uleb128 0x19
+ 445 007d 03       		.uleb128 0x3
+ 446 007e 0E       		.uleb128 0xe
+ 447 007f 3A       		.uleb128 0x3a
+ 448 0080 0B       		.uleb128 0xb
+ 449 0081 3B       		.uleb128 0x3b
+ 450 0082 0B       		.uleb128 0xb
+ 451 0083 11       		.uleb128 0x11
+ 452 0084 01       		.uleb128 0x1
+ 453 0085 12       		.uleb128 0x12
+ 454 0086 06       		.uleb128 0x6
+ 455 0087 40       		.uleb128 0x40
+ 456 0088 18       		.uleb128 0x18
+ 457 0089 9742     		.uleb128 0x2117
+ 458 008b 19       		.uleb128 0x19
+ 459 008c 00       		.byte	0
+ 460 008d 00       		.byte	0
+ 461 008e 0C       		.uleb128 0xc
+ 462 008f 2E       		.uleb128 0x2e
+ 463 0090 01       		.byte	0x1
+ 464 0091 3F       		.uleb128 0x3f
+ 465 0092 19       		.uleb128 0x19
+ 466 0093 03       		.uleb128 0x3
+ 467 0094 0E       		.uleb128 0xe
+ 468 0095 3A       		.uleb128 0x3a
+ 469 0096 0B       		.uleb128 0xb
+ 470 0097 3B       		.uleb128 0x3b
+ 471 0098 0B       		.uleb128 0xb
+ 472 0099 11       		.uleb128 0x11
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 10
+
+
+ 473 009a 01       		.uleb128 0x1
+ 474 009b 12       		.uleb128 0x12
+ 475 009c 06       		.uleb128 0x6
+ 476 009d 40       		.uleb128 0x40
+ 477 009e 18       		.uleb128 0x18
+ 478 009f 9742     		.uleb128 0x2117
+ 479 00a1 19       		.uleb128 0x19
+ 480 00a2 01       		.uleb128 0x1
+ 481 00a3 13       		.uleb128 0x13
+ 482 00a4 00       		.byte	0
+ 483 00a5 00       		.byte	0
+ 484 00a6 0D       		.uleb128 0xd
+ 485 00a7 898201   		.uleb128 0x4109
+ 486 00aa 00       		.byte	0
+ 487 00ab 11       		.uleb128 0x11
+ 488 00ac 01       		.uleb128 0x1
+ 489 00ad 31       		.uleb128 0x31
+ 490 00ae 13       		.uleb128 0x13
+ 491 00af 00       		.byte	0
+ 492 00b0 00       		.byte	0
+ 493 00b1 0E       		.uleb128 0xe
+ 494 00b2 34       		.uleb128 0x34
+ 495 00b3 00       		.byte	0
+ 496 00b4 03       		.uleb128 0x3
+ 497 00b5 0E       		.uleb128 0xe
+ 498 00b6 3A       		.uleb128 0x3a
+ 499 00b7 0B       		.uleb128 0xb
+ 500 00b8 3B       		.uleb128 0x3b
+ 501 00b9 05       		.uleb128 0x5
+ 502 00ba 49       		.uleb128 0x49
+ 503 00bb 13       		.uleb128 0x13
+ 504 00bc 3F       		.uleb128 0x3f
+ 505 00bd 19       		.uleb128 0x19
+ 506 00be 3C       		.uleb128 0x3c
+ 507 00bf 19       		.uleb128 0x19
+ 508 00c0 00       		.byte	0
+ 509 00c1 00       		.byte	0
+ 510 00c2 0F       		.uleb128 0xf
+ 511 00c3 34       		.uleb128 0x34
+ 512 00c4 00       		.byte	0
+ 513 00c5 03       		.uleb128 0x3
+ 514 00c6 08       		.uleb128 0x8
+ 515 00c7 3A       		.uleb128 0x3a
+ 516 00c8 0B       		.uleb128 0xb
+ 517 00c9 3B       		.uleb128 0x3b
+ 518 00ca 0B       		.uleb128 0xb
+ 519 00cb 49       		.uleb128 0x49
+ 520 00cc 13       		.uleb128 0x13
+ 521 00cd 3F       		.uleb128 0x3f
+ 522 00ce 19       		.uleb128 0x19
+ 523 00cf 02       		.uleb128 0x2
+ 524 00d0 18       		.uleb128 0x18
+ 525 00d1 00       		.byte	0
+ 526 00d2 00       		.byte	0
+ 527 00d3 10       		.uleb128 0x10
+ 528 00d4 34       		.uleb128 0x34
+ 529 00d5 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 11
+
+
+ 530 00d6 03       		.uleb128 0x3
+ 531 00d7 0E       		.uleb128 0xe
+ 532 00d8 3A       		.uleb128 0x3a
+ 533 00d9 0B       		.uleb128 0xb
+ 534 00da 3B       		.uleb128 0x3b
+ 535 00db 0B       		.uleb128 0xb
+ 536 00dc 49       		.uleb128 0x49
+ 537 00dd 13       		.uleb128 0x13
+ 538 00de 3F       		.uleb128 0x3f
+ 539 00df 19       		.uleb128 0x19
+ 540 00e0 02       		.uleb128 0x2
+ 541 00e1 18       		.uleb128 0x18
+ 542 00e2 00       		.byte	0
+ 543 00e3 00       		.byte	0
+ 544 00e4 11       		.uleb128 0x11
+ 545 00e5 2E       		.uleb128 0x2e
+ 546 00e6 00       		.byte	0
+ 547 00e7 3F       		.uleb128 0x3f
+ 548 00e8 19       		.uleb128 0x19
+ 549 00e9 03       		.uleb128 0x3
+ 550 00ea 0E       		.uleb128 0xe
+ 551 00eb 3A       		.uleb128 0x3a
+ 552 00ec 0B       		.uleb128 0xb
+ 553 00ed 3B       		.uleb128 0x3b
+ 554 00ee 0B       		.uleb128 0xb
+ 555 00ef 27       		.uleb128 0x27
+ 556 00f0 19       		.uleb128 0x19
+ 557 00f1 49       		.uleb128 0x49
+ 558 00f2 13       		.uleb128 0x13
+ 559 00f3 3C       		.uleb128 0x3c
+ 560 00f4 19       		.uleb128 0x19
+ 561 00f5 00       		.byte	0
+ 562 00f6 00       		.byte	0
+ 563 00f7 00       		.byte	0
+ 564              		.section	.debug_aranges,"",%progbits
+ 565 0000 2C000000 		.4byte	0x2c
+ 566 0004 0200     		.2byte	0x2
+ 567 0006 00000000 		.4byte	.Ldebug_info0
+ 568 000a 04       		.byte	0x4
+ 569 000b 00       		.byte	0
+ 570 000c 0000     		.2byte	0
+ 571 000e 0000     		.2byte	0
+ 572 0010 00000000 		.4byte	.LFB63
+ 573 0014 02000000 		.4byte	.LFE63-.LFB63
+ 574 0018 00000000 		.4byte	.LFB64
+ 575 001c 1C000000 		.4byte	.LFE64-.LFB64
+ 576 0020 00000000 		.4byte	.LFB65
+ 577 0024 02000000 		.4byte	.LFE65-.LFB65
+ 578 0028 00000000 		.4byte	0
+ 579 002c 00000000 		.4byte	0
+ 580              		.section	.debug_ranges,"",%progbits
+ 581              	.Ldebug_ranges0:
+ 582 0000 00000000 		.4byte	.LFB63
+ 583 0004 02000000 		.4byte	.LFE63
+ 584 0008 00000000 		.4byte	.LFB64
+ 585 000c 1C000000 		.4byte	.LFE64
+ 586 0010 00000000 		.4byte	.LFB65
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 12
+
+
+ 587 0014 02000000 		.4byte	.LFE65
+ 588 0018 00000000 		.4byte	0
+ 589 001c 00000000 		.4byte	0
+ 590              		.section	.debug_line,"",%progbits
+ 591              	.Ldebug_line0:
+ 592 0000 AE010000 		.section	.debug_str,"MS",%progbits,1
+ 592      02007801 
+ 592      00000201 
+ 592      FB0E0D00 
+ 592      01010101 
+ 593              	.LASF18:
+ 594 0000 64657641 		.ascii	"devAddress\000"
+ 594      64647265 
+ 594      737300
+ 595              	.LASF4:
+ 596 000b 5F5F7569 		.ascii	"__uint8_t\000"
+ 596      6E74385F 
+ 596      7400
+ 597              	.LASF19:
+ 598 0015 6261636B 		.ascii	"backlight\000"
+ 598      6C696768 
+ 598      7400
+ 599              	.LASF27:
+ 600 001f 75706461 		.ascii	"update_lcd\000"
+ 600      74655F6C 
+ 600      636400
+ 601              	.LASF5:
+ 602 002a 5F5F696E 		.ascii	"__int32_t\000"
+ 602      7433325F 
+ 602      7400
+ 603              	.LASF13:
+ 604 0034 75696E74 		.ascii	"uint8_t\000"
+ 604      385F7400 
+ 605              	.LASF33:
+ 606 003c 75706461 		.ascii	"update_lcd_it\000"
+ 606      74655F6C 
+ 606      63645F69 
+ 606      7400
+ 607              	.LASF16:
+ 608 004a 666C6F61 		.ascii	"float\000"
+ 608      7400
+ 609              	.LASF22:
+ 610 0050 626C696E 		.ascii	"blinkON\000"
+ 610      6B4F4E00 
+ 611              	.LASF7:
+ 612 0058 6C6F6E67 		.ascii	"long unsigned int\000"
+ 612      20756E73 
+ 612      69676E65 
+ 612      6420696E 
+ 612      7400
+ 613              	.LASF3:
+ 614 006a 73686F72 		.ascii	"short unsigned int\000"
+ 614      7420756E 
+ 614      7369676E 
+ 614      65642069 
+ 614      6E7400
+ 615              	.LASF29:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 13
+
+
+ 616 007d 6C63645F 		.ascii	"lcd_update\000"
+ 616      75706461 
+ 616      746500
+ 617              	.LASF21:
+ 618 0088 64697370 		.ascii	"displayON\000"
+ 618      6C61794F 
+ 618      4E00
+ 619              	.LASF34:
+ 620 0092 43795379 		.ascii	"CySysTickGetValue\000"
+ 620      73546963 
+ 620      6B476574 
+ 620      56616C75 
+ 620      6500
+ 621              	.LASF28:
+ 622 00a4 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 622      52784275 
+ 622      66666572 
+ 622      00
+ 623              	.LASF1:
+ 624 00b1 756E7369 		.ascii	"unsigned char\000"
+ 624      676E6564 
+ 624      20636861 
+ 624      7200
+ 625              	.LASF17:
+ 626 00bf 646F7562 		.ascii	"double\000"
+ 626      6C6500
+ 627              	.LASF25:
+ 628 00c6 6932634C 		.ascii	"i2cLCD_HandleTypeDef\000"
+ 628      43445F48 
+ 628      616E646C 
+ 628      65547970 
+ 628      65446566 
+ 629              	.LASF15:
+ 630 00db 75696E74 		.ascii	"uint32\000"
+ 630      333200
+ 631              	.LASF30:
+ 632 00e2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 632      4320342E 
+ 632      392E3320 
+ 632      32303135 
+ 632      30333033 
+ 633 0115 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 633      20726576 
+ 633      6973696F 
+ 633      6E203232 
+ 633      31323230 
+ 634 0148 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 634      66756E63 
+ 634      74696F6E 
+ 634      2D736563 
+ 634      74696F6E 
+ 635              	.LASF10:
+ 636 0170 756E7369 		.ascii	"unsigned int\000"
+ 636      676E6564 
+ 636      20696E74 
+ 636      00
+ 637              	.LASF9:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 14
+
+
+ 638 017d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 638      206C6F6E 
+ 638      6720756E 
+ 638      7369676E 
+ 638      65642069 
+ 639              	.LASF20:
+ 640 0194 63757273 		.ascii	"cursorON\000"
+ 640      6F724F4E 
+ 640      00
+ 641              	.LASF26:
+ 642 019d 73657475 		.ascii	"setup_lcd\000"
+ 642      705F6C63 
+ 642      6400
+ 643              	.LASF24:
+ 644 01a7 63757374 		.ascii	"customCharIdentifiers\000"
+ 644      6F6D4368 
+ 644      61724964 
+ 644      656E7469 
+ 644      66696572 
+ 645              	.LASF14:
+ 646 01bd 696E7433 		.ascii	"int32_t\000"
+ 646      325F7400 
+ 647              	.LASF11:
+ 648 01c5 73697A65 		.ascii	"sizetype\000"
+ 648      74797065 
+ 648      00
+ 649              	.LASF8:
+ 650 01ce 6C6F6E67 		.ascii	"long long int\000"
+ 650      206C6F6E 
+ 650      6720696E 
+ 650      7400
+ 651              	.LASF12:
+ 652 01dc 63686172 		.ascii	"char\000"
+ 652      00
+ 653              	.LASF23:
+ 654 01e1 6E756D62 		.ascii	"numberOfCustomChars\000"
+ 654      65724F66 
+ 654      43757374 
+ 654      6F6D4368 
+ 654      61727300 
+ 655              	.LASF2:
+ 656 01f5 73686F72 		.ascii	"short int\000"
+ 656      7420696E 
+ 656      7400
+ 657              	.LASF31:
+ 658 01ff 2E5C676E 		.ascii	".\\gnome_lcd.c\000"
+ 658      6F6D655F 
+ 658      6C63642E 
+ 658      6300
+ 659              	.LASF6:
+ 660 020d 6C6F6E67 		.ascii	"long int\000"
+ 660      20696E74 
+ 660      00
+ 661              	.LASF32:
+ 662 0216 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 662      73657273 
+ 662      5C4A6176 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\ccFmmNK3.s 			page 15
+
+
+ 662      6965725C 
+ 662      446F6375 
+ 663 0244 6F726B73 		.ascii	"orkspace\\gnome_template.cydsn\000"
+ 663      70616365 
+ 663      5C676E6F 
+ 663      6D655F74 
+ 663      656D706C 
+ 664              	.LASF0:
+ 665 0262 7369676E 		.ascii	"signed char\000"
+ 665      65642063 
+ 665      68617200 
+ 666              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

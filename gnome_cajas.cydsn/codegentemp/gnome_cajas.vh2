@@ -2,7 +2,7 @@
 --	Conversion of gnome_cajas.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Aug 17 00:23:41 2016
+--	Tue Aug 30 15:54:31 2016
 --
 
 USE cypress.cypress.all;

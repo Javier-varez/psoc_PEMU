@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="gnome_workspace\gnome_template">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="gnome_workspace">
 <ExpandedNodeIds>
 <v>gnome_workspace</v>
 <v>gnome_workspace\gnome_cajas\TopDesign</v>
@@ -203,7 +203,6 @@
 <v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cyfitterrv.inc</v>
 <v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\cymetadata.c</v>
 <v>gnome_workspace\gnome_cajas\Generated_Source\PSoC5\project.h</v>
-<v>gnome_workspace\gnome_template</v>
 <v>gnome_workspace\gnome_template\TopDesign</v>
 <v>gnome_workspace\gnome_template\gnome_template.cydwr</v>
 <v>gnome_workspace\gnome_template\Header Files</v>
@@ -229,13 +228,6 @@
 <v>gnome_workspace\gnome_template\Source Files\i2cLCD.c</v>
 <v>gnome_workspace\gnome_template\Source Files\main.c</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Button</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Button\Button.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Button\Button.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Button\Button_aliases.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Clock_3</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Clock_3\Clock_3.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Clock_3\Clock_3.h</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Clock_5</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Clock_5\Clock_5.c</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Clock_5\Clock_5.h</v>
@@ -267,52 +259,9 @@
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\EEPROM</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\EEPROM\EEPROM.c</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\EEPROM\EEPROM.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C\I2C.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C\I2C.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C\I2C_BOOT.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C\I2C_INT.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C\I2C_MASTER.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C\I2C_PM.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C\I2C_PVT.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\I2C\I2C_SLAVE.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\i2c_scl</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\i2c_scl\i2c_scl.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\i2c_scl\i2c_scl.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\i2c_scl\i2c_scl_aliases.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\i2c_sda</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\i2c_sda\i2c_sda.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\i2c_sda\i2c_sda.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\i2c_sda\i2c_sda_aliases.h</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\ISR</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\ISR\ISR.c</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\ISR\ISR.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LCD_gnome_A_reg</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LCD_gnome_A_reg\LCD_gnome_A_reg.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LCD_gnome_A_reg\LCD_gnome_A_reg.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LCD_gnome_B_reg</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LCD_gnome_B_reg\LCD_gnome_B_reg.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LCD_gnome_B_reg\LCD_gnome_B_reg.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LED</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LED\LED.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LED\LED.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\LED\LED_aliases.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Rx_1</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Rx_1\Rx_1.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Rx_1\Rx_1.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\Rx_1\Rx_1_aliases.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART\UART.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART\UART.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART\UART_BOOT.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART\UART_INT.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART\UART_PM.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART_IntClock</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART_IntClock\UART_IntClock.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART_IntClock\UART_IntClock.h</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART_RX_IT</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART_RX_IT\UART_RX_IT.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source\PSoC5\UART_RX_IT\UART_RX_IT.h</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\via8bits1_Ctrl</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\via8bits1_Ctrl\via8bits1_Ctrl.c</v>
 <v>gnome_workspace\gnome_template\Generated_Source\PSoC5\via8bits1_Ctrl\via8bits1_Ctrl.h</v>
@@ -396,31 +345,6 @@
 <v>gnome_workspace</v>
 <v>gnome_workspace\gnome_cajas</v>
 <v>gnome_workspace\gnome_template</v>
-<v>gnome_workspace\gnome_template\TopDesign</v>
-<v>gnome_workspace\gnome_template\gnome_template.cydwr</v>
-<v>gnome_workspace\gnome_template\Header Files</v>
-<v>gnome_workspace\gnome_template\Header Files\cyapicallbacks.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome_config.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome_debug.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome_execute.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome_inst_decoder.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome_it.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome_lcd.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome_memory.h</v>
-<v>gnome_workspace\gnome_template\Header Files\gnome_registers.h</v>
-<v>gnome_workspace\gnome_template\Header Files\i2cLCD.h</v>
-<v>gnome_workspace\gnome_template\Source Files</v>
-<v>gnome_workspace\gnome_template\Source Files\gnome.c</v>
-<v>gnome_workspace\gnome_template\Source Files\gnome_debug.c</v>
-<v>gnome_workspace\gnome_template\Source Files\gnome_execute.c</v>
-<v>gnome_workspace\gnome_template\Source Files\gnome_inst_decoder.c</v>
-<v>gnome_workspace\gnome_template\Source Files\gnome_it.c</v>
-<v>gnome_workspace\gnome_template\Source Files\gnome_lcd.c</v>
-<v>gnome_workspace\gnome_template\Source Files\gnome_memory.c</v>
-<v>gnome_workspace\gnome_template\Source Files\i2cLCD.c</v>
-<v>gnome_workspace\gnome_template\Source Files\main.c</v>
-<v>gnome_workspace\gnome_template\Generated_Source</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="gnome_workspace\gnome_template">
@@ -544,6 +468,61 @@
 <v>gnome_workspace\gnome_cajas\gnome_cajas.rpt</v>
 <v>gnome_workspace\gnome_cajas\gnome_cajas_timing.html</v>
 <v>gnome_workspace\gnome_template</v>
+<v>gnome_workspace\gnome_template\CortexM3</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_5.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\EEPROM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_debug.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_execute.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_inst_decoder.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_it.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_lcd.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_memory.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\i2cLCD.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_Ctrl.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_Ctrl_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_gnome_clk.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_gnome_clk_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_gnome_res.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_gnome_res_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_P0_ctrl.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_P0_ctrl_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_P0_stat.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_P1_ctrl.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_P1_ctrl_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_P1_stat.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits1_Stat.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_Ctrl.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_Ctrl_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_gnome_clk.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_gnome_clk_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_gnome_res.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_gnome_res_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_P0_ctrl.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_P0_ctrl_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_P0_stat.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_P1_ctrl.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_P1_ctrl_PM.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_P1_stat.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\Listing Files\via8bits2_Stat.lst</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\gnome_template.elf</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\gnome_template.hex</v>
+<v>gnome_workspace\gnome_template\CortexM3\ARM_GCC_493\Debug\gnome_template.map</v>
 <v>gnome_workspace\gnome_template\gnome_template.gpdsc</v>
 <v>gnome_workspace\gnome_template\gnome_template.rpt</v>
 <v>gnome_workspace\gnome_template\gnome_template_timing.html</v>
@@ -551,42 +530,6 @@
 <VisibleNodeIds>
 <v>gnome_workspace</v>
 <v>gnome_workspace\gnome_cajas</v>
-<v>gnome_workspace\gnome_cajas\CortexM3</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\Button.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_3.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_5.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\EEPROM.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_debug.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_execute.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_inst_decoder.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_it.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_lcd.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\gnome_memory.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_BOOT.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_INT.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_MASTER.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_PM.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\i2c_scl.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\i2c_sda.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_SLAVE.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\i2cLCD.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR.lst</v>
-<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_gnome_A_reg.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -675,12 +618,7 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\gnome_template.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\gnome_template.cydsn\gnome_template.cydwr" />
-<name v=".\gnome_template.cydsn\gnome_config.h" />
-<name v=".\gnome_template.cydsn\gnome_debug.h" />
-</OpenDocs>
+<OpenDocs />
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

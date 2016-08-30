@@ -1,0 +1,2169 @@
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"gnome_memory.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.gnome_store_reg,"ax",%progbits
+  19              		.align	2
+  20              		.global	gnome_store_reg
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	gnome_store_reg, %function
+  24              	gnome_store_reg:
+  25              	.LFB63:
+  26              		.file 1 ".\\gnome_memory.c"
+   1:.\gnome_memory.c **** /* ========================================
+   2:.\gnome_memory.c ****  *
+   3:.\gnome_memory.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\gnome_memory.c ****  * All Rights Reserved
+   5:.\gnome_memory.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\gnome_memory.c ****  *
+   7:.\gnome_memory.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\gnome_memory.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\gnome_memory.c ****  *
+  10:.\gnome_memory.c ****  * ========================================
+  11:.\gnome_memory.c **** */
+  12:.\gnome_memory.c **** 
+  13:.\gnome_memory.c **** #include "gnome_memory.h"
+  14:.\gnome_memory.c **** 
+  15:.\gnome_memory.c **** void gnome_store_reg(uint8_t regist) {
+  27              		.loc 1 15 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              	.LVL0:
+  16:.\gnome_memory.c ****         reg8 *mem_mapped_reg;
+  17:.\gnome_memory.c ****         uint8_t intermediateValue;
+  18:.\gnome_memory.c ****         switch (regist & 0x0F) {
+  33              		.loc 1 18 0
+  34 0000 00F00F00 		and	r0, r0, #15
+  35              	.LVL1:
+  36 0004 A0F10A03 		sub	r3, r0, #10
+  37 0008 052B     		cmp	r3, #5
+  38 000a 00F2C180 		bhi	.L2
+  39 000e DFE803F0 		tbb	[pc, r3]
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 2
+
+
+  40              	.L4:
+  41 0012 61       		.byte	(.L3-.L4)/2
+  42 0013 7F       		.byte	(.L5-.L4)/2
+  43 0014 9F       		.byte	(.L6-.L4)/2
+  44 0015 03       		.byte	(.L7-.L4)/2
+  45 0016 21       		.byte	(.L8-.L4)/2
+  46 0017 41       		.byte	(.L9-.L4)/2
+  47              		.p2align 1
+  48              	.L7:
+  19:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_CONFIG_OUT_OPT_OUT) && GNOME_VIA1_ACTIVE /* Check for removal b
+  20:.\gnome_memory.c ****             case GNOME_VIA1_CONFIG:
+  21:.\gnome_memory.c ****                 if(via_state.config_mask & 0x80) {
+  49              		.loc 1 21 0
+  50 0018 614B     		ldr	r3, .L21
+  51 001a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  52 001c DAB2     		uxtb	r2, r3
+  53 001e 12F0800F 		tst	r2, #128
+  54 0022 0FD0     		beq	.L10
+  55              	.LVL2:
+  22:.\gnome_memory.c ****                     mem_mapped_reg = GNOME_VIA1_CONFIG_OUT_ADDR;
+  23:.\gnome_memory.c ****                     intermediateValue = *mem_mapped_reg & ~via_state.config_mask; // Ponemos a cero
+  56              		.loc 1 23 0
+  57 0024 5F48     		ldr	r0, .L21+4
+  58 0026 0178     		ldrb	r1, [r0]	@ zero_extendqisi2
+  59 0028 21EA0202 		bic	r2, r1, r2
+  60              	.LVL3:
+  24:.\gnome_memory.c ****                     *mem_mapped_reg = ((current_context->accumulator & via_state.config_mask) | int
+  61              		.loc 1 24 0
+  62 002c 5E49     		ldr	r1, .L21+8
+  63 002e 0968     		ldr	r1, [r1]
+  64 0030 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+  65 0032 0B40     		ands	r3, r3, r1
+  66 0034 1343     		orrs	r3, r3, r2
+  67 0036 03F00F03 		and	r3, r3, #15
+  68 003a 0370     		strb	r3, [r0]
+  25:.\gnome_memory.c ****                     via_state.config_mask = 0;
+  69              		.loc 1 25 0
+  70 003c 0022     		movs	r2, #0
+  71              	.LVL4:
+  72 003e 584B     		ldr	r3, .L21
+  73 0040 1A70     		strb	r2, [r3]
+  74 0042 7047     		bx	lr
+  75              	.LVL5:
+  76              	.L10:
+  26:.\gnome_memory.c ****                 } else {
+  27:.\gnome_memory.c ****                     // 0x80 indica una petición de escritura, incluso si la máscara es cero.
+  28:.\gnome_memory.c ****                     via_state.config_mask = current_context->accumulator | 0x80;
+  77              		.loc 1 28 0
+  78 0044 584B     		ldr	r3, .L21+8
+  79 0046 1B68     		ldr	r3, [r3]
+  80 0048 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  81 004a 63F07F03 		orn	r3, r3, #127
+  82 004e 544A     		ldr	r2, .L21
+  83 0050 1370     		strb	r3, [r2]
+  84 0052 7047     		bx	lr
+  85              	.L8:
+  86              	.LVL6:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 3
+
+
+  29:.\gnome_memory.c ****                 }
+  30:.\gnome_memory.c ****                 break;
+  31:.\gnome_memory.c ****             #endif
+  32:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_PORT0_OUT_OPT_OUT) && GNOME_VIA1_ACTIVE /* Check for removal by
+  33:.\gnome_memory.c ****             case GNOME_VIA1_PORT0:
+  34:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA1_PORT0_OUT_ADDR;
+  35:.\gnome_memory.c ****                 if (via_state.port0_ptr) {
+  87              		.loc 1 35 0
+  88 0054 524B     		ldr	r3, .L21
+  89 0056 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+  90 0058 5BB1     		cbz	r3, .L12
+  36:.\gnome_memory.c ****                     intermediateValue = 0x0F & *mem_mapped_reg;
+  91              		.loc 1 36 0
+  92 005a 544A     		ldr	r2, .L21+12
+  93 005c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  94 005e 03F00F03 		and	r3, r3, #15
+  95              	.LVL7:
+  37:.\gnome_memory.c ****                     *mem_mapped_reg =  (intermediateValue + (current_context->accumulator << 4));
+  96              		.loc 1 37 0
+  97 0062 5149     		ldr	r1, .L21+8
+  98 0064 0968     		ldr	r1, [r1]
+  99 0066 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 100 0068 03EB0113 		add	r3, r3, r1, lsl #4
+ 101              	.LVL8:
+ 102 006c DBB2     		uxtb	r3, r3
+ 103 006e 1370     		strb	r3, [r2]
+ 104 0070 09E0     		b	.L13
+ 105              	.L12:
+  38:.\gnome_memory.c ****                 } else {
+  39:.\gnome_memory.c ****                     intermediateValue = 0xF0 & *mem_mapped_reg;
+ 106              		.loc 1 39 0
+ 107 0072 4E4A     		ldr	r2, .L21+12
+ 108 0074 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 109 0076 03F0F003 		and	r3, r3, #240
+ 110              	.LVL9:
+  40:.\gnome_memory.c ****                     *mem_mapped_reg =  (intermediateValue + current_context->accumulator);
+ 111              		.loc 1 40 0
+ 112 007a 4B49     		ldr	r1, .L21+8
+ 113 007c 0968     		ldr	r1, [r1]
+ 114 007e 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 115 0080 0B44     		add	r3, r3, r1
+ 116              	.LVL10:
+ 117 0082 DBB2     		uxtb	r3, r3
+ 118 0084 1370     		strb	r3, [r2]
+ 119              	.L13:
+  41:.\gnome_memory.c ****                 }
+  42:.\gnome_memory.c ****                 via_state.port0_ptr = !via_state.port0_ptr;
+ 120              		.loc 1 42 0
+ 121 0086 464A     		ldr	r2, .L21
+ 122 0088 5378     		ldrb	r3, [r2, #1]	@ zero_extendqisi2
+ 123 008a B3FA83F3 		clz	r3, r3
+ 124 008e 5B09     		lsrs	r3, r3, #5
+ 125 0090 5370     		strb	r3, [r2, #1]
+  43:.\gnome_memory.c ****                 break;
+ 126              		.loc 1 43 0
+ 127 0092 7047     		bx	lr
+ 128              	.LVL11:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 4
+
+
+ 129              	.L9:
+  44:.\gnome_memory.c ****             #endif
+  45:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_PORT1_OUT_OPT_OUT)  && GNOME_VIA1_ACTIVE/* Check for removal by
+  46:.\gnome_memory.c ****             case GNOME_VIA1_PORT1:
+  47:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA1_PORT1_OUT_ADDR;
+  48:.\gnome_memory.c ****                 if (via_state.port1_ptr) {
+ 130              		.loc 1 48 0
+ 131 0094 424B     		ldr	r3, .L21
+ 132 0096 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 133 0098 5BB1     		cbz	r3, .L14
+  49:.\gnome_memory.c ****                     intermediateValue = 0x0F & *mem_mapped_reg;
+ 134              		.loc 1 49 0
+ 135 009a 454A     		ldr	r2, .L21+16
+ 136 009c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 137 009e 03F00F03 		and	r3, r3, #15
+ 138              	.LVL12:
+  50:.\gnome_memory.c ****                     *mem_mapped_reg =  (intermediateValue + (current_context->accumulator << 4));
+ 139              		.loc 1 50 0
+ 140 00a2 4149     		ldr	r1, .L21+8
+ 141 00a4 0968     		ldr	r1, [r1]
+ 142 00a6 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 143 00a8 03EB0113 		add	r3, r3, r1, lsl #4
+ 144              	.LVL13:
+ 145 00ac DBB2     		uxtb	r3, r3
+ 146 00ae 1370     		strb	r3, [r2]
+ 147 00b0 09E0     		b	.L15
+ 148              	.L14:
+  51:.\gnome_memory.c ****                 } else {
+  52:.\gnome_memory.c ****                     intermediateValue = 0xF0 & *mem_mapped_reg;
+ 149              		.loc 1 52 0
+ 150 00b2 3F4A     		ldr	r2, .L21+16
+ 151 00b4 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 152 00b6 03F0F003 		and	r3, r3, #240
+ 153              	.LVL14:
+  53:.\gnome_memory.c ****                     *mem_mapped_reg =  (intermediateValue + current_context->accumulator);
+ 154              		.loc 1 53 0
+ 155 00ba 3B49     		ldr	r1, .L21+8
+ 156 00bc 0968     		ldr	r1, [r1]
+ 157 00be 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 158 00c0 0B44     		add	r3, r3, r1
+ 159              	.LVL15:
+ 160 00c2 DBB2     		uxtb	r3, r3
+ 161 00c4 1370     		strb	r3, [r2]
+ 162              	.L15:
+  54:.\gnome_memory.c ****                 }
+  55:.\gnome_memory.c ****                 via_state.port1_ptr = !via_state.port1_ptr;                
+ 163              		.loc 1 55 0
+ 164 00c6 364A     		ldr	r2, .L21
+ 165 00c8 9378     		ldrb	r3, [r2, #2]	@ zero_extendqisi2
+ 166 00ca B3FA83F3 		clz	r3, r3
+ 167 00ce 5B09     		lsrs	r3, r3, #5
+ 168 00d0 9370     		strb	r3, [r2, #2]
+  56:.\gnome_memory.c ****                 break;
+ 169              		.loc 1 56 0
+ 170 00d2 7047     		bx	lr
+ 171              	.LVL16:
+ 172              	.L3:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 5
+
+
+  57:.\gnome_memory.c ****             #endif
+  58:.\gnome_memory.c ****             #if !defined(GNOME_VIA2_CONFIG_OUT_OPT_OUT) && GNOME_VIA2_ACTIVE /* Check for removal b
+  59:.\gnome_memory.c ****             case GNOME_VIA2_CONFIG:
+  60:.\gnome_memory.c ****                 if(via_state.config_mask & 0x80) {
+ 173              		.loc 1 60 0
+ 174 00d4 324B     		ldr	r3, .L21
+ 175 00d6 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 176 00d8 DAB2     		uxtb	r2, r3
+ 177 00da 12F0800F 		tst	r2, #128
+ 178 00de 0FD0     		beq	.L16
+ 179              	.LVL17:
+  61:.\gnome_memory.c ****                     mem_mapped_reg = GNOME_VIA2_CONFIG_OUT_ADDR;
+  62:.\gnome_memory.c ****                     intermediateValue = *mem_mapped_reg & ~via_state.config_mask; // Ponemos a cero
+ 180              		.loc 1 62 0
+ 181 00e0 3448     		ldr	r0, .L21+20
+ 182 00e2 0178     		ldrb	r1, [r0]	@ zero_extendqisi2
+ 183 00e4 21EA0202 		bic	r2, r1, r2
+ 184              	.LVL18:
+  63:.\gnome_memory.c ****                     *mem_mapped_reg = ((current_context->accumulator & via_state.config_mask) | int
+ 185              		.loc 1 63 0
+ 186 00e8 2F49     		ldr	r1, .L21+8
+ 187 00ea 0968     		ldr	r1, [r1]
+ 188 00ec 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 189 00ee 0B40     		ands	r3, r3, r1
+ 190 00f0 1343     		orrs	r3, r3, r2
+ 191 00f2 03F00F03 		and	r3, r3, #15
+ 192 00f6 0370     		strb	r3, [r0]
+  64:.\gnome_memory.c ****                     via_state.config_mask = 0;
+ 193              		.loc 1 64 0
+ 194 00f8 0022     		movs	r2, #0
+ 195              	.LVL19:
+ 196 00fa 294B     		ldr	r3, .L21
+ 197 00fc 1A70     		strb	r2, [r3]
+ 198 00fe 7047     		bx	lr
+ 199              	.LVL20:
+ 200              	.L16:
+  65:.\gnome_memory.c ****                 } else {
+  66:.\gnome_memory.c ****                     // 0x80 indica una petición de escritura, incluso si la máscara es cero.
+  67:.\gnome_memory.c ****                     via_state.config_mask = current_context->accumulator | 0x80;
+ 201              		.loc 1 67 0
+ 202 0100 294B     		ldr	r3, .L21+8
+ 203 0102 1B68     		ldr	r3, [r3]
+ 204 0104 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 205 0106 63F07F03 		orn	r3, r3, #127
+ 206 010a 254A     		ldr	r2, .L21
+ 207 010c 1370     		strb	r3, [r2]
+ 208 010e 7047     		bx	lr
+ 209              	.L5:
+ 210              	.LVL21:
+  68:.\gnome_memory.c ****                 }
+  69:.\gnome_memory.c ****                 break;
+  70:.\gnome_memory.c ****             #endif
+  71:.\gnome_memory.c ****             #if !defined(GNOME_VIA2_PORT0_OUT_OPT_OUT) && GNOME_VIA2_ACTIVE /* Check for removal by
+  72:.\gnome_memory.c ****             case GNOME_VIA2_PORT0:
+  73:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA2_PORT0_OUT_ADDR;
+  74:.\gnome_memory.c ****                 if (via_state.port0_ptr) {
+ 211              		.loc 1 74 0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 6
+
+
+ 212 0110 234B     		ldr	r3, .L21
+ 213 0112 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 214 0114 5BB1     		cbz	r3, .L17
+  75:.\gnome_memory.c ****                     intermediateValue = 0x0F & *mem_mapped_reg;
+ 215              		.loc 1 75 0
+ 216 0116 284A     		ldr	r2, .L21+24
+ 217 0118 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 218 011a 03F00F03 		and	r3, r3, #15
+ 219              	.LVL22:
+  76:.\gnome_memory.c ****                     *mem_mapped_reg =  (intermediateValue + (current_context->accumulator << 4));
+ 220              		.loc 1 76 0
+ 221 011e 2249     		ldr	r1, .L21+8
+ 222 0120 0968     		ldr	r1, [r1]
+ 223 0122 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 224 0124 03EB0113 		add	r3, r3, r1, lsl #4
+ 225              	.LVL23:
+ 226 0128 DBB2     		uxtb	r3, r3
+ 227 012a 1370     		strb	r3, [r2]
+ 228 012c 09E0     		b	.L18
+ 229              	.L17:
+  77:.\gnome_memory.c ****                 } else {
+  78:.\gnome_memory.c ****                     intermediateValue = 0xF0 & *mem_mapped_reg;
+ 230              		.loc 1 78 0
+ 231 012e 224A     		ldr	r2, .L21+24
+ 232 0130 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 233 0132 03F0F003 		and	r3, r3, #240
+ 234              	.LVL24:
+  79:.\gnome_memory.c ****                     *mem_mapped_reg =  (intermediateValue + current_context->accumulator);
+ 235              		.loc 1 79 0
+ 236 0136 1C49     		ldr	r1, .L21+8
+ 237 0138 0968     		ldr	r1, [r1]
+ 238 013a 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 239 013c 0B44     		add	r3, r3, r1
+ 240              	.LVL25:
+ 241 013e DBB2     		uxtb	r3, r3
+ 242 0140 1370     		strb	r3, [r2]
+ 243              	.L18:
+  80:.\gnome_memory.c ****                 }
+  81:.\gnome_memory.c ****                 via_state.port0_ptr = !via_state.port0_ptr;
+ 244              		.loc 1 81 0
+ 245 0142 174A     		ldr	r2, .L21
+ 246 0144 5378     		ldrb	r3, [r2, #1]	@ zero_extendqisi2
+ 247 0146 B3FA83F3 		clz	r3, r3
+ 248 014a 5B09     		lsrs	r3, r3, #5
+ 249 014c 5370     		strb	r3, [r2, #1]
+  82:.\gnome_memory.c ****                 break;
+ 250              		.loc 1 82 0
+ 251 014e 7047     		bx	lr
+ 252              	.LVL26:
+ 253              	.L6:
+  83:.\gnome_memory.c ****             #endif
+  84:.\gnome_memory.c ****             #if !defined(GNOME_VIA_PORT2_OUT_OPT_OUT)  && GNOME_VIA2_ACTIVE/* Check for removal by 
+  85:.\gnome_memory.c ****             case GNOME_VIA2_PORT1:
+  86:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA2_PORT1_OUT_ADDR;
+  87:.\gnome_memory.c ****                 if (via_state.port1_ptr) {
+ 254              		.loc 1 87 0
+ 255 0150 134B     		ldr	r3, .L21
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 7
+
+
+ 256 0152 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 257 0154 5BB1     		cbz	r3, .L19
+  88:.\gnome_memory.c ****                     intermediateValue = 0x0F & *mem_mapped_reg;
+ 258              		.loc 1 88 0
+ 259 0156 194A     		ldr	r2, .L21+28
+ 260 0158 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 261 015a 03F00F03 		and	r3, r3, #15
+ 262              	.LVL27:
+  89:.\gnome_memory.c ****                     *mem_mapped_reg =  (intermediateValue + (current_context->accumulator << 4));
+ 263              		.loc 1 89 0
+ 264 015e 1249     		ldr	r1, .L21+8
+ 265 0160 0968     		ldr	r1, [r1]
+ 266 0162 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 267 0164 03EB0113 		add	r3, r3, r1, lsl #4
+ 268              	.LVL28:
+ 269 0168 DBB2     		uxtb	r3, r3
+ 270 016a 1370     		strb	r3, [r2]
+ 271 016c 09E0     		b	.L20
+ 272              	.L19:
+  90:.\gnome_memory.c ****                 } else {
+  91:.\gnome_memory.c ****                     intermediateValue = 0xF0 & *mem_mapped_reg;
+ 273              		.loc 1 91 0
+ 274 016e 134A     		ldr	r2, .L21+28
+ 275 0170 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 276 0172 03F0F003 		and	r3, r3, #240
+ 277              	.LVL29:
+  92:.\gnome_memory.c ****                     *mem_mapped_reg =  (intermediateValue + current_context->accumulator);
+ 278              		.loc 1 92 0
+ 279 0176 0C49     		ldr	r1, .L21+8
+ 280 0178 0968     		ldr	r1, [r1]
+ 281 017a 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 282 017c 0B44     		add	r3, r3, r1
+ 283              	.LVL30:
+ 284 017e DBB2     		uxtb	r3, r3
+ 285 0180 1370     		strb	r3, [r2]
+ 286              	.L20:
+  93:.\gnome_memory.c ****                 }
+  94:.\gnome_memory.c ****                 via_state.port1_ptr = !via_state.port1_ptr;                
+ 287              		.loc 1 94 0
+ 288 0182 074A     		ldr	r2, .L21
+ 289 0184 9378     		ldrb	r3, [r2, #2]	@ zero_extendqisi2
+ 290 0186 B3FA83F3 		clz	r3, r3
+ 291 018a 5B09     		lsrs	r3, r3, #5
+ 292 018c 9370     		strb	r3, [r2, #2]
+  95:.\gnome_memory.c ****                 break;
+ 293              		.loc 1 95 0
+ 294 018e 7047     		bx	lr
+ 295              	.LVL31:
+ 296              	.L2:
+  96:.\gnome_memory.c ****             #endif
+  97:.\gnome_memory.c ****             default:
+  98:.\gnome_memory.c ****                 registers[regist & 0x0f] = current_context->accumulator & ((1<<GNOME_WORD_SIZE) -1)
+ 297              		.loc 1 98 0
+ 298 0190 054B     		ldr	r3, .L21+8
+ 299 0192 1B68     		ldr	r3, [r3]
+ 300 0194 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 301 0196 03F00F03 		and	r3, r3, #15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 8
+
+
+ 302 019a 094A     		ldr	r2, .L21+32
+ 303 019c 1354     		strb	r3, [r2, r0]
+ 304 019e 7047     		bx	lr
+ 305              	.L22:
+ 306              		.align	2
+ 307              	.L21:
+ 308 01a0 00000000 		.word	via_state
+ 309 01a4 7C640040 		.word	1073767548
+ 310 01a8 00000000 		.word	current_context
+ 311 01ac 7D640040 		.word	1073767549
+ 312 01b0 7B640040 		.word	1073767547
+ 313 01b4 7E640040 		.word	1073767550
+ 314 01b8 7F640040 		.word	1073767551
+ 315 01bc 7A640040 		.word	1073767546
+ 316 01c0 00000000 		.word	registers
+ 317              		.cfi_endproc
+ 318              	.LFE63:
+ 319              		.size	gnome_store_reg, .-gnome_store_reg
+ 320              		.section	.text.gnome_load_reg,"ax",%progbits
+ 321              		.align	2
+ 322              		.global	gnome_load_reg
+ 323              		.thumb
+ 324              		.thumb_func
+ 325              		.type	gnome_load_reg, %function
+ 326              	gnome_load_reg:
+ 327              	.LFB64:
+  99:.\gnome_memory.c ****                 break;
+ 100:.\gnome_memory.c ****         }
+ 101:.\gnome_memory.c **** }
+ 102:.\gnome_memory.c **** 
+ 103:.\gnome_memory.c **** uint8_t gnome_load_reg(uint8_t regist) {
+ 328              		.loc 1 103 0
+ 329              		.cfi_startproc
+ 330              		@ args = 0, pretend = 0, frame = 0
+ 331              		@ frame_needed = 0, uses_anonymous_args = 0
+ 332              		@ link register save eliminated.
+ 333              	.LVL32:
+ 104:.\gnome_memory.c ****         reg8 *mem_mapped_reg;
+ 105:.\gnome_memory.c ****         uint8_t retVal;
+ 106:.\gnome_memory.c ****         switch (regist & 0xF) {
+ 334              		.loc 1 106 0
+ 335 0000 00F00F00 		and	r0, r0, #15
+ 336              	.LVL33:
+ 337 0004 A0F10A03 		sub	r3, r0, #10
+ 338 0008 052B     		cmp	r3, #5
+ 339 000a 52D8     		bhi	.L24
+ 340 000c DFE803F0 		tbb	[pc, r3]
+ 341              	.L26:
+ 342 0010 2A       		.byte	(.L25-.L26)/2
+ 343 0011 2F       		.byte	(.L27-.L26)/2
+ 344 0012 40       		.byte	(.L28-.L26)/2
+ 345 0013 03       		.byte	(.L29-.L26)/2
+ 346 0014 08       		.byte	(.L30-.L26)/2
+ 347 0015 19       		.byte	(.L31-.L26)/2
+ 348              		.p2align 1
+ 349              	.L29:
+ 350              	.LVL34:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 9
+
+
+ 107:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_CONFIG_IN_OPT_OUT) && GNOME_VIA1_ACTIVE /* Check for removal by
+ 108:.\gnome_memory.c ****             case GNOME_VIA1_CONFIG:
+ 109:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA1_CONFIG_IN_ADDR;
+ 110:.\gnome_memory.c ****                 retVal = (*mem_mapped_reg) & 0x0F;
+ 351              		.loc 1 110 0
+ 352 0016 294B     		ldr	r3, .L41
+ 353 0018 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 354 001a 00F00F00 		and	r0, r0, #15
+ 355              	.LVL35:
+ 111:.\gnome_memory.c ****                 break;
+ 356              		.loc 1 111 0
+ 357 001e 7047     		bx	lr
+ 358              	.LVL36:
+ 359              	.L30:
+ 112:.\gnome_memory.c ****             #endif
+ 113:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_PORT0_IN_OPT_OUT) && GNOME_VIA1_ACTIVE /* Check for removal by 
+ 114:.\gnome_memory.c ****             case GNOME_VIA1_PORT0:
+ 115:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA1_PORT0_IN_ADDR;
+ 116:.\gnome_memory.c ****                 if (via_state.port0_ptr) {
+ 360              		.loc 1 116 0
+ 361 0020 274B     		ldr	r3, .L41+4
+ 362 0022 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 363 0024 1BB1     		cbz	r3, .L33
+ 117:.\gnome_memory.c ****                     retVal = (((*mem_mapped_reg) & 0xF0) >> 4) & ((1<<GNOME_WORD_SIZE) -1);
+ 364              		.loc 1 117 0
+ 365 0026 274A     		ldr	r2, .L41+8
+ 366 0028 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 367 002a 0009     		lsrs	r0, r0, #4
+ 368              	.LVL37:
+ 369 002c 03E0     		b	.L34
+ 370              	.LVL38:
+ 371              	.L33:
+ 118:.\gnome_memory.c ****                 } else {
+ 119:.\gnome_memory.c ****                     retVal = (*mem_mapped_reg) & ((1<<GNOME_WORD_SIZE) -1);
+ 372              		.loc 1 119 0
+ 373 002e 254A     		ldr	r2, .L41+8
+ 374 0030 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 375 0032 00F00F00 		and	r0, r0, #15
+ 376              	.LVL39:
+ 377              	.L34:
+ 120:.\gnome_memory.c ****                 }
+ 121:.\gnome_memory.c ****                 via_state.port0_ptr = !via_state.port0_ptr;
+ 378              		.loc 1 121 0
+ 379 0036 B3FA83F3 		clz	r3, r3
+ 380 003a 5B09     		lsrs	r3, r3, #5
+ 381 003c 204A     		ldr	r2, .L41+4
+ 382 003e 5370     		strb	r3, [r2, #1]
+ 122:.\gnome_memory.c ****                 break;
+ 383              		.loc 1 122 0
+ 384 0040 7047     		bx	lr
+ 385              	.LVL40:
+ 386              	.L31:
+ 123:.\gnome_memory.c ****             #endif
+ 124:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_PORT1_IN_OPT_OUT) && GNOME_VIA1_ACTIVE /* Check for removal by 
+ 125:.\gnome_memory.c ****             case GNOME_VIA1_PORT1:
+ 126:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA1_PORT1_IN_ADDR;
+ 127:.\gnome_memory.c ****                 if (via_state.port1_ptr) {
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 10
+
+
+ 387              		.loc 1 127 0
+ 388 0042 1F4B     		ldr	r3, .L41+4
+ 389 0044 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 390 0046 1BB1     		cbz	r3, .L35
+ 128:.\gnome_memory.c ****                     retVal = (((*mem_mapped_reg) & 0xF0) >> 4) & ((1<<GNOME_WORD_SIZE) -1);
+ 391              		.loc 1 128 0
+ 392 0048 1F4A     		ldr	r2, .L41+12
+ 393 004a 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 394 004c 0009     		lsrs	r0, r0, #4
+ 395              	.LVL41:
+ 396 004e 03E0     		b	.L36
+ 397              	.LVL42:
+ 398              	.L35:
+ 129:.\gnome_memory.c ****                 } else {
+ 130:.\gnome_memory.c ****                     retVal = (*mem_mapped_reg) & ((1<<GNOME_WORD_SIZE) -1);
+ 399              		.loc 1 130 0
+ 400 0050 1D4A     		ldr	r2, .L41+12
+ 401 0052 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 402 0054 00F00F00 		and	r0, r0, #15
+ 403              	.LVL43:
+ 404              	.L36:
+ 131:.\gnome_memory.c ****                 }
+ 132:.\gnome_memory.c ****                 via_state.port1_ptr = !via_state.port1_ptr;                
+ 405              		.loc 1 132 0
+ 406 0058 B3FA83F3 		clz	r3, r3
+ 407 005c 5B09     		lsrs	r3, r3, #5
+ 408 005e 184A     		ldr	r2, .L41+4
+ 409 0060 9370     		strb	r3, [r2, #2]
+ 133:.\gnome_memory.c ****                 break;
+ 410              		.loc 1 133 0
+ 411 0062 7047     		bx	lr
+ 412              	.LVL44:
+ 413              	.L25:
+ 134:.\gnome_memory.c ****             #endif
+ 135:.\gnome_memory.c ****             #if !defined(GNOME_VIA2_CONFIG_IN_OPT_OUT) && GNOME_VIA2_ACTIVE /* Check for removal by
+ 136:.\gnome_memory.c ****             case GNOME_VIA2_CONFIG:
+ 137:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA2_CONFIG_IN_ADDR;
+ 138:.\gnome_memory.c ****                 retVal = (*mem_mapped_reg) & 0x0F;
+ 414              		.loc 1 138 0
+ 415 0064 194B     		ldr	r3, .L41+16
+ 416 0066 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 417 0068 00F00F00 		and	r0, r0, #15
+ 418              	.LVL45:
+ 139:.\gnome_memory.c ****                 break;
+ 419              		.loc 1 139 0
+ 420 006c 7047     		bx	lr
+ 421              	.LVL46:
+ 422              	.L27:
+ 140:.\gnome_memory.c ****             #endif
+ 141:.\gnome_memory.c ****             #if !defined(GNOME_VIA2_PORT0_IN_OPT_OUT) && GNOME_VIA2_ACTIVE /* Check for removal by 
+ 142:.\gnome_memory.c ****             case GNOME_VIA2_PORT0:
+ 143:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA2_PORT0_IN_ADDR;
+ 144:.\gnome_memory.c ****                 if (via_state.port0_ptr) {
+ 423              		.loc 1 144 0
+ 424 006e 144B     		ldr	r3, .L41+4
+ 425 0070 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 426 0072 1BB1     		cbz	r3, .L37
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 11
+
+
+ 145:.\gnome_memory.c ****                     retVal = (((*mem_mapped_reg) & 0xF0) >> 4) & ((1<<GNOME_WORD_SIZE) -1);
+ 427              		.loc 1 145 0
+ 428 0074 164A     		ldr	r2, .L41+20
+ 429 0076 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 430 0078 0009     		lsrs	r0, r0, #4
+ 431              	.LVL47:
+ 432 007a 03E0     		b	.L38
+ 433              	.LVL48:
+ 434              	.L37:
+ 146:.\gnome_memory.c ****                 } else {
+ 147:.\gnome_memory.c ****                     retVal = (*mem_mapped_reg) & ((1<<GNOME_WORD_SIZE) -1);
+ 435              		.loc 1 147 0
+ 436 007c 144A     		ldr	r2, .L41+20
+ 437 007e 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 438 0080 00F00F00 		and	r0, r0, #15
+ 439              	.LVL49:
+ 440              	.L38:
+ 148:.\gnome_memory.c ****                 }
+ 149:.\gnome_memory.c ****                 via_state.port0_ptr = !via_state.port0_ptr;
+ 441              		.loc 1 149 0
+ 442 0084 B3FA83F3 		clz	r3, r3
+ 443 0088 5B09     		lsrs	r3, r3, #5
+ 444 008a 0D4A     		ldr	r2, .L41+4
+ 445 008c 5370     		strb	r3, [r2, #1]
+ 150:.\gnome_memory.c ****                 break;
+ 446              		.loc 1 150 0
+ 447 008e 7047     		bx	lr
+ 448              	.LVL50:
+ 449              	.L28:
+ 151:.\gnome_memory.c ****             #endif
+ 152:.\gnome_memory.c ****             #if !defined(GNOME_VIA2_PORT1_IN_OPT_OUT) && GNOME_VIA2_ACTIVE /* Check for removal by 
+ 153:.\gnome_memory.c ****             case GNOME_VIA2_PORT1:
+ 154:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA2_PORT1_IN_ADDR;
+ 155:.\gnome_memory.c ****                 if (via_state.port1_ptr) {
+ 450              		.loc 1 155 0
+ 451 0090 0B4B     		ldr	r3, .L41+4
+ 452 0092 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 453 0094 1BB1     		cbz	r3, .L39
+ 156:.\gnome_memory.c ****                     retVal = (((*mem_mapped_reg) & 0xF0) >> 4) & ((1<<GNOME_WORD_SIZE) -1);
+ 454              		.loc 1 156 0
+ 455 0096 0F4A     		ldr	r2, .L41+24
+ 456 0098 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 457 009a 0009     		lsrs	r0, r0, #4
+ 458              	.LVL51:
+ 459 009c 03E0     		b	.L40
+ 460              	.LVL52:
+ 461              	.L39:
+ 157:.\gnome_memory.c ****                 } else {
+ 158:.\gnome_memory.c ****                     retVal = (*mem_mapped_reg) & ((1<<GNOME_WORD_SIZE) -1);
+ 462              		.loc 1 158 0
+ 463 009e 0D4A     		ldr	r2, .L41+24
+ 464 00a0 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 465 00a2 00F00F00 		and	r0, r0, #15
+ 466              	.LVL53:
+ 467              	.L40:
+ 159:.\gnome_memory.c ****                 }
+ 160:.\gnome_memory.c ****                 via_state.port1_ptr = !via_state.port1_ptr;                
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 12
+
+
+ 468              		.loc 1 160 0
+ 469 00a6 B3FA83F3 		clz	r3, r3
+ 470 00aa 5B09     		lsrs	r3, r3, #5
+ 471 00ac 044A     		ldr	r2, .L41+4
+ 472 00ae 9370     		strb	r3, [r2, #2]
+ 161:.\gnome_memory.c ****                 break;
+ 473              		.loc 1 161 0
+ 474 00b0 7047     		bx	lr
+ 475              	.LVL54:
+ 476              	.L24:
+ 162:.\gnome_memory.c ****             #endif
+ 163:.\gnome_memory.c ****             default:
+ 164:.\gnome_memory.c ****                retVal = registers[regist & 0x0F] &((1<<GNOME_WORD_SIZE) -1);
+ 477              		.loc 1 164 0
+ 478 00b2 094B     		ldr	r3, .L41+28
+ 479 00b4 185C     		ldrb	r0, [r3, r0]	@ zero_extendqisi2
+ 480 00b6 00F00F00 		and	r0, r0, #15
+ 481              	.LVL55:
+ 165:.\gnome_memory.c ****                 break;
+ 166:.\gnome_memory.c ****         }
+ 167:.\gnome_memory.c ****         return retVal;
+ 168:.\gnome_memory.c **** }
+ 482              		.loc 1 168 0
+ 483 00ba 7047     		bx	lr
+ 484              	.L42:
+ 485              		.align	2
+ 486              	.L41:
+ 487 00bc 6C640040 		.word	1073767532
+ 488 00c0 00000000 		.word	via_state
+ 489 00c4 6D640040 		.word	1073767533
+ 490 00c8 6B640040 		.word	1073767531
+ 491 00cc 6E640040 		.word	1073767534
+ 492 00d0 6F640040 		.word	1073767535
+ 493 00d4 6A640040 		.word	1073767530
+ 494 00d8 00000000 		.word	registers
+ 495              		.cfi_endproc
+ 496              	.LFE64:
+ 497              		.size	gnome_load_reg, .-gnome_load_reg
+ 498              		.section	.text.gnome_debug_load_reg,"ax",%progbits
+ 499              		.align	2
+ 500              		.global	gnome_debug_load_reg
+ 501              		.thumb
+ 502              		.thumb_func
+ 503              		.type	gnome_debug_load_reg, %function
+ 504              	gnome_debug_load_reg:
+ 505              	.LFB65:
+ 169:.\gnome_memory.c **** 
+ 170:.\gnome_memory.c **** 
+ 171:.\gnome_memory.c **** uint8_t gnome_debug_load_reg(uint8_t regist) {
+ 506              		.loc 1 171 0
+ 507              		.cfi_startproc
+ 508              		@ args = 0, pretend = 0, frame = 0
+ 509              		@ frame_needed = 0, uses_anonymous_args = 0
+ 510              		@ link register save eliminated.
+ 511              	.LVL56:
+ 172:.\gnome_memory.c ****         reg8 *mem_mapped_reg;
+ 173:.\gnome_memory.c ****         uint8_t retVal;
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 13
+
+
+ 174:.\gnome_memory.c ****         switch (regist & 0xF) {
+ 512              		.loc 1 174 0
+ 513 0000 00F00F00 		and	r0, r0, #15
+ 514              	.LVL57:
+ 515 0004 A0F10A03 		sub	r3, r0, #10
+ 516 0008 052B     		cmp	r3, #5
+ 517 000a 1CD8     		bhi	.L44
+ 518 000c DFE803F0 		tbb	[pc, r3]
+ 519              	.L46:
+ 520 0010 0F       		.byte	(.L45-.L46)/2
+ 521 0011 13       		.byte	(.L47-.L46)/2
+ 522 0012 17       		.byte	(.L48-.L46)/2
+ 523 0013 03       		.byte	(.L49-.L46)/2
+ 524 0014 07       		.byte	(.L50-.L46)/2
+ 525 0015 0B       		.byte	(.L51-.L46)/2
+ 526              		.p2align 1
+ 527              	.L49:
+ 528              	.LVL58:
+ 175:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_CONFIG_IN_OPT_OUT) && GNOME_VIA1_ACTIVE /* Check for removal by
+ 176:.\gnome_memory.c ****             case GNOME_VIA1_CONFIG:
+ 177:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA1_CONFIG_IN_ADDR;
+ 178:.\gnome_memory.c ****                 retVal = *mem_mapped_reg;
+ 529              		.loc 1 178 0
+ 530 0016 0E4B     		ldr	r3, .L53
+ 531 0018 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 532 001a C0B2     		uxtb	r0, r0
+ 533              	.LVL59:
+ 179:.\gnome_memory.c ****                 break;
+ 534              		.loc 1 179 0
+ 535 001c 7047     		bx	lr
+ 536              	.LVL60:
+ 537              	.L50:
+ 180:.\gnome_memory.c ****             #endif
+ 181:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_PORT0_IN_OPT_OUT) && GNOME_VIA1_ACTIVE /* Check for removal by 
+ 182:.\gnome_memory.c ****             case GNOME_VIA1_PORT0:
+ 183:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA1_PORT0_IN_ADDR;
+ 184:.\gnome_memory.c ****                 retVal = *mem_mapped_reg;
+ 538              		.loc 1 184 0
+ 539 001e 0D4B     		ldr	r3, .L53+4
+ 540 0020 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 541 0022 C0B2     		uxtb	r0, r0
+ 542              	.LVL61:
+ 185:.\gnome_memory.c ****                 break;
+ 543              		.loc 1 185 0
+ 544 0024 7047     		bx	lr
+ 545              	.LVL62:
+ 546              	.L51:
+ 186:.\gnome_memory.c ****             #endif
+ 187:.\gnome_memory.c ****             #if !defined(GNOME_VIA1_PORT1_IN_OPT_OUT) && GNOME_VIA1_ACTIVE /* Check for removal by 
+ 188:.\gnome_memory.c ****             case GNOME_VIA1_PORT1:
+ 189:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA1_PORT1_IN_ADDR;
+ 190:.\gnome_memory.c ****                 retVal = *mem_mapped_reg;
+ 547              		.loc 1 190 0
+ 548 0026 0C4B     		ldr	r3, .L53+8
+ 549 0028 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 550 002a C0B2     		uxtb	r0, r0
+ 551              	.LVL63:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 14
+
+
+ 191:.\gnome_memory.c ****                 break;
+ 552              		.loc 1 191 0
+ 553 002c 7047     		bx	lr
+ 554              	.LVL64:
+ 555              	.L45:
+ 192:.\gnome_memory.c ****             #endif
+ 193:.\gnome_memory.c ****             #if !defined(GNOME_VIA2_CONFIG_IN_OPT_OUT) && GNOME_VIA2_ACTIVE /* Check for removal by
+ 194:.\gnome_memory.c ****             case GNOME_VIA2_CONFIG:
+ 195:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA2_CONFIG_IN_ADDR;
+ 196:.\gnome_memory.c ****                 retVal = *mem_mapped_reg;
+ 556              		.loc 1 196 0
+ 557 002e 0B4B     		ldr	r3, .L53+12
+ 558 0030 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 559 0032 C0B2     		uxtb	r0, r0
+ 560              	.LVL65:
+ 197:.\gnome_memory.c ****                 break;
+ 561              		.loc 1 197 0
+ 562 0034 7047     		bx	lr
+ 563              	.LVL66:
+ 564              	.L47:
+ 198:.\gnome_memory.c ****             #endif
+ 199:.\gnome_memory.c ****             #if !defined(GNOME_VIA2_PORT0_IN_OPT_OUT) && GNOME_VIA2_ACTIVE /* Check for removal by 
+ 200:.\gnome_memory.c ****             case GNOME_VIA2_PORT0:
+ 201:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA2_PORT0_IN_ADDR;
+ 202:.\gnome_memory.c ****                 retVal = *mem_mapped_reg;
+ 565              		.loc 1 202 0
+ 566 0036 0A4B     		ldr	r3, .L53+16
+ 567 0038 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 568 003a C0B2     		uxtb	r0, r0
+ 569              	.LVL67:
+ 203:.\gnome_memory.c ****                 break;
+ 570              		.loc 1 203 0
+ 571 003c 7047     		bx	lr
+ 572              	.LVL68:
+ 573              	.L48:
+ 204:.\gnome_memory.c ****             #endif
+ 205:.\gnome_memory.c ****             #if !defined(GNOME_VIA2_PORT1_IN_OPT_OUT) && GNOME_VIA2_ACTIVE /* Check for removal by 
+ 206:.\gnome_memory.c ****             case GNOME_VIA2_PORT1:
+ 207:.\gnome_memory.c ****                 mem_mapped_reg = GNOME_VIA2_PORT1_IN_ADDR;
+ 208:.\gnome_memory.c ****                 retVal = *mem_mapped_reg;
+ 574              		.loc 1 208 0
+ 575 003e 094B     		ldr	r3, .L53+20
+ 576 0040 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 577 0042 C0B2     		uxtb	r0, r0
+ 578              	.LVL69:
+ 209:.\gnome_memory.c ****                 break;
+ 579              		.loc 1 209 0
+ 580 0044 7047     		bx	lr
+ 581              	.LVL70:
+ 582              	.L44:
+ 210:.\gnome_memory.c ****             #endif
+ 211:.\gnome_memory.c ****             default:
+ 212:.\gnome_memory.c ****                retVal = registers[regist & 0x0F] &((1<<GNOME_WORD_SIZE) -1);
+ 583              		.loc 1 212 0
+ 584 0046 084B     		ldr	r3, .L53+24
+ 585 0048 185C     		ldrb	r0, [r3, r0]	@ zero_extendqisi2
+ 586 004a 00F00F00 		and	r0, r0, #15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 15
+
+
+ 587              	.LVL71:
+ 213:.\gnome_memory.c ****                 break;
+ 214:.\gnome_memory.c ****         }
+ 215:.\gnome_memory.c ****         return retVal;
+ 216:.\gnome_memory.c **** }
+ 588              		.loc 1 216 0
+ 589 004e 7047     		bx	lr
+ 590              	.L54:
+ 591              		.align	2
+ 592              	.L53:
+ 593 0050 6C640040 		.word	1073767532
+ 594 0054 6D640040 		.word	1073767533
+ 595 0058 6B640040 		.word	1073767531
+ 596 005c 6E640040 		.word	1073767534
+ 597 0060 6F640040 		.word	1073767535
+ 598 0064 6A640040 		.word	1073767530
+ 599 0068 00000000 		.word	registers
+ 600              		.cfi_endproc
+ 601              	.LFE65:
+ 602              		.size	gnome_debug_load_reg, .-gnome_debug_load_reg
+ 603              		.comm	via_state,3,4
+ 604              		.comm	rom,256,4
+ 605              		.comm	registers,16,4
+ 606              		.comm	current_context,4,4
+ 607              		.comm	it_context,11,4
+ 608              		.comm	normal_context,11,4
+ 609              		.text
+ 610              	.Letext0:
+ 611              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 612              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 613              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 614              		.file 5 ".\\gnome_registers.h"
+ 615              		.file 6 ".\\gnome_memory.h"
+ 616              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 617              		.section	.debug_info,"",%progbits
+ 618              	.Ldebug_info0:
+ 619 0000 58030000 		.4byte	0x358
+ 620 0004 0400     		.2byte	0x4
+ 621 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 622 000a 04       		.byte	0x4
+ 623 000b 01       		.uleb128 0x1
+ 624 000c 16010000 		.4byte	.LASF44
+ 625 0010 01       		.byte	0x1
+ 626 0011 FB000000 		.4byte	.LASF45
+ 627 0015 71020000 		.4byte	.LASF46
+ 628 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 629 001d 00000000 		.4byte	0
+ 630 0021 00000000 		.4byte	.Ldebug_line0
+ 631 0025 02       		.uleb128 0x2
+ 632 0026 01       		.byte	0x1
+ 633 0027 06       		.byte	0x6
+ 634 0028 80000000 		.4byte	.LASF0
+ 635 002c 03       		.uleb128 0x3
+ 636 002d 37000000 		.4byte	.LASF4
+ 637 0031 02       		.byte	0x2
+ 638 0032 1D       		.byte	0x1d
+ 639 0033 37000000 		.4byte	0x37
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 16
+
+
+ 640 0037 02       		.uleb128 0x2
+ 641 0038 01       		.byte	0x1
+ 642 0039 08       		.byte	0x8
+ 643 003a 8C000000 		.4byte	.LASF1
+ 644 003e 02       		.uleb128 0x2
+ 645 003f 02       		.byte	0x2
+ 646 0040 05       		.byte	0x5
+ 647 0041 42020000 		.4byte	.LASF2
+ 648 0045 02       		.uleb128 0x2
+ 649 0046 02       		.byte	0x2
+ 650 0047 07       		.byte	0x7
+ 651 0048 C7020000 		.4byte	.LASF3
+ 652 004c 03       		.uleb128 0x3
+ 653 004d 41000000 		.4byte	.LASF5
+ 654 0051 02       		.byte	0x2
+ 655 0052 3F       		.byte	0x3f
+ 656 0053 57000000 		.4byte	0x57
+ 657 0057 02       		.uleb128 0x2
+ 658 0058 04       		.byte	0x4
+ 659 0059 05       		.byte	0x5
+ 660 005a 68020000 		.4byte	.LASF6
+ 661 005e 02       		.uleb128 0x2
+ 662 005f 04       		.byte	0x4
+ 663 0060 07       		.byte	0x7
+ 664 0061 9F000000 		.4byte	.LASF7
+ 665 0065 02       		.uleb128 0x2
+ 666 0066 08       		.byte	0x8
+ 667 0067 05       		.byte	0x5
+ 668 0068 27020000 		.4byte	.LASF8
+ 669 006c 02       		.uleb128 0x2
+ 670 006d 08       		.byte	0x8
+ 671 006e 07       		.byte	0x7
+ 672 006f C7010000 		.4byte	.LASF9
+ 673 0073 04       		.uleb128 0x4
+ 674 0074 04       		.byte	0x4
+ 675 0075 05       		.byte	0x5
+ 676 0076 696E7400 		.ascii	"int\000"
+ 677 007a 02       		.uleb128 0x2
+ 678 007b 04       		.byte	0x4
+ 679 007c 07       		.byte	0x7
+ 680 007d B4010000 		.4byte	.LASF10
+ 681 0081 03       		.uleb128 0x3
+ 682 0082 60000000 		.4byte	.LASF11
+ 683 0086 03       		.byte	0x3
+ 684 0087 15       		.byte	0x15
+ 685 0088 2C000000 		.4byte	0x2c
+ 686 008c 03       		.uleb128 0x3
+ 687 008d 04020000 		.4byte	.LASF12
+ 688 0091 03       		.byte	0x3
+ 689 0092 2C       		.byte	0x2c
+ 690 0093 4C000000 		.4byte	0x4c
+ 691 0097 05       		.uleb128 0x5
+ 692 0098 68000000 		.4byte	.LASF13
+ 693 009c 04       		.byte	0x4
+ 694 009d 3801     		.2byte	0x138
+ 695 009f 37000000 		.4byte	0x37
+ 696 00a3 02       		.uleb128 0x2
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 17
+
+
+ 697 00a4 04       		.byte	0x4
+ 698 00a5 04       		.byte	0x4
+ 699 00a6 75000000 		.4byte	.LASF14
+ 700 00aa 02       		.uleb128 0x2
+ 701 00ab 08       		.byte	0x8
+ 702 00ac 04       		.byte	0x4
+ 703 00ad F4000000 		.4byte	.LASF15
+ 704 00b1 02       		.uleb128 0x2
+ 705 00b2 01       		.byte	0x1
+ 706 00b3 08       		.byte	0x8
+ 707 00b4 35020000 		.4byte	.LASF16
+ 708 00b8 05       		.uleb128 0x5
+ 709 00b9 9A000000 		.4byte	.LASF17
+ 710 00bd 04       		.byte	0x4
+ 711 00be E201     		.2byte	0x1e2
+ 712 00c0 C4000000 		.4byte	0xc4
+ 713 00c4 06       		.uleb128 0x6
+ 714 00c5 97000000 		.4byte	0x97
+ 715 00c9 02       		.uleb128 0x2
+ 716 00ca 04       		.byte	0x4
+ 717 00cb 07       		.byte	0x7
+ 718 00cc 0C020000 		.4byte	.LASF18
+ 719 00d0 07       		.uleb128 0x7
+ 720 00d1 02       		.byte	0x2
+ 721 00d2 05       		.byte	0x5
+ 722 00d3 19       		.byte	0x19
+ 723 00d4 ED000000 		.4byte	0xed
+ 724 00d8 08       		.uleb128 0x8
+ 725 00d9 4300     		.ascii	"C\000"
+ 726 00db 05       		.byte	0x5
+ 727 00dc 1A       		.byte	0x1a
+ 728 00dd 81000000 		.4byte	0x81
+ 729 00e1 00       		.byte	0
+ 730 00e2 08       		.uleb128 0x8
+ 731 00e3 5A00     		.ascii	"Z\000"
+ 732 00e5 05       		.byte	0x5
+ 733 00e6 1B       		.byte	0x1b
+ 734 00e7 81000000 		.4byte	0x81
+ 735 00eb 01       		.byte	0x1
+ 736 00ec 00       		.byte	0
+ 737 00ed 03       		.uleb128 0x3
+ 738 00ee 3A020000 		.4byte	.LASF19
+ 739 00f2 05       		.byte	0x5
+ 740 00f3 1C       		.byte	0x1c
+ 741 00f4 D0000000 		.4byte	0xd0
+ 742 00f8 07       		.uleb128 0x7
+ 743 00f9 05       		.byte	0x5
+ 744 00fa 05       		.byte	0x5
+ 745 00fb 20       		.byte	0x20
+ 746 00fc 19010000 		.4byte	0x119
+ 747 0100 09       		.uleb128 0x9
+ 748 0101 7B000000 		.4byte	.LASF20
+ 749 0105 05       		.byte	0x5
+ 750 0106 21       		.byte	0x21
+ 751 0107 19010000 		.4byte	0x119
+ 752 010b 00       		.byte	0
+ 753 010c 08       		.uleb128 0x8
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 18
+
+
+ 754 010d 70747200 		.ascii	"ptr\000"
+ 755 0111 05       		.byte	0x5
+ 756 0112 22       		.byte	0x22
+ 757 0113 81000000 		.4byte	0x81
+ 758 0117 04       		.byte	0x4
+ 759 0118 00       		.byte	0
+ 760 0119 0A       		.uleb128 0xa
+ 761 011a 81000000 		.4byte	0x81
+ 762 011e 29010000 		.4byte	0x129
+ 763 0122 0B       		.uleb128 0xb
+ 764 0123 C9000000 		.4byte	0xc9
+ 765 0127 03       		.byte	0x3
+ 766 0128 00       		.byte	0
+ 767 0129 03       		.uleb128 0x3
+ 768 012a 4C020000 		.4byte	.LASF21
+ 769 012e 05       		.byte	0x5
+ 770 012f 23       		.byte	0x23
+ 771 0130 F8000000 		.4byte	0xf8
+ 772 0134 07       		.uleb128 0x7
+ 773 0135 02       		.byte	0x2
+ 774 0136 05       		.byte	0x5
+ 775 0137 25       		.byte	0x25
+ 776 0138 55010000 		.4byte	0x155
+ 777 013c 09       		.uleb128 0x9
+ 778 013d 7B000000 		.4byte	.LASF20
+ 779 0141 05       		.byte	0x5
+ 780 0142 26       		.byte	0x26
+ 781 0143 81000000 		.4byte	0x81
+ 782 0147 00       		.byte	0
+ 783 0148 08       		.uleb128 0x8
+ 784 0149 70747200 		.ascii	"ptr\000"
+ 785 014d 05       		.byte	0x5
+ 786 014e 27       		.byte	0x27
+ 787 014f 81000000 		.4byte	0x81
+ 788 0153 01       		.byte	0x1
+ 789 0154 00       		.byte	0
+ 790 0155 03       		.uleb128 0x3
+ 791 0156 B1000000 		.4byte	.LASF22
+ 792 015a 05       		.byte	0x5
+ 793 015b 28       		.byte	0x28
+ 794 015c 34010000 		.4byte	0x134
+ 795 0160 07       		.uleb128 0x7
+ 796 0161 0B       		.byte	0xb
+ 797 0162 05       		.byte	0x5
+ 798 0163 45       		.byte	0x45
+ 799 0164 A4010000 		.4byte	0x1a4
+ 800 0168 09       		.uleb128 0x9
+ 801 0169 2B000000 		.4byte	.LASF23
+ 802 016d 05       		.byte	0x5
+ 803 016e 46       		.byte	0x46
+ 804 016f 81000000 		.4byte	0x81
+ 805 0173 00       		.byte	0
+ 806 0174 09       		.uleb128 0x9
+ 807 0175 C1010000 		.4byte	.LASF24
+ 808 0179 05       		.byte	0x5
+ 809 017a 47       		.byte	0x47
+ 810 017b ED000000 		.4byte	0xed
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 19
+
+
+ 811 017f 01       		.byte	0x1
+ 812 0180 08       		.uleb128 0x8
+ 813 0181 504300   		.ascii	"PC\000"
+ 814 0184 05       		.byte	0x5
+ 815 0185 48       		.byte	0x48
+ 816 0186 81000000 		.4byte	0x81
+ 817 018a 03       		.byte	0x3
+ 818 018b 09       		.uleb128 0x9
+ 819 018c 5A000000 		.4byte	.LASF25
+ 820 0190 05       		.byte	0x5
+ 821 0191 49       		.byte	0x49
+ 822 0192 29010000 		.4byte	0x129
+ 823 0196 04       		.byte	0x4
+ 824 0197 09       		.uleb128 0x9
+ 825 0198 CF000000 		.4byte	.LASF26
+ 826 019c 05       		.byte	0x5
+ 827 019d 4A       		.byte	0x4a
+ 828 019e 55010000 		.4byte	0x155
+ 829 01a2 09       		.byte	0x9
+ 830 01a3 00       		.byte	0
+ 831 01a4 03       		.uleb128 0x3
+ 832 01a5 5E020000 		.4byte	.LASF27
+ 833 01a9 05       		.byte	0x5
+ 834 01aa 4B       		.byte	0x4b
+ 835 01ab 60010000 		.4byte	0x160
+ 836 01af 07       		.uleb128 0x7
+ 837 01b0 03       		.byte	0x3
+ 838 01b1 06       		.byte	0x6
+ 839 01b2 13       		.byte	0x13
+ 840 01b3 DC010000 		.4byte	0x1dc
+ 841 01b7 09       		.uleb128 0x9
+ 842 01b8 DA020000 		.4byte	.LASF28
+ 843 01bc 06       		.byte	0x6
+ 844 01bd 14       		.byte	0x14
+ 845 01be 81000000 		.4byte	0x81
+ 846 01c2 00       		.byte	0
+ 847 01c3 09       		.uleb128 0x9
+ 848 01c4 FA010000 		.4byte	.LASF29
+ 849 01c8 06       		.byte	0x6
+ 850 01c9 15       		.byte	0x15
+ 851 01ca 81000000 		.4byte	0x81
+ 852 01ce 01       		.byte	0x1
+ 853 01cf 09       		.uleb128 0x9
+ 854 01d0 BD020000 		.4byte	.LASF30
+ 855 01d4 06       		.byte	0x6
+ 856 01d5 16       		.byte	0x16
+ 857 01d6 81000000 		.4byte	0x81
+ 858 01da 02       		.byte	0x2
+ 859 01db 00       		.byte	0
+ 860 01dc 03       		.uleb128 0x3
+ 861 01dd 0F000000 		.4byte	.LASF31
+ 862 01e1 06       		.byte	0x6
+ 863 01e2 17       		.byte	0x17
+ 864 01e3 AF010000 		.4byte	0x1af
+ 865 01e7 0C       		.uleb128 0xc
+ 866 01e8 1B000000 		.4byte	.LASF47
+ 867 01ec 01       		.byte	0x1
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 20
+
+
+ 868 01ed 0F       		.byte	0xf
+ 869 01ee 00000000 		.4byte	.LFB63
+ 870 01f2 C4010000 		.4byte	.LFE63-.LFB63
+ 871 01f6 01       		.uleb128 0x1
+ 872 01f7 9C       		.byte	0x9c
+ 873 01f8 2A020000 		.4byte	0x22a
+ 874 01fc 0D       		.uleb128 0xd
+ 875 01fd DE010000 		.4byte	.LASF34
+ 876 0201 01       		.byte	0x1
+ 877 0202 0F       		.byte	0xf
+ 878 0203 81000000 		.4byte	0x81
+ 879 0207 00000000 		.4byte	.LLST0
+ 880 020b 0E       		.uleb128 0xe
+ 881 020c 4B000000 		.4byte	.LASF32
+ 882 0210 01       		.byte	0x1
+ 883 0211 10       		.byte	0x10
+ 884 0212 2A020000 		.4byte	0x22a
+ 885 0216 21000000 		.4byte	.LLST1
+ 886 021a 0E       		.uleb128 0xe
+ 887 021b 15020000 		.4byte	.LASF33
+ 888 021f 01       		.byte	0x1
+ 889 0220 11       		.byte	0x11
+ 890 0221 81000000 		.4byte	0x81
+ 891 0225 89000000 		.4byte	.LLST2
+ 892 0229 00       		.byte	0
+ 893 022a 0F       		.uleb128 0xf
+ 894 022b 04       		.byte	0x4
+ 895 022c B8000000 		.4byte	0xb8
+ 896 0230 10       		.uleb128 0x10
+ 897 0231 C0000000 		.4byte	.LASF36
+ 898 0235 01       		.byte	0x1
+ 899 0236 67       		.byte	0x67
+ 900 0237 81000000 		.4byte	0x81
+ 901 023b 00000000 		.4byte	.LFB64
+ 902 023f DC000000 		.4byte	.LFE64-.LFB64
+ 903 0243 01       		.uleb128 0x1
+ 904 0244 9C       		.byte	0x9c
+ 905 0245 77020000 		.4byte	0x277
+ 906 0249 0D       		.uleb128 0xd
+ 907 024a DE010000 		.4byte	.LASF34
+ 908 024e 01       		.byte	0x1
+ 909 024f 67       		.byte	0x67
+ 910 0250 81000000 		.4byte	0x81
+ 911 0254 FF000000 		.4byte	.LLST3
+ 912 0258 0E       		.uleb128 0xe
+ 913 0259 4B000000 		.4byte	.LASF32
+ 914 025d 01       		.byte	0x1
+ 915 025e 68       		.byte	0x68
+ 916 025f 2A020000 		.4byte	0x22a
+ 917 0263 20010000 		.4byte	.LLST4
+ 918 0267 0E       		.uleb128 0xe
+ 919 0268 6E000000 		.4byte	.LASF35
+ 920 026c 01       		.byte	0x1
+ 921 026d 69       		.byte	0x69
+ 922 026e 81000000 		.4byte	0x81
+ 923 0272 88010000 		.4byte	.LLST5
+ 924 0276 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 21
+
+
+ 925 0277 10       		.uleb128 0x10
+ 926 0278 E5010000 		.4byte	.LASF37
+ 927 027c 01       		.byte	0x1
+ 928 027d AB       		.byte	0xab
+ 929 027e 81000000 		.4byte	0x81
+ 930 0282 00000000 		.4byte	.LFB65
+ 931 0286 6C000000 		.4byte	.LFE65-.LFB65
+ 932 028a 01       		.uleb128 0x1
+ 933 028b 9C       		.byte	0x9c
+ 934 028c BE020000 		.4byte	0x2be
+ 935 0290 0D       		.uleb128 0xd
+ 936 0291 DE010000 		.4byte	.LASF34
+ 937 0295 01       		.byte	0x1
+ 938 0296 AB       		.byte	0xab
+ 939 0297 81000000 		.4byte	0x81
+ 940 029b 09020000 		.4byte	.LLST6
+ 941 029f 0E       		.uleb128 0xe
+ 942 02a0 4B000000 		.4byte	.LASF32
+ 943 02a4 01       		.byte	0x1
+ 944 02a5 AC       		.byte	0xac
+ 945 02a6 2A020000 		.4byte	0x22a
+ 946 02aa 2A020000 		.4byte	.LLST7
+ 947 02ae 0E       		.uleb128 0xe
+ 948 02af 6E000000 		.4byte	.LASF35
+ 949 02b3 01       		.byte	0x1
+ 950 02b4 AD       		.byte	0xad
+ 951 02b5 81000000 		.4byte	0x81
+ 952 02b9 92020000 		.4byte	.LLST8
+ 953 02bd 00       		.byte	0
+ 954 02be 11       		.uleb128 0x11
+ 955 02bf E7000000 		.4byte	.LASF38
+ 956 02c3 07       		.byte	0x7
+ 957 02c4 5506     		.2byte	0x655
+ 958 02c6 CA020000 		.4byte	0x2ca
+ 959 02ca 06       		.uleb128 0x6
+ 960 02cb 8C000000 		.4byte	0x8c
+ 961 02cf 12       		.uleb128 0x12
+ 962 02d0 00000000 		.4byte	.LASF39
+ 963 02d4 05       		.byte	0x5
+ 964 02d5 51       		.byte	0x51
+ 965 02d6 A4010000 		.4byte	0x1a4
+ 966 02da 05       		.uleb128 0x5
+ 967 02db 03       		.byte	0x3
+ 968 02dc 00000000 		.4byte	normal_context
+ 969 02e0 12       		.uleb128 0x12
+ 970 02e1 DC000000 		.4byte	.LASF40
+ 971 02e5 05       		.byte	0x5
+ 972 02e6 52       		.byte	0x52
+ 973 02e7 A4010000 		.4byte	0x1a4
+ 974 02eb 05       		.uleb128 0x5
+ 975 02ec 03       		.byte	0x3
+ 976 02ed 00000000 		.4byte	it_context
+ 977 02f1 12       		.uleb128 0x12
+ 978 02f2 A4010000 		.4byte	.LASF41
+ 979 02f6 05       		.byte	0x5
+ 980 02f7 54       		.byte	0x54
+ 981 02f8 02030000 		.4byte	0x302
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 22
+
+
+ 982 02fc 05       		.uleb128 0x5
+ 983 02fd 03       		.byte	0x3
+ 984 02fe 00000000 		.4byte	current_context
+ 985 0302 0F       		.uleb128 0xf
+ 986 0303 04       		.byte	0x4
+ 987 0304 A4010000 		.4byte	0x1a4
+ 988 0308 0A       		.uleb128 0xa
+ 989 0309 81000000 		.4byte	0x81
+ 990 030d 18030000 		.4byte	0x318
+ 991 0311 0B       		.uleb128 0xb
+ 992 0312 C9000000 		.4byte	0xc9
+ 993 0316 0F       		.byte	0xf
+ 994 0317 00       		.byte	0
+ 995 0318 12       		.uleb128 0x12
+ 996 0319 54020000 		.4byte	.LASF42
+ 997 031d 05       		.byte	0x5
+ 998 031e 56       		.byte	0x56
+ 999 031f 08030000 		.4byte	0x308
+ 1000 0323 05       		.uleb128 0x5
+ 1001 0324 03       		.byte	0x3
+ 1002 0325 00000000 		.4byte	registers
+ 1003 0329 0A       		.uleb128 0xa
+ 1004 032a 81000000 		.4byte	0x81
+ 1005 032e 39030000 		.4byte	0x339
+ 1006 0332 0B       		.uleb128 0xb
+ 1007 0333 C9000000 		.4byte	0xc9
+ 1008 0337 FF       		.byte	0xff
+ 1009 0338 00       		.byte	0
+ 1010 0339 13       		.uleb128 0x13
+ 1011 033a 726F6D00 		.ascii	"rom\000"
+ 1012 033e 05       		.byte	0x5
+ 1013 033f 59       		.byte	0x59
+ 1014 0340 29030000 		.4byte	0x329
+ 1015 0344 05       		.uleb128 0x5
+ 1016 0345 03       		.byte	0x3
+ 1017 0346 00000000 		.4byte	rom
+ 1018 034a 12       		.uleb128 0x12
+ 1019 034b 0C010000 		.4byte	.LASF43
+ 1020 034f 06       		.byte	0x6
+ 1021 0350 19       		.byte	0x19
+ 1022 0351 DC010000 		.4byte	0x1dc
+ 1023 0355 05       		.uleb128 0x5
+ 1024 0356 03       		.byte	0x3
+ 1025 0357 00000000 		.4byte	via_state
+ 1026 035b 00       		.byte	0
+ 1027              		.section	.debug_abbrev,"",%progbits
+ 1028              	.Ldebug_abbrev0:
+ 1029 0000 01       		.uleb128 0x1
+ 1030 0001 11       		.uleb128 0x11
+ 1031 0002 01       		.byte	0x1
+ 1032 0003 25       		.uleb128 0x25
+ 1033 0004 0E       		.uleb128 0xe
+ 1034 0005 13       		.uleb128 0x13
+ 1035 0006 0B       		.uleb128 0xb
+ 1036 0007 03       		.uleb128 0x3
+ 1037 0008 0E       		.uleb128 0xe
+ 1038 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 23
+
+
+ 1039 000a 0E       		.uleb128 0xe
+ 1040 000b 55       		.uleb128 0x55
+ 1041 000c 17       		.uleb128 0x17
+ 1042 000d 11       		.uleb128 0x11
+ 1043 000e 01       		.uleb128 0x1
+ 1044 000f 10       		.uleb128 0x10
+ 1045 0010 17       		.uleb128 0x17
+ 1046 0011 00       		.byte	0
+ 1047 0012 00       		.byte	0
+ 1048 0013 02       		.uleb128 0x2
+ 1049 0014 24       		.uleb128 0x24
+ 1050 0015 00       		.byte	0
+ 1051 0016 0B       		.uleb128 0xb
+ 1052 0017 0B       		.uleb128 0xb
+ 1053 0018 3E       		.uleb128 0x3e
+ 1054 0019 0B       		.uleb128 0xb
+ 1055 001a 03       		.uleb128 0x3
+ 1056 001b 0E       		.uleb128 0xe
+ 1057 001c 00       		.byte	0
+ 1058 001d 00       		.byte	0
+ 1059 001e 03       		.uleb128 0x3
+ 1060 001f 16       		.uleb128 0x16
+ 1061 0020 00       		.byte	0
+ 1062 0021 03       		.uleb128 0x3
+ 1063 0022 0E       		.uleb128 0xe
+ 1064 0023 3A       		.uleb128 0x3a
+ 1065 0024 0B       		.uleb128 0xb
+ 1066 0025 3B       		.uleb128 0x3b
+ 1067 0026 0B       		.uleb128 0xb
+ 1068 0027 49       		.uleb128 0x49
+ 1069 0028 13       		.uleb128 0x13
+ 1070 0029 00       		.byte	0
+ 1071 002a 00       		.byte	0
+ 1072 002b 04       		.uleb128 0x4
+ 1073 002c 24       		.uleb128 0x24
+ 1074 002d 00       		.byte	0
+ 1075 002e 0B       		.uleb128 0xb
+ 1076 002f 0B       		.uleb128 0xb
+ 1077 0030 3E       		.uleb128 0x3e
+ 1078 0031 0B       		.uleb128 0xb
+ 1079 0032 03       		.uleb128 0x3
+ 1080 0033 08       		.uleb128 0x8
+ 1081 0034 00       		.byte	0
+ 1082 0035 00       		.byte	0
+ 1083 0036 05       		.uleb128 0x5
+ 1084 0037 16       		.uleb128 0x16
+ 1085 0038 00       		.byte	0
+ 1086 0039 03       		.uleb128 0x3
+ 1087 003a 0E       		.uleb128 0xe
+ 1088 003b 3A       		.uleb128 0x3a
+ 1089 003c 0B       		.uleb128 0xb
+ 1090 003d 3B       		.uleb128 0x3b
+ 1091 003e 05       		.uleb128 0x5
+ 1092 003f 49       		.uleb128 0x49
+ 1093 0040 13       		.uleb128 0x13
+ 1094 0041 00       		.byte	0
+ 1095 0042 00       		.byte	0
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 24
+
+
+ 1096 0043 06       		.uleb128 0x6
+ 1097 0044 35       		.uleb128 0x35
+ 1098 0045 00       		.byte	0
+ 1099 0046 49       		.uleb128 0x49
+ 1100 0047 13       		.uleb128 0x13
+ 1101 0048 00       		.byte	0
+ 1102 0049 00       		.byte	0
+ 1103 004a 07       		.uleb128 0x7
+ 1104 004b 13       		.uleb128 0x13
+ 1105 004c 01       		.byte	0x1
+ 1106 004d 0B       		.uleb128 0xb
+ 1107 004e 0B       		.uleb128 0xb
+ 1108 004f 3A       		.uleb128 0x3a
+ 1109 0050 0B       		.uleb128 0xb
+ 1110 0051 3B       		.uleb128 0x3b
+ 1111 0052 0B       		.uleb128 0xb
+ 1112 0053 01       		.uleb128 0x1
+ 1113 0054 13       		.uleb128 0x13
+ 1114 0055 00       		.byte	0
+ 1115 0056 00       		.byte	0
+ 1116 0057 08       		.uleb128 0x8
+ 1117 0058 0D       		.uleb128 0xd
+ 1118 0059 00       		.byte	0
+ 1119 005a 03       		.uleb128 0x3
+ 1120 005b 08       		.uleb128 0x8
+ 1121 005c 3A       		.uleb128 0x3a
+ 1122 005d 0B       		.uleb128 0xb
+ 1123 005e 3B       		.uleb128 0x3b
+ 1124 005f 0B       		.uleb128 0xb
+ 1125 0060 49       		.uleb128 0x49
+ 1126 0061 13       		.uleb128 0x13
+ 1127 0062 38       		.uleb128 0x38
+ 1128 0063 0B       		.uleb128 0xb
+ 1129 0064 00       		.byte	0
+ 1130 0065 00       		.byte	0
+ 1131 0066 09       		.uleb128 0x9
+ 1132 0067 0D       		.uleb128 0xd
+ 1133 0068 00       		.byte	0
+ 1134 0069 03       		.uleb128 0x3
+ 1135 006a 0E       		.uleb128 0xe
+ 1136 006b 3A       		.uleb128 0x3a
+ 1137 006c 0B       		.uleb128 0xb
+ 1138 006d 3B       		.uleb128 0x3b
+ 1139 006e 0B       		.uleb128 0xb
+ 1140 006f 49       		.uleb128 0x49
+ 1141 0070 13       		.uleb128 0x13
+ 1142 0071 38       		.uleb128 0x38
+ 1143 0072 0B       		.uleb128 0xb
+ 1144 0073 00       		.byte	0
+ 1145 0074 00       		.byte	0
+ 1146 0075 0A       		.uleb128 0xa
+ 1147 0076 01       		.uleb128 0x1
+ 1148 0077 01       		.byte	0x1
+ 1149 0078 49       		.uleb128 0x49
+ 1150 0079 13       		.uleb128 0x13
+ 1151 007a 01       		.uleb128 0x1
+ 1152 007b 13       		.uleb128 0x13
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 25
+
+
+ 1153 007c 00       		.byte	0
+ 1154 007d 00       		.byte	0
+ 1155 007e 0B       		.uleb128 0xb
+ 1156 007f 21       		.uleb128 0x21
+ 1157 0080 00       		.byte	0
+ 1158 0081 49       		.uleb128 0x49
+ 1159 0082 13       		.uleb128 0x13
+ 1160 0083 2F       		.uleb128 0x2f
+ 1161 0084 0B       		.uleb128 0xb
+ 1162 0085 00       		.byte	0
+ 1163 0086 00       		.byte	0
+ 1164 0087 0C       		.uleb128 0xc
+ 1165 0088 2E       		.uleb128 0x2e
+ 1166 0089 01       		.byte	0x1
+ 1167 008a 3F       		.uleb128 0x3f
+ 1168 008b 19       		.uleb128 0x19
+ 1169 008c 03       		.uleb128 0x3
+ 1170 008d 0E       		.uleb128 0xe
+ 1171 008e 3A       		.uleb128 0x3a
+ 1172 008f 0B       		.uleb128 0xb
+ 1173 0090 3B       		.uleb128 0x3b
+ 1174 0091 0B       		.uleb128 0xb
+ 1175 0092 27       		.uleb128 0x27
+ 1176 0093 19       		.uleb128 0x19
+ 1177 0094 11       		.uleb128 0x11
+ 1178 0095 01       		.uleb128 0x1
+ 1179 0096 12       		.uleb128 0x12
+ 1180 0097 06       		.uleb128 0x6
+ 1181 0098 40       		.uleb128 0x40
+ 1182 0099 18       		.uleb128 0x18
+ 1183 009a 9742     		.uleb128 0x2117
+ 1184 009c 19       		.uleb128 0x19
+ 1185 009d 01       		.uleb128 0x1
+ 1186 009e 13       		.uleb128 0x13
+ 1187 009f 00       		.byte	0
+ 1188 00a0 00       		.byte	0
+ 1189 00a1 0D       		.uleb128 0xd
+ 1190 00a2 05       		.uleb128 0x5
+ 1191 00a3 00       		.byte	0
+ 1192 00a4 03       		.uleb128 0x3
+ 1193 00a5 0E       		.uleb128 0xe
+ 1194 00a6 3A       		.uleb128 0x3a
+ 1195 00a7 0B       		.uleb128 0xb
+ 1196 00a8 3B       		.uleb128 0x3b
+ 1197 00a9 0B       		.uleb128 0xb
+ 1198 00aa 49       		.uleb128 0x49
+ 1199 00ab 13       		.uleb128 0x13
+ 1200 00ac 02       		.uleb128 0x2
+ 1201 00ad 17       		.uleb128 0x17
+ 1202 00ae 00       		.byte	0
+ 1203 00af 00       		.byte	0
+ 1204 00b0 0E       		.uleb128 0xe
+ 1205 00b1 34       		.uleb128 0x34
+ 1206 00b2 00       		.byte	0
+ 1207 00b3 03       		.uleb128 0x3
+ 1208 00b4 0E       		.uleb128 0xe
+ 1209 00b5 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 26
+
+
+ 1210 00b6 0B       		.uleb128 0xb
+ 1211 00b7 3B       		.uleb128 0x3b
+ 1212 00b8 0B       		.uleb128 0xb
+ 1213 00b9 49       		.uleb128 0x49
+ 1214 00ba 13       		.uleb128 0x13
+ 1215 00bb 02       		.uleb128 0x2
+ 1216 00bc 17       		.uleb128 0x17
+ 1217 00bd 00       		.byte	0
+ 1218 00be 00       		.byte	0
+ 1219 00bf 0F       		.uleb128 0xf
+ 1220 00c0 0F       		.uleb128 0xf
+ 1221 00c1 00       		.byte	0
+ 1222 00c2 0B       		.uleb128 0xb
+ 1223 00c3 0B       		.uleb128 0xb
+ 1224 00c4 49       		.uleb128 0x49
+ 1225 00c5 13       		.uleb128 0x13
+ 1226 00c6 00       		.byte	0
+ 1227 00c7 00       		.byte	0
+ 1228 00c8 10       		.uleb128 0x10
+ 1229 00c9 2E       		.uleb128 0x2e
+ 1230 00ca 01       		.byte	0x1
+ 1231 00cb 3F       		.uleb128 0x3f
+ 1232 00cc 19       		.uleb128 0x19
+ 1233 00cd 03       		.uleb128 0x3
+ 1234 00ce 0E       		.uleb128 0xe
+ 1235 00cf 3A       		.uleb128 0x3a
+ 1236 00d0 0B       		.uleb128 0xb
+ 1237 00d1 3B       		.uleb128 0x3b
+ 1238 00d2 0B       		.uleb128 0xb
+ 1239 00d3 27       		.uleb128 0x27
+ 1240 00d4 19       		.uleb128 0x19
+ 1241 00d5 49       		.uleb128 0x49
+ 1242 00d6 13       		.uleb128 0x13
+ 1243 00d7 11       		.uleb128 0x11
+ 1244 00d8 01       		.uleb128 0x1
+ 1245 00d9 12       		.uleb128 0x12
+ 1246 00da 06       		.uleb128 0x6
+ 1247 00db 40       		.uleb128 0x40
+ 1248 00dc 18       		.uleb128 0x18
+ 1249 00dd 9742     		.uleb128 0x2117
+ 1250 00df 19       		.uleb128 0x19
+ 1251 00e0 01       		.uleb128 0x1
+ 1252 00e1 13       		.uleb128 0x13
+ 1253 00e2 00       		.byte	0
+ 1254 00e3 00       		.byte	0
+ 1255 00e4 11       		.uleb128 0x11
+ 1256 00e5 34       		.uleb128 0x34
+ 1257 00e6 00       		.byte	0
+ 1258 00e7 03       		.uleb128 0x3
+ 1259 00e8 0E       		.uleb128 0xe
+ 1260 00e9 3A       		.uleb128 0x3a
+ 1261 00ea 0B       		.uleb128 0xb
+ 1262 00eb 3B       		.uleb128 0x3b
+ 1263 00ec 05       		.uleb128 0x5
+ 1264 00ed 49       		.uleb128 0x49
+ 1265 00ee 13       		.uleb128 0x13
+ 1266 00ef 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 27
+
+
+ 1267 00f0 19       		.uleb128 0x19
+ 1268 00f1 3C       		.uleb128 0x3c
+ 1269 00f2 19       		.uleb128 0x19
+ 1270 00f3 00       		.byte	0
+ 1271 00f4 00       		.byte	0
+ 1272 00f5 12       		.uleb128 0x12
+ 1273 00f6 34       		.uleb128 0x34
+ 1274 00f7 00       		.byte	0
+ 1275 00f8 03       		.uleb128 0x3
+ 1276 00f9 0E       		.uleb128 0xe
+ 1277 00fa 3A       		.uleb128 0x3a
+ 1278 00fb 0B       		.uleb128 0xb
+ 1279 00fc 3B       		.uleb128 0x3b
+ 1280 00fd 0B       		.uleb128 0xb
+ 1281 00fe 49       		.uleb128 0x49
+ 1282 00ff 13       		.uleb128 0x13
+ 1283 0100 3F       		.uleb128 0x3f
+ 1284 0101 19       		.uleb128 0x19
+ 1285 0102 02       		.uleb128 0x2
+ 1286 0103 18       		.uleb128 0x18
+ 1287 0104 00       		.byte	0
+ 1288 0105 00       		.byte	0
+ 1289 0106 13       		.uleb128 0x13
+ 1290 0107 34       		.uleb128 0x34
+ 1291 0108 00       		.byte	0
+ 1292 0109 03       		.uleb128 0x3
+ 1293 010a 08       		.uleb128 0x8
+ 1294 010b 3A       		.uleb128 0x3a
+ 1295 010c 0B       		.uleb128 0xb
+ 1296 010d 3B       		.uleb128 0x3b
+ 1297 010e 0B       		.uleb128 0xb
+ 1298 010f 49       		.uleb128 0x49
+ 1299 0110 13       		.uleb128 0x13
+ 1300 0111 3F       		.uleb128 0x3f
+ 1301 0112 19       		.uleb128 0x19
+ 1302 0113 02       		.uleb128 0x2
+ 1303 0114 18       		.uleb128 0x18
+ 1304 0115 00       		.byte	0
+ 1305 0116 00       		.byte	0
+ 1306 0117 00       		.byte	0
+ 1307              		.section	.debug_loc,"",%progbits
+ 1308              	.Ldebug_loc0:
+ 1309              	.LLST0:
+ 1310 0000 00000000 		.4byte	.LVL0
+ 1311 0004 04000000 		.4byte	.LVL1
+ 1312 0008 0100     		.2byte	0x1
+ 1313 000a 50       		.byte	0x50
+ 1314 000b 04000000 		.4byte	.LVL1
+ 1315 000f C4010000 		.4byte	.LFE63
+ 1316 0013 0400     		.2byte	0x4
+ 1317 0015 F3       		.byte	0xf3
+ 1318 0016 01       		.uleb128 0x1
+ 1319 0017 50       		.byte	0x50
+ 1320 0018 9F       		.byte	0x9f
+ 1321 0019 00000000 		.4byte	0
+ 1322 001d 00000000 		.4byte	0
+ 1323              	.LLST1:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 28
+
+
+ 1324 0021 24000000 		.4byte	.LVL2
+ 1325 0025 44000000 		.4byte	.LVL5
+ 1326 0029 0600     		.2byte	0x6
+ 1327 002b 0C       		.byte	0xc
+ 1328 002c 7C640040 		.4byte	0x4000647c
+ 1329 0030 9F       		.byte	0x9f
+ 1330 0031 54000000 		.4byte	.LVL6
+ 1331 0035 94000000 		.4byte	.LVL11
+ 1332 0039 0600     		.2byte	0x6
+ 1333 003b 0C       		.byte	0xc
+ 1334 003c 7D640040 		.4byte	0x4000647d
+ 1335 0040 9F       		.byte	0x9f
+ 1336 0041 94000000 		.4byte	.LVL11
+ 1337 0045 D4000000 		.4byte	.LVL16
+ 1338 0049 0600     		.2byte	0x6
+ 1339 004b 0C       		.byte	0xc
+ 1340 004c 7B640040 		.4byte	0x4000647b
+ 1341 0050 9F       		.byte	0x9f
+ 1342 0051 E0000000 		.4byte	.LVL17
+ 1343 0055 00010000 		.4byte	.LVL20
+ 1344 0059 0600     		.2byte	0x6
+ 1345 005b 0C       		.byte	0xc
+ 1346 005c 7E640040 		.4byte	0x4000647e
+ 1347 0060 9F       		.byte	0x9f
+ 1348 0061 10010000 		.4byte	.LVL21
+ 1349 0065 50010000 		.4byte	.LVL26
+ 1350 0069 0600     		.2byte	0x6
+ 1351 006b 0C       		.byte	0xc
+ 1352 006c 7F640040 		.4byte	0x4000647f
+ 1353 0070 9F       		.byte	0x9f
+ 1354 0071 50010000 		.4byte	.LVL26
+ 1355 0075 90010000 		.4byte	.LVL31
+ 1356 0079 0600     		.2byte	0x6
+ 1357 007b 0C       		.byte	0xc
+ 1358 007c 7A640040 		.4byte	0x4000647a
+ 1359 0080 9F       		.byte	0x9f
+ 1360 0081 00000000 		.4byte	0
+ 1361 0085 00000000 		.4byte	0
+ 1362              	.LLST2:
+ 1363 0089 2C000000 		.4byte	.LVL3
+ 1364 008d 3E000000 		.4byte	.LVL4
+ 1365 0091 0100     		.2byte	0x1
+ 1366 0093 52       		.byte	0x52
+ 1367 0094 62000000 		.4byte	.LVL7
+ 1368 0098 6C000000 		.4byte	.LVL8
+ 1369 009c 0100     		.2byte	0x1
+ 1370 009e 53       		.byte	0x53
+ 1371 009f 7A000000 		.4byte	.LVL9
+ 1372 00a3 82000000 		.4byte	.LVL10
+ 1373 00a7 0100     		.2byte	0x1
+ 1374 00a9 53       		.byte	0x53
+ 1375 00aa A2000000 		.4byte	.LVL12
+ 1376 00ae AC000000 		.4byte	.LVL13
+ 1377 00b2 0100     		.2byte	0x1
+ 1378 00b4 53       		.byte	0x53
+ 1379 00b5 BA000000 		.4byte	.LVL14
+ 1380 00b9 C2000000 		.4byte	.LVL15
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 29
+
+
+ 1381 00bd 0100     		.2byte	0x1
+ 1382 00bf 53       		.byte	0x53
+ 1383 00c0 E8000000 		.4byte	.LVL18
+ 1384 00c4 FA000000 		.4byte	.LVL19
+ 1385 00c8 0100     		.2byte	0x1
+ 1386 00ca 52       		.byte	0x52
+ 1387 00cb 1E010000 		.4byte	.LVL22
+ 1388 00cf 28010000 		.4byte	.LVL23
+ 1389 00d3 0100     		.2byte	0x1
+ 1390 00d5 53       		.byte	0x53
+ 1391 00d6 36010000 		.4byte	.LVL24
+ 1392 00da 3E010000 		.4byte	.LVL25
+ 1393 00de 0100     		.2byte	0x1
+ 1394 00e0 53       		.byte	0x53
+ 1395 00e1 5E010000 		.4byte	.LVL27
+ 1396 00e5 68010000 		.4byte	.LVL28
+ 1397 00e9 0100     		.2byte	0x1
+ 1398 00eb 53       		.byte	0x53
+ 1399 00ec 76010000 		.4byte	.LVL29
+ 1400 00f0 7E010000 		.4byte	.LVL30
+ 1401 00f4 0100     		.2byte	0x1
+ 1402 00f6 53       		.byte	0x53
+ 1403 00f7 00000000 		.4byte	0
+ 1404 00fb 00000000 		.4byte	0
+ 1405              	.LLST3:
+ 1406 00ff 00000000 		.4byte	.LVL32
+ 1407 0103 04000000 		.4byte	.LVL33
+ 1408 0107 0100     		.2byte	0x1
+ 1409 0109 50       		.byte	0x50
+ 1410 010a 04000000 		.4byte	.LVL33
+ 1411 010e DC000000 		.4byte	.LFE64
+ 1412 0112 0400     		.2byte	0x4
+ 1413 0114 F3       		.byte	0xf3
+ 1414 0115 01       		.uleb128 0x1
+ 1415 0116 50       		.byte	0x50
+ 1416 0117 9F       		.byte	0x9f
+ 1417 0118 00000000 		.4byte	0
+ 1418 011c 00000000 		.4byte	0
+ 1419              	.LLST4:
+ 1420 0120 16000000 		.4byte	.LVL34
+ 1421 0124 20000000 		.4byte	.LVL36
+ 1422 0128 0600     		.2byte	0x6
+ 1423 012a 0C       		.byte	0xc
+ 1424 012b 6C640040 		.4byte	0x4000646c
+ 1425 012f 9F       		.byte	0x9f
+ 1426 0130 20000000 		.4byte	.LVL36
+ 1427 0134 42000000 		.4byte	.LVL40
+ 1428 0138 0600     		.2byte	0x6
+ 1429 013a 0C       		.byte	0xc
+ 1430 013b 6D640040 		.4byte	0x4000646d
+ 1431 013f 9F       		.byte	0x9f
+ 1432 0140 42000000 		.4byte	.LVL40
+ 1433 0144 64000000 		.4byte	.LVL44
+ 1434 0148 0600     		.2byte	0x6
+ 1435 014a 0C       		.byte	0xc
+ 1436 014b 6B640040 		.4byte	0x4000646b
+ 1437 014f 9F       		.byte	0x9f
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 30
+
+
+ 1438 0150 64000000 		.4byte	.LVL44
+ 1439 0154 6E000000 		.4byte	.LVL46
+ 1440 0158 0600     		.2byte	0x6
+ 1441 015a 0C       		.byte	0xc
+ 1442 015b 6E640040 		.4byte	0x4000646e
+ 1443 015f 9F       		.byte	0x9f
+ 1444 0160 6E000000 		.4byte	.LVL46
+ 1445 0164 90000000 		.4byte	.LVL50
+ 1446 0168 0600     		.2byte	0x6
+ 1447 016a 0C       		.byte	0xc
+ 1448 016b 6F640040 		.4byte	0x4000646f
+ 1449 016f 9F       		.byte	0x9f
+ 1450 0170 90000000 		.4byte	.LVL50
+ 1451 0174 B2000000 		.4byte	.LVL54
+ 1452 0178 0600     		.2byte	0x6
+ 1453 017a 0C       		.byte	0xc
+ 1454 017b 6A640040 		.4byte	0x4000646a
+ 1455 017f 9F       		.byte	0x9f
+ 1456 0180 00000000 		.4byte	0
+ 1457 0184 00000000 		.4byte	0
+ 1458              	.LLST5:
+ 1459 0188 1E000000 		.4byte	.LVL35
+ 1460 018c 20000000 		.4byte	.LVL36
+ 1461 0190 0100     		.2byte	0x1
+ 1462 0192 50       		.byte	0x50
+ 1463 0193 2C000000 		.4byte	.LVL37
+ 1464 0197 2E000000 		.4byte	.LVL38
+ 1465 019b 0100     		.2byte	0x1
+ 1466 019d 50       		.byte	0x50
+ 1467 019e 36000000 		.4byte	.LVL39
+ 1468 01a2 42000000 		.4byte	.LVL40
+ 1469 01a6 0100     		.2byte	0x1
+ 1470 01a8 50       		.byte	0x50
+ 1471 01a9 4E000000 		.4byte	.LVL41
+ 1472 01ad 50000000 		.4byte	.LVL42
+ 1473 01b1 0100     		.2byte	0x1
+ 1474 01b3 50       		.byte	0x50
+ 1475 01b4 58000000 		.4byte	.LVL43
+ 1476 01b8 64000000 		.4byte	.LVL44
+ 1477 01bc 0100     		.2byte	0x1
+ 1478 01be 50       		.byte	0x50
+ 1479 01bf 6C000000 		.4byte	.LVL45
+ 1480 01c3 6E000000 		.4byte	.LVL46
+ 1481 01c7 0100     		.2byte	0x1
+ 1482 01c9 50       		.byte	0x50
+ 1483 01ca 7A000000 		.4byte	.LVL47
+ 1484 01ce 7C000000 		.4byte	.LVL48
+ 1485 01d2 0100     		.2byte	0x1
+ 1486 01d4 50       		.byte	0x50
+ 1487 01d5 84000000 		.4byte	.LVL49
+ 1488 01d9 90000000 		.4byte	.LVL50
+ 1489 01dd 0100     		.2byte	0x1
+ 1490 01df 50       		.byte	0x50
+ 1491 01e0 9C000000 		.4byte	.LVL51
+ 1492 01e4 9E000000 		.4byte	.LVL52
+ 1493 01e8 0100     		.2byte	0x1
+ 1494 01ea 50       		.byte	0x50
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 31
+
+
+ 1495 01eb A6000000 		.4byte	.LVL53
+ 1496 01ef B2000000 		.4byte	.LVL54
+ 1497 01f3 0100     		.2byte	0x1
+ 1498 01f5 50       		.byte	0x50
+ 1499 01f6 BA000000 		.4byte	.LVL55
+ 1500 01fa DC000000 		.4byte	.LFE64
+ 1501 01fe 0100     		.2byte	0x1
+ 1502 0200 50       		.byte	0x50
+ 1503 0201 00000000 		.4byte	0
+ 1504 0205 00000000 		.4byte	0
+ 1505              	.LLST6:
+ 1506 0209 00000000 		.4byte	.LVL56
+ 1507 020d 04000000 		.4byte	.LVL57
+ 1508 0211 0100     		.2byte	0x1
+ 1509 0213 50       		.byte	0x50
+ 1510 0214 04000000 		.4byte	.LVL57
+ 1511 0218 6C000000 		.4byte	.LFE65
+ 1512 021c 0400     		.2byte	0x4
+ 1513 021e F3       		.byte	0xf3
+ 1514 021f 01       		.uleb128 0x1
+ 1515 0220 50       		.byte	0x50
+ 1516 0221 9F       		.byte	0x9f
+ 1517 0222 00000000 		.4byte	0
+ 1518 0226 00000000 		.4byte	0
+ 1519              	.LLST7:
+ 1520 022a 16000000 		.4byte	.LVL58
+ 1521 022e 1E000000 		.4byte	.LVL60
+ 1522 0232 0600     		.2byte	0x6
+ 1523 0234 0C       		.byte	0xc
+ 1524 0235 6C640040 		.4byte	0x4000646c
+ 1525 0239 9F       		.byte	0x9f
+ 1526 023a 1E000000 		.4byte	.LVL60
+ 1527 023e 26000000 		.4byte	.LVL62
+ 1528 0242 0600     		.2byte	0x6
+ 1529 0244 0C       		.byte	0xc
+ 1530 0245 6D640040 		.4byte	0x4000646d
+ 1531 0249 9F       		.byte	0x9f
+ 1532 024a 26000000 		.4byte	.LVL62
+ 1533 024e 2E000000 		.4byte	.LVL64
+ 1534 0252 0600     		.2byte	0x6
+ 1535 0254 0C       		.byte	0xc
+ 1536 0255 6B640040 		.4byte	0x4000646b
+ 1537 0259 9F       		.byte	0x9f
+ 1538 025a 2E000000 		.4byte	.LVL64
+ 1539 025e 36000000 		.4byte	.LVL66
+ 1540 0262 0600     		.2byte	0x6
+ 1541 0264 0C       		.byte	0xc
+ 1542 0265 6E640040 		.4byte	0x4000646e
+ 1543 0269 9F       		.byte	0x9f
+ 1544 026a 36000000 		.4byte	.LVL66
+ 1545 026e 3E000000 		.4byte	.LVL68
+ 1546 0272 0600     		.2byte	0x6
+ 1547 0274 0C       		.byte	0xc
+ 1548 0275 6F640040 		.4byte	0x4000646f
+ 1549 0279 9F       		.byte	0x9f
+ 1550 027a 3E000000 		.4byte	.LVL68
+ 1551 027e 46000000 		.4byte	.LVL70
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 32
+
+
+ 1552 0282 0600     		.2byte	0x6
+ 1553 0284 0C       		.byte	0xc
+ 1554 0285 6A640040 		.4byte	0x4000646a
+ 1555 0289 9F       		.byte	0x9f
+ 1556 028a 00000000 		.4byte	0
+ 1557 028e 00000000 		.4byte	0
+ 1558              	.LLST8:
+ 1559 0292 1C000000 		.4byte	.LVL59
+ 1560 0296 1E000000 		.4byte	.LVL60
+ 1561 029a 0100     		.2byte	0x1
+ 1562 029c 50       		.byte	0x50
+ 1563 029d 24000000 		.4byte	.LVL61
+ 1564 02a1 26000000 		.4byte	.LVL62
+ 1565 02a5 0100     		.2byte	0x1
+ 1566 02a7 50       		.byte	0x50
+ 1567 02a8 2C000000 		.4byte	.LVL63
+ 1568 02ac 2E000000 		.4byte	.LVL64
+ 1569 02b0 0100     		.2byte	0x1
+ 1570 02b2 50       		.byte	0x50
+ 1571 02b3 34000000 		.4byte	.LVL65
+ 1572 02b7 36000000 		.4byte	.LVL66
+ 1573 02bb 0100     		.2byte	0x1
+ 1574 02bd 50       		.byte	0x50
+ 1575 02be 3C000000 		.4byte	.LVL67
+ 1576 02c2 3E000000 		.4byte	.LVL68
+ 1577 02c6 0100     		.2byte	0x1
+ 1578 02c8 50       		.byte	0x50
+ 1579 02c9 44000000 		.4byte	.LVL69
+ 1580 02cd 46000000 		.4byte	.LVL70
+ 1581 02d1 0100     		.2byte	0x1
+ 1582 02d3 50       		.byte	0x50
+ 1583 02d4 4E000000 		.4byte	.LVL71
+ 1584 02d8 6C000000 		.4byte	.LFE65
+ 1585 02dc 0100     		.2byte	0x1
+ 1586 02de 50       		.byte	0x50
+ 1587 02df 00000000 		.4byte	0
+ 1588 02e3 00000000 		.4byte	0
+ 1589              		.section	.debug_aranges,"",%progbits
+ 1590 0000 2C000000 		.4byte	0x2c
+ 1591 0004 0200     		.2byte	0x2
+ 1592 0006 00000000 		.4byte	.Ldebug_info0
+ 1593 000a 04       		.byte	0x4
+ 1594 000b 00       		.byte	0
+ 1595 000c 0000     		.2byte	0
+ 1596 000e 0000     		.2byte	0
+ 1597 0010 00000000 		.4byte	.LFB63
+ 1598 0014 C4010000 		.4byte	.LFE63-.LFB63
+ 1599 0018 00000000 		.4byte	.LFB64
+ 1600 001c DC000000 		.4byte	.LFE64-.LFB64
+ 1601 0020 00000000 		.4byte	.LFB65
+ 1602 0024 6C000000 		.4byte	.LFE65-.LFB65
+ 1603 0028 00000000 		.4byte	0
+ 1604 002c 00000000 		.4byte	0
+ 1605              		.section	.debug_ranges,"",%progbits
+ 1606              	.Ldebug_ranges0:
+ 1607 0000 00000000 		.4byte	.LFB63
+ 1608 0004 C4010000 		.4byte	.LFE63
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 33
+
+
+ 1609 0008 00000000 		.4byte	.LFB64
+ 1610 000c DC000000 		.4byte	.LFE64
+ 1611 0010 00000000 		.4byte	.LFB65
+ 1612 0014 6C000000 		.4byte	.LFE65
+ 1613 0018 00000000 		.4byte	0
+ 1614 001c 00000000 		.4byte	0
+ 1615              		.section	.debug_line,"",%progbits
+ 1616              	.Ldebug_line0:
+ 1617 0000 02020000 		.section	.debug_str,"MS",%progbits,1
+ 1617      02007C01 
+ 1617      00000201 
+ 1617      FB0E0D00 
+ 1617      01010101 
+ 1618              	.LASF39:
+ 1619 0000 6E6F726D 		.ascii	"normal_context\000"
+ 1619      616C5F63 
+ 1619      6F6E7465 
+ 1619      787400
+ 1620              	.LASF31:
+ 1621 000f 7669615F 		.ascii	"via_state_t\000"
+ 1621      73746174 
+ 1621      655F7400 
+ 1622              	.LASF47:
+ 1623 001b 676E6F6D 		.ascii	"gnome_store_reg\000"
+ 1623      655F7374 
+ 1623      6F72655F 
+ 1623      72656700 
+ 1624              	.LASF23:
+ 1625 002b 61636375 		.ascii	"accumulator\000"
+ 1625      6D756C61 
+ 1625      746F7200 
+ 1626              	.LASF4:
+ 1627 0037 5F5F7569 		.ascii	"__uint8_t\000"
+ 1627      6E74385F 
+ 1627      7400
+ 1628              	.LASF5:
+ 1629 0041 5F5F696E 		.ascii	"__int32_t\000"
+ 1629      7433325F 
+ 1629      7400
+ 1630              	.LASF32:
+ 1631 004b 6D656D5F 		.ascii	"mem_mapped_reg\000"
+ 1631      6D617070 
+ 1631      65645F72 
+ 1631      656700
+ 1632              	.LASF25:
+ 1633 005a 73746163 		.ascii	"stack\000"
+ 1633      6B00
+ 1634              	.LASF11:
+ 1635 0060 75696E74 		.ascii	"uint8_t\000"
+ 1635      385F7400 
+ 1636              	.LASF13:
+ 1637 0068 75696E74 		.ascii	"uint8\000"
+ 1637      3800
+ 1638              	.LASF35:
+ 1639 006e 72657456 		.ascii	"retVal\000"
+ 1639      616C00
+ 1640              	.LASF14:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 34
+
+
+ 1641 0075 666C6F61 		.ascii	"float\000"
+ 1641      7400
+ 1642              	.LASF20:
+ 1643 007b 64617461 		.ascii	"data\000"
+ 1643      00
+ 1644              	.LASF0:
+ 1645 0080 7369676E 		.ascii	"signed char\000"
+ 1645      65642063 
+ 1645      68617200 
+ 1646              	.LASF1:
+ 1647 008c 756E7369 		.ascii	"unsigned char\000"
+ 1647      676E6564 
+ 1647      20636861 
+ 1647      7200
+ 1648              	.LASF17:
+ 1649 009a 72656738 		.ascii	"reg8\000"
+ 1649      00
+ 1650              	.LASF7:
+ 1651 009f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1651      20756E73 
+ 1651      69676E65 
+ 1651      6420696E 
+ 1651      7400
+ 1652              	.LASF22:
+ 1653 00b1 696E645F 		.ascii	"ind_addr_reg_t\000"
+ 1653      61646472 
+ 1653      5F726567 
+ 1653      5F7400
+ 1654              	.LASF36:
+ 1655 00c0 676E6F6D 		.ascii	"gnome_load_reg\000"
+ 1655      655F6C6F 
+ 1655      61645F72 
+ 1655      656700
+ 1656              	.LASF26:
+ 1657 00cf 696E645F 		.ascii	"ind_addr_reg\000"
+ 1657      61646472 
+ 1657      5F726567 
+ 1657      00
+ 1658              	.LASF40:
+ 1659 00dc 69745F63 		.ascii	"it_context\000"
+ 1659      6F6E7465 
+ 1659      787400
+ 1660              	.LASF38:
+ 1661 00e7 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1661      52784275 
+ 1661      66666572 
+ 1661      00
+ 1662              	.LASF15:
+ 1663 00f4 646F7562 		.ascii	"double\000"
+ 1663      6C6500
+ 1664              	.LASF45:
+ 1665 00fb 2E5C676E 		.ascii	".\\gnome_memory.c\000"
+ 1665      6F6D655F 
+ 1665      6D656D6F 
+ 1665      72792E63 
+ 1665      00
+ 1666              	.LASF43:
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 35
+
+
+ 1667 010c 7669615F 		.ascii	"via_state\000"
+ 1667      73746174 
+ 1667      6500
+ 1668              	.LASF44:
+ 1669 0116 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1669      4320342E 
+ 1669      392E3320 
+ 1669      32303135 
+ 1669      30333033 
+ 1670 0149 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1670      20726576 
+ 1670      6973696F 
+ 1670      6E203232 
+ 1670      31323230 
+ 1671 017c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1671      66756E63 
+ 1671      74696F6E 
+ 1671      2D736563 
+ 1671      74696F6E 
+ 1672              	.LASF41:
+ 1673 01a4 63757272 		.ascii	"current_context\000"
+ 1673      656E745F 
+ 1673      636F6E74 
+ 1673      65787400 
+ 1674              	.LASF10:
+ 1675 01b4 756E7369 		.ascii	"unsigned int\000"
+ 1675      676E6564 
+ 1675      20696E74 
+ 1675      00
+ 1676              	.LASF24:
+ 1677 01c1 666C6167 		.ascii	"flags\000"
+ 1677      7300
+ 1678              	.LASF9:
+ 1679 01c7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1679      206C6F6E 
+ 1679      6720756E 
+ 1679      7369676E 
+ 1679      65642069 
+ 1680              	.LASF34:
+ 1681 01de 72656769 		.ascii	"regist\000"
+ 1681      737400
+ 1682              	.LASF37:
+ 1683 01e5 676E6F6D 		.ascii	"gnome_debug_load_reg\000"
+ 1683      655F6465 
+ 1683      6275675F 
+ 1683      6C6F6164 
+ 1683      5F726567 
+ 1684              	.LASF29:
+ 1685 01fa 706F7274 		.ascii	"port0_ptr\000"
+ 1685      305F7074 
+ 1685      7200
+ 1686              	.LASF12:
+ 1687 0204 696E7433 		.ascii	"int32_t\000"
+ 1687      325F7400 
+ 1688              	.LASF18:
+ 1689 020c 73697A65 		.ascii	"sizetype\000"
+ 1689      74797065 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 36
+
+
+ 1689      00
+ 1690              	.LASF33:
+ 1691 0215 696E7465 		.ascii	"intermediateValue\000"
+ 1691      726D6564 
+ 1691      69617465 
+ 1691      56616C75 
+ 1691      6500
+ 1692              	.LASF8:
+ 1693 0227 6C6F6E67 		.ascii	"long long int\000"
+ 1693      206C6F6E 
+ 1693      6720696E 
+ 1693      7400
+ 1694              	.LASF16:
+ 1695 0235 63686172 		.ascii	"char\000"
+ 1695      00
+ 1696              	.LASF19:
+ 1697 023a 666C6167 		.ascii	"flags_t\000"
+ 1697      735F7400 
+ 1698              	.LASF2:
+ 1699 0242 73686F72 		.ascii	"short int\000"
+ 1699      7420696E 
+ 1699      7400
+ 1700              	.LASF21:
+ 1701 024c 73746163 		.ascii	"stack_t\000"
+ 1701      6B5F7400 
+ 1702              	.LASF42:
+ 1703 0254 72656769 		.ascii	"registers\000"
+ 1703      73746572 
+ 1703      7300
+ 1704              	.LASF27:
+ 1705 025e 636F6E74 		.ascii	"context_t\000"
+ 1705      6578745F 
+ 1705      7400
+ 1706              	.LASF6:
+ 1707 0268 6C6F6E67 		.ascii	"long int\000"
+ 1707      20696E74 
+ 1707      00
+ 1708              	.LASF46:
+ 1709 0271 433A5C55 		.ascii	"C:\\Users\\Javier\\Documents\\PSoC Creator\\gnome_w"
+ 1709      73657273 
+ 1709      5C4A6176 
+ 1709      6965725C 
+ 1709      446F6375 
+ 1710 029f 6F726B73 		.ascii	"orkspace\\gnome_template.cydsn\000"
+ 1710      70616365 
+ 1710      5C676E6F 
+ 1710      6D655F74 
+ 1710      656D706C 
+ 1711              	.LASF30:
+ 1712 02bd 706F7274 		.ascii	"port1_ptr\000"
+ 1712      315F7074 
+ 1712      7200
+ 1713              	.LASF3:
+ 1714 02c7 73686F72 		.ascii	"short unsigned int\000"
+ 1714      7420756E 
+ 1714      7369676E 
+ 1714      65642069 
+ARM GAS  C:\Users\Javier\AppData\Local\Temp\cc3wpAbK.s 			page 37
+
+
+ 1714      6E7400
+ 1715              	.LASF28:
+ 1716 02da 636F6E66 		.ascii	"config_mask\000"
+ 1716      69675F6D 
+ 1716      61736B00 
+ 1717              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

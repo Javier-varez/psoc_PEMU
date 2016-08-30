@@ -1,0 +1,48 @@
+dont_use_io iocell 1 0
+dont_use_io iocell 1 1
+dont_use_io iocell 1 3
+set_location "Net_796_4" macrocell 1 3 0 0
+set_location "Net_976_4" macrocell 0 3 0 0
+set_location "Net_796_3" macrocell 1 3 1 0
+set_location "Net_976_3" macrocell 0 3 1 0
+set_location "Net_796_2" macrocell 1 3 0 3
+set_location "Net_976_2" macrocell 0 3 0 3
+set_location "Net_796_6" macrocell 1 3 1 2
+set_location "Net_976_6" macrocell 0 3 1 2
+set_location "Net_796_0" macrocell 1 3 0 1
+set_location "Net_976_0" macrocell 0 3 0 1
+set_location "Net_796_1" macrocell 1 3 0 2
+set_location "Net_976_1" macrocell 0 3 0 2
+set_location "Net_870_2" macrocell 0 4 0 0
+set_location "Net_975_2" macrocell 1 5 0 0
+set_location "Net_870_1" macrocell 0 4 0 2
+set_location "Net_975_1" macrocell 1 5 0 2
+set_location "Net_870_0" macrocell 0 4 0 1
+set_location "Net_975_0" macrocell 1 5 0 1
+set_location "Net_870_4" macrocell 0 4 1 0
+set_location "Net_975_4" macrocell 1 5 1 0
+set_location "Net_870_7" macrocell 0 4 1 3
+set_location "Net_975_7" macrocell 1 5 1 3
+set_location "Net_870_6" macrocell 0 4 1 2
+set_location "Net_975_6" macrocell 1 5 1 2
+set_location "Net_796_7" macrocell 1 3 1 3
+set_location "Net_976_7" macrocell 0 3 1 3
+set_location "Net_796_5" macrocell 1 3 1 1
+set_location "Net_976_5" macrocell 0 3 1 1
+set_location "Net_870_3" macrocell 0 4 0 3
+set_location "Net_975_3" macrocell 1 5 0 3
+set_location "Net_870_5" macrocell 0 4 1 1
+set_location "Net_975_5" macrocell 1 5 1 1
+set_location "\via8bits1:P0_stat:sts:sts_reg\" statuscell 0 4 3 
+set_location "\via8bits2:P0_stat:sts:sts_reg\" statuscell 1 5 3 
+set_location "\via8bits1:P1_stat:sts:sts_reg\" statuscell 1 3 3 
+set_location "\via8bits2:P1_stat:sts:sts_reg\" statuscell 0 3 3 
+set_location "\via8bits1:Ctrl:Sync:ctrl_reg\" controlcell 1 4 6 
+set_location "\via8bits2:Ctrl:Sync:ctrl_reg\" controlcell 0 5 6 
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "\via8bits1:Stat:sts:sts_reg\" statuscell 1 4 3 
+set_location "\via8bits2:Stat:sts:sts_reg\" statuscell 0 5 3 
+set_location "\via8bits1:P1_ctrl:Sync:ctrl_reg\" controlcell 1 3 6 
+set_location "\via8bits2:P1_ctrl:Sync:ctrl_reg\" controlcell 0 3 6 
+set_location "\via8bits1:P0_ctrl:Sync:ctrl_reg\" controlcell 0 4 6 
+set_location "\via8bits2:P0_ctrl:Sync:ctrl_reg\" controlcell 1 5 6 
