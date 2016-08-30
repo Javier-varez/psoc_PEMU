@@ -16,7 +16,7 @@
 #include "project.h"
     
 // Debug
-#define GNOME_DEBUGGING_ON              0x01
+#define GNOME_DEBUGGING_ON              0x00
 #define GNOME_DEBUGGING_MAX_BREAKPOINTS 0x08
 #define GNOME_DEBUG_MAX_BUFFER_LENGTH   15
     
@@ -39,7 +39,7 @@
 #define GNOME_VIA2_PORT0                 0x0B    // Registro mapeado en memoria para el puerto 0
 #define GNOME_VIA2_PORT1                 0x0C    // Registro mapeado en memoria para el puerto 1
     
-#define GNOME_LCD_MODULE_ACTIVE         0x01        // Pantalla LCD activa
+#define GNOME_LCD_MODULE_ACTIVE         0x00        // Pantalla LCD activa
 #define GNOME_LCD_MODULE_MSG1           "CG: 0x"    // Mensaje 1
 #define GNOME_LCD_LINE_OFFSET1          6
 #define GNOME_LCD_MODULE_MSG2           "CP: 0x"    // Mensaje 2

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="gnome_workspace\gnome_template\gnome_template.cydwr">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="gnome_workspace\gnome_template">
 <ExpandedNodeIds>
 <v>gnome_workspace</v>
 <v>gnome_workspace\gnome_cajas\TopDesign</v>
@@ -583,6 +583,10 @@
 <v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_PM.lst</v>
 <v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\i2c_scl.lst</v>
 <v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\i2c_sda.lst</v>
+<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_SLAVE.lst</v>
+<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\i2cLCD.lst</v>
+<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR.lst</v>
+<v>gnome_workspace\gnome_cajas\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_gnome_A_reg.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
