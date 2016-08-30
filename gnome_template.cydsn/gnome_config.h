@@ -21,7 +21,7 @@
 #define GNOME_DEBUG_MAX_BUFFER_LENGTH   15
     
 // Procesador
-#define GNOME_WORD_SIZE                 0x04    // 4 bits
+#define GNOME_WORD_SIZE                 0x04    // 4 bits (NO MODIFICAR)
 #define GNOME_STACK_SIZE                0x04    // Tamaño de las pilas
 #define GNOME_RESET_VECTOR              0x00    // Vector de reset
 #define GNOME_IT_VECTOR                 0xE0    // Vector de interrupción
@@ -47,6 +47,7 @@
 #define GNOME_LCD_MODULE_I2C_ADDR       0x27
     
 // Registros Mapeados en Memoria (PSOC)
+// NO MODIFICAR
 #define GNOME_VIA1_CONFIG_IN_ADDR        via8bits1_Stat_Status_PTR 
 #define GNOME_VIA1_CONFIG_OUT_ADDR       via8bits1_Ctrl_Control_PTR
 #define GNOME_VIA1_PORT0_IN_ADDR         via8bits1_P0_stat_Status_PTR
@@ -69,7 +70,7 @@
 #define GNOME_LCD_B_ADDR                LCD_gnome_B_reg_Status_PTR
 
 // Optimizacion de registros, en caso de que el sintetizador elimine algun puerto de acceso por no ser utilizado
-
+// NO MODIFICAR
 #ifdef ISR__REMOVED
     #define GNOME_ISR_OPT_OUT 1u
 #endif

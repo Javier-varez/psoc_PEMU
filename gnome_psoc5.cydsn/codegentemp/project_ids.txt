@@ -1,8 +1,0 @@
-C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_psoc5.cydsn\gnome_psoc5.cyprj|7694afcd-dba2-4acc-a36a-7979b910e77e
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|47a203d5-1781-45aa-b9e2-059151a49a45
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|8745d987-d40b-4179-8890-1590054fe5c8
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|dbdef08e-f4ab-4174-ac7e-9b82fb1b2f27
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|0a51c753-dfad-4518-9013-c8f834bf1882
-C:\Users\Javier\Documents\PSoC Creator\gnome_workspace\gnome_psoc4.cydsn\gnome_psoc4.cyprj|34a974fb-372a-41ee-99d7-3cf75b66aad4
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev\psoc4\PSoC4AnalogDevice\psoc4arch.cydsn\psoc4arch.cyprj|a60d5fec-2de7-4575-9c05-e4753d31f3f3
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|44a12009-ae42-421b-aa49-0d0087f4ee30

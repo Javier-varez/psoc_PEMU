@@ -23,7 +23,7 @@ int main(int argc, char const *argv[]) {
   char string[1001];
 
   uint8_t addrmap[256];
-  
+
   int i,j;
   for (i = 0; i < 16; i++) {
     for (j = 0; j < 16; j++) {
@@ -50,12 +50,14 @@ int main(int argc, char const *argv[]) {
       inst = &inst[12];
       inst[2] = 0x00;
     }
-    uint8_t dir = strtol(addr, NULL, 16);
-    printf("addr: %s, %x\n",addr, dir);
-    uint8_t instint = strtol(inst, NULL, 16);
-    printf("inst: %s, %x\n", inst, instint);
-	if (addr && inst)
+
+	  if (addr && inst) {
+      uint8_t dir = strtol(addr, NULL, 16);
+      printf("addr: %s, %x\n",addr, dir);
+      uint8_t instint = strtol(inst, NULL, 16);
+      printf("inst: %s, %x\n", inst, instint);
     	addrmap[dir] = instint;
+    }
 
   }
 
